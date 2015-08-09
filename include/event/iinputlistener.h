@@ -28,23 +28,23 @@ public:
 
     int getInputType()const;
 
-    void addInputListener(mg::io::InputIfc* in);
+    void addInputListener(mg::io::IInput* in);
 
-    virtual void keyUp(mg::io::InputIfc key) = 0;
+    virtual void keyUp(mg::io::IInput key) = 0;
 
-    virtual void keyDown(mg::io::InputIfc key) = 0;
+    virtual void keyDown(mg::io::IInput key) = 0;
 
-    virtual void mouseDblClick(mg::io::InputIfc ms) = 0;
+    virtual void mouseDblClick(mg::io::IInput ms) = 0;
 
-    virtual void mouseMove(mg::io::InputIfc ms) = 0;
+    virtual void mouseMove(mg::io::IInput ms) = 0;
 
-    virtual void mouseExit(mg::io::InputIfc ms) = 0;
+    virtual void mouseExit(mg::io::IInput ms) = 0;
 
-    virtual void mouseScroll(mg::io::InputIfc ms) = 0;
+    virtual void mouseScroll(mg::io::IInput ms) = 0;
 
-    virtual void mouseClick(mg::io::InputIfc ms) = 0;
+    virtual void mouseClick(mg::io::IInput ms) = 0;
 
-    virtual void mouseDrag(mg::io::InputIfc ms) = 0;
+    virtual void mouseDrag(mg::io::IInput ms) = 0;
 
 protected:
     std::list <mg::io::IInput*> input_list_;

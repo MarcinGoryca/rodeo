@@ -38,7 +38,7 @@
 #endif
 
 #ifndef MG_CORE_INPUTLISTENERIFC_H_
-#include "event\inputlistenerifc.h"
+#include "event\iinputlistener.h"
 #endif
 
 #ifndef MG_CORE_KEYBOARDEVENT_H_

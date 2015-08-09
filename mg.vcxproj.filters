@@ -207,9 +207,6 @@
     <ClInclude Include="include\event\jennieevent.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
-    <ClInclude Include="include\event\inputlistenerifc.h">
-      <Filter>Header Files\event</Filter>
-    </ClInclude>
     <ClInclude Include="include\event\iinputlistener.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
@@ -265,9 +262,6 @@
       <Filter>Header Files\io</Filter>
     </ClInclude>
     <ClInclude Include="include\io\io.h">
-      <Filter>Header Files\io</Filter>
-    </ClInclude>
-    <ClInclude Include="include\io\jennieio.h">
       <Filter>Header Files\io</Filter>
     </ClInclude>
     <ClInclude Include="include\io\keyboard.h">

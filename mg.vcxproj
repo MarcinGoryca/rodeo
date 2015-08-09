@@ -51,6 +51,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\dev\projects\engine\mg\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,7 +105,6 @@
     <ClInclude Include="include\event\eventall.h" />
     <ClInclude Include="include\event\gameevent.h" />
     <ClInclude Include="include\event\iinputlistener.h" />
-    <ClInclude Include="include\event\inputlistenerifc.h" />
     <ClInclude Include="include\event\jennieevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
@@ -123,7 +123,6 @@
     <ClInclude Include="include\io\iinput.h" />
     <ClInclude Include="include\io\importer.h" />
     <ClInclude Include="include\io\io.h" />
-    <ClInclude Include="include\io\jennieio.h" />
     <ClInclude Include="include\io\keyboard.h" />
     <ClInclude Include="include\io\log.h" />
     <ClInclude Include="include\io\mouse.h" />
