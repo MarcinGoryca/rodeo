@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine name="Rodeo Game Engine">
+<!-- SETTINGS FOR WINDOW -->
+  <window>
+    <width>1600</width>
+    <height>1050</height>
+    <depth>32</depth>
+    <frequency>60</frequency>
+	<fullscreen>false</fullscreen>
+  </window>
+ <!-- SETTINGS FOR RENDERER --> 
+  <renderer>
+    <use_gl>1</use_gl>
+    <use_dx>0</use_dx>
+  </renderer>
+<!-- Viewports in engine --> 	
+  <viewports>
+   <count>4</count>
+  </viewports>   
+</engine>

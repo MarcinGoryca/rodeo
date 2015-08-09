@@ -1,0 +1,14 @@
+//Rodeo Game Engine configuration file
+engine
+{
+    "renderer":
+    [
+        "use_gl" : "0",
+        "use_dx" : "1"
+	],
+	
+	"framework":
+	[
+	    "fullscreen" : "true"
+	]
+}
