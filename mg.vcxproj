@@ -187,6 +187,7 @@
     <ClInclude Include="include\tools\tools.h" />
     <ClInclude Include="include\tools\toolsall.h" />
     <ClInclude Include="include\tools\xmlparser.h" />
+    <ClInclude Include="test\game1.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\audio\soundobject.cpp" />

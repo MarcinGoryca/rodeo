@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<engine name="Rodeo Game Engine">
+<engine name="MG Game Engine">
 <!-- SETTINGS FOR WINDOW -->
   <window>
     <width>1600</width>

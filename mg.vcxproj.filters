@@ -97,6 +97,9 @@
     <Filter Include="Source Files\test">
       <UniqueIdentifier>{b1e89822-5af5-4e90-8879-d592f798a32e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{ebe1786d-a36f-47fc-a1b5-ad0c4f652c8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\audio\audio.h">
@@ -452,6 +455,9 @@
     </ClInclude>
     <ClInclude Include="include\tools\xmlparser.h">
       <Filter>Header Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="test\game1.h">
+      <Filter>Header Files\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

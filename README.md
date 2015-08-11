@@ -8,6 +8,12 @@ MG Game Engine
 <li>FMOD</li>
 <li>GLSL</li>
 <li>HLSL</li>
+<li>FreeType</li>
+<li>TinyXML</li>
+<h5>To be considered</h5>
+<li>ASSIMP</li>
+<li>SOIL</li>
+<li>FreeImage</li>
 </ul>
 <h4>#Updates</h4>
 <ul>

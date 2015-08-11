@@ -40,11 +40,11 @@ void Framework::create()
 
     HDC hdc = GetDC(getHWND());
 
-    if(xml_parser_->read(CONFIGURATION_XML.c_str()))
-    {
-        readXMLData();
-    }
-    else if(!readConfFile(CONFIGURATION_INI.c_str()))
+    //if(xml_parser_->read(/*CONFIGURATION_XML.c_str())*/L"configuration\\engine_start.xml"))
+    //{
+    //    readXMLData();
+    //}
+    if(!readConfFile(CONFIGURATION_INI.c_str()))
     {
         readDefaults();
     }
@@ -568,9 +568,9 @@ void Framework::readDefaults()
     height_ = 1024;
     depth_ = 32;
     frequency_ = 60;
-    fullscreen_ = true;
-    use_dx_ = true;
-    use_gl_ = false;
+    fullscreen_ = false;
+    use_dx_ = false;
+    use_gl_ = true;
     //viewports_ = 4;
 }
 
