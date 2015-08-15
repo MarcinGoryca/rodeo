@@ -24,7 +24,7 @@ public:
 
     // Constructor
     // Parameter const char* You must specify what went wrong
-    explicit RendererException(const char* reason_of_exception)
+    explicit RendererException(std::wstring reason_of_exception)
         :Exception(reason_of_exception)
     {}
 

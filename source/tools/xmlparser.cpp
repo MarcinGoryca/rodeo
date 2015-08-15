@@ -23,10 +23,10 @@ bool XmlParser::read(const std::wstring filepath)
 // Step 1. Try to load XML file
     try
     {
-       /* if(!xml_document_.LoadFile(filepath))
-        {
-            throw -1;
-        }*/
+       //if(!xml_document_.LoadFile(filepath))
+        //{
+        //    throw -1;
+        //}
     }
     catch(...)
     {

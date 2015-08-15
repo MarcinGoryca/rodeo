@@ -9,6 +9,8 @@
 #ifndef MG_CORE_EXCEPTION_H_
 #define MG_CORE_EXCEPTION_H_
 
+#include <string>
+
 namespace mg
 {
 namespace core
@@ -18,16 +20,16 @@ class Exception
 public:
     Exception(){}
 
-    explicit Exception(const char* str)
+    explicit Exception(std::wstring str)
         :exception_string_(str)
     {}
     
-    ~Exception(){}
+    virtual ~Exception(){}
 
-    const char* getExceptionString()const { return exception_string_; }
+    std::wstring getExceptionString() const { return exception_string_; }
 
 private:
-    const char* exception_string_;
+    std::wstring exception_string_;
 };
 }    // end of core namespace
 }    // end of mg namespace

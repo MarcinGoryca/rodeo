@@ -40,7 +40,7 @@ void Framework::create()
 
     HDC hdc = GetDC(getHWND());
 
-    //if(xml_parser_->read(/*CONFIGURATION_XML.c_str())*/L"configuration\\engine_start.xml"))
+    //if(xml_parser_->read(CONFIGURATION_XML.c_str()))
     //{
     //    readXMLData();
     //}
@@ -68,11 +68,8 @@ void Framework::create()
         render_manager_->getRenderer()->setHWND(getHWND());
     }
 
-
     output_manager_->getLog()->write(L"Rendering Context is created");
-
     render_manager_->getRenderer()->run(getWidth(), getHeight());
-
     output_manager_->getLog()->write(L"Renderer is running...");
 
     if(physicsystem_->module_initialized_)
@@ -99,12 +96,10 @@ void Framework::run()
         event_manager_->getUserInput();
 
         //Start Physics calculations
-
         physicsystem_->update(getGlobalDeltaTime());
         physicsystem_->update();
 
         //Begin Rendering Phase
-
         render_manager_->getRenderer()->enterFrame();
         render_manager_->getRenderer()->enableShaders();
         
@@ -115,7 +110,6 @@ void Framework::run()
         scene_manager_->update(getGlobalDeltaTime());
 
         //End Rendering Phase
-
         render_manager_->getRenderer()->disableShaders();
         render_manager_->getRenderer()->endFrame();
 

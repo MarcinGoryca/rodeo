@@ -41,7 +41,6 @@ public:
         return renderer_;
     }
 
-
 private:
     RenderManager(){}
 
