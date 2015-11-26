@@ -17,6 +17,8 @@ MG Game Engine
 </ul>
 <h4>#Updates</h4>
 <ul>
+<h5>26/11/2015</h5>
+<li>Whole project is being redesigning</li>
 <h5>06/08/2015</h5>
 <li>Since nVidia doesn't recommend using CG it is not available</li>
 <h5>17/07/2015</h5>
