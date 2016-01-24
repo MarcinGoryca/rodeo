@@ -1,6 +1,7 @@
 MG Game Engine
 -----------------------------
 <h2>It is based on first project Rodeo Game Engine.</h2>
+<h3>Off hours right now, to learn and have fun</h3>
 <h4>Features:</h4>
 <ul>
 <li>DirectX</li>
@@ -17,6 +18,8 @@ MG Game Engine
 </ul>
 <h4>#Updates</h4>
 <ul>
+<h5>26/11/2015</h5>
+<li>Whole project is being redesigned</li>
 <h5>06/08/2015</h5>
 <li>Since nVidia doesn't recommend using CG it is not available</li>
 <h5>17/07/2015</h5>
