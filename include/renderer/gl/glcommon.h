@@ -13,16 +13,12 @@
 #pragma comment(lib, "libs\\glu32.lib")
 #pragma comment(lib, "libs\\opengl32.lib")
 
-#ifndef MG_GL_GLEW_H_
-#include "gl\glew.h"
+#ifndef MG_RENDERER_GL_GLEW_H_
+#include "glew.h"
 #endif
 
-#ifndef MG_GL_WGLEW_H_
-#include "gl\wglew.h"
-#endif
-
-#ifndef MG_GL_GLU_H_
-#include "gl\glu.h"
+#ifndef MG_RENDERER_GL_WGLEW_H_
+#include "wglew.h"
 #endif
 
 #endif

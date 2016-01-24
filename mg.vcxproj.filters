@@ -459,6 +459,12 @@
     <ClInclude Include="test\game1.h">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="include\renderer\gl\gldrawing.h">
+      <Filter>Header Files\renderer\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\renderer\gl\gldrawingenums.h">
+      <Filter>Header Files\renderer\gl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\audio\soundobject.cpp">
@@ -697,6 +703,9 @@
     </ClCompile>
     <ClCompile Include="test\test.cpp">
       <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\renderer\gl\gldrawing.cpp">
+      <Filter>Source Files\renderer\gl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

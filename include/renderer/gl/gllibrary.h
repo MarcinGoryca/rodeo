@@ -1,11 +1,13 @@
 ﻿/*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ |   MG Game Engine
+ |   [ GLLibrary.h ] / [renderer/gl]
+ |   Copyright(c) Marcin Goryca
+ |   marcin.goryca@gmail.com
+ |   http://marcingoryca.pl
+ | ----------------------------------------------
+ */
+
 #ifndef MG_RENDERER_GLLIBRARY_H
 #define MG_RENDERER_GLLIBRARY_H
 

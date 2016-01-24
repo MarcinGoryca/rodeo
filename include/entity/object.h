@@ -22,6 +22,7 @@ namespace mg
 namespace entity
 {
 class Event;
+
 class Object
 {
 public:
@@ -94,8 +95,10 @@ protected:
     //virtual void setId(ui id);
     void clear();
 
+	// Counter for every object on the scene
     static mg::core::ui s_object_counter_;
 
+	// Identifier for every object on the scene
     mg::core::ui id_;
 
     std::string name_;
