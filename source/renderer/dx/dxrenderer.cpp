@@ -82,12 +82,15 @@ void DxRenderer::onSize(int w, int h)
     dx_device_->OMSetRenderTargets(1, &target_view_, depth_stencil_view_);
 
     D3D10_VIEWPORT viewport;
-    viewport.Height = h;
+	fillViewport(viewport, h, w, 1.0f, 0.0f, 0, 0);
+    /*
+	viewport.Height = h;
     viewport.Width = w;
     viewport.MaxDepth = 1.0f;
     viewport.MinDepth = 0.0f;
     viewport.TopLeftX = 0;
     viewport.TopLeftY = 0;
+	*/
 
     dx_device_->RSSetViewports(1, &viewport);
 
@@ -238,6 +241,17 @@ void DxRenderer::init(HWND app, int w, int h)
     //}
 
     onSize(w, h);
+}
+// [private]
+void fillViewport(D3D10_VIEWPORT v, int width, int height, float max_depth, float min_depth,
+int top_left_x, int top_left_y)
+{
+	v.Height = height;
+	v.Width = width;
+	v.MaxDepth = max_depth;
+	v.MinDepth = min_depth;
+	v.TopLeftX = top_left_x;
+	v.TopLeftY = top_left_y;
 }
 }    // end of renderer namespace
 }    // end of mg namespace

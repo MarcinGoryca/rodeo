@@ -1,11 +1,12 @@
 ﻿/*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ |  ----------------------------------------------
+ |    MG Game Engine
+ |    [ GLRenderer.h ] / [ renderer/gl ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  ----------------------------------------------
+ */
 #ifndef MG_RENDERER_GLRENDERER_H_
 #define MG_RENDERER_GLRENDERER_H_
 
@@ -48,13 +49,21 @@ public:
    
     virtual ~GLRenderer();
 
-    // Parameter w - width of the scene
-    // Parameter h - height of the scene
-    // Runs renderer
-    //    Calls glewInit(), QueryRenderer.run()
+	/*
+	 |  ------------------------------------------------------
+     |    Parameter w - width of the scene
+     |    Parameter h - height of the scene
+     |    Runs renderer
+     |    Calls glewInit(), QueryRenderer.run()
+	 |  ------------------------------------------------------
+	 */
     virtual bool run(int w, int h);
 
-    // Render to the screen, 
+    /*
+	 |  ------------------------------------------------------
+	 |    Render to the screen, 
+	 |  ------------------------------------------------------
+	 */
     virtual void render();
 
     virtual void update();

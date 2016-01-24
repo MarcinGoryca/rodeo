@@ -33,7 +33,8 @@ public:
     enum File3DType
     {
         MG_FILE_3DS,
-        MG_FILE_FBX
+        MG_FILE_FBX,
+		MG_FILE_OBJ
     };
 
     static Importer* create(File3DType type);

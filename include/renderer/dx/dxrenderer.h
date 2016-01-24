@@ -78,6 +78,8 @@ public:
 
 private:
     void init(HWND app, int w, int h);
+	void fillViewport(D3D10_VIEWPORT v, int width, int height, float max_depth, float min_depth,
+	                  int top_left_x, int top_left_y);
 
     ID3D10Device* dx_device_;
     IDXGISwapChain* dx_swap_chain_;

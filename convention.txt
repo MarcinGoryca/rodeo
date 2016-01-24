@@ -1,0 +1,19 @@
+1) Variables, parameters
+
+some_variable;
+
+2) Class members
+
+some_member_;
+
+3) Functions
+
+someFunction();
+
+4) Methods
+
+someMethod();
+
+--------------------------------
+TODO:
+1) more modular, less dependency

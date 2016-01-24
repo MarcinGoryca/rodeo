@@ -1,10 +1,10 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
+|-----------------------------------
+|    MG Game Engine
+|    Copyright(c) Marcin Goryca
+|    marcin.goryca@gmail.com
+|    http://marcingoryca.pl
+|-----------------------------------
 */
 #ifndef MG_CORE_H_
 #define MG_CORE_H_

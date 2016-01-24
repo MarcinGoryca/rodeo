@@ -22,23 +22,23 @@ void QueryRenderer::run()
     {
         gl21supported_ = ::atof((const char*)glGetString(GL_VERSION)) >= 2.1;
         if(!gl21supported_)
-            throw RendererException("Sorry, your GPU doesn't support OpenGL 2.1");
+            throw RendererException(L"Sorry, your GPU doesn't support OpenGL 2.1");
         
         gl31supported_ = ::atof((const char*)glGetString(GL_VERSION)) >= 3.1;
         if(!gl31supported_)
-            throw RendererException("Sorry, your GPU doesn't support OpenGL 3.1");
+            throw RendererException(L"Sorry, your GPU doesn't support OpenGL 3.1");
     
         gl32supported_ = ::atof((const char*)glGetString(GL_VERSION)) >= 3.2; 
         if(!gl32supported_)
-            throw RendererException("Sorry, your GPU doesn't support OpenGL 3.2");
+            throw RendererException(L"Sorry, your GPU doesn't support OpenGL 3.2");
         
         gl33supported_ = ::atof((const char*)glGetString(GL_VERSION)) >= 3.3;
         if(!gl33supported_)
-            throw RendererException("Sorry, your GPU doesn't support OpenGL 3.3");
+            throw RendererException(L"Sorry, your GPU doesn't support OpenGL 3.3");
 
         gl41supported_ = ::atof((const char*)glGetString(GL_VERSION)) >= 4.1;
         if(!gl41supported_)
-            throw RendererException("Sorry, your GPU doesn't support OpenGL 4.1");
+            throw RendererException(L"Sorry, your GPU doesn't support OpenGL 4.1");
     }
     catch(RendererException& renderer_exception)
     {
