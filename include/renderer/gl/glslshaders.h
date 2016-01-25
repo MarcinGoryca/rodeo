@@ -1,11 +1,12 @@
 /*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ |  ----------------------------------------------
+ |    MG GAME ENGINE 
+ |    [ GLSLShaders.h ] [ mg\renderere\gl ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  ----------------------------------------------
+ */
 #ifndef MG_RENDERER_GLSLSHADERS_H_
 #define MG_RENDERER_GLSLSHADERS_H_
 
@@ -30,19 +31,35 @@ public:
     virtual ~GLSLShaders()
     {}
 
-    // Loads Shader from File
-    // Parameter const char* string of shader filename
-    // Parameter ShaderType - RODEO_VS, RODEO_FS
-    // Returns unsigned int shader program id
+    /*
+	 |  ----------------------------------------------------
+	 |    Loads Shader from File
+     |    Parameter const char* string of shader filename
+     |    Parameter ShaderType - MG_VS, MG_FS
+     |    Returns unsigned int shader program id
+	 |  ----------------------------------------------------
+	 */
     virtual core::ui loadShaderFromFile(const char* filename, core::ShaderType st);
 
-    // Loads Shaders from files
+    /*
+	 |  ----------------------------------------------------
+	 |    Loads Shaders from files
+	 |  ----------------------------------------------------
+	 */
     void loadShaders(std::string vertex_file, std::string fragment_file);
 
-    // Inits Shaders
+    /*
+	 |  ----------------------------------------------------
+	 |    Inits Shaders
+	 |  ----------------------------------------------------
+	 */
     virtual void init();
 
-    // Uses ShaderProgram
+    /*
+	 |  ----------------------------------------------------
+	 |    Uses ShaderProgram
+	 |  ----------------------------------------------------
+	 */
     virtual void useShaderProgram(core::ui shader_program);
   
     virtual const char* getVertexProgramFile() const 
@@ -90,13 +107,25 @@ public:
     virtual void setProgram(core::ui program) { program_ = program; }
 
 private:
-    // Copy constructor
+    /*
+	 |  ---------------------------------
+	 |    Copy constructor
+	 |  ---------------------------------
+	 */
     GLSLShaders(const GLSLShaders& copy);
 
-    // Copy operator
+    /*
+	 |  ---------------------------------
+	 |    Copy operator
+	 |  ---------------------------------
+	 */
     GLSLShaders operator=(const GLSLShaders& copy);
 
-    // Helper method to read shader file
+    /*
+	 |  -----------------------------------
+	 |    Helper method to read shader file
+	 |  -----------------------------------
+	 */
     char* readFile(const char* file);
 
     core::ui program_;

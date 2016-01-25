@@ -1,4 +1,9 @@
-﻿/*
+﻿// TODO
+// THIS FILE MUST BE CLEARED,
+// IT SHOULD NOT CONTAIN ENABLING/DISABLING METHODS
+
+
+/*
  |  ----------------------------------------------
  |    MG Game Engine
  |    [ GLRenderer.h ] / [ renderer/gl ]
@@ -74,15 +79,19 @@ public:
     // For Perspective projection
     virtual void enter3d();
 
-    // Parameter r - red value of the color [range 0.0f - 1.0f]
-    // Parameter g - green value of the color [range 0.0f - 1.0f]
-    // Parameter b - blue value of the color [range 0.0f - 1.0f]
-    // Use it to Change Background Color of the rendering window
-    // Using Colors from Rodeo
-    // BackColor(darkgreen, 1.0f)
-    // You must specify your alfa argument [range 0.0f[transparent] - 1.0f[opacity]]
-    // Colors in float manner are defined with only three values red, green, blue
-    // like that: #define white 1.0f, 1.0f, 1.0f
+	/*
+	 |  ---------------------------------------------------------------------------------
+     |    Parameter r - red value of the color [range 0.0f - 1.0f]
+     |    Parameter g - green value of the color [range 0.0f - 1.0f]
+     |    Parameter b - blue value of the color [range 0.0f - 1.0f]
+     |    Use it to Change Background Color of the rendering window
+     |    Using Colors from MG
+     |    backColor(darkgreen, 1.0f)
+     |    You must specify your alfa argument [range 0.0f[transparent] - 1.0f[opacity]]
+     |    Colors in float manner are defined with only three values red, green, blue
+     |    like that: #define white 1.0f, 1.0f, 1.0f
+	 |  ---------------------------------------------------------------------------------
+	 */
     virtual void backColor(float r, float g, float b, float a);
 
     // Change Size if it receives WM_SIZE MSG
@@ -150,30 +159,54 @@ public:
 
  
 private:
-    // Copy Constructor
+    /* 
+	 |  ----------------------------------
+	 |    Copy Constructor
+	 |  ----------------------------------
+	 */
     GLRenderer(const GLRenderer& glrenderer);
 
-    // Copy operator
+    /*
+	 |  ----------------------------------
+	 |    Copy operator
+	 |  ----------------------------------
+	 */
     GLRenderer operator=(const GLRenderer& glrenderer);
 
-    // Sets OpenGL Renderer
-    // Parameter w - width of the scene
-    // Parameter h - height of the scene
-    // This method calls
+    /*
+	 |  ----------------------------------------
+	 |    Sets OpenGL Renderer
+     |    Parameter w - width of the scene
+     |    Parameter h - height of the scene
+     |    This method calls
+	 |  ----------------------------------------
+	 */
     void setGL(int w, int h);
 
-    // Calls glClearColor(r, g, b, a)
-    // In Rodeo it's value is glClearColor(black, 1.0) but it is NOT called!
+    /*
+	 |  ------------------------------------------
+	 |    Calls glClearColor(r, g, b, a)
+     |    In MG it's value is glClearColor(black, 1.0) but it is NOT called!
+	 |  -------------------------------------------
+	 */
     bool initGL();
 
-    // Initializes Background color for GL
-    // Parameter float red - red value from RGB - MUST BE in <0.0, 1.0> !
-    // Parameter float green - green value from RGB - MUST BE  in <0.0, 1.0> !
-    // Parameter float blue - blue value form RGB - MUST BE in <0.0, 1.0> !
-    // Calls SetGL(int, int), glClearColor(float, float, float, float), glClearDepth(float)
+    /*
+	 |  -----------------------------------------------------------
+	 |    Initializes Background color for GL
+     |    Parameter float red - red value from RGB - MUST BE in <0.0, 1.0> !
+     |    Parameter float green - green value from RGB - MUST BE  in <0.0, 1.0> !
+     |    Parameter float blue - blue value form RGB - MUST BE in <0.0, 1.0> !
+     |    Calls SetGL(int, int), glClearColor(float, float, float, float), glClearDepth(float)
+	 |  ---------------------------------------------------------------
+	 */
     bool initGL(int w, int h, float r, float g, float b, float a);
 
-    // Calls glFlush()
+    /*
+	 |  -------------------------------------------------------
+	 |    Calls glFlush()
+	 |  -------------------------------------------------------
+	 */
     void flush();
 
     QueryRenderer* getQueryRenderer() const { return query_renderer_; }

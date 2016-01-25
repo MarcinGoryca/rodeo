@@ -1,11 +1,12 @@
 ﻿/*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ |  ----------------------------------------------
+ |    MG GAME ENGINE
+ |    [ Colors.h ] [ mg\renderer ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  ----------------------------------------------
+ */
 #ifndef MG_RENDERER_COLORS_H_
 #define MG_RENDERER_COLORS_H_ 
 
@@ -13,167 +14,299 @@ namespace mg
 {
 namespace renderer
 {
-// Red #FF0000 
+/*
+ |  ----------------------------
+ |    Red #FF0000 
+ |  ----------------------------
+ */
 const float MG_RED[] = {1.0f, 0.0f, 0.0f, 1.0f};
 #define MGRed 1.0f, 0.0f, 0.0f
 #define MGUBred 255, 0, 0
 
-// Green #00FF00 
+/*
+ |  ----------------------------
+ |    Green #00FF00 
+ |  ----------------------------
+ */
 const float MG_GREEN[] = {0.0f, 1.0f, 0.0f, 1.0f};
 #define MGGreen 0.0f, 1.0f, 0.0f
 #define MGUBgreen 0, 255, 0
 
-// Blue #0000FF 
+/*
+ |  ----------------------------
+ |    Blue #0000FF 
+ |  ----------------------------
+ */
 const float MG_BLUE[] = {0.0f, 0.0f, 1.0f, 1.0f};
 #define MGBlue 0.0f, 0.0f, 1.0f
 #define MGUBblue 0, 0, 255
 
-// Black #000000 
+/*
+ |  ----------------------------
+ |    Black #000000 
+ |  ----------------------------
+ */
 const float MG_BLACK[] = {0.0f, 0.0f, 0.0f, 1.0f};
 #define MGBlack 0.0f, 0.0f, 0.0f
 #define MGUBblack 0, 0, 0
 
-// White #FFFFFF 
+/*
+|  ----------------------------
+|    White #FFFFFF
+|  ----------------------------
+*/
 const float MG_WHITE[] = {1.0f, 1.0f, 1.0f, 1.0f};
 #define MGWhite 1.0f, 1.0f, 1.0f
 #define MGUBwhite 255, 255, 255
 
-// Yellow #FFFF00 
+/*
+ |  ----------------------------
+ |    Yellow #FFFF00 
+ |  ----------------------------
+ */
 const float MG_YELLOW[] = {1.0f, 1.0f, 0.0f, 1.0f};
 #define MGYellow 1.0f, 1.0f, 0.0f
 #define MGUByellow 255, 255, 0  
 
-// Darkblue #000080 
+/*
+ |  ----------------------------
+ |    Darkblue #000080 
+ |  -----------------------------
+ */
 const float MG_DARKBLUE[] = { 0.0f, 0.0f, 0.8f, 1.0f };
 #define MGDarkblue 0.0f, 0.0f, 0.8f
 #define MGUBdarkblue 0, 0, 128
 
-// Darkgreen #008000 
+/*
+ |  ------------------------------
+ |    Darkgreen #008000 
+ |  ------------------------------
+ */
 const float MG_DARKGREEN[] = { 0.0f, 0.8f, 0.0f, 1.0f };
 #define MGDarkgreen 0.0f, 0.8f, 0.0f
 #define MGUBdarkgreen 0, 128, 0
 
-// Darkcyan #008080 
+/*
+ |  ------------------------------
+ |    Darkcyan #008080 
+ |  ------------------------------
+ */
 const float MG_DARKCYAN[] = { 0.0f, 0.8f, 0.8f, 1.0f };
 #define MGDarkcyan 0.0f, 0.8f, 0.8f
 #define MGUBdarkcyan 0, 128, 128
 
-// Darkred #800000 
+/*
+ |  ------------------------------
+ |    Darkred #800000 
+ |  ------------------------------
+ */
 const float MG_DARKRED[] = { 0.8f, 0.0f, 0.0f, 1.0f };
 #define darkred 0.8f, 0.0f, 0.0f
 #define UBdarkred 128, 0, 0
 
-// Darkmagenta #800080 
+/*
+ |  ------------------------------
+ |    Darkmagenta #800080 
+ |  ------------------------------
+ */
 const float MG_DARKMAGENTA[] = { 0.8f, 0.0f, 0.8f, 1.0f };
 #define darkmagenta 0.8f, 0.0f, 0.8f
 #define UBdarkmagenta 128, 0, 128
 
-// Darkyellow #808000 
+/*
+ |  ------------------------------
+ |    Darkyellow #808000 
+ |  ------------------------------
+ */
 const float MG_DARKYELLOW[] = { 0.8f, 0.8f, 0.0f, 1.0f };
 #define darkyellow 0.8f, 0.8f, 0.0f
 #define UBdarkyellow 128, 128, 0
 
-// Lightgrey #606060 
+/*
+ |  ------------------------------
+ |    Lightgrey #606060 
+ |  ------------------------------
+ */
 const float MG_LIGHTGREY[] = { 0.6f, 0.6f, 0.6f, 1.0f };
 #define lightgrey 0.6f, 0.6f, 0.6f
 #define UBlightgrey 192, 192, 192
 
-// Darkgrey #808080 
+/*
+ |  ------------------------------
+ |    Darkgrey #808080 
+ |  ------------------------------
+ */
 const float MG_DARKGREY[] = { 0.8f, 0.8f, 0.8f, 1.0f };
 #define darkgrey 0.8f, 0.8f, 0.8f
 #define UBdarkgrey 128, 128, 128
 
-// Cyan #00FFFF 
+/*
+ |  ------------------------------
+ |    Cyan #00FFFF 
+ |  ------------------------------
+ */
 const float MG_CYAN[] = { 0.0f, 1.0f, 1.0f, 1.0f };
 #define cyan 0.0f, 1.0f, 1.0f
 #define UBcyan 0, 255, 255
 
-// Magenta #FF00FF 
+/*
+ |  ------------------------------
+ |    Magenta #FF00FF 
+ |  ------------------------------
+ */
 const float MG_MAGENTA[] = { 1.0f, 0.0f, 1.0f, 1.0f };
 #define magenta 1.0f, 0.0f, 1.0f
 #define UBmagenta 255, 0, 255
 
-// Moneygreen #609060 
+/*
+ |  ------------------------------
+ |    Moneygreen #609060 
+ |  ------------------------------
+ */
 const float MG_MONEYGREEN[] = { 0.6f, 0.9f, 0.6f, 1.0f };
 #define moneygreen 0.6f, 0.9f, 0.6f
 #define UBmoneygreen 192, 220, 192
 
-// Airforceblue #5D8AA8 
+/*
+ |  ------------------------------
+ |    Airforceblue #5D8AA8
+ |  ------------------------------
+ */
 const float MG_AIRFORCEBLUE[] = { 0.36f, 0.54f, 0.66f, 1.0f };
 #define airforceblue 0.36f, 0.54f, 0.66f
 #define UBairforceblue 93, 138, 168
 
-// Alizarin Crimson #E32636 
+/*
+ |  ------------------------------
+ |    Alizarin Crimson #E32636 
+ |  ------------------------------
+ */
 const float MG_ALIZARINCRIMSON[] = { 0.83f, 0.1f, 0.26f, 1.0f };
 #define alizarincrimson 0.83f, 0.1f, 0.26f
 #define UBalizarincrimson 227, 38, 54
 
-// Amaranth #E52B50 
+/*
+ |  -------------------------------
+ |    Amaranth #E52B50 
+ |  -------------------------------
+ */
 const float MG_AMARANTH[] = { 0.9f, 0.17f, 0.31f, 1.0f };
 #define amaranth 0.9f, 0.17f, 0.31f
 #define UBamaranth 229, 43, 80
 
-// Skyblue #A6CAF0 
+/*
+ |  -----------------------------------
+ |    Skyblue #A6CAF0 
+ |  -----------------------------------
+ */
 const float MG_SKYBLUE[] = { 0.57f, 0.89f, 0.95f, 1.0f };
 #define skyblue 0.57f, 0.89f, 0.95f
 #define UBskyblue 166, 202, 240
 
-// Cream #FFFBF0 
+/*
+ |  -----------------------------------
+ |    Cream #FFFBF0 
+ |  -----------------------------------
+ */
 const float MG_CREAM[] = { 1.0f, 0.99f, 0.95f, 1.0f };
 #define cream 1.0f, 0.99f, 0.95f
 #define UBcream 255, 251, 240
 
-// MEDIUMGREY #A0A0A4 
+/* 
+ |  -----------------------------------
+ |    MEDIUMGREY #A0A0A4 
+ |  -----------------------------------
+ */
 const float MG_MEDIUMGREY[] = { 0.55f, 0.55f, 0.56f, 1.0f };
 #define mediumgrey 0.55f, 0.55f, 0.56f
 #define UBmediumgrey 160, 160, 164
 
-// AMBER #FFBF00 
+/*
+ |  -----------------------------------
+ |    AMBER #FFBF00 
+ |  -----------------------------------
+ */
 const float MG_AMBER[] = { 1.0f, 0.75f, 0.0f, 1.0f };
 #define amber 1.0f, 0.75f, 0.0f
 #define UBamber 255, 191, 0
 
-// Amethyst #9966CC 
+/*
+ |  -----------------------------------
+ |    Amethyst #9966CC 
+ |  -----------------------------------
+ */
 const float MG_AMETHYST[] = { 0.6f, 0.4f, 0.8f, 1.0f };  
 #define amethyst 0.6f, 0.4f, 0.8f
 #define UBamethyst 153, 102, 204
 
-// Antique Brass #CD9575 
+/*
+ |  -----------------------------------
+ |    Antique Brass #CD9575 
+ |  -----------------------------------
+ */
 const float MG_ANTIQUEBRASS[] = { 0.8f, 0.58f, 0.46f, 1.0f };
 #define antiquebrass 0.8f, 0.58f, 0.46f
 #define UBantiquebrass 205, 149, 117
 
-// Applegreen #8DB600 
+/*
+ |  -----------------------------------
+ |    Applegreen #8DB600 
+ |  -----------------------------------
+ */
 const float MG_APPLEGREEN[] = { 0.55f, 0.71f, 0.0f, 1.0f };
 #define applegreen 0.55f, 0.71f, 0.0f
 #define UBapplegreen 141, 182, 0
 
-// Arsenic #3B444B 
+/*
+ |  -----------------------------------
+ |    Arsenic #3B444B 
+ |  -----------------------------------
+ */
 const float MG_ARSENIC[] = { 0.23f, 0.27f, 0.29f, 1.0f };
 #define arsenic 0.23f, 0.27f, 0.29f
 #define UBarsenic 59, 68, 75
 
-// Arylideyellow #E9D66B 
+/*
+ |  -----------------------------------
+ |    Arylideyellow #E9D66B 
+ |  -----------------------------------
+ */
 const float MG_ARYLIDEYELLOW[] = { 0.91f, 0.84f, 0.42f, 1.0f };
 #define arylideyellow 0.91f, 0.84f, 0.42f
 #define UBarylideyellow 233, 214, 107
 
-// Atomic Tangerine #FF9966 
+/*
+ |  -----------------------------------
+ |    Atomic Tangerine #FF9966 
+ |  -----------------------------------
+ */
 const float MG_ATOMICTANGERINE[] = { 1.0f, 0.6f, 0.4f, 1.0f };
 #define atomictangerine 1.0f, 0.6f,0.4f
 #define UBatomictangerine 255, 153, 102
 
-// Auburn #6D351A 
+/*
+ |  ------------------------------------
+ |    Auburn #6D351A 
+ |  ------------------------------------
+ */
 const float MG_AUBURN[] = { 0.43f, 0.21f, 0.1f, 1.0f };
 #define auburn #0.43f, 0.21f, 0.1f
 #define UBauburn 109, 53, 26
 
-// Babypink #F4C2C2 
+/*
+ |  ------------------------------------
+ |    Babypink #F4C2C2 
+ |  ------------------------------------
+ */
 const float MG_BABYPINK[] = { 0.96f, 0.76f, 0.76f, 1.0f };
 #define babypink 0.96f, 0.76f, 0.76f
 #define UBbabypink 244, 194, 194
 
-// Ballblue #21ABCD 
+/*
+ |  -----------------------------------
+ |    Ballblue #21ABCD 
+ |  -----------------------------------
+ */
 const float MG_BALLBLUE[] = { 0.13f, 0.67f, 0.8f, 1.0f };
 #define ballblue 0.13f, 0.67f, 0.8f
 #define UBballblue 33, 171, 205

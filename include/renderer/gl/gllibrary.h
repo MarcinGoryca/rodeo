@@ -1,4 +1,8 @@
-﻿/*
+﻿// TODO
+// THIS FILE MUST BE CLEARED AND DELETED!
+
+
+/*
  | ----------------------------------------------
  |   MG Game Engine
  |   [ GLLibrary.h ] / [renderer/gl]
