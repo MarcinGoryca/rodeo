@@ -1,9 +1,12 @@
 /*
- -------------------------------------------
-   MG Game Engine
-   Copyright(c) Marcin Goryca
- -------------------------------------------
-*/
+ |  -------------------------------------------
+ |    MG GAME ENGINE
+ |    [ Audio.h ] [ mg\audio]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingryca.pl
+ |  -------------------------------------------
+ */
 #ifndef MG_AUDIO_AUDIO_H_
 #define MG_AUDIO_AUDIO_H_
 
