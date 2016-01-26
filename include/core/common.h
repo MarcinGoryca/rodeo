@@ -1,11 +1,12 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ Common.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |   http://marcingoryca.pl
+ |  -----------------------------------
+ */
 #ifndef MG_CORE_COMMON_H_
 #define MG_CORE_COMMON_H_
 //#define WIN32_LEAN_AND_MEAN
@@ -25,4 +26,4 @@
 #include <memory>
 #include <algorithm>
 
-#endif
+#endif    // MG_CORE_COMMON_H_

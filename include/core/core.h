@@ -1,13 +1,14 @@
 ﻿/*
-|-----------------------------------
-|    MG Game Engine
-|    Copyright(c) Marcin Goryca
-|    marcin.goryca@gmail.com
-|    http://marcingoryca.pl
-|-----------------------------------
-*/
-#ifndef MG_CORE_H_
-#define MG_CORE_H_
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ Core.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+#ifndef MG_CORE_CORE_H_
+#define MG_CORE_CORE_H_
 
 #ifndef MG_CORE_AUDIOMANAGER_H_
 #include "core\audiomanager.h"
@@ -85,4 +86,4 @@
 #include "core\timer.h"
 #endif
 
-#endif
+#endif   // MG_CORE_CORE_H_
