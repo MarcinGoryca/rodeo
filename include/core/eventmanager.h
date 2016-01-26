@@ -55,20 +55,55 @@ namespace mg
 				clear();
 			}
 
+			/*
+			 |  -----------------------------------------
+			 |    Translates the event
+			 |  -----------------------------------------
+			 */
 			void translate(mg::event::Event* event);
 
+			/*
+			 |  -----------------------------------------
+			 |    Dispatches the event
+			 |  -----------------------------------------
+			 */
 			void dispatch(mg::event::Event* event);
 
+			/*
+			 |  -----------------------------------------
+			 |    Sends the event
+			 |  -----------------------------------------
+			 */
 			void send(mg::event::Event* event);
 
+			/*
+			 |  ----------------------------------------
+			 |    Adds event listener
+			 |    Implementing virtual method
+			 |    Parameter Event* type of the event
+			 |  ----------------------------------------
+			 */
 			virtual void addEventListener(mg::event::Event* event_type);
 
+			/*
+			 |  ---------------------------------------
+			 |    Removes an event listener
+			 |  ---------------------------------------
+			 */
 			void removeEventListener();
 
-			// Overload this method in game class
+			/*
+			 |  ---------------------------------------
+			 |    Overload this method in game class
+			 |  ---------------------------------------
+			 */
 			virtual void getUserInput();
 
-			// Gets Event object pointer
+			/*
+			 |  ---------------------------------------
+			 |    Gets Event object pointer
+			 |  ---------------------------------------
+			 */
 			mg::event::Event* getEvent() const
 			{
 				return event_;
