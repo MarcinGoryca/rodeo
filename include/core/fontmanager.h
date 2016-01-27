@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ FontManager.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_FONTMANAGER_H_
 #define MG_CORE_FONTMANAGER_H_
 
@@ -23,28 +25,28 @@
 
 namespace mg
 {
-namespace core
-{
-class FontManager : public Singleton<FontManager>, public MasterManager
-{
-public:
-    FontManager(){}
+	namespace core
+	{
+		class FontManager : public Singleton<FontManager>, public MasterManager
+		{
+		public:
+			FontManager() {}
 
-    ~FontManager()
-    { 
-        clear();
-    }
+			~FontManager()
+			{
+				clear();
+			}
 
-    // Gets Font object pointer
-    mg::renderer::Font* getFont() const { return font_; }
+			// Gets Font object pointer
+			mg::renderer::Font* getFont() const { return font_; }
 
 
-private:
-    void init();
-    void clear();
+		private:
+			void init();
+			void clear();
 
-    mg::renderer::Font* font_;
-};
-}   // end of core namespace
+			mg::renderer::Font* font_;
+		};
+	}   // end of core namespace
 }   // end of mg namespace
-#endif
+#endif    // MG_CORE_FONTMANAGER_H_

@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ Exception.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_EXCEPTION_H_
 #define MG_CORE_EXCEPTION_H_
 
@@ -13,24 +15,24 @@
 
 namespace mg
 {
-namespace core
-{
-class Exception
-{
-public:
-    Exception(){}
+	namespace core
+	{
+		class Exception
+		{
+		public:
+			Exception() {}
 
-    explicit Exception(std::wstring str)
-        :exception_string_(str)
-    {}
-    
-    virtual ~Exception(){}
+			explicit Exception(std::wstring str)
+				:exception_string_(str)
+			{}
 
-    std::wstring getExceptionString() const { return exception_string_; }
+			virtual ~Exception() {}
 
-private:
-    std::wstring exception_string_;
-};
-}    // end of core namespace
+			std::wstring getExceptionString() const { return exception_string_; }
+
+		private:
+			std::wstring exception_string_;
+		};
+	}    // end of core namespace
 }    // end of mg namespace
-#endif
+#endif    // MG_CORE_EXCEPTION_H_
