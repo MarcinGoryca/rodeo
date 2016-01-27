@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ EventManager.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_EVENTMANAGER_H_
 #define MG_CORE_EVENTMANAGER_H_
 
@@ -23,51 +25,96 @@
 
 namespace mg
 {
-namespace event 
-{
-class Event;
-}
+	namespace event
+	{
+		class Event;
+	}
 
-namespace core
-{
-class EventManager : public Singleton<EventManager>, public MasterManager
-{
-public:
-    EventManager()
-    {
-        init();
-    }
+	namespace core
+	{
+		class EventManager : public Singleton<EventManager>, public MasterManager
+		{
+		public:
+			/*
+			 |  ------------------------------------------
+			 |    Constructor
+			 |  ------------------------------------------
+			 */
+			EventManager()
+			{
+				init();
+			}
 
-    virtual ~EventManager()
-    {
-        clear();
-    }
+			/*
+			|  ------------------------------------------
+			|    Destructor
+			|  ------------------------------------------
+			*/
+			virtual ~EventManager()
+			{
+				clear();
+			}
 
-    void translate(mg::event::Event* event);
+			/*
+			 |  -----------------------------------------
+			 |    Translates the event
+			 |  -----------------------------------------
+			 */
+			void translate(mg::event::Event* event);
 
-    void dispatch(mg::event::Event* event);
+			/*
+			 |  -----------------------------------------
+			 |    Dispatches the event
+			 |  -----------------------------------------
+			 */
+			void dispatch(mg::event::Event* event);
 
-    void send(mg::event::Event* event);
+			/*
+			 |  -----------------------------------------
+			 |    Sends the event
+			 |  -----------------------------------------
+			 */
+			void send(mg::event::Event* event);
 
-    virtual void addEventListener(mg::event::Event* event_type);
+			/*
+			 |  ----------------------------------------
+			 |    Adds event listener
+			 |    Implementing virtual method
+			 |    Parameter Event* type of the event
+			 |  ----------------------------------------
+			 */
+			virtual void addEventListener(mg::event::Event* event_type);
 
-    void removeEventListener();
+			/*
+			 |  ---------------------------------------
+			 |    Removes an event listener
+			 |  ---------------------------------------
+			 */
+			void removeEventListener();
 
-    // Overload this method in game class
-    virtual void getUserInput();
+			/*
+			 |  ---------------------------------------
+			 |    Overload this method in game class
+			 |  ---------------------------------------
+			 */
+			virtual void getUserInput();
 
-    // Gets Event object pointer
-    mg::event::Event* getEvent() const
-    {
-        return event_;
-    }
+			/*
+			 |  ---------------------------------------
+			 |    Gets Event object pointer
+			 |  ---------------------------------------
+			 */
+			mg::event::Event* getEvent() const
+			{
+				return event_;
+			}
 
-private:
-    bool init();
-    void clear();
+		private:
+			bool init();
+			void clear();
 
-    mg::event::Event* event_;
-};
-}    // end of core namespace
+			mg::event::Event* event_;
+		};
+	}    // end of core namespace
 }    // end of mg namespace
-#endif
+#endif    // MG_CORE_EVENTMANAGER_H_
