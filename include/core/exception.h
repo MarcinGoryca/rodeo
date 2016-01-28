@@ -22,12 +22,29 @@ namespace mg
 		public:
 			Exception() {}
 
+			/*
+			 |  ---------------------------------------------------
+			 |    Constructor
+			 |    parameter wstring the string to output
+			 |  ---------------------------------------------------
+			 */
 			explicit Exception(std::wstring str)
 				:exception_string_(str)
 			{}
 
+			/*
+			 |  ---------------------------------------------------
+			 |    Destructor
+             |  ---------------------------------------------------			 
+			 */
 			virtual ~Exception() {}
 
+			/* 
+			 |  ---------------------------------------------------
+			 |    Gets exception string
+			 |    Returns wstring 
+			 |  ---------------------------------------------------
+			 */
 			std::wstring getExceptionString() const { return exception_string_; }
 
 		private:
