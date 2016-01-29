@@ -4,3 +4,8 @@ other
 resources
 test
 *.sdf
+*.opensdf
+*.sln
+*.sln*
+*.vcxproj
+*.vcxproj*

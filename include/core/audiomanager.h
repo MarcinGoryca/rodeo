@@ -7,6 +7,7 @@
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
+
 #ifndef MG_CORE_AUDIOMANAGER_H_
 #define MG_CORE_AUDIOMANAGER_H_
 

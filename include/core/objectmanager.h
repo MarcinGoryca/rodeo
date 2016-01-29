@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |   MG GAME ENGINE
+ |   [ ObjectManager.h ] [ mg\core ]
+ |   Copyright(c) Marcin Goryca
+ |   marcin.goryca@gmail.com
+ |   http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_OBJECTMANAGER_H_
 #define MG_CORE_OBJECTMANAGER_H_
 

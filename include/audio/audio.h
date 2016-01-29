@@ -1,10 +1,10 @@
 /*
  |  -------------------------------------------
  |    MG GAME ENGINE
- |    [ Audio.h ] [ mg\audio]
+ |    [ Audio.h ] [ mg\audio ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
- |    http://marcingryca.pl
+ |    http://marcingoryca.pl
  |  -------------------------------------------
  */
 #ifndef MG_AUDIO_AUDIO_H_
@@ -14,4 +14,4 @@
 #include "soundobject.h"
 #endif
 
-#endif
+#endif    // MG_AUDIO_AUDIO_H_
