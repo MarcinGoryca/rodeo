@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ OutputManager.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_OUTPUTMANAGER_H
 #define MG_CORE_OUTPUTMANAGER_H
 
@@ -17,36 +19,36 @@
 #include "core/mastermanager.h"
 #endif
 
-namespace mg 
+namespace mg
 {
-namespace core
-{
-class OutputManager : public MasterManager
-{
-public:
+	namespace core
+	{
+		class OutputManager : public MasterManager
+		{
+		public:
 
-    OutputManager()
-        :MasterManager()
-    {
-        init();
-    }
+			OutputManager()
+				:MasterManager()
+			{
+				init();
+			}
 
-    ~OutputManager()
-    {
-        clear();
-    }
+			~OutputManager()
+			{
+				clear();
+			}
 
-    mg::io::Log* getLog() const
-    {
-        return log_;
-    }
+			mg::io::Log* getLog() const
+			{
+				return log_;
+			}
 
-private:
-    void init();
-    void clear();
+		private:
+			void init();
+			void clear();
 
-    io::Log* log_;
-};
-}    // end of core namespace
+			io::Log* log_;
+		};
+	}    // end of core namespace
 }    // end of mg namespace
-#endif
+#endif    // MG_CORE_OUTPUTMANAGER_H_

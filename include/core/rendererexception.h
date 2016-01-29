@@ -1,11 +1,12 @@
 /*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_RENDEREREXCEPTION_H_
 #define MG_CORE_RENDEREREXCEPTION_H_
 
@@ -15,21 +16,25 @@
 
 namespace mg
 {
-namespace core
-{
-class RendererException : public Exception
-{
-public:
-    RendererException(){}
+	namespace core
+	{
+		class RendererException : public Exception
+		{
+		public:
+			RendererException() {}
 
-    // Constructor
-    // Parameter const char* You must specify what went wrong
-    explicit RendererException(std::wstring reason_of_exception)
-        :Exception(reason_of_exception)
-    {}
+			/*
+			 |  -----------------------------------------------------------
+			 |    Constructor
+			 |    Parameter const char* You must specify what went wrong
+			 |  -----------------------------------------------------------
+			 */
+			explicit RendererException(std::wstring reason_of_exception)
+				:Exception(reason_of_exception)
+			{}
 
-    ~RendererException(){}
-};
-}    // end of core namespace
+			~RendererException() {}
+		};
+	}    // end of core namespace
 }    // end of mg namespace
-#endif
+#endif    // MG_CORE_RENDEREREXCEPTION_H_

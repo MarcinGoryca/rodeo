@@ -1,11 +1,12 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_RENDERMANAGER_H_
 #define MG_CORE_RENDERMANAGER_H_
 
@@ -27,31 +28,39 @@
 
 namespace mg
 {
-namespace core
-{
-class RenderManager : public Singleton<RenderManager>, public MasterManager
-{
-public:
-    RenderManager(RendererType renderer);
+	namespace core
+	{
+		class RenderManager : public Singleton<RenderManager>, public MasterManager
+		{
+		public:
+			RenderManager(RendererType renderer);
 
-    ~RenderManager();
+			~RenderManager();
 
-    mg::renderer::IRenderer* getRenderer() const
-    {
-        return renderer_;
-    }
+			mg::renderer::IRenderer* getRenderer() const
+			{
+				return renderer_;
+			}
 
-private:
-    RenderManager(){}
+		private:
+			RenderManager() {}
 
-    // Copy constructor
-    RenderManager(RenderManager& copy);
+			/*
+			 |  ------------------------------------------------------
+			 |    COPY CONSTRUCTOR
+			 |  ------------------------------------------------------
+			 */
+			RenderManager(RenderManager& copy);
 
-    // Copy operator
-    RenderManager operator=(RenderManager& copy);
+			/*
+			 |  ------------------------------------------------------
+			 |    COPY OPERATOR
+			 |  ------------------------------------------------------
+			 */
+			RenderManager operator=(RenderManager& copy);
 
-    mg::renderer::IRenderer* renderer_;
-};
-}    // end of core namespace
+			mg::renderer::IRenderer* renderer_;
+		};
+	}    // end of core namespace
 }    // end of mg namespace
-#endif
+#endif    // MG_CORE_RENDERMANAGER_H_
