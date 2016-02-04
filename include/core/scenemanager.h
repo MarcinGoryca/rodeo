@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |     MG GAME ENGINE
+ |     [ SceneManager.h ] [ mg\core ]
+ |     Copyright(c) Marcin Goryca
+ |     marcin.goryca@gmail.com
+ |     http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_SCENEMANAGER_H_
 #define MG_CORE_SCENEMANAGER_H_
 
@@ -32,42 +34,42 @@
 */
 namespace mg
 {
-namespace core
-{
-class SceneManager : public Singleton<SceneManager>, public MasterManager
-{
-public:
-    SceneManager()
+    namespace core
     {
-        init();
-    }
+        class SceneManager : public Singleton<SceneManager>, public MasterManager
+        {
+        public:
+            SceneManager()
+            {
+                init();
+            }
 
-    virtual ~SceneManager()
-    {
-        clear();
-    }
+            virtual ~SceneManager()
+            {
+                clear();
+            }
 
-    virtual void render();
+            virtual void render();
 
-    virtual void update(float dt);
+            virtual void update(float dt);
 
-    //virtual void onIdle();
+            //virtual void onIdle();
 
-    //void addChild(entity::Entity* entity);
+            //void addChild(entity::Entity* entity);
 
-    //void removeChild(entity::Entity* entity);
+            //void removeChild(entity::Entity* entity);
 
-    //void removeChildren();
+            //void removeChildren();
 
-    scene::Scene* getScene()const { return scene_; }
+            scene::Scene* getScene()const { return scene_; }
 
-protected:
-    void init();
-    void clear();
+        protected:
+            void init();
+            void clear();
 
-private:
-    scene::Scene* scene_;
-};
-}    // end of core namespace
+        private:
+            scene::Scene* scene_;
+        };
+    }    // end of core namespace
 }    // end of mg namespace
 #endif

@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |     MG GAME ENGINE
+ |     [ TextureManager.h ] [ mg\core ]
+ |     Copyright(c) Marcin Goryca
+ |     marcin.goryca@gmail.com
+ |     http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_TEXTUREMANAGER_H_
 #define MG_CORE_TEXTUREMANAGER_H_
 
@@ -27,58 +29,58 @@
 
 namespace mg
 {
-namespace core
-{
-class TextureManager : public Singleton<TextureManager>
-{
-public:
-    TextureManager()
+    namespace core
     {
-        reset();
-    }
-    
-    ~TextureManager()
-    {
-        clean();
-    }
+        class TextureManager : public Singleton<TextureManager>
+        {
+        public:
+            TextureManager()
+            {
+                reset();
+            }
 
-    void bind(ui& tid);
+            ~TextureManager()
+            {
+                clean();
+            }
 
-    //Parameter texid is an id of actually loaded texture,
-    // from 1 to MAX_TEXTURES
-    void load(mg::renderer::Image* img, const char* filename, ui& tid);
+            void bind(ui& tid);
 
-    void load();
+            //Parameter texid is an id of actually loaded texture,
+            // from 1 to MAX_TEXTURES
+            void load(mg::renderer::Image* img, const char* filename, ui& tid);
 
-    ui loadDDS(const char* filename);
+            void load();
 
-    ui loadTGA(const char* filename);
+            ui loadDDS(const char* filename);
 
-    mg::renderer::Texture* getTexture() const { return texture_; }
+            ui loadTGA(const char* filename);
 
-    static int getTextureCount() { return s_texture_count_; }
+            mg::renderer::Texture* getTexture() const { return texture_; }
 
-private:
-    void clean();
+            static int getTextureCount() { return s_texture_count_; }
 
-    void reset();
+        private:
+            void clean();
 
-    // Texture object 
-    mg::renderer::Texture* texture_;
+            void reset();
 
-    // Counting How many textures are loaded
-    static int s_texture_count_;
+            // Texture object 
+            mg::renderer::Texture* texture_;
 
-    // Maximum number of textures to load, this can be changed freely 
-    static const ui S_MAX_TEXTURES = 100;
+            // Counting How many textures are loaded
+            static int s_texture_count_;
 
-    // Unique Id of a texture
-    ui texture_id_[S_MAX_TEXTURES];
+            // Maximum number of textures to load, this can be changed freely 
+            static const ui S_MAX_TEXTURES = 100;
 
-    mg::renderer::Image* image_data_[S_MAX_TEXTURES];
+            // Unique Id of a texture
+            ui texture_id_[S_MAX_TEXTURES];
 
-    std::vector<ui> texObj_;
-};
-}    // end of core namespace
+            mg::renderer::Image* image_data_[S_MAX_TEXTURES];
+
+            std::vector<ui> texObj_;
+        };
+    }    // end of core namespace
 }    // end of mg namespace
 #endif

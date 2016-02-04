@@ -177,9 +177,6 @@
     <ClInclude Include="include\entity\entity.h">
       <Filter>Header Files\entity</Filter>
     </ClInclude>
-    <ClInclude Include="include\entity\entityall.h">
-      <Filter>Header Files\entity</Filter>
-    </ClInclude>
     <ClInclude Include="include\entity\mesh.h">
       <Filter>Header Files\entity</Filter>
     </ClInclude>
@@ -214,9 +211,6 @@
       <Filter>Header Files\event</Filter>
     </ClInclude>
     <ClInclude Include="include\event\gameevent.h">
-      <Filter>Header Files\event</Filter>
-    </ClInclude>
-    <ClInclude Include="include\event\eventall.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
     <ClInclude Include="include\event\event.h">
@@ -464,6 +458,12 @@
     </ClInclude>
     <ClInclude Include="source\renderer\gl\gldrawingenums.h">
       <Filter>Header Files\renderer\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\entity\entityheader.h">
+      <Filter>Header Files\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\event\eventheader.h">
+      <Filter>Header Files\event</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

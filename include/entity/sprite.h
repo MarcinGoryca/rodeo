@@ -1,11 +1,13 @@
 /*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ Sprite.h ] [ mg\entity ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_ENTITY_SPRITE_H_
 #define MG_ENTITY_SPRITE_H_
 
@@ -15,38 +17,38 @@
 
 namespace mg
 {
-namespace entity
-{
-class Sprite : public Entity
-{
-public:
-    Sprite()
-    :Entity("", "sprite")
-    {}
+    namespace entity
+    {
+        class Sprite : public Entity
+        {
+        public:
+            Sprite()
+                :Entity("", "sprite")
+            {}
 
-    virtual ~Sprite(){}
-    
-    virtual void render();
-    virtual void update();
+            virtual ~Sprite() {}
 
-    // Gets Width value of the Sprite
-    // Returns unsigned int width
-    unsigned int getWidth() const { return width_; }
+            virtual void render();
+            virtual void update();
 
-    // Gets Height value of the Sprite
-    // Returns unsigned int height
-    unsigned int getHeight() const { return height_; }
+            // Gets Width value of the Sprite
+            // Returns unsigned int width
+            unsigned int getWidth() const { return width_; }
 
-    // Sets Width of the Sprite
-    void setWidth(unsigned int width) { width_ = width; }
+            // Gets Height value of the Sprite
+            // Returns unsigned int height
+            unsigned int getHeight() const { return height_; }
 
-    // Sets Height of the Sprite
-    void setHeight(unsigned int height) { height_ = height; }
+            // Sets Width of the Sprite
+            void setWidth(unsigned int width) { width_ = width; }
 
-private:
-    mg::core ui width_;
-    mg::core ui height_;
-};
-}    // end of entity namespace
+            // Sets Height of the Sprite
+            void setHeight(unsigned int height) { height_ = height; }
+
+        private:
+            mg::core ui width_;
+            mg::core ui height_;
+        };
+    }    // end of entity namespace
 }    // end of mg namespace
 #endif

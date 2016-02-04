@@ -94,7 +94,7 @@
     <ClInclude Include="include\core\timer.h" />
     <ClInclude Include="include\core\window.h" />
     <ClInclude Include="include\entity\entity.h" />
-    <ClInclude Include="include\entity\entityall.h" />
+    <ClInclude Include="include\entity\entityheader.h" />
     <ClInclude Include="include\entity\mesh.h" />
     <ClInclude Include="include\entity\model.h" />
     <ClInclude Include="include\entity\model3d.h" />
@@ -102,7 +102,7 @@
     <ClInclude Include="include\entity\object3d.h" />
     <ClInclude Include="include\entity\sprite.h" />
     <ClInclude Include="include\event\event.h" />
-    <ClInclude Include="include\event\eventall.h" />
+    <ClInclude Include="include\event\eventheader.h" />
     <ClInclude Include="include\event\gameevent.h" />
     <ClInclude Include="include\event\iinputlistener.h" />
     <ClInclude Include="include\event\jennieevent.h" />

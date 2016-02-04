@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ Object.h ] [ mg\entity ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_ENTITY_OBJECT_H_
 #define MG_ENTITY_OBJECT_H_
 
@@ -19,91 +21,91 @@
 
 namespace mg
 {
-namespace entity
-{
-class Event;
-
-class Object
-{
-public:
-    Object()
-        :name_(""),
-         type_("")
-    { 
-        init();
-    }
-
-    // ---- //
-    virtual ~Object()
-    { 
-        clear();
-    }
-
-    // ---- //
-    explicit Object(std::string name)
-        :name_(name)
+    namespace entity
     {
-        init();
-    }
+        class Event;
 
-    // ---- //
-    Object(std::string name, std::string type)
-        :name_(name),
-         type_ (type)
-    {
-        init();
-    }
+        class Object
+        {
+        public:
+            Object()
+                :name_(""),
+                type_("")
+            {
+                init();
+            }
 
-    // Copy Constructor 
-    Object(Object& copy);
+            // ---- //
+            virtual ~Object()
+            {
+                clear();
+            }
 
-    // Copy operator
-    Object& operator=(const Object& copy);
+            // ---- //
+            explicit Object(std::string name)
+                :name_(name)
+            {
+                init();
+            }
 
-    // Gets Id of the Object
-    // Returns unsigned int value of the id
-    mg::core::ui getObjectId() const { return id_; }
+            // ---- //
+            Object(std::string name, std::string type)
+                :name_(name),
+                type_(type)
+            {
+                init();
+            }
 
-    // Gets Name of the Object
-    // Returns string value of the name
-    std::string getObjectName() const { return name_; }
+            // Copy Constructor 
+            Object(Object& copy);
 
-    // Gets Type of the Object
-    // Returns string value of the type
-    std::string getObjectType() const { return type_; }
+            // Copy operator
+            Object& operator=(const Object& copy);
 
-    // Gets number of the Objects
-    // Returns unsigned int value of the number
-    mg::core::ui getObjectsCounter() const { return s_object_counter_; }
+            // Gets Id of the Object
+            // Returns unsigned int value of the id
+            mg::core::ui getObjectId() const { return id_; }
 
-    // Sets type of the Object
-    // Parameter string value of the type
-    void setObjectType(std::string new_type)
-    {
-        type_ = new_type;
-    }
+            // Gets Name of the Object
+            // Returns string value of the name
+            std::string getObjectName() const { return name_; }
 
-    // Sets name of the Object
-    // Parameter string value of the name
-    void setObjectName(std::string new_name)
-    {
-        name_ = new_name;
-    }
+            // Gets Type of the Object
+            // Returns string value of the type
+            std::string getObjectType() const { return type_; }
 
-protected:
-    void init();
-    //virtual void setId(ui id);
-    void clear();
+            // Gets number of the Objects
+            // Returns unsigned int value of the number
+            mg::core::ui getObjectsCounter() const { return s_object_counter_; }
 
-	// Counter for every object on the scene
-    static mg::core::ui s_object_counter_;
+            // Sets type of the Object
+            // Parameter string value of the type
+            void setObjectType(std::string new_type)
+            {
+                type_ = new_type;
+            }
 
-	// Identifier for every object on the scene
-    mg::core::ui id_;
+            // Sets name of the Object
+            // Parameter string value of the name
+            void setObjectName(std::string new_name)
+            {
+                name_ = new_name;
+            }
 
-    std::string name_;
-    std::string type_;
-};
-}    // end of entity namespace
+        protected:
+            void init();
+            //virtual void setId(ui id);
+            void clear();
+
+            // Counter for every object on the scene
+            static mg::core::ui s_object_counter_;
+
+            // Identifier for every object on the scene
+            mg::core::ui id_;
+
+            std::string name_;
+            std::string type_;
+        };
+    }    // end of entity namespace
 }    // end of mg namespace
 #endif

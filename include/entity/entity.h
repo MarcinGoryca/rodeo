@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ Entity.h ] [ mg\entity ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_ENTITY_ENTITY_H_
 #define MG_ENTITY_ENTITY_H_
 
@@ -29,62 +31,62 @@
 #include "math\transform.h"
 #endif
 
-namespace mg 
+namespace mg
 {
-namespace entity
-{
-class Entity : public Object
-{
-public:
-    Entity()
-        :Object(),
-        renderable_(true)
-    { 
-        init();
-    }
-
-    // ---- //
-    explicit Entity(std::string name)
-        :Object(name)
+    namespace entity
     {
-        init();
-    }
+        class Entity : public Object
+        {
+        public:
+            Entity()
+                :Object(),
+                renderable_(true)
+            {
+                init();
+            }
 
-    // ---- //
-    Entity(std::string name, std::string type)
-        :Object(name, type)
-    {
-        init();
-    }
-    
-    // --- //
-    virtual ~Entity()
-    { 
-        clear();
-    }
+            // ---- //
+            explicit Entity(std::string name)
+                :Object(name)
+            {
+                init();
+            }
 
-    virtual void draw();
-    virtual void update(float dt);
-    virtual void init();
-    virtual void clear();
+            // ---- //
+            Entity(std::string name, std::string type)
+                :Object(name, type)
+            {
+                init();
+            }
 
-    virtual void release();
+            // --- //
+            virtual ~Entity()
+            {
+                clear();
+            }
 
-    //virtual void setColor(enginerenderer::Colors& rgb);
+            virtual void draw();
+            virtual void update(float dt);
+            virtual void init();
+            virtual void clear();
 
-protected:
-    //enginerenderer::Material material_;
-    mg::math::AABB box_;
+            virtual void release();
 
-    mg::math::Transform transform_;
-    bool renderable_;
+            //virtual void setColor(enginerenderer::Colors& rgb);
 
-    // Copy Constructor
-    Entity(const Entity& copy);
+        protected:
+            //enginerenderer::Material material_;
+            mg::math::AABB box_;
 
-    // Copy operator
-    Entity operator=(const Entity& copy);
-};
-}    // end of entity namespace
+            mg::math::Transform transform_;
+            bool renderable_;
+
+            // Copy Constructor
+            Entity(const Entity& copy);
+
+            // Copy operator
+            Entity operator=(const Entity& copy);
+        };
+    }    // end of entity namespace
 }    // end of mg namespace
 #endif

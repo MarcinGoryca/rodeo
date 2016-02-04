@@ -1,11 +1,13 @@
 ﻿/*
------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
------------------------------------
-*/
+ |  -----------------------------------
+ |    MG GAME ENGINE
+ |    [ TimeManager.h ] [ mg\core ]
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |  -----------------------------------
+ */
+
 #ifndef MG_CORE_TIMEMANAGER_H_
 #define MG_CORE_TIMEMANAGER_H_
 
@@ -23,41 +25,41 @@
 
 namespace mg
 {
-namespace core
-{
-class TimeManager : public Singleton<TimeManager>, public MasterManager
-{
-public:
-    TimeManager()
-        :time_(NULL),
-         fps_show_(false)
+    namespace core
     {
-        init();
-    }
+        class TimeManager : public Singleton<TimeManager>, public MasterManager
+        {
+        public:
+            TimeManager()
+                :time_(NULL),
+                fps_show_(false)
+            {
+                init();
+            }
 
-    ~TimeManager()
-    {
-        clean();
-    }
+            ~TimeManager()
+            {
+                clean();
+            }
 
-    // Get pointer to Timer Object
-    Timer* getTimer() const { return time_; }
+            // Get pointer to Timer Object
+            Timer* getTimer() const { return time_; }
 
-    // Get FPSShow
-    bool getFpsShow() const { return fps_show_; }
+            // Get FPSShow
+            bool getFpsShow() const { return fps_show_; }
 
-private:
-    // This method is responsible for initiliazation of member objects
-    void init();
+        private:
+            // This method is responsible for initiliazation of member objects
+            void init();
 
-    // This method is responsible for cleaning of member obejcts
-    void clean();
-    bool toggleFPS();
-    float showFPS();
+            // This method is responsible for cleaning of member obejcts
+            void clean();
+            bool toggleFPS();
+            float showFPS();
 
-   Timer* time_;
-   bool fps_show_;
-};
-}    // end of core namespace
+            Timer* time_;
+            bool fps_show_;
+        };
+    }    // end of core namespace
 }    // end of mg namespace
 #endif
