@@ -105,7 +105,7 @@
     <ClInclude Include="include\event\eventheader.h" />
     <ClInclude Include="include\event\gameevent.h" />
     <ClInclude Include="include\event\iinputlistener.h" />
-    <ClInclude Include="include\event\jennieevent.h" />
+    <ClInclude Include="include\event\mgevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
     <ClInclude Include="include\frontend\frontend.h" />
@@ -272,6 +272,9 @@
     <ClCompile Include="source\tools\tools.cpp" />
     <ClCompile Include="source\tools\xmlparser.cpp" />
     <ClCompile Include="test\test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

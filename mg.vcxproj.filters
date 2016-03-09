@@ -100,6 +100,9 @@
     <Filter Include="Header Files\test">
       <UniqueIdentifier>{ebe1786d-a36f-47fc-a1b5-ad0c4f652c8a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Build">
+      <UniqueIdentifier>{35005bf2-fb1a-45f9-a144-c591426ca833}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\audio\audio.h">
@@ -202,9 +205,6 @@
       <Filter>Header Files\event</Filter>
     </ClInclude>
     <ClInclude Include="include\event\keyboardevent.h">
-      <Filter>Header Files\event</Filter>
-    </ClInclude>
-    <ClInclude Include="include\event\jennieevent.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
     <ClInclude Include="include\event\iinputlistener.h">
@@ -465,6 +465,9 @@
     <ClInclude Include="include\event\eventheader.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
+    <ClInclude Include="include\event\mgevent.h">
+      <Filter>Header Files\event</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\audio\soundobject.cpp">
@@ -707,5 +710,10 @@
     <ClCompile Include="source\renderer\gl\gldrawing.cpp">
       <Filter>Source Files\renderer\gl</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt">
+      <Filter>Build</Filter>
+    </Text>
   </ItemGroup>
 </Project>
