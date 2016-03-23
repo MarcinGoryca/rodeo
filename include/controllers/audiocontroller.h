@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ AudioManager.h ] [ mg\core ]
+ |    [ AudioController.h ] [ mg\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_AUDIOMANAGER_H_
-#define MG_CORE_AUDIOMANAGER_H_
+#ifndef MG_CORE_AUDIOCONTROLLER_H_
+#define MG_CORE_AUDIOCONTROLLER_H_
 
 #ifndef MG_MATH_VECTOR_H_
 #include <vector>
@@ -27,7 +27,7 @@ namespace mg
 {
 	namespace core
 	{
-		class AudioManager : public mg::core::Singleton<AudioManager>
+		class AudioController : public mg::core::Singleton<AudioController>
 		{
 		public:
 			/*
@@ -35,19 +35,19 @@ namespace mg
 			 |    Constructor
 			 |  -------------------------------------------------
 			 */
-			AudioManager()
+			AudioController()
 				:sound_object_(NULL),
 				sound_container_(0)
 			{}
 
-			//explicit AudioManager(const char* filename){}
+			//explicit AudioController(const char* filename){}
 
 			/*
 			 |  -------------------------------------------------
 			 |    Destructor
 			 |  -------------------------------------------------
 			 */
-			~AudioManager()
+			~AudioController()
 			{
 				clean();
 			}
@@ -89,14 +89,14 @@ namespace mg
 			 |    Copy Constructor
 			 |  ---------------------------------------------------
 			 */
-			AudioManager(const AudioManager& copy);
+			AudioController(const AudioController& copy);
 
 			/*
 			 |  ---------------------------------------------------
 			 |    Copy operator
 			 |  ---------------------------------------------------
 			 */
-			AudioManager& operator=(const AudioManager& copy);
+			AudioController& operator=(const AudioController& copy);
 
 			/*
 			 |  ---------------------------------------------------
@@ -110,4 +110,4 @@ namespace mg
 		};
 	}    //end of core namespace
 }    // end of mg namespace
-#endif    //MG_CORE_AUDIOMANAGER_H_
+#endif    //MG_CORE_AUDIOCONTROLLER_H_

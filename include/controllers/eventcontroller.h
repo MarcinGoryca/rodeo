@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ EventManager.h ] [ mg\core ]
+ |    [ EventController.h ] [ mg\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_EVENTMANAGER_H_
-#define MG_CORE_EVENTMANAGER_H_
+#ifndef MG_CORE_EVENTCONTROLLER_H_
+#define MG_CORE_EVENTCONTROLLER_H_
 
 #ifndef MG_CORE_CONSTANTS_H_
 #include "constants.h"
@@ -19,8 +19,8 @@
 #include "singleton.h"
 #endif
 
-#ifndef MG_CORE_MASTERMANAGER_H_
-#include "mastermanager.h"
+#ifndef MG_CORE_MASTERCONTROLLER_H_
+#include "mastercontroller.h"
 #endif
 
 namespace mg
@@ -32,7 +32,7 @@ namespace mg
 
 	namespace core
 	{
-		class EventManager : public Singleton<EventManager>, public MasterManager
+		class EventController : public Singleton<EventController>, public MasterController
 		{
 		public:
 			/*
@@ -40,7 +40,7 @@ namespace mg
 			 |    Constructor
 			 |  ------------------------------------------
 			 */
-			EventManager()
+			EventController()
 			{
 				init();
 			}
@@ -50,7 +50,7 @@ namespace mg
 			|    Destructor
 			|  ------------------------------------------
 			*/
-			virtual ~EventManager()
+			virtual ~EventController()
 			{
 				clear();
 			}
@@ -117,4 +117,4 @@ namespace mg
 		};
 	}    // end of core namespace
 }    // end of mg namespace
-#endif    // MG_CORE_EVENTMANAGER_H_
+#endif    // MG_CORE_EVENTCONTROLLER_H_
