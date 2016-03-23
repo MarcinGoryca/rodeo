@@ -19,8 +19,8 @@ namespace renderer
 {
 struct Heightmap
 {
-    ucp data_;
-    ui size_;
+    unsigned char* data_;
+     size_;
 };
 
 //class Heightmap

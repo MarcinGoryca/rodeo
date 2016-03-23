@@ -29,24 +29,15 @@ namespace mg
 {
 	namespace core
 	{
-
 		/*
-		 |  ------------------------------
-		 |    DATA TYPE DEFINITIONS
-		 |  ------------------------------
-		 */
-		typedef unsigned char* ucp;
-		typedef unsigned char uc;
-		typedef unsigned int ui;
-		typedef short int si;
-		typedef const int ci;
-		typedef unsigned short us;
-		typedef unsigned long ul;
-		typedef const char* ccp;
-		typedef const char* const ccpc;
-		typedef std::wstring ws;
-		typedef std::string s;
-		
+		 | -------------------------------------------
+		 |    TYPEDEFS
+		 | -------------------------------------------
+		*/
+		typedef const std::wstring cws;
+
+
+
 		/*
 		 |  -----------------
 		 |    MATH
@@ -61,7 +52,7 @@ namespace mg
 		const float MG_HALFPI = 1.5707963f;
 		const float MG_ONEBYPI = 1.0f / MG_PI;
 		const float MG_ONEBY2PI = 1.0f / MG_TWOPI;
-		const ui MG_FULL_CIRCLE = 360;
+		const unsigned int MG_FULL_CIRCLE = 360;
 
 		// DEGREE - Degrees From Radians [180 / PI] 
 		const float MG_DEGREE = 57.2957f;
@@ -261,7 +252,7 @@ namespace mg
 		enum ShadersVendor { MG_GLSL, MG_CG };
 
 		// Maximum amount of objects on the scene
-		const ui MAX_OBJECTS_ = 100;
+		const unsigned int MAX_OBJECTS_ = 100;
 
 
 		enum RendererType

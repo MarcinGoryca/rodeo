@@ -22,61 +22,26 @@ namespace mg {
 
 			~GLDrawing() {}
 
-			/*
-             |  ---------------------------------------------------------------
-			 |    Wraps glPointSize(GLfloat size)
-			 |    Sets the fixed size, in pixels, that will be used for points
-			 |    when GL_PROGRAM_POINT_SIZE is not enabled
-             |  ---------------------------------------------------------------
-			 */
-			void pointSize(float point_size);
+			// glPointSize(GLfloat size)
+			// Sets the fixed size, in pixels, that will be used for points
+			// when GL_PROGRAM_POINT_SIZE is not enabled
 
-			/*
-             |  --------------------------------------------------------------
-			 |    Wraps glLineWidth(GLfloat width)
-			 |    Sets the fixed width of lines. The default value is 1.0. 
-			 |    width is the new value of line width and must be 
-             |    greater than 0.0
-             |  --------------------------------------------------------------
-			 */
-			void lineWidth(float line_width);
+			// glLineWidth(GLfloat width)
+			// Sets the fixed width of lines. The default value is 1.0. 
+			// width is the new value of line width and must be 
+            // greater than 0.0
 
-			/*
-             |  --------------------------------------------------------------
-             |    Wraps glPolygonMode(GLenum face, GLenum mode)
-			 |    face = GL_FRONT_AND_BACK
-			 |    mode = GL_POINT / GL_LINE / GL_FILL
-             |  --------------------------------------------------------------
-			 */
-			void polygonMode(PolygonFace, PolygonMode);
+			// glPolygonMode(GLenum face, GLenum mode)
+			// face = GL_FRONT_AND_BACK
+			// mode = GL_POINT / GL_LINE / GL_FILL
 
-			/*
-             |  --------------------------------------------------------------
-			 |    Wraps glFrontFace(GLenum mode)
-             |    mode = GL_CCW / GL_CW
-             |  --------------------------------------------------------------
-			 */
-			void frontFace(FrontFaceMode);
+			// Wraps glFrontFace(GLenum mode)
+            // mode = GL_CCW / GL_CW
 
-			/*
-             |  --------------------------------------------------------------
-             |    Wraps glCullFace(GLenum mode)
-			 |    mode = GL_FRONT / GL_BACK / GL_FRONT_AND_BACK
-             |    Culling must be enabled by glEnable(GL_CULL_FACE)
-             |    and can be disabled by glDisable(GL_CULL_FACE)
-             |  --------------------------------------------------------------
-			 */
-			void cullFace(CullFaceMode);
-
-
-			void generateBuffers(int size, uint* buffers);
-
-			void bindBuffer(enum target, uint buffer);
-
-			void bufferData(enum target, int* size, const void* data, enum usage);
-
-			void bufferSubData(enum target, int* offset, int* size, const void* data);
-
+			// glCullFace(GLenum mode)
+			// mode = GL_FRONT / GL_BACK / GL_FRONT_AND_BACK
+            // Culling must be enabled by glEnable(GL_CULL_FACE)
+            // and can be disabled by glDisable(GL_CULL_FACE)
 		};
 
 

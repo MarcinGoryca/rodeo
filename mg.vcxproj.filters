@@ -103,6 +103,9 @@
     <Filter Include="Build">
       <UniqueIdentifier>{35005bf2-fb1a-45f9-a144-c591426ca833}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{435d397f-56db-42c6-8c62-d4b67d0b42ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\audio\audio.h">
@@ -714,6 +717,9 @@
   <ItemGroup>
     <Text Include="todo.txt">
       <Filter>Build</Filter>
+    </Text>
+    <Text Include="docs\structure.txt">
+      <Filter>Docs</Filter>
     </Text>
   </ItemGroup>
 </Project>

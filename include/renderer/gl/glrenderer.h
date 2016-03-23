@@ -213,11 +213,6 @@ private:
 
 private:
     QueryRenderer* query_renderer_;
-
-    float gl_red_;
-    float gl_green_;
-    float gl_blue_;
-    float gl_alpha_;
 };
 }    // end of renderer namespace
 }    // end of mg namespace

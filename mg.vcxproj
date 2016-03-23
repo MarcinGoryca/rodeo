@@ -274,6 +274,7 @@
     <ClCompile Include="test\test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="docs\structure.txt" />
     <Text Include="todo.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
