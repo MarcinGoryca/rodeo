@@ -131,7 +131,7 @@ namespace mg
 		 |    Win32 error - changed for convinience?
 		 |  --------------------------------------------
 		 */
-		const ui ERR_ICON_OK = MB_ICONERROR | MB_OK;
+		const unsigned int ERR_ICON_OK = MB_ICONERROR | MB_OK;
 
 		/*
 		 |  --------------------------------

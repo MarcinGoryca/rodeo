@@ -13,7 +13,7 @@
 #include "frontend\guiifc.h"
 #endif
 
-#ifndef JENNIE_FRONTEND_WIDGET_H_
+#ifndef MG_FRONTEND_WIDGET_H_
 #include "frontend\widget.h"
 #endif
 

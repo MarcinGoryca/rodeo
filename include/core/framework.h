@@ -773,10 +773,10 @@ namespace mg
 			// Window Rectangle structure
 			RECT rect_;
 
-			// 
+			// Power on DirectX
 			bool use_dx_;
 
-			//
+			// Power on OpenGL
 			bool use_gl_;
 		};
 	}    // end of core namespace

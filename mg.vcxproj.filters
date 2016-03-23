@@ -106,6 +106,9 @@
     <Filter Include="Docs">
       <UniqueIdentifier>{435d397f-56db-42c6-8c62-d4b67d0b42ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\controllers">
+      <UniqueIdentifier>{669ac239-9247-4cab-9185-b2b9214d3f5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\audio\audio.h">
@@ -113,9 +116,6 @@
     </ClInclude>
     <ClInclude Include="include\audio\soundobject.h">
       <Filter>Header Files\audio</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\audiomanager.h">
-      <Filter>Header Files\core</Filter>
     </ClInclude>
     <ClInclude Include="include\core\common.h">
       <Filter>Header Files\core</Filter>
@@ -129,49 +129,19 @@
     <ClInclude Include="include\core\error.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\core\eventmanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
     <ClInclude Include="include\core\exception.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\fontmanager.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
     <ClInclude Include="include\core\framework.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\core\mastermanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\objectmanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\outputmanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
     <ClInclude Include="include\core\rendererexception.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\rendermanager.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
     <ClInclude Include="include\core\rtti.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\core\scenemanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\shadersmanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
     <ClInclude Include="include\core\singleton.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\texturemanager.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\core\timemanager.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
     <ClInclude Include="include\core\timer.h">
@@ -470,6 +440,39 @@
     </ClInclude>
     <ClInclude Include="include\event\mgevent.h">
       <Filter>Header Files\event</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\audiocontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\eventcontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\fontcontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\mastercontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\objectcontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\outputcontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\rendercontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\scenecontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\shaderscontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\texturecontroller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controllers\timecontroller.h">
+      <Filter>Header Files\controllers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
