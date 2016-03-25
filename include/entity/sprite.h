@@ -23,7 +23,9 @@ namespace mg
         {
         public:
             Sprite()
-                :Entity("", "sprite")
+                :Entity("", "sprite"),
+				_width(0),
+				_height(0)
             {}
 
             virtual ~Sprite() {}
@@ -33,21 +35,23 @@ namespace mg
 
             // Gets Width value of the Sprite
             // Returns unsigned int width
-            unsigned int getWidth() const { return width_; }
+            unsigned int getWidth() const { return _width; }
 
             // Gets Height value of the Sprite
             // Returns unsigned int height
-            unsigned int getHeight() const { return height_; }
+            unsigned int getHeight() const { return _height; }
 
             // Sets Width of the Sprite
-            void setWidth(unsigned int width) { width_ = width; }
+            void setWidth(unsigned int width) { _width = width; }
 
             // Sets Height of the Sprite
-            void setHeight(unsigned int height) { height_ = height; }
+            void setHeight(unsigned int height) { _height = height; }
 
         private:
-            mg::core ui width_;
-            mg::core ui height_;
+            unsigned int _width;
+            unsigned int _height;
+
+			void init();
         };
     }    // end of entity namespace
 }    // end of mg namespace

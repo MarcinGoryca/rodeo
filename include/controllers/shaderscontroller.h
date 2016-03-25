@@ -1,15 +1,15 @@
 /*
  |  -----------------------------------
  |     MG Game Engine
- |     [ ShadersManager.h ] [ mg\core ]
+ |     [ ShadersController.h ] [ mg\core ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_SHADERSMANAGER_H_
-#define MG_CORE_SHADERSMANAGER_H_
+#ifndef MG_CORE_SHADERSCONTROLLER_H_
+#define MG_CORE_SHADERSCONTROLLER_H_
 
  //#include <string>
 
@@ -19,15 +19,15 @@
 
 namespace mg
 {
-    namespace core
+    namespace controllers
     {
-        class ShadersManager
+        class ShadersController
         {
         public:
-            ShadersManager()
+            ShadersController()
                 :shader_(nullptr)
             {}
-            ~ShadersManager() {}
+            ~ShadersController() {}
 
             // Creates Shaders
             // Parameter ShadersVendor - CG, GLSL

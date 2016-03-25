@@ -6,16 +6,16 @@
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
+#ifndef MG_CORE_RENDERCONTROLLER_H_
+#define MG_CORE_RENDERCONTROLLER_H_
 
-#ifndef MG_CORE_RENDERMANAGER_H_
-#define MG_CORE_RENDERMANAGER_H_
+#ifndef MG_CORE_MASTERCONTROLLER_H_
+#include "controllers\mastercontroller.h"
+#endif
+
 
 #ifndef MG_CORE_SINGLETON_H_
 #include "core\singleton.h"
-#endif
-
-#ifndef MG_CORE_MASTERMANAGER_H_
-#include "core\mastermanager.h"
 #endif
 
 #ifndef MG_RENDERER_GL_GLRENDERER_H_
@@ -30,12 +30,12 @@ namespace mg
 {
 	namespace core
 	{
-		class RenderManager : public Singleton<RenderManager>, public MasterManager
+		class RenderController : public Singleton<RenderController>, public MasterController
 		{
 		public:
-			RenderManager(RendererType renderer);
+			RenderController(RendererType renderer);
 
-			~RenderManager();
+			~RenderController();
 
 			mg::renderer::IRenderer* getRenderer() const
 			{
@@ -43,24 +43,24 @@ namespace mg
 			}
 
 		private:
-			RenderManager() {}
+			RenderController() {}
 
 			/*
 			 |  ------------------------------------------------------
 			 |    COPY CONSTRUCTOR
 			 |  ------------------------------------------------------
 			 */
-			RenderManager(RenderManager& copy);
+			RenderController(RenderController& copy);
 
 			/*
 			 |  ------------------------------------------------------
 			 |    COPY OPERATOR
 			 |  ------------------------------------------------------
 			 */
-			RenderManager operator=(RenderManager& copy);
+			RenderController operator=(RenderController& copy);
 
 			mg::renderer::IRenderer* renderer_;
 		};
 	}    // end of core namespace
 }    // end of mg namespace
-#endif    // MG_CORE_RENDERMANAGER_H_
+#endif    // MG_CORE_RENDERCONTROLLER_H_

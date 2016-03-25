@@ -1,15 +1,19 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ FontManager.h ] [ mg\core ]
+ |    [ FontController.h ] [ mg\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_FONTMANAGER_H_
-#define MG_CORE_FONTMANAGER_H_
+#ifndef MG_CORE_MASTERCONTROLLER_H_
+#include "core\mastermanager.h"
+#endif
+
+#ifndef MG_CORE_FONTCONTROLLER_H_
+#define MG_CORE_FONTCONTROLLER_H_
 
 #ifndef MG_RENDERER_FONT_H_
 #include "renderer\font.h"
@@ -19,20 +23,16 @@
 #include "core\Singleton.h"
 #endif
 
-#ifndef MG_CORE_MASTERMANAGER_H_
-#include "core\mastermanager.h"
-#endif
-
 namespace mg
 {
 	namespace core
 	{
-		class FontManager : public Singleton<FontManager>, public MasterManager
+		class FontController : public Singleton<FontController>, public MasterController
 		{
 		public:
-			FontManager() {}
+			FontController() {}
 
-			~FontManager()
+			~FontController()
 			{
 				clear();
 			}
@@ -49,4 +49,4 @@ namespace mg
 		};
 	}   // end of core namespace
 }   // end of mg namespace
-#endif    // MG_CORE_FONTMANAGER_H_
+#endif    // MG_CORE_FONTCONTROLLER_H_

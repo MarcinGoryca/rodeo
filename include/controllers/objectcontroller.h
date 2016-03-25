@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |   MG GAME ENGINE
- |   [ ObjectManager.h ] [ mg\core ]
+ |   [ ObjectController.h ] [ mg\core ]
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_OBJECTMANAGER_H_
-#define MG_CORE_OBJECTMANAGER_H_
+#ifndef MG_CORE_OBJECTCONTROLLER_H_
+#define MG_CORE_OBJECTCONTROLLER_H_
 
 #ifndef VECTOR_H_
 #include <vector>
@@ -31,12 +31,12 @@ namespace mg
 {
 namespace core
 {
-class ObjectManager : public Singleton<ObjectManager>
+class ObjectController : public Singleton<ObjectController>
 {
 public:
-    ObjectManager();
+    ObjectController();
 
-    virtual ~ObjectManager(){}
+    virtual ~ObjectController(){}
 
     //scene::Model3D* object3d_;
     //scene::Model3D* objects_container_[MAX_OBJECTS_];
@@ -54,10 +54,10 @@ public:
 
 private:
     // Copy constructor
-    ObjectManager(const ObjectManager& copy);
+    ObjectController(const ObjectController& copy);
 
     // Copy operator
-    ObjectManager operator=(const ObjectManager& copy);
+    ObjectController operator=(const ObjectController& copy);
 
     // Used to counting objects
     static ui s_objects_counter_;

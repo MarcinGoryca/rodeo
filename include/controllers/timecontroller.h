@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ TimeManager.h ] [ mg\core ]
+ |    [ TimeController.h ] [ mg\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_TIMEMANAGER_H_
-#define MG_CORE_TIMEMANAGER_H_
+#ifndef MG_CORE_TIMECONTROLLER_H_
+#define MG_CORE_TIMECONTROLLER_H_
 
 #ifndef MG_CORE_SINGLETON_H_
 #include "core\singleton.h"
@@ -19,25 +19,25 @@
 #include "core\Timer.h"
 #endif
 
-#ifndef MG_CORE_MASTERMANAGER_H_
-#include "core\mastermanager.h"
+#ifndef MG_CORE_MASTERCONTROLLER_H_
+#include "controllers\mastercontroller.h"
 #endif
 
 namespace mg
 {
-    namespace core
+    namespace controllers
     {
-        class TimeManager : public Singleton<TimeManager>, public MasterManager
+        class TimeController : public Singleton<TimeController>, public MasterController
         {
         public:
-            TimeManager()
+            TimeController()
                 :time_(NULL),
                 fps_show_(false)
             {
                 init();
             }
 
-            ~TimeManager()
+            ~TimeController()
             {
                 clean();
             }

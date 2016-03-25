@@ -62,8 +62,8 @@ public:
     virtual bool open(const char* fileName);
 
 
-    core::ui getColorDepth()const { return colordepth_; }
-    core::ui getTextureId()const { return texture_id_; }
+    unsigned int getColorDepth()const { return colordepth_; }
+    unsigned int getTextureId()const { return texture_id_; }
 
 private :
     bool pickFile(const char* fileName);
@@ -79,11 +79,11 @@ private :
     BYTE uheader_[12];
     BYTE cheader_[12];
     BYTE header_[6];
-    core::ui colordepth_;
+    unsigned int colordepth_;
 
-    core::ul imagesize_;
+    unsigned long imagesize_;
     HANDLE hfile_;
-    core::ui texture_id_;
+    unsigned int texture_id_;
 };
 }    // end of io namespace
 }    // end of mg namespace

@@ -1,39 +1,39 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ OutputManager.h ] [ mg\core ]
+ |    [ OutputController.h ] [ mg\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_OUTPUTMANAGER_H
-#define MG_CORE_OUTPUTMANAGER_H
+#ifndef MG_CORE_OUTPUTCONTROLLER_H
+#define MG_CORE_OUTPUTCONTROLLER_H
 
 #ifndef MG_IO_LOG_H_
 #include "io/log.h"
 #endif
 
-#ifndef MG_CORE_MASTERMANAGER_H_
-#include "core/mastermanager.h"
+#ifndef MG_CORE_MASTERCONTROLLER_H_
+#include "core/mastercontroller.h"
 #endif
 
 namespace mg
 {
 	namespace core
 	{
-		class OutputManager : public MasterManager
+		class OutputController : public MasterController
 		{
 		public:
 
-			OutputManager()
-				:MasterManager()
+			OutputController()
+				:MasterController()
 			{
 				init();
 			}
 
-			~OutputManager()
+			~OutputController()
 			{
 				clear();
 			}
@@ -51,4 +51,4 @@ namespace mg
 		};
 	}    // end of core namespace
 }    // end of mg namespace
-#endif    // MG_CORE_OUTPUTMANAGER_H_
+#endif    // MG_CORE_OUTPUTCONTROLLER_H_

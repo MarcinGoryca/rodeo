@@ -108,12 +108,9 @@
     <ClInclude Include="include\event\mgevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
-    <ClInclude Include="include\frontend\frontend.h" />
-    <ClInclude Include="include\frontend\gameui.h" />
-    <ClInclude Include="include\frontend\guiifc.h" />
-    <ClInclude Include="include\frontend\igui.h" />
-    <ClInclude Include="include\frontend\jenniefrontend.h" />
-    <ClInclude Include="include\frontend\widget.h" />
+    <ClInclude Include="include\front\front.h" />
+    <ClInclude Include="include\front\igui.h" />
+    <ClInclude Include="include\front\widget.h" />
     <ClInclude Include="include\io\file3dfactory.h" />
     <ClInclude Include="include\io\file3ds.h" />
     <ClInclude Include="include\io\filease.h" />

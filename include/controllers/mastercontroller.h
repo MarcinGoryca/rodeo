@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ MasterManager.h ] [ mg\ core ]
+ |    [ MasterController.h ] [ mg\ core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_MASTERMANAGER_H
-#define MG_CORE_MASTERMANAGER_H
+#ifndef MG_CORE_MASTERCONTROLLER_H
+#define MG_CORE_MASTERCONTROLLER_H
 
 #ifndef MG_CORE_COMMON_H_
 #include "common.h"
@@ -19,16 +19,16 @@ namespace mg
 {
 	namespace core
 	{
-		class MasterManager
+		class MasterController
 		{
 		public:
-			MasterManager()
+			MasterController()
 				:module_initialized_(false)
 			{
 				initstr_.clear();
 			}
 
-			virtual ~MasterManager()
+			virtual ~MasterController()
 			{
 				initstr_.clear();
 				module_initialized_ = false;
@@ -43,4 +43,4 @@ namespace mg
 		};
 	}    // end of core namespace
 }    // end of mg namespace
-#endif    // MG_CORE_MASTERMANAGER_H_
+#endif    // MG_CORE_MASTERCONTROLLER_H_
