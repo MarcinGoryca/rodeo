@@ -11,40 +11,40 @@
 #ifndef MG_CORE_FRAMEWORK_H_
 #define MG_CORE_FRAMEWORK_H_
 
-#ifndef MG_CORE_OBJECTMANAGER_H_
-#include "core\objectmanager.h"
+#ifndef MG_CONTROLLERS_OBJECTCONTROLLER_H_
+#include "controllers\objectcontroller.h"
 #endif
 
-#ifndef MG_CORE_AUDIOMANAGER_H_
-#include "core\audiomanager.h"
+#ifndef MG_CONTROLLERS_AUDIOCONTROLLER_H_
+#include "controllers\audiocontroller.h"
 #endif
 
-#ifndef MG_CORE_SCENEMANAGER_H_
-#include "core\scenemanager.h"
+#ifndef MG_CONTROLLERS_SCENECONTROLLER_H_
+#include "controllers\scenecontroller.h"
 #endif
 
-#ifndef MG_CORE_TIMEMANAGER_H_
-#include "core\timemanager.h"
+#ifndef MG_CONTROLLERS_TIMECONTROLLER_H_
+#include "controllers\timecontroller.h"
 #endif
 
-#ifndef MG_CORE_RENDERMANAGER_H_
-#include "core\rendermanager.h"
+#ifndef MG_CONTROLLERS_RENDERCONTROLLER_H_
+#include "controllers\rendercontroller.h"
 #endif
 
  //#ifndef CORE_FONTMANAGER_H_
  //#include "core\fontmanager.h"
  //#endif
 
-#ifndef MG_CORE_EVENTMANAGER_H_
-#include "core\eventmanager.h"
+#ifndef MG_CONTROLLERS_EVENTCONTROLLER_H_
+#include "controllers\eventcontroller.h"
 #endif
 
 //#ifndef CORE_TEXTUREMANAGER_H_
 //#include "core\texturemanager.h"
 //#endif
 
-#ifndef MG_CORE_OUTPUTMANAGER_H_
-#include "core\outputmanager.h"
+#ifndef MG_CONTROLLERS_OUTPUTCONTROLLER_H_
+#include "controllers\outputcontroller.h"
 #endif
 
 //#ifndef IO_MOUSE_H_
@@ -83,61 +83,61 @@ namespace mg
 		{
 		public:
 			Framework()
-				:output_manager_(nullptr),
-				audio_manager_(nullptr),
-				mathsystem_(nullptr),
-				render_manager_(nullptr),
-				xml_parser_(nullptr),
-				object_manager_(nullptr),
-				time_manager_(nullptr),
-				scene_manager_(nullptr),
-				event_manager_(nullptr),
-				physicsystem_(nullptr),
-				width_(0),
-				height_(0),
-				depth_(0),
-				frequency_(0),
-				fullscreen_(false),
-				style_(0),
-				exstyles_(0),
-				hwnd_(0),
-				hrc_(0),
-				hdc_(0),
-				hinstance_(0),
-				window_classname_(L"ENGINE"),
-				windowname_(L"ENGINE Game Engine"),
-				use_dx_(false),
-				use_gl_(false)
+				:_output_controller(nullptr),
+				_audio_controller(nullptr),
+				_mathsystem(nullptr),
+				_render_controller(nullptr),
+				_xml_parser(nullptr),
+				_object_controller(nullptr),
+				_time_controller(nullptr),
+				_scene_controller(nullptr),
+				_event_controller(nullptr),
+				_physicsystem(nullptr),
+				_width(0),
+				_height(0),
+				_depth(0),
+				_frequency(0),
+				_fullscreen(false),
+				_style(0),
+				_exstyles(0),
+				_hwnd(0),
+				_hrc(0),
+				_hdc(0),
+				_hinstance(0),
+				_window_classname(L"ENGINE"),
+				_windowname(L"ENGINE Game Engine"),
+				_use_dx(false),
+				_use_gl(false)
 			{
 				init();
 			}
 
 			Framework(const std::wstring window_name)
-				:output_manager_(nullptr),
-				audio_manager_(nullptr),
-				mathsystem_(nullptr),
-				render_manager_(nullptr),
-				xml_parser_(nullptr),
-				object_manager_(nullptr),
-				time_manager_(nullptr),
-				scene_manager_(nullptr),
-				event_manager_(nullptr),
-				physicsystem_(nullptr),
-				width_(0),
-				height_(0),
-				depth_(0),
-				frequency_(0),
-				fullscreen_(false),
-				style_(0),
-				exstyles_(0),
-				hwnd_(0),
-				hrc_(0),
-				hdc_(0),
-				hinstance_(0),
-				window_classname_(L"ENGINE"),
-				windowname_(window_name),
-				use_dx_(false),
-				use_gl_(false)
+				:_output_controller(nullptr),
+				_audio_controller(nullptr),
+				_mathsystem(nullptr),
+				_render_controller(nullptr),
+				_xml_parser(nullptr),
+				_object_controller(nullptr),
+				_time_controller(nullptr),
+				_scene_controller(nullptr),
+				_event_controller(nullptr),
+				_physicsystem(nullptr),
+				_width(0),
+				_height(0),
+				_depth(0),
+				_frequency(0),
+				_fullscreen(false),
+				_style(0),
+				_exstyles(0),
+				_hwnd(0),
+				_hrc(0),
+				_hdc(0),
+				_hinstance(0),
+				_window_classname(L"ENGINE"),
+				_windowname(window_name),
+				_use_dx(false),
+				_use_gl(false)
 			{
 				init();
 			}
@@ -147,7 +147,7 @@ namespace mg
 				destroy();
 			}
 
-			/* 
+			/*
 			 |  -------------------------------------------------------------------------
 			 |    Creates Framework instance
 			 |    This method creates Win32 window class and all stuff to create window
@@ -277,7 +277,7 @@ namespace mg
 			 |  ------------------------------------------------------------------------
 			 |    [Pure Virtual]
 			 |    This method is invoked when rendering takes place
-			 |    This method must be implemented in derivied class 
+			 |    This method must be implemented in derivied class
 			 |  ------------------------------------------------------------------------
 			 */
 			virtual void onRender() = 0;
@@ -314,7 +314,7 @@ namespace mg
 			 |  -------------------------------------------------------------------------
 			 |    [Optional]
 			 |    const char* Path to cursor file
-			 |        e.g. "assets\\cursor.cur" 
+			 |        e.g. "assets\\cursor.cur"
 			 |    This method will replace default cursor with specified one
 			 |  -------------------------------------------------------------------------
 			 */
@@ -336,7 +336,7 @@ namespace mg
 			 */
 			const int getHeight() const
 			{
-				return height_;
+				return _height;
 			}
 
 			/*
@@ -346,7 +346,7 @@ namespace mg
 			 */
 			const int getWidth() const
 			{
-				return width_;
+				return _width;
 			}
 
 			/*
@@ -357,27 +357,27 @@ namespace mg
 			 */
 			float getGlobalDeltaTime() const
 			{
-				return global_delta_time_;
+				return _global_delta_time;
 			}
 
 			/*
 			 |  --------------------------------------------------------------------------
-			 |    Gets the DirectX Renderer if true 
+			 |    Gets the DirectX Renderer if true
 			 |  --------------------------------------------------------------------------
 			 */
-			bool useDirectX() const { return use_dx_; }
+			bool useDirectX() const { return _use_dx; }
 
 			/*
 			 |  --------------------------------------------------------------------------
 			 |    Gets the OpenGL Renderer if true
 			 |  --------------------------------------------------------------------------
 			 */
-			bool useOpenGL() const { return use_gl_; }
+			bool useOpenGL() const { return _use_gl; }
 
 		private:
 			/*
 			 |  ----------------------------------------------------------------
-		     |    Initializes all subsystems
+			 |    Initializes all subsystems
 			 |  ----------------------------------------------------------------
 			 */
 			void init();
@@ -546,7 +546,7 @@ namespace mg
 
 			/*
 			 |  -----------------------------------------------------------------------
-			 |    Sets Window width and height, 
+			 |    Sets Window width and height,
 			 |           Also it will change renderer width/height ratio
 			 |  -----------------------------------------------------------------------
 			 */
@@ -571,84 +571,84 @@ namespace mg
 			 |    Sets Rendering Context
 			 |  -----------------------------------------------------------------------
 			 */
-			void setHRC(HGLRC hrc) { hrc_ = hrc; }
+			void setHrc(HGLRC hrc) { _hrc = hrc; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Sets Width of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			void setWindowWidth(int width) { width_ = width; }
+			void setWindowWidth(int width) { _width = width; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Sets Height of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			void setWindowHeight(int height) { height_ = height; }
+			void setWindowHeight(int height) { _height = height; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Sets Depth of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			void setDepth(int depth) { depth_ = depth; }
+			void setDepth(int depth) { _depth = depth; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Sets Frequency of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			void setFrequency(int freq) { frequency_ = freq; }
+			void setFrequency(int freq) { _frequency = freq; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Sets Class name of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			void setClassName(std::wstring cn) { window_classname_ = cn; }
+			void setClassName(std::wstring cn) { _window_classname = cn; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Sets Name of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			void setWindowName(const std::wstring wn) { windowname_ = wn; }
+			void setWindowName(const std::wstring wn) { _windowname = wn; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Gets Handle to the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			const HWND getHWND()const { return hwnd_; }
+			const HWND getHwnd()const { return _hwnd; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Gets Handle to the Instance of the Window
 			 |  -----------------------------------------------------------------------
 			 */
-			const HINSTANCE getHinstance()const { return hinstance_; }
+			const HINSTANCE getHinstance()const { return _hinstance; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Gets Handle to Rendering Context
 			 |  -----------------------------------------------------------------------
 			 */
-			const HGLRC getHRC()const { return hrc_; }
+			const HGLRC getHrc()const { return _hrc; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Gets Handle to Device Context
 			 |  -----------------------------------------------------------------------
 			 */
-			const HDC getDeviceContext()const { return hdc_; }
+			const HDC getHdc()const { return _hdc; }
 
 			/*
 			 |  -----------------------------------------------------------------------
 			 |    Gets Window Class name
 			 |  -----------------------------------------------------------------------
 			 */
-			std::wstring getWindowClassName() const { return window_classname_; }
+			std::wstring getWindowClassName() const { return _window_classname; }
 
 			/*
 			 |  -----------------------------------------------------------------------
@@ -656,7 +656,7 @@ namespace mg
 			 |    Returns const char* - the name of the window
 			 |  -----------------------------------------------------------------------
 			 */
-			std::wstring getWindowName() const { return windowname_; }
+			std::wstring getWindowName() const { return _windowname; }
 
 			/*
 			 |  ------------------------------------------------------------------------
@@ -664,7 +664,7 @@ namespace mg
 			 |    Returns int value of the depth
 			 |  ------------------------------------------------------------------------
 			 */
-			int getDepth()const { return depth_; }
+			int getDepth()const { return _depth; }
 
 			/*
 			 |  ------------------------------------------------------------------------
@@ -672,7 +672,7 @@ namespace mg
 			 |    Returns int value of the frequency
 			 |  ------------------------------------------------------------------------
 			 */
-			int getFrequency()const { return frequency_; }
+			int getFrequency()const { return _frequency; }
 
 			/*
 			 |  ------------------------------------------------------------------------
@@ -681,103 +681,134 @@ namespace mg
 			 */
 			void setGlobalDeltaTime(float delta)
 			{
-				global_delta_time_ = delta;
+				_global_delta_time = delta;
 			}
+
+			/*
+			 |  -----------------------------------------------------------------
+			 |     Sets Device Context
+			 |  -----------------------------------------------------------------
+			 */
+			void setHdc(HDC dc)
+			{
+				_hdc = dc;
+			}
+
+			/*
+			 |  --------------------------------------------------------------
+			 |    Sets Window Handle
+			 |  --------------------------------------------------------------
+			 */
+			void setHwnd(HWND hwnd)
+			{
+				_hwnd = hwnd;
+			}
+
+			/*
+			 |  --------------------------------------------------------------
+			 |    Sets Instance of the Window
+			 |  --------------------------------------------------------------
+			 */
+			void setHinstance(HINSTANCE hinstance)
+			{
+				_hinstance = hinstance;
+			}
+
 		public:
-			std::unique_ptr<OutputManager> output_manager_;
-			std::unique_ptr<AudioManager> audio_manager_;
+			std::unique_ptr<OutputController> _output_controller;
+			std::unique_ptr<AudioController> _audio_controller;
 
 			//io::Mouse mouse_;
 
-			std::unique_ptr<mg::math::MathSystem> mathsystem_;
+			std::unique_ptr<mg::math::MathSystem> _mathsystem;
 
-			std::unique_ptr<RenderManager> render_manager_;
+			std::unique_ptr<RenderController> _render_controller;
 
 			//renderer::RendererInterface* renderer_;
 
 			//scene::Camera camera_;
 
-			std::unique_ptr<mg::tools::XmlParser> xml_parser_;
+			std::unique_ptr<mg::tools::XmlParser> _xml_parser;
 
-			std::unique_ptr<ObjectManager> object_manager_;
+			std::unique_ptr<ObjectController> _object_controller;
 
-			std::unique_ptr<TimeManager> time_manager_;
+			std::unique_ptr<TimeController> _time_controller;
 
-			std::unique_ptr<SceneManager> scene_manager_;
+			std::unique_ptr<SceneController> _scene_controller;
 
 			//FontManager fontMgr_;
 
-			std::unique_ptr<EventManager> event_manager_;
+			std::unique_ptr<EventController> _event_controller;
 
 			//TextureManager textureMgr_;
 
 			//scene::Viewport viewport_;
 
-			std::unique_ptr<mg::physics::PhysicSystem> physicsystem_;
+			std::unique_ptr<mg::physics::PhysicSystem> _physicsystem;
 
+		private:
 			// Global Delta Time,
 			// value for entire engine, 
 			// e.g. for updating individual subsystems
-			float global_delta_time_;
+			float _global_delta_time;
 
-		private:
 			// Win32 Window structure
-			WNDCLASSEX wnd_;
+			WNDCLASSEX _wnd;
 
 			// Width of the Window
-			int width_;
+			int _width;
 
 			// Height of the Window
-			int height_;
+			int _height;
 
 			// Depth of the Window
-			int depth_;
+			int _depth;
 
 			// Frequency of the Window
-			int frequency_;
+			int _frequency;
 
 			// Fullscreen mode of the window
-			bool fullscreen_;
+			bool _fullscreen;
 
 			// Styles of the Window
 			//    WS_BORDER | WS_OVERLAPPEDWINDOW | WS_VISIBLE
-			int style_;
+			int _style;
 
 			// Extended styles of the Window
 			//    WS_EX_APPWINDOW | WS_EX_WINDOWEDGE
-			int exstyles_;
+			int _exstyles;
 
 			// Window Handle
-			HWND hwnd_;
+			HWND _hwnd;
 
 			// Rendering Context Handle
-			HGLRC hrc_;
+			HGLRC _hrc;
 
 			// Device Context Handle
-			HDC hdc_;
+			HDC _hdc;
 
 			// Instance of the Window
-			HINSTANCE hinstance_;
+			HINSTANCE _hinstance;
 
 			// Classname for the Window
 			//    it must not contain spaces
-			std::wstring window_classname_;
+			std::wstring _window_classname;
 
 			// Window Name
 			//    It is displayed on the titlebar
-			std::wstring windowname_;
+			std::wstring _windowname;
 
 			// Message structure
-			MSG msg_;
+			MSG _msg;
 
 			// Window Rectangle structure
-			RECT rect_;
+			RECT _rect;
 
 			// Power on DirectX
-			bool use_dx_;
+			bool _use_dx;
 
 			// Power on OpenGL
-			bool use_gl_;
+			bool _use_gl;
 		};
 	}    // end of core namespace
 }    // end of mg namespace

@@ -19,16 +19,16 @@ namespace mg
 {
     namespace core
     {
-        class RTTI
+        class Rtti
         {
         public:
-            RTTI(const std::string& name)
+            Rtti(const std::string& name)
                 :classname_(name)
             {}
 
             virtual const std::string& getClassName()const { return classname_; }
 
-            ~RTTI() {}
+            ~Rtti() {}
 
         private:
             std::string classname_;

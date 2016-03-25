@@ -1,11 +1,11 @@
 ﻿/*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ |   MG Game Engine
+ |   Copyright(c) Marcin Goryca
+ |   marcin.goryca@gmail.com
+ |   http://marcingoryca.pl
+ | ----------------------------------------------
+ */
 #include "core\framework.h"
 
 namespace mg
@@ -34,11 +34,11 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpar
 //--------------------------------------------------------------------------------------------------
 void Framework::create()
 {	
-    output_manager_->getLog()->open(L"log.txt");
-    output_manager_->getLog()->write(output_manager_->getString());
-    output_manager_->getLog()->write(L"Framework created\nEngine is starting...");
+    //output_manager_->getLog()->open(L"log.txt");
+    //output_manager_->getLog()->write(output_manager_->getString());
+    //output_manager_->getLog()->write(L"Framework created\nEngine is starting...");
 
-    HDC hdc = GetDC(getHWND());
+    HDC hdc = GetDC(getHwnd());
 
     //if(xml_parser_->read(CONFIGURATION_XML.c_str()))
     //{
@@ -51,30 +51,30 @@ void Framework::create()
 
     createWindowClass(getHinstance(), getWindowClassName());
 
-    RegisterClassEx(&wnd_);
+    RegisterClassEx(&_wnd);
     window(getWindowClassName(), getWindowName(), getHinstance(), getWidth(), getHeight());
     show();
 
-    output_manager_->getLog()->write(L"Win32 Application is created");
+    //output_manager_->getLog()->write(L"Win32 Application is created");
 
-    if(use_gl_)
+    if(_use_gl)
     {
-        render_manager_ = std::unique_ptr<RenderManager>(new RenderManager(MG_GL));
-        createGLContext(GetDC(getHWND()));
+        render_manager_ = std::unique_ptr<RenderController>(new RenderController(MG_GL));
+        createGLContext(GetDC(getHwnd()));
     }
-    if(use_dx_)
+    if(_use_dx)
     {
-        render_manager_ = std::unique_ptr<RenderManager>(new RenderManager(MG_DX));
-        render_manager_->getRenderer()->setHWND(getHWND());
+        render_manager_ = std::unique_ptr<RenderController>(new RenderController(MG_DX));
+        render_manager_->getRenderer()->setHWND(getHwnd());
     }
 
-    output_manager_->getLog()->write(L"Rendering Context is created");
+    //output_manager_->getLog()->write(L"Rendering Context is created");
     render_manager_->getRenderer()->run(getWidth(), getHeight());
-    output_manager_->getLog()->write(L"Renderer is running...");
+    //output_manager_->getLog()->write(L"Renderer is running...");
 
-    if(physicsystem_->module_initialized_)
+    if(physicsystem_->_module_initialized)
     {
-        output_manager_->getLog()->write(physicsystem_->getString());
+        //output_manager_->getLog()->write(physicsystem_->getString());
     }
 }
 
@@ -83,12 +83,12 @@ void Framework::run()
 {
     while(true)
     {
-        if(PeekMessage(&msg_, 0, 0, 0, PM_REMOVE))
+        if(PeekMessage(&_msg, 0, 0, 0, PM_REMOVE))
         {
-            if(msg_.message == WM_QUIT)
+            if(_msg.message == WM_QUIT)
                 break;
-            TranslateMessage(&msg_);
-            DispatchMessage(&msg_);
+            TranslateMessage(&_msg);
+            DispatchMessage(&_msg);
         }
         time_manager_->getTimer()->countFramesPerSecond();
         setGlobalDeltaTime(time_manager_->getTimer()->getDelta());
@@ -96,8 +96,8 @@ void Framework::run()
         event_manager_->getUserInput();
 
         //Start Physics calculations
-        physicsystem_->update(getGlobalDeltaTime());
-        physicsystem_->update();
+        //physicsystem_->update(getGlobalDeltaTime());
+        //physicsystem_->update();
 
         //Begin Rendering Phase
         render_manager_->getRenderer()->enterFrame();
@@ -247,7 +247,7 @@ LRESULT Framework::messageProcessor(UINT msg, WPARAM wparam, LPARAM lparam)
         }
         break;
     }
-    return DefWindowProc(hwnd_, msg, wparam, lparam);
+    return DefWindowProc(_hwnd, msg, wparam, lparam);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -255,28 +255,28 @@ void Framework::loadCustomCursor(const std::wstring file_path)
 {
     HCURSOR custom_cursor = (HCURSOR)LoadCursorFromFile(file_path.c_str());
 
-    SetClassLong(hwnd_, GCL_HCURSOR, (LONG)custom_cursor);
+    SetClassLong(_hwnd, GCL_HCURSOR, (LONG)custom_cursor);
 }
 
 //--------------------------------------------------------------------------------------------------
 void Framework::addMenu(HINSTANCE hinstance, LPCWSTR menuName)
 {
     HMENU hmenu = LoadMenu(hinstance, menuName); 
-    SetMenu(getHWND(), hmenu);
+    SetMenu(getHwnd(), hmenu);
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 void Framework::init()
 {
-    output_manager_ = std::unique_ptr<OutputManager>(new OutputManager);
-    audio_manager_ = std::unique_ptr<AudioManager>(new AudioManager);
-    mathsystem_ = std::unique_ptr<math::MathSystem>(new math::MathSystem);
-    xml_parser_ = std::unique_ptr<tools::XmlParser>(new tools::XmlParser);
-    object_manager_ = std::unique_ptr<ObjectManager>(new ObjectManager);
-    time_manager_ = std::unique_ptr<TimeManager>(new TimeManager);
-    scene_manager_ = std::unique_ptr<SceneManager>(new SceneManager);
-    event_manager_ = std::unique_ptr<EventManager>(new EventManager);
-    physicsystem_ = std::unique_ptr<physics::PhysicSystem>(new physics::PhysicSystem);
+    //output_manager_ = std::unique_ptr<OutputManager>(new OutputManager);
+    //audio_manager_ = std::unique_ptr<AudioManager>(new AudioManager);
+    //mathsystem_ = std::unique_ptr<math::MathSystem>(new math::MathSystem);
+    //xml_parser_ = std::unique_ptr<tools::XmlParser>(new tools::XmlParser);
+    //object_manager_ = std::unique_ptr<ObjectManager>(new ObjectManager);
+    time_manager_ = std::unique_ptr<TimeController>(new TimeController);
+    //scene_manager_ = std::unique_ptr<SceneManager>(new SceneManager);
+    //event_manager_ = std::unique_ptr<EventManager>(new EventManager);
+    //physicsystem_ = std::unique_ptr<physics::PhysicSystem>(new physics::PhysicSystem);
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
@@ -297,74 +297,74 @@ void Framework::destroy()
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 void Framework::update()
 {
-    SwapBuffers(GetDC(hwnd_));
+    SwapBuffers(GetDC(getHwnd()));
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::createWindowClass(HINSTANCE hinstance, const std::wstring classname)
 {
-    wnd_.cbSize = sizeof(wnd_);
-    wnd_.cbClsExtra = 0;
-    wnd_.cbWndExtra = 0;
-    wnd_.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
-    wnd_.hCursor = (HCURSOR)LoadCursor(NULL, IDC_ARROW);
-    wnd_.hIcon = (HICON)LoadImage(NULL, ICON_ASSETS_PATH.c_str(), IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
-    wnd_.hIconSm = (HICON)LoadImage(NULL, ICON_SMALL_ASSETS_PATH.c_str(), IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
-    wnd_.hInstance = hinstance;
-    wnd_.lpfnWndProc = WindowProcedure;
-    wnd_.lpszClassName = classname.c_str();
-    wnd_.lpszMenuName = NULL;
-    wnd_.style = CS_HREDRAW | CS_VREDRAW | CS_DBLCLKS | CS_OWNDC;
+    _wnd.cbSize = sizeof(_wnd);
+    _wnd.cbClsExtra = 0;
+    _wnd.cbWndExtra = 0;
+    _wnd.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+    _wnd.hCursor = (HCURSOR)LoadCursor(NULL, IDC_ARROW);
+    _wnd.hIcon = (HICON)LoadImage(NULL, ICON_ASSETS_PATH.c_str(), IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
+    _wnd.hIconSm = (HICON)LoadImage(NULL, ICON_SMALL_ASSETS_PATH.c_str(), IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
+    _wnd.hInstance = hinstance;
+    _wnd.lpfnWndProc = WindowProcedure;
+    _wnd.lpszClassName = classname.c_str();
+    _wnd.lpszMenuName = NULL;
+    _wnd.style = CS_HREDRAW | CS_VREDRAW | CS_DBLCLKS | CS_OWNDC;
     return true;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::registerClass()
 {
-    ::RegisterClassEx(&wnd_);
+    ::RegisterClassEx(&_wnd);
     return true;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 HWND Framework::window(const std::wstring classname, const std::wstring windowname, HINSTANCE hinstance, int w, int h)
 {
-    width_ = w;
-    height_ = h;
+    _width = w;
+    _height = h;
 
-    style_ = WS_BORDER | WS_OVERLAPPEDWINDOW | WS_VISIBLE;
+    _style = WS_BORDER | WS_OVERLAPPEDWINDOW | WS_VISIBLE;
 
-    if(fullscreen_)
+    if(_fullscreen)
     {
-        exstyles_ = WS_EX_APPWINDOW;
+        _exstyles = WS_EX_APPWINDOW;
         toggleFullScreen();
         //setStyle(WS_POPUP | WS_VISIBLE);
-        style_ = WS_POPUP | WS_VISIBLE;
+        _style = WS_POPUP | WS_VISIBLE;
     }
     else
     {
-        exstyles_ = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
+        _exstyles = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
         //tStyle(style_);
     }
 
     setRect();
 
-    AdjustWindowRectEx(&rect_, style_, false, exstyles_);
+    AdjustWindowRectEx(&_rect, _style, false, _exstyles);
 
-    hwnd_ = CreateWindowEx(exstyles_,
+    _hwnd = CreateWindowEx(_exstyles,
                            classname.c_str(),
                            windowname.c_str(),
-                           style_,
-                           rect_.left,
-                           rect_.top,
-                           rect_.right - rect_.left, 
-                           rect_.bottom - rect_.top,
+                           _style,
+                           _rect.left,
+                           _rect.top,
+                           _rect.right - _rect.left, 
+                           _rect.bottom - _rect.top,
                            NULL,
                            NULL,
                            hinstance, 
                            this
                            );
-    if(!hwnd_) return NULL;                                  //Implement Exception Handling
-    return hwnd_;
+    if(!_hwnd) return NULL;                                  //Implement Exception Handling
+    return _hwnd;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
@@ -398,9 +398,9 @@ void Framework::toggleFullScreen()
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::show()
 {
-    ::ShowWindow(hwnd_, SW_SHOW);
-    ::UpdateWindow(hwnd_);
-    ::SetFocus(hwnd_);
+    ::ShowWindow(getHwnd(), SW_SHOW);
+    ::UpdateWindow(getHwnd());
+    ::SetFocus(getHwnd());
     return true;
 }
 
@@ -415,8 +415,8 @@ void Framework::setupPixelFormat(HDC hdc)
         pfd.dwFlags = PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER;
         pfd.dwLayerMask = PFD_MAIN_PLANE;
         pfd.iPixelType = PFD_TYPE_RGBA;
-        pfd.cColorBits = static_cast<BYTE>(depth_);
-        pfd.cDepthBits = static_cast<BYTE>(depth_);
+        pfd.cColorBits = static_cast<BYTE>(_depth);
+        pfd.cDepthBits = static_cast<BYTE>(_depth);
         pfd.cAccumBits = 0;
         pfd.cStencilBits = 0;
     
@@ -438,10 +438,11 @@ void Framework::setupPixelFormat(HDC hdc)
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::startWiggle(HDC hhdc)
 {
-    hdc_ = hhdc;
-    setupPixelFormat(hdc_);
-    hrc_ = wglCreateContext(hdc_);
-    wglMakeCurrent(hdc_, hrc_);
+    //_hdc = hhdc;
+	setHdc(hhdc);
+    setupPixelFormat(getHdc());
+    setHrc(wglCreateContext(getHdc()));
+    wglMakeCurrent(getHdc(), getHrc());
 
     //Attempting to create OpenGL 3.2 rendering context
     //wglCreateContextAttribsARB = reinterpret_cast<PFNWGLCREATECONTEXTATTRIBSARBPROC>(wglGetProcAddress("wglCreateContextAttribsARB"));
@@ -453,26 +454,26 @@ bool Framework::startWiggle(HDC hhdc)
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::stopWiggle()
 {
-    wglMakeCurrent(hdc_, NULL);
-    wglDeleteContext(hrc_);
+    wglMakeCurrent(getHdc(), NULL);
+    wglDeleteContext(getHrc());
     return true;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::setRect()
 {
-    if(fullscreen_)
+    if(_fullscreen)
     {
-        rect_.left = 0;
-        rect_.top = 0;
+        _rect.left = 0;
+        _rect.top = 0;
     }
     else
     {
-        rect_.left = 30;
-        rect_.top = 40;
+        _rect.left = 30;
+        _rect.top = 40;
     }
-    rect_.bottom = getHeight();
-    rect_.right = getWidth();
+    _rect.bottom = getHeight();
+    _rect.right = getWidth();
 
     return true;
 }
@@ -480,10 +481,10 @@ bool Framework::setRect()
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::setRect(int left, int top, int right, int bottom)
 {
-    rect_.left = left;
-    rect_.top = top;
-    rect_.right = right;
-    rect_.bottom = bottom;
+    _rect.left = left;
+    _rect.top = top;
+    _rect.right = right;
+    _rect.bottom = bottom;
     return true;
 }
 
@@ -492,26 +493,26 @@ bool Framework::readConfFile(const std::wstring filePath)
 {
 
     ui fullscreenTemp = 0;
-    if(width_ == 0)
+    if(_width == 0)
     {
-        width_ = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_WINDOW_WIDTH_KEY.c_str(), CONF_DEF_WINDOW_WIDTH, filePath.c_str());
+        _width = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_WINDOW_WIDTH_KEY.c_str(), CONF_DEF_WINDOW_WIDTH, filePath.c_str());
     }
-    if(height_ == 0)
+    if(_height == 0)
     {
-        height_ = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_WINDOW_HEIGHT_KEY.c_str(), CONF_DEF_WINDOW_HEIGHT, filePath.c_str());
+        _height = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_WINDOW_HEIGHT_KEY.c_str(), CONF_DEF_WINDOW_HEIGHT, filePath.c_str());
     }
 
-    depth_ = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_SCREEN_DEPTH_KEY.c_str(), CONF_DEF_WINDOW_DEPTH, filePath.c_str());
-    frequency_ = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_SCREEN_FREQUENCY_KEY.c_str(), CONF_DEF_WINDOW_FREQUENCY, filePath.c_str());
+    _depth = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_SCREEN_DEPTH_KEY.c_str(), CONF_DEF_WINDOW_DEPTH, filePath.c_str());
+    _frequency = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_SCREEN_FREQUENCY_KEY.c_str(), CONF_DEF_WINDOW_FREQUENCY, filePath.c_str());
     fullscreenTemp = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_FULLSCREEN_KEY.c_str(), fullscreen_, filePath.c_str());
 
     if(fullscreenTemp == 1)
     {
-        fullscreen_ = true;
+        _fullscreen = true;
     }
     else
     {
-        fullscreen_ = false;
+        _fullscreen = false;
     }
 
     return true;
@@ -522,20 +523,20 @@ void Framework::readXMLData()
 {
     //XML - based configuration
 
-    width_ = xml_parser_->getIntMap()["width"];
-    height_ = xml_parser_->getIntMap()["height"];
-    depth_ = xml_parser_->getIntMap()["depth"];
-    frequency_ = xml_parser_->getIntMap()["frequency"];
-    use_dx_ = xml_parser_->getIntMap()["use_dx"];
-    use_gl_ = xml_parser_->getIntMap()["use_gl"];
+    _width = xml_parser_->getIntMap()["width"];
+    _height = xml_parser_->getIntMap()["height"];
+    _depth = xml_parser_->getIntMap()["depth"];
+    _frequency = xml_parser_->getIntMap()["frequency"];
+    _use_dx = xml_parser_->getIntMap()["use_dx"];
+    _use_gl = xml_parser_->getIntMap()["use_gl"];
 
-    if(xml_parser_->getStringMap()["fullscreen"] == "true")
+    if(_xml_parser->getStringMap()["fullscreen"] == "true")
     {
-        fullscreen_ = true;
+        _fullscreen = true;
     }
-    else if(xml_parser_->getStringMap()["fullscreen"] == "false")
+    else if(_xml_parser->getStringMap()["fullscreen"] == "false")
     {
-        fullscreen_ = false; 
+        _fullscreen = false; 
     }
 
     //viewports_ = xml_parser_->getIntMap()["count"];
@@ -558,20 +559,20 @@ void Framework::readXMLData()
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 void Framework::readDefaults()
 {
-    width_ = 1600;
-    height_ = 1024;
-    depth_ = 32;
-    frequency_ = 60;
-    fullscreen_ = false;
-    use_dx_ = false;
-    use_gl_ = true;
+    _width = 1600;
+    _height = 1024;
+    _depth = 32;
+    _frequency = 60;
+    _fullscreen = false;
+    _use_dx = false;
+    _use_gl = true;
     //viewports_ = 4;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::createGLContext(HDC hdc)
 {
-    hdc_ = hdc;
+    setHdc(hdc);
     PIXELFORMATDESCRIPTOR pfd;
     ZeroMemory(&pfd, sizeof(pfd));
 
@@ -583,17 +584,17 @@ bool Framework::createGLContext(HDC hdc)
     pfd.cDepthBits = 32;
     pfd.iLayerType = PFD_MAIN_PLANE;
 
-    int pixel_format = ChoosePixelFormat(hdc_, &pfd);
+    int pixel_format = ChoosePixelFormat(getHdc(), &pfd);
 
     if(pixel_format == 0)
         return false;
-    BOOL result = SetPixelFormat(getDeviceContext(), pixel_format, &pfd);
+    BOOL result = SetPixelFormat(getHdc(), pixel_format, &pfd);
 
     if(!result)
         return false;
 
-    HGLRC temporary_context = wglCreateContext(getDeviceContext());
-    wglMakeCurrent(getDeviceContext(), temporary_context);
+    HGLRC temporary_context = wglCreateContext(getHdc());
+    wglMakeCurrent(getHdc(), temporary_context);
 
     int attributes[] =
     {
@@ -605,21 +606,21 @@ bool Framework::createGLContext(HDC hdc)
 
     if(wglewIsSupported("WGL_ARB_create_context") == 1)
     {
-        hrc_ = wglCreateContextAttribsARB(getDeviceContext(), 0, attributes);
+        setHrc(wglCreateContextAttribsARB(getHdc(), 0, attributes));
         wglMakeCurrent(NULL, NULL);
         wglDeleteContext(temporary_context);
-        wglMakeCurrent(getDeviceContext(), hrc_);
+        wglMakeCurrent(getHdc(), getHrc());
     }
     else
     {
-        hrc_ = temporary_context;
+        setHrc(temporary_context);
     }
 
     int opengl_version[2] = {0};
     glGetIntegerv(GL_MAJOR_VERSION, &opengl_version[0]);
     glGetIntegerv(GL_MINOR_VERSION, &opengl_version[1]);
 
-    if(!hrc_)
+    if(!getHdc())
         return false;
 
     return true;
@@ -628,16 +629,16 @@ bool Framework::createGLContext(HDC hdc)
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 int Framework::shutdown()
 {
-    return msg_.wParam;
+    return _msg.wParam;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 void Framework::setWindow(int w, int h, int d, int f)
 {
-    width_ = w;
-    height_ = h;
-    depth_ = d;
-    frequency_ = f;
+    _width = w;
+    _height = h;
+    _depth = d;
+    _frequency = f;
 }
 
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
@@ -657,15 +658,15 @@ void Framework::onClose()
 {
     stopWiggle();
 
-    if(fullscreen_)
+    if(_fullscreen)
     {
         ChangeDisplaySettings(NULL, 0);
     }
 
-    hrc_ = NULL;
-    hdc_ = NULL;
-    hwnd_ = NULL;
-    hinstance_ = NULL;
+    setHrc(NULL);
+    setHdc(NULL);
+    setHwnd(NULL);
+    setHinstance(NULL);
 
     onDestroy();
 }
@@ -682,12 +683,12 @@ void Framework::onSize(int width, int height)
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::setFullscreen()
 {
-    fullscreen_ = true;
+    _fullscreen = true;
     
-    SetWindowLongPtr(getHWND(), GWL_STYLE, WS_SYSMENU | WS_POPUP | WS_CLIPCHILDREN | WS_CLIPSIBLINGS | WS_VISIBLE);
-    SetWindowPos(getHWND(), 0, 0, 0, rect_.right - rect_.left, rect_.bottom - rect_.top, SWP_SHOWWINDOW);
+    SetWindowLongPtr(getHwnd(), GWL_STYLE, WS_SYSMENU | WS_POPUP | WS_CLIPCHILDREN | WS_CLIPSIBLINGS | WS_VISIBLE);
+    SetWindowPos(getHwnd(), 0, 0, 0, _rect.right - _rect.left, _rect.bottom - _rect.top, SWP_SHOWWINDOW);
 
-    if(fullscreen_)
+    if(_fullscreen)
     {
         toggleFullScreen();
     }
@@ -698,14 +699,14 @@ bool Framework::setFullscreen()
 // -- [ PRIVATE ] ----------------------------------------------------------------------------------
 bool Framework::changeResolution(int w, int h)
 {
-    if(hinstance_ != NULL)
-        hinstance_ = NULL;
+    if(_hinstance != NULL)
+        _hinstance = NULL;
     
     setWindow(getWidth(), getHeight(), getDepth(), getFrequency());
     
     show();
 
-    onCreate(GetDC(getHWND()));
+    onCreate(GetDC(getHwnd()));
     render_manager_->getRenderer()->onSize(getWidth(), getHeight());
     return true;
 }

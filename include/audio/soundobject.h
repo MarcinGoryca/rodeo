@@ -62,11 +62,11 @@ namespace mg
 		{
 		public:
 			SoundObject()
-				:file_("")
+				:_file("")
 			{}
 
 			explicit SoundObject(const char* filename)
-				:file_(filename)
+				:_file(filename)
 			{}
 
 			~SoundObject() {}
@@ -74,30 +74,30 @@ namespace mg
 			bool createSound();
 
 			// Sets file of the sound
-			void setFile(const char* filename) { file_ = filename; }
+			void setFile(const char* filename) { _file = filename; }
 
 			//Gets sound file name 
-			const char* getFile() const { return file_; }
+			const char* getFile() const { return _file; }
 			bool initSound();
 		protected:
 			void release();
 		private:
+			// System - it's main FMOD object
+			FMOD::System* _system;
+			FMOD_RESULT _result;
+			mg::core::ui _version;
+			int _numdrivers;
+			FMOD_SPEAKERMODE _speakermode;
+			//FMOD_CAPS caps_;
+			char _drivername[256];
+			// Sound file
+			const char* _file;
+
 			// Copy Constructor
 			SoundObject(const SoundObject& copy);
 
 			// Copy Operator
 			SoundObject& operator=(const SoundObject& copy);
-
-			// System - it's main FMOD object
-			FMOD::System* system_;
-			FMOD_RESULT result_;
-			mg::core::ui version_;
-			int numdrivers_;
-			FMOD_SPEAKERMODE speakermode_;
-			//FMOD_CAPS caps_;
-			char drivername_[256];
-			// Sound file
-			const char* file_;
 		};
 	}
 }

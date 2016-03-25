@@ -715,5 +715,8 @@
     <Text Include="docs\structure.txt">
       <Filter>Docs</Filter>
     </Text>
+    <Text Include="codespec.txt">
+      <Filter>Docs</Filter>
+    </Text>
   </ItemGroup>
 </Project>

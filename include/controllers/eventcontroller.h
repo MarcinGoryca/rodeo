@@ -110,10 +110,10 @@ namespace mg
 			}
 
 		private:
+			mg::event::Event* event_;
+
 			bool init();
 			void clear();
-
-			mg::event::Event* event_;
 		};
 	}    // end of core namespace
 }    // end of mg namespace

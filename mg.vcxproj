@@ -271,6 +271,7 @@
     <ClCompile Include="test\test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="codespec.txt" />
     <Text Include="docs\structure.txt" />
     <Text Include="todo.txt" />
   </ItemGroup>

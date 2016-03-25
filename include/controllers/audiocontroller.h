@@ -36,8 +36,8 @@ namespace mg
 			 |  -------------------------------------------------
 			 */
 			AudioController()
-				:sound_object_(NULL),
-				sound_container_(0)
+				:_sound_object(NULL),
+				_sound_container(0)
 			{}
 
 			//explicit AudioController(const char* filename){}
@@ -58,14 +58,20 @@ namespace mg
 			 |    Returns SounObject pointer to the sound object
 			 |  -------------------------------------------------
 			 */
-			mg::audio::SoundObject* getSoundObject() const { return sound_object_; }
+			mg::audio::SoundObject* getSoundObject() const
+			{ 
+				return _sound_object;
+			}
 
 			/*
 			 |  -------------------------------------------------
 			 |    Sets SoundObject object
 			 |  -------------------------------------------------
 			 */
-			void setSoundObject(mg::audio::SoundObject* so) { sound_object_ = so; }
+			void setSoundObject(mg::audio::SoundObject* so)
+			{ 
+				_sound_object = so;
+			}
 
 			/*
 			 |  --------------------------------------------------
@@ -73,7 +79,10 @@ namespace mg
 			 |    Returns Vector object, container of SoundObject objects
 			 |  --------------------------------------------------
 			 */
-			std::vector<mg::audio::SoundObject*> getSoundContainer() const { return sound_container_; }
+			std::vector<mg::audio::SoundObject*> getSoundContainer() const
+			{ 
+				return _sound_container;
+			}
 
 			/*
 			 |  -------------------------------------------------
@@ -84,29 +93,29 @@ namespace mg
 		protected:
 
 		private:
+			mg::audio::SoundObject* _sound_object;
+			std::vector<mg::audio::SoundObject*> _sound_container;
+
 			/*
-			 |  ---------------------------------------------------
-			 |    Copy Constructor
-			 |  ---------------------------------------------------
-			 */
+			|  ---------------------------------------------------
+			|    Copy Constructor
+			|  ---------------------------------------------------
+			*/
 			AudioController(const AudioController& copy);
 
 			/*
-			 |  ---------------------------------------------------
-			 |    Copy operator
-			 |  ---------------------------------------------------
-			 */
+			|  ---------------------------------------------------
+			|    Copy operator
+			|  ---------------------------------------------------
+			*/
 			AudioController& operator=(const AudioController& copy);
 
 			/*
-			 |  ---------------------------------------------------
-			 |    Cleans the memory
-			 |  ---------------------------------------------------
-			 */
+			|  ---------------------------------------------------
+			|    Cleans the memory
+			|  ---------------------------------------------------
+			*/
 			void clean();
-
-			mg::audio::SoundObject* sound_object_;
-			std::vector<mg::audio::SoundObject*> sound_container_;
 		};
 	}    //end of core namespace
 }    // end of mg namespace

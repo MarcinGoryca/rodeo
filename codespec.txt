@@ -1,0 +1,11 @@
+MG GAME ENGINE
+CODE SPECIFICATION
+----------------------------------------------------------------------------------------------
+1) Interfaces have I prefix, eg. IController
+2) Namespaces start at lowercase, eg. mg
+3) Class members start with _, eg. _width
+4) In private / protected class section members go before methods
+5) Static members are prefixed by _s, eg. _s_counter
+6) Methods follow camelCase notation, eg. getWidth
+7) Variables, members follow underscore notation, eg. _window_width, input_device
+8) Variables have no prefix, eg. input_device

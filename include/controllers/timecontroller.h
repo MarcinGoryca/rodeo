@@ -8,8 +8,8 @@
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_TIMECONTROLLER_H_
-#define MG_CORE_TIMECONTROLLER_H_
+#ifndef MG_CONTROLLERS_TIMECONTROLLER_H_
+#define MG_CONTROLLERS_TIMECONTROLLER_H_
 
 #ifndef MG_CORE_SINGLETON_H_
 #include "core\singleton.h"
@@ -19,7 +19,7 @@
 #include "core\Timer.h"
 #endif
 
-#ifndef MG_CORE_MASTERCONTROLLER_H_
+#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
