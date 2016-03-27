@@ -9,3 +9,4 @@ test
 *.sln*
 *.vcxproj
 *.vcxproj*
+*.opendb

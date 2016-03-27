@@ -6,10 +6,10 @@
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
-#ifndef MG_CORE_RENDERCONTROLLER_H_
-#define MG_CORE_RENDERCONTROLLER_H_
+#ifndef MG_CONTROLLERS_RENDERCONTROLLER_H_
+#define MG_CONTROLLERS_RENDERCONTROLLER_H_
 
-#ifndef MG_CORE_MASTERCONTROLLER_H_
+#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
@@ -28,7 +28,7 @@
 
 namespace mg
 {
-	namespace core
+	namespace controllers
 	{
 		class RenderController : public Singleton<RenderController>, public MasterController
 		{
@@ -39,10 +39,12 @@ namespace mg
 
 			mg::renderer::IRenderer* getRenderer() const
 			{
-				return renderer_;
+				return _renderer;
 			}
 
 		private:
+			mg::renderer::IRenderer* _renderer;
+
 			RenderController() {}
 
 			/*
@@ -59,8 +61,8 @@ namespace mg
 			 */
 			RenderController operator=(RenderController& copy);
 
-			mg::renderer::IRenderer* renderer_;
+
 		};
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_RENDERCONTROLLER_H_
+	}
+}
+#endif

@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ MasterController.h ] [ mg\ core ]
+ |    [ MasterController.h ] [ mg\ controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -17,30 +17,30 @@
 
 namespace mg
 {
-	namespace core
+	namespace controllers
 	{
 		class MasterController
 		{
 		public:
 			MasterController()
-				:module_initialized_(false)
+				:_module_initialized(false)
 			{
-				initstr_.clear();
+				_initstr.clear();
 			}
 
 			virtual ~MasterController()
 			{
-				initstr_.clear();
-				module_initialized_ = false;
+				_initstr.clear();
+				_module_initialized = false;
 			}
 
-			bool module_initialized_;
+			bool _module_initialized;
 
-			virtual std::wstring getString() const { return initstr_; }
+			virtual std::wstring getString() const { return _initstr; }
 
 		protected:
-			std::wstring initstr_;
+			std::wstring _initstr;
 		};
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_MASTERCONTROLLER_H_
+	}
+}
+#endif

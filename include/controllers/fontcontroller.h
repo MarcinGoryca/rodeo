@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ FontController.h ] [ mg\core ]
+ |    [ FontController.h ] [ mg\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -38,15 +38,15 @@ namespace mg
 			}
 
 			// Gets Font object pointer
-			mg::renderer::Font* getFont() const { return font_; }
+			mg::renderer::Font* getFont() const { return _font; }
 
 
 		private:
 			void init();
 			void clear();
 
-			mg::renderer::Font* font_;
+			mg::renderer::Font* _font;
 		};
-	}   // end of core namespace
-}   // end of mg namespace
-#endif    // MG_CORE_FONTCONTROLLER_H_
+	}
+}
+#endif

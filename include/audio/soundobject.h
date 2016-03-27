@@ -85,9 +85,10 @@ namespace mg
 			// System - it's main FMOD object
 			FMOD::System* _system;
 			FMOD_RESULT _result;
-			mg::core::ui _version;
-			int _numdrivers;
 			FMOD_SPEAKERMODE _speakermode;
+			unsigned int _version;
+			int _numdrivers;
+
 			//FMOD_CAPS caps_;
 			char _drivername[256];
 			// Sound file
@@ -101,4 +102,4 @@ namespace mg
 		};
 	}
 }
-#endif    // MG_AUDIO_SOUNDOBJECT_H_
+#endif

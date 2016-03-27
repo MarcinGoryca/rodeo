@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |     MG GAME ENGINE
- |     [ TextureController.h ] [ mg\core ]
+ |     [ TextureController.h ] [ mg\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_TEXTURECONTROLLER_H_
-#define MG_CORE_TEXTURECONTROLLER_H_
+#ifndef MG_CONTROLLERS_TEXTURECONTROLLER_H_
+#define MG_CONTROLLERS_TEXTURECONTROLLER_H_
 
 #ifndef MG_CORE_SINGLETON_H
 #include "core\singleton.h"
@@ -31,7 +31,7 @@ namespace mg
 {
     namespace controllers
     {
-        class TextureController : public Singleton<TextureController>
+        class TextureController : public mg::core::Singleton<TextureController>
         {
         public:
             TextureController()
@@ -56,31 +56,30 @@ namespace mg
 
             unsigned int loadTGA(const char* filename);
 
-            mg::renderer::Texture* getTexture() const { return texture_; }
+            mg::renderer::Texture* getTexture() const { return _texture; }
 
-            static int getTextureCount() { return s_texture_count_; }
+            static int getTextureCount() { return _s_texture_count; }
 
         private:
+			// Texture object 
+			mg::renderer::Texture* _texture;
+
+			// Counting How many textures are loaded
+			static int _s_texture_count;
+
+			// Maximum number of textures to load, this can be changed freely 
+			static const unsigned int _S_MAX_TEXTURES = 100;
+
+			// Unique Id of a texture
+			unsigned int _texture_id[_S_MAX_TEXTURES];
+
+			mg::renderer::Image* _image_data[_S_MAX_TEXTURES];
+
+			std::vector<unsigned int> _texObj;
+
             void clean();
-
             void reset();
-
-            // Texture object 
-            mg::renderer::Texture* texture_;
-
-            // Counting How many textures are loaded
-            static int s_texture_count_;
-
-            // Maximum number of textures to load, this can be changed freely 
-            static const unsigned int S_MAX_TEXTURES = 100;
-
-            // Unique Id of a texture
-            unsigned int texture_id_[S_MAX_TEXTURES];
-
-            mg::renderer::Image* image_data_[S_MAX_TEXTURES];
-
-            std::vector<unsigned int> texObj_;
         };
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

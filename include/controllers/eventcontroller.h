@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ EventController.h ] [ mg\core ]
+ |    [ EventController.h ] [ mg\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -106,15 +106,15 @@ namespace mg
 			 */
 			mg::event::Event* getEvent() const
 			{
-				return event_;
+				return _event;
 			}
 
 		private:
-			mg::event::Event* event_;
+			mg::event::Event* _event;
 
 			bool init();
 			void clear();
 		};
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_EVENTCONTROLLER_H_
+	}
+}
+#endif

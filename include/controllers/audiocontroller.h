@@ -1,22 +1,22 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ AudioController.h ] [ mg\core ]
+ |    [ AudioController.h ] [ mg\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_AUDIOCONTROLLER_H_
-#define MG_CORE_AUDIOCONTROLLER_H_
+#ifndef MG_CONTROLLERS_AUDIOCONTROLLER_H_
+#define MG_CONTROLLERS_AUDIOCONTROLLER_H_
 
 #ifndef MG_MATH_VECTOR_H_
 #include <vector>
 #endif
 
 #ifndef MG_CORE_SINGLETON_H_
-#include "singleton.h"
+#include "core\singleton.h"
 #endif
 
 #ifndef MG_AUDIO_SOUNDOBJECT_H_
@@ -25,7 +25,7 @@
 
 namespace mg
 {
-	namespace core
+	namespace controllers
 	{
 		class AudioController : public mg::core::Singleton<AudioController>
 		{
@@ -117,6 +117,6 @@ namespace mg
 			*/
 			void clean();
 		};
-	}    //end of core namespace
-}    // end of mg namespace
-#endif    //MG_CORE_AUDIOCONTROLLER_H_
+	}
+}
+#endif

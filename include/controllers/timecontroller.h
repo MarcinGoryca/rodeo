@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ TimeController.h ] [ mg\core ]
+ |    [ TimeController.h ] [ mg\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -27,12 +27,12 @@ namespace mg
 {
     namespace controllers
     {
-        class TimeController : public Singleton<TimeController>, public MasterController
+        class TimeController : public mg::core::Singleton<TimeController>, public MasterController
         {
         public:
             TimeController()
-                :time_(NULL),
-                fps_show_(false)
+                :_time(nullptr),
+                _fps_show(false)
             {
                 init();
             }
@@ -43,12 +43,15 @@ namespace mg
             }
 
             // Get pointer to Timer Object
-            Timer* getTimer() const { return time_; }
+            Timer* getTimer() const { return _time; }
 
             // Get FPSShow
-            bool getFpsShow() const { return fps_show_; }
+            bool getFpsShow() const { return _fps_show; }
 
         private:
+			Timer* _time;
+			bool _fps_show;
+
             // This method is responsible for initiliazation of member objects
             void init();
 
@@ -56,10 +59,7 @@ namespace mg
             void clean();
             bool toggleFPS();
             float showFPS();
-
-            Timer* time_;
-            bool fps_show_;
         };
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

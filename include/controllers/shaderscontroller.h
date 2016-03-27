@@ -1,15 +1,15 @@
 /*
  |  -----------------------------------
  |     MG Game Engine
- |     [ ShadersController.h ] [ mg\core ]
+ |     [ ShadersController.h ] [ mg\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_SHADERSCONTROLLER_H_
-#define MG_CORE_SHADERSCONTROLLER_H_
+#ifndef MG_CONTROLLERS_SHADERSCONTROLLER_H_
+#define MG_CONTROLLERS_SHADERSCONTROLLER_H_
 
  //#include <string>
 
@@ -46,9 +46,9 @@ namespace mg
             // Inits Shaders
             void init();
         public:
-            std::unique_ptr<mg::renderer::IShaders> shader_;
-            std::unique_ptr<mg::renderer::GLSLShaders >glsl_shader_;
+            std::unique_ptr<mg::renderer::IShaders> _shader;
+            std::unique_ptr<mg::renderer::GLSLShaders> _glsl_shader;
         };
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

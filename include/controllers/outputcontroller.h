@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
- |    [ OutputController.h ] [ mg\core ]
+ |    [ OutputController.h ] [ mg\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -15,13 +15,13 @@
 #include "io/log.h"
 #endif
 
-#ifndef MG_CORE_MASTERCONTROLLER_H_
-#include "core/mastercontroller.h"
+#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#include "controllers/mastercontroller.h"
 #endif
 
 namespace mg
 {
-	namespace core
+	namespace controllers
 	{
 		class OutputController : public MasterController
 		{
@@ -40,15 +40,15 @@ namespace mg
 
 			mg::io::Log* getLog() const
 			{
-				return log_;
+				return _log;
 			}
 
 		private:
 			void init();
 			void clear();
 
-			io::Log* log_;
+			io::Log* _log;
 		};
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_OUTPUTCONTROLLER_H_
+	}
+}
+#endif

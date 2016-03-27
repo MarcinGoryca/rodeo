@@ -1,15 +1,15 @@
 ﻿/*
  |  -----------------------------------
  |     MG GAME ENGINE
- |     [ SceneController.h ] [ mg\core ]
+ |     [ SceneController.h ] [ mg\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_SCENECONTROLLER_H_
-#define MG_CORE_SCENECONTROLLER_H_
+#ifndef MG_CONTROLLERS_SCENECONTROLLER_H_
+#define MG_CONTROLLERS_SCENECONTROLLER_H_
 
 #ifndef MG_CORE_ERROR_H_
 #include "core\error.h"
@@ -19,7 +19,7 @@
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_CORE_MASTERCONTROLLER_H_
+#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
@@ -34,7 +34,7 @@
 */
 namespace mg
 {
-    namespace core
+    namespace controllers
     {
         class SceneController : public Singleton<SceneController>, public MasterController
         {
@@ -70,6 +70,6 @@ namespace mg
         private:
             scene::Scene* scene_;
         };
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

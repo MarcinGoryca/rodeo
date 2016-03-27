@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
  |   MG GAME ENGINE
- |   [ ObjectController.h ] [ mg\core ]
+ |   [ ObjectController.h ] [ mg\controllers ]
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
@@ -53,17 +53,15 @@ public:
     entity::Model3D* getObject(ui id)const;
 
 private:
+	// Container for Model3D objects
+	std::vector<mg::entity::Model3D*> _objects;
+	// Used to counting objects
+	static ui _s_objects_counter;
     // Copy constructor
     ObjectController(const ObjectController& copy);
 
     // Copy operator
     ObjectController operator=(const ObjectController& copy);
-
-    // Used to counting objects
-    static ui s_objects_counter_;
-
-    // Container for Model3D objects
-    std::vector<mg::entity::Model3D*> objects_;
 };
 }    // end of core namespace
 }    // end of mg namespace
