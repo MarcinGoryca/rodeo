@@ -23,16 +23,25 @@ namespace mg
         {
         public:
             Rtti(const std::string& name)
-                :classname_(name)
+                :_classname(name)
             {}
 
-            virtual const std::string& getClassName()const { return classname_; }
+            virtual const std::string& getClassName()const { return _classname; }
 
             ~Rtti() {}
 
         private:
-            std::string classname_;
+            std::string _classname;
+
+			/*
+			 | ---------------------------------------------------
+			 |    Default constructor
+			 | ---------------------------------------------------
+			 */
+			Rtti()
+				:_classname("")
+			{}
         };
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

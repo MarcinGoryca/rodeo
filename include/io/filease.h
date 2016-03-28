@@ -40,15 +40,15 @@ public:
     ~FileASE(){}
     bool import(const char* filename);
     void release();
-    static const int MAX_BUFFER = 5000;
-    char buffer_[MAX_BUFFER];
+    static const int _S_MAX_BUFFER = 5000;
+    char _buffer[_S_MAX_BUFFER];
 
 private:
-    static const char* const ASE_STRING;
-    static const char* const SCENE_STRING;
+    static const char* const _S_ASE_STRING;
+    static const char* const _S_SCENE_STRING;
     
-    HANDLE file_;
+    HANDLE _file;
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

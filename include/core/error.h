@@ -311,6 +311,6 @@ namespace mg
 		 |  ----------------------------------------
 		 */
 		const char* const ALLOCATE_MEMORY_FAIL = "Couldn't Allocate Enough Memory!";
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_ERROR_H_
+	}
+}
+#endif

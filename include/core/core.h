@@ -54,4 +54,4 @@
 #include "core\timer.h"
 #endif
 
-#endif   // MG_CORE_CORE_H_
+#endif

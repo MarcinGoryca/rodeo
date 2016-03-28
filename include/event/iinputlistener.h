@@ -47,8 +47,8 @@ public:
     virtual void mouseDrag(mg::io::IInput ms) = 0;
 
 protected:
-    std::list <mg::io::IInput*> input_list_;
+    std::list <mg::io::IInput*> _input_list;
 };
-}    // end of event namespace
-}    // end of mg namespace
+}
+}
 #endif

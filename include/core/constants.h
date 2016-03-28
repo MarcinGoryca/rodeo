@@ -1,10 +1,4 @@
-﻿// TODO
-// OPTIMIZE THIS FILE
-// IT SHOULD NOT CONTAIN SO MANY CONSTANTS
-// E.G. CONSTANTS FOR 3DS
-
-
-/*
+﻿/*
  |  -----------------------------------
  |    MG GAME ENGINE
  |    [ Constants.h ] [ mg\core ]
@@ -100,6 +94,6 @@ namespace mg
 
 		// Maximum amount of objects on the scene
 		const unsigned int MAX_OBJECTS_ = 100;
-	}    // end of core namespace
-}    // end of mg namespace
+	}
+}
 #endif

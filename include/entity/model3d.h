@@ -38,11 +38,11 @@ namespace mg
         public:
             Model3D()
                 :Entity("", "model3d"),
-                mesh_count_(model_.mesh_count_),
-                material_count_(model_.material_count_),
-                vertex_count_(0),
-                index_count_(0),
-                winding_(GL_CCW)
+                _mesh_count(_model._mesh_count),
+                _material_count(_model._material_count),
+                _vertex_count(0),
+                _index_count(0),
+                _winding(GL_CCW)
             {}
 
             Model3D(const char* filename, mg::io::File3DFactory::File3DType type);
@@ -55,23 +55,33 @@ namespace mg
             void scale(float scale_factor);
 
             virtual void draw();
+			virtual void release();
+			virtual void update(float dt);
+			void setDefaults();
 
-            mg::core::ui getMeshCount()const { return mesh_count_; }
-            mg::core::ui getMaterialCount()const { return material_count_; }
-            mg::core::ui getVertexCount()const { return vertex_count_; }
-            mg::core::ui getIndexCount()const { return index_count_; }
+            unsigned int getMeshCount()const { return _mesh_count; }
+            unsigned int getMaterialCount()const { return _material_count; }
+            unsigned int getVertexCount()const { return _vertex_count; }
+            unsigned int getIndexCount()const { return _index_count; }
 
-            void setMeshCount(mg::core::ui mc) { mesh_count_ = mc; }
-            void setMaterialCount(mg::core::ui mtc) { material_count_ = mtc; }
-            void setVertexCount(mg::core::ui vc) { vertex_count_ = vc; }
-            void setIndexCount(mg::core::ui ic) { index_count_ = ic; }
-
-            virtual void release();
-            virtual void update(float dt);
-
-            void setDefaults();
+            void setMeshCount(unsigned int mesh_count) { _mesh_count = mesh_count; }
+            void setMaterialCount(unsigned int material_count) { _material_count = material_count; }
+            void setVertexCount(unsigned int vertex_count) { _vertex_count = vertex_count; }
+            void setIndexCount(unsigned int index_count) { _index_count = index_count; }
 
         protected:
+			Model _model;
+			mg::renderer::Buffers _buffer;
+
+			unsigned int _texture_id;
+			unsigned int _mesh_count;
+			unsigned int _material_count;
+			unsigned int _vertex_count;
+			unsigned int _index_count;
+
+			bool _has_texture;
+			bool _has_material;
+			GLenum _winding;
 
             void create();
             void buildAABB();
@@ -80,19 +90,8 @@ namespace mg
 
             void bindTexture(mg::core::ui& texture_id);
 
-            Model model_;
-            mg::renderer::Buffers buffer_;
 
-            mg::core::ui texture_id_;
-            mg::core::ui mesh_count_;
-            mg::core::ui material_count_;
-            mg::core::ui vertex_count_;
-            mg::core::ui index_count_;
-
-            bool has_texture_;
-            bool has_material_;
-            GLenum winding_;
         };
-    }    // end of entity namespace
-}    // end of mg  namespace
+    }
+}
 #endif

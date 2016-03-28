@@ -30,27 +30,27 @@ struct MeshNormal;
 
 struct Mesh
 {
-    std::vector<MeshTriangle*> triangles_;
-    std::vector<MeshUV*> coordinates_;
-    std::vector<mg::math::Vector3> normals_;
-    std::vector<mg::math::Vector3> vertex_normals_;
-    std::vector<mg::math::Vector3> surface_normals_;
+    std::vector<MeshTriangle*> _triangles;
+    std::vector<MeshUV*> _coordinates;
+    std::vector<mg::math::Vector3> _normals;
+    std::vector<mg::math::Vector3> _vertex_normals;
+    std::vector<mg::math::Vector3> _surface_normals;
 
-    MeshVertex* vertex_;
-    MeshTriangle* triangle_;
-    MeshUV* coordinate_;
-    MeshNormal* normal_;
-    mg::core::us index_;
-    mg::core::ui vertex_count_;
-    mg::core::ui face_count_;
-    mg::core::ui uv_count_;
-    mg::core::ui normal_count_;
-    mg::core::ui vertex_normal_count_;
-    mg::core::ui surface_normal_count_;
-    char meshname_[255];
-    const char* mesh_name_;
-    int material_id_;
-    bool has_texture_;
+    MeshVertex* _vertex;
+    MeshTriangle* _triangle;
+    MeshUV* _coordinate;
+    MeshNormal* _normal;
+    unsigned short _index;
+    unsigned int _vertex_count;
+    unsigned int _face_count;
+    unsigned int _uv_count;
+    unsigned int _normal_count;
+    unsigned int _vertex_normal_count;
+    unsigned int _surface_normal_count;
+    char _meshname[255];
+    const char* _mesh_name;
+    int _material_id;
+    bool _has_texture;
 
     void reset();
     void clear();
@@ -63,37 +63,37 @@ struct Mesh
 // MeshVertex
 struct MeshVertex
 {
-    mg::math::Vector3 vertex_;
+    mg::math::Vector3 _vertex;
 };
 
 
 // MeshTriangle
 struct MeshTriangle
 {
-    mg::core::us triangle_[3];
+    unsigned short _triangle[3];
 };
 
 // MeshUV
 struct MeshUV
 {
-    mg::math::Vector2 uv_;
+    mg::math::Vector2 _uv;
 };
 
 // MeshNormal
 struct MeshNormal
 {
-    mg::math::Vector3 normal_;
+    mg::math::Vector3 _normal;
 };
 
 
 // MeshMaterial
 struct MeshMaterial
 {
-    char name_[255];
-    char file_[255];
-    BYTE color_[3];
-    mg::core::ui id_;
+    char _name[255];
+    char _file[255];
+    BYTE _color[3];
+    unsigned int _id;
 };
-}    // end of entity namespace
-}    // end of mg namespace
+}
+}
 #endif

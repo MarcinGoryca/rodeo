@@ -40,7 +40,7 @@ namespace mg
         public:
             Entity()
                 :Object(),
-                renderable_(true)
+                _renderable(true)
             {
                 init();
             }
@@ -74,12 +74,74 @@ namespace mg
 
             //virtual void setColor(enginerenderer::Colors& rgb);
 
+			/*
+			 | ------------------------------------------------
+			 |    Get AABB Box
+			 |    Returns AABB object
+			 | ------------------------------------------------
+			 */
+			mg::math::AABB getAabb() const
+			{
+				return _box;
+			}
+
+			/*
+			 | ------------------------------------------------
+			 |    Get Transform object
+			 | ------------------------------------------------
+			 */
+			mg::math::Transform getTransform() const
+			{
+				return _transform;
+			}
+
+			/*
+			 | ------------------------------------------------
+			 |    Get Renderable
+			 |    Returns bool
+			 | ------------------------------------------------
+			 */
+			bool getRenderable() const
+			{
+				return _renderable;
+			}
+
+			/*
+			 | ------------------------------------------------
+			 |    Set AABB box
+			 | ------------------------------------------------
+			 */
+			void setAabb(mg::math::AABB box)
+			{
+				_box = box;
+			}
+
+			/*
+			 | ------------------------------------------------
+			 |    Set Transform
+			 | ------------------------------------------------
+			 */
+			void setTransform(mg::math::Transform transform)
+			{
+				_transform = transform;
+			}
+
+			/*
+			 | -------------------------------------------------
+			 |    Set Renderable
+			 | -------------------------------------------------
+			 */
+			void setRenderable(bool renderable)
+			{
+				_renderable = renderable;
+			}
+
         protected:
             //enginerenderer::Material material_;
-            mg::math::AABB box_;
+            mg::math::AABB _box;
 
-            mg::math::Transform transform_;
-            bool renderable_;
+            mg::math::Transform _transform;
+            bool _renderable;
 
             // Copy Constructor
             Entity(const Entity& copy);
@@ -87,6 +149,6 @@ namespace mg
             // Copy operator
             Entity operator=(const Entity& copy);
         };
-    }    // end of entity namespace
-}    // end of mg namespace
+    }
+}
 #endif

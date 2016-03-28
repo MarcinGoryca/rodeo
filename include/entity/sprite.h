@@ -33,18 +33,34 @@ namespace mg
             virtual void render();
             virtual void update();
 
-            // Gets Width value of the Sprite
-            // Returns unsigned int width
+            /*
+			 | ----------------------------------------------
+			 |    Gets Width value of the Sprite
+             |    Returns unsigned int width
+			 | ----------------------------------------------
+			 */
             unsigned int getWidth() const { return _width; }
 
-            // Gets Height value of the Sprite
-            // Returns unsigned int height
+            /*
+			 | ----------------------------------------------
+			 |    Gets Height value of the Sprite
+             |    Returns unsigned int height
+			 | ----------------------------------------------
+			 */
             unsigned int getHeight() const { return _height; }
 
-            // Sets Width of the Sprite
+            /*
+			 | ----------------------------------------------
+			 |    Sets Width of the Sprite
+			 | ----------------------------------------------
+			 */
             void setWidth(unsigned int width) { _width = width; }
 
-            // Sets Height of the Sprite
+            /*
+			 | -----------------------------------------------
+			 |    Sets Height of the Sprite
+			 | -----------------------------------------------
+			 */
             void setHeight(unsigned int height) { _height = height; }
 
         private:
@@ -53,6 +69,6 @@ namespace mg
 
 			void init();
         };
-    }    // end of entity namespace
-}    // end of mg namespace
+    }
+}
 #endif

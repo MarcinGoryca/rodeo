@@ -20,7 +20,9 @@ namespace mg
 		class Exception
 		{
 		public:
-			Exception() {}
+			Exception()
+			:_exception_string(L"")
+			{}
 
 			/*
 			 |  ---------------------------------------------------
@@ -29,7 +31,7 @@ namespace mg
 			 |  ---------------------------------------------------
 			 */
 			explicit Exception(std::wstring str)
-				:exception_string_(str)
+				:_exception_string(str)
 			{}
 
 			/*
@@ -45,11 +47,11 @@ namespace mg
 			 |    Returns wstring 
 			 |  ---------------------------------------------------
 			 */
-			std::wstring getExceptionString() const { return exception_string_; }
+			std::wstring getExceptionString() const { return _exception_string; }
 
 		private:
-			std::wstring exception_string_;
+			std::wstring _exception_string;
 		};
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_EXCEPTION_H_
+	}
+}
+#endif

@@ -35,6 +35,6 @@ namespace mg
 
 			~RendererException() {}
 		};
-	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_RENDEREREXCEPTION_H_
+	}
+}
+#endif

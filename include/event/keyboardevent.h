@@ -30,6 +30,6 @@ public:
 
     virtual bool onKeyDown(mg::io::KeyMap key);
 };
-}    // end of event namespace
-}    // end of mg namespace
+}
+}
 #endif

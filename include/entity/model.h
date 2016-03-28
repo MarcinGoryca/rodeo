@@ -23,9 +23,9 @@ namespace mg
         {
         public:
             Model()
-                :mesh_count_(0),
-                material_count_(0),
-                anim_key_count_(0)
+                :_mesh_count(0),
+                _material_count(0),
+                _anim_key_count(0)
             {}
 
             ~Model() {}
@@ -33,13 +33,13 @@ namespace mg
             Model operator=(const Model& copy);
             Model(const Model& copy);
 
-            std::vector<Mesh> mesh_;
-            std::vector<MeshMaterial> material_;
+            std::vector<Mesh> _mesh;
+            std::vector<MeshMaterial> _material;
 
-            mg::core::ui mesh_count_;
-            mg::core::ui material_count_;
-            mg::core::ui anim_key_count_;
+            unsigned int _mesh_count;
+            unsigned int _material_count;
+            unsigned int _anim_key_count;
         };
-    }    // end of entity namespace
-}    // end of mg namespace
+    }
+}
 #endif

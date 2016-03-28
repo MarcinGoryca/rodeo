@@ -23,13 +23,13 @@ namespace mg
         {
         public:
             Timer()
-                :use_query_performance_frequency_(false),
-                current_time_(0.0f),
-                last_time_(0.0f),
-                fps_(0.0f),
-                fps_time_(0.0f),
-                delta_(0.0f),
-                frames_(0)
+                :_use_query_performance_frequency(false),
+                _current_time(0.0f),
+                _last_time(0.0f),
+                _fps(0.0f),
+                _fps_time(0.0f),
+                _delta(0.0f),
+                _frames(0)
             {}
 
             ~Timer() {}
@@ -37,42 +37,43 @@ namespace mg
             void countFPS();
 
             // Gets Current Time Value
-            float getCurrentTime() const { return current_time_; }
+            float getCurrentTime() const { return _current_time; }
 
             // Gets Last Time Value
-            float getLastTime() const { return last_time_; }
+            float getLastTime() const { return _last_time; }
 
             // Gets Frames Per Second
-            float getFps() { return fps_; }
+            float getFps() { return _fps; }
 
             // Gets Time Frames per second
-            float getFpsTime() const { return fps_time_; }
+            float getFpsTime() const { return _fps_time; }
 
             // Gets Delta Time
-            float getDelta()const { return delta_; }
+            float getDelta()const { return _delta; }
 
             // Gets Frames
-            unsigned int getFrames() const { return frames_; }
+            unsigned int getFrames() const { return _frames; }
 
             void countFramesPerSecond();
 
         private:
+			bool _use_query_performance_frequency;
+			float _current_time;
+			float _last_time;
+			float _fps;
+			float _fps_time;
+			float _delta;
+			unsigned int _frames;
+
+			LARGE_INTEGER _frequency;
+			LARGE_INTEGER _ticks;
             float getSecs();
 
             // Before using CountFramesPerSecond call this method!
             void init();
 
-            bool use_query_performance_frequency_;
-            float current_time_;
-            float last_time_;
-            float fps_;
-            float fps_time_;
-            float delta_;
-            unsigned int frames_;
 
-            LARGE_INTEGER frequency_;
-            LARGE_INTEGER ticks_;
         };
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

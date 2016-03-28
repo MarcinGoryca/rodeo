@@ -188,25 +188,32 @@ namespace io
 // ---- < Chunk > ---- //
 struct Chunk
 {
-    unsigned short id_;
-    core::ui length_; 
-    core::ui bytesread_;
+    unsigned short _id;
+    unsigned int _length; 
+    unsigned int _bytesread;
 };
 
 class File3DS : public Importer
 {
 public:
     File3DS()
-        :file_(NULL),
-         classname_("File3DS")
+        :_file(NULL),
+         _classname("File3DS")
     {}
     virtual ~File3DS(){}
 
     virtual bool import(const char* filename);
 
-    virtual const std::string& getClassName()const { return classname_; }
+    virtual const std::string& getClassName()const { return _classname; }
 
 private:
+	// Maximum number of chars in the buffer
+	static const int _S_BUFFER_MAX = 500000;
+	HANDLE _file;
+	DWORD _bytesread;
+	char _buffer[_S_BUFFER_MAX];
+	std::string _classname;
+
     bool release();
 
     void readHeaderChunk(Chunk& chunk);
@@ -226,14 +233,7 @@ private:
 
     void readFaceMaterial(entity::Mesh& m, Chunk& chunk);
     void readColorChunk(entity::MeshMaterial& mat, Chunk& c);
-
-    // Maximum number of chars in the buffer
-    static const int BUFFER_MAX = 500000;
-    HANDLE file_;
-    DWORD bytesread_;
-    char buffer_[BUFFER_MAX];
-    std::string classname_;
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

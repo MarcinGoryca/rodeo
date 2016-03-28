@@ -62,6 +62,6 @@ namespace mg
         };
 
         template <typename T> T* Singleton <T>::pSingleton = 0;
-    }    // end of core namespace
-}    // end of mg namespace
+    }
+}
 #endif

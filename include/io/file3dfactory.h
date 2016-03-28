@@ -39,6 +39,6 @@ public:
 
     static Importer* create(File3DType type);
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

@@ -9,3 +9,8 @@ CODE SPECIFICATION
 6) Methods follow camelCase notation, eg. getWidth
 7) Variables, members follow underscore notation, eg. _window_width, input_device
 8) Variables have no prefix, eg. input_device
+9) In public section getters and setters go under every other methods
+10) In class constructors go at the top, next operators
+11) Constants are always UPPERCASE
+12) Static constants start with _ followed by S, eg. _S_MAX
+13) In public section members (if any) go at the bottom
