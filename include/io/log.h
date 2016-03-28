@@ -21,18 +21,18 @@ class Log
 {
 public:
     Log()
-        :hfile_(NULL),
-         filename_(""),
-         mode_(""),
-         fileopen_(false)
+        :_hfile(NULL),
+         _filename(""),
+         _mode(""),
+         _fileopen(false)
     {}
 
     ~Log()
     {
-        fileopen_ = false;
-        mode_ = "";
-        filename_ = "";
-        hfile_ = NULL;
+        _fileopen = false;
+        _mode = "";
+        _filename = "";
+        _hfile = NULL;
     }
 
     //Copy constructor
@@ -42,16 +42,16 @@ public:
     void write(std::wstring string);
 
 private:
+	HANDLE _hfile;
+	const char* _filename;
+	const char* _mode;
+	bool _fileopen;
+
     void close();
     void update(std::string filename, std::string buffer);
     void save(std::wstring filename);
     void load(std::string filename);
-
-    HANDLE hfile_;
-    const char* filename_;
-    const char* mode_;
-    bool fileopen_;
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

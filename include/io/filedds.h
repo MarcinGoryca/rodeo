@@ -43,7 +43,7 @@ namespace io
 
 // texture contains alpha data;
 // rgbAlphaBitMask contains valid data 
-core::ci DDPF_ALPHAPIXELS = 0x1;
+const int DDPF_ALPHAPIXELS = 0x1;
 
 // used in older files for alpha channel only uncompressed data 
 // (rgbBitCount contains the alpha channel bitcount, aBitMask contains valid data) 
@@ -180,8 +180,9 @@ struct DDS_HEADER
 // This is helper structure for flipping the image
 struct DXTColors
 {
-    core::us r, g, b, a;
+    unsigned short r, g, b, a;
 };
+
 class FileDDS : public renderer::Image
 {
 public:
@@ -195,24 +196,25 @@ public:
 
     core::ui getTexture() const
     {
-        return texture_;
+        return _texture;
     }
 
     void setTexture(core::ui new_texture)
     {
-        texture_ = new_texture;
+        _texture = new_texture;
     }
 
 private:
+	// unsigned int texture - variable to store texture object 
+	unsigned int _texture;
+	DDS_HEADER _dds;
+
     void flipColorBlock(GLubyte* data);
     virtual void draw(float x, float y);
     virtual void release();
     void read(const char* fileName);
     void flipDXT1(GLubyte* data);
-    // unsigned int texture - variable to store texture object 
-    core::ui texture_;
-    DDS_HEADER dds_;
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

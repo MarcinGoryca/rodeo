@@ -34,12 +34,12 @@ public:
     // Gets Model object
     entity::Model* getModel() const
     {
-        return model_;
+        return _model;
     }
 
 protected:
-    entity::Model* model_;
+    entity::Model* _model;
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

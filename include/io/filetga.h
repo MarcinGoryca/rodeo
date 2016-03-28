@@ -41,19 +41,19 @@ class FileTGA : public renderer::Image
 {
 public:
     FileTGA()
-        :filename_(""),
-         colordepth_(0),
-         imagesize_(0),
-         hfile_(NULL),
-         texture_id_(0)
+        :_filename(""),
+         _colordepth(0),
+         _imagesize(0),
+         _hfile(NULL),
+         _texture_id(0)
     {}
     
     FileTGA(const char* new_filename)
-        :filename_(new_filename),
-         colordepth_(0),
-         imagesize_(0),
-         hfile_(NULL),
-         texture_id_(0)
+        :_filename(new_filename),
+         _colordepth(0),
+         _imagesize(0),
+         _hfile(NULL),
+         _texture_id(0)
     {}
     
     virtual ~FileTGA()
@@ -62,10 +62,20 @@ public:
     virtual bool open(const char* fileName);
 
 
-    unsigned int getColorDepth()const { return colordepth_; }
-    unsigned int getTextureId()const { return texture_id_; }
+    unsigned int getColorDepth()const { return _colordepth; }
+    unsigned int getTextureId()const { return _texture_id; }
 
 private :
+	const char* _filename;
+	BYTE _uheader[12];
+	BYTE _cheader[12];
+	BYTE _header[6];
+	unsigned int _colordepth;
+
+	unsigned long _imagesize;
+	HANDLE _hfile;
+	unsigned int _texture_id;
+
     bool pickFile(const char* fileName);
     void swapRedBlue();
     void flipVertically();
@@ -75,16 +85,8 @@ private :
     void release();
     virtual const char* getClassName()const{ return "FileTGA"; }
 
-    const char* filename_;
-    BYTE uheader_[12];
-    BYTE cheader_[12];
-    BYTE header_[6];
-    unsigned int colordepth_;
 
-    unsigned long imagesize_;
-    HANDLE hfile_;
-    unsigned int texture_id_;
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

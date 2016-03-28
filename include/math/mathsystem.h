@@ -36,29 +36,30 @@ public:
     ~MathSystem(){}
 
     // Gets the random number
-    mg::tools::CRandom getRandomNumber() const { return random_number_; }
+    mg::tools::CRandom getRandomNumber() const { return _random_number; }
 
     // Gets specified member of sinus table
     // Returns float value of specified index from sinus table
-    float getSinusTable(int index) const { return sinus_table_[index]; }
+    float getSinusTable(int index) const { return _sinus_table[index]; }
 
     // Gets specified member of cosinus table
     // Returns float value of specified index from cosinus table
-    float getCosinusTable(int index) const { return cosinus_table_[index]; }
+    float getCosinusTable(int index) const { return _cosinus_table[index]; }
 
 private:
+	// Random Number
+	mg::tools::CRandom _random_number;
+
+	// Full Sinus Table
+	float _sinus_table[mg::core::MG_FULL_CIRCLE];
+
+	// Full Sosinus Table
+	float _cosinus_table[mg::core::MG_FULL_CIRCLE];
     // Runs Random Number Generator (Mersenne Twister)
     void runGenerator();
     void init();
 
-    // Random Number
-    mg::tools::CRandom random_number_;
 
-    // Full Sinus Table
-    float sinus_table_[mg::core::MG_FULL_CIRCLE];
-
-    // Full Sosinus Table
-    float cosinus_table_[mg::core::MG_FULL_CIRCLE];
 };
 }    // end of math namespace
 }    // end of mg namespace

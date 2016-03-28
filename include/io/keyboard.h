@@ -115,7 +115,7 @@ class Keyboard : public IInput
 {
 public:
     Keyboard()
-        :keystate_(-1)
+        :_keystate(-1)
     {}
     Keyboard(int state);
     Keyboard(const Keyboard& copy);
@@ -129,19 +129,19 @@ public:
 
     int getKeyState() const
     {
-        return keystate_;
+        return _keystate;
     }
 
     void setKeyState(int new_keystate)
     {
-        keystate_ = new_keystate;
+        _keystate = new_keystate;
     }
 
 protected:
-    int keystate_;
+    int _keystate;
 
 private:
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif

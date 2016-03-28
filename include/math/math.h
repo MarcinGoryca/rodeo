@@ -49,4 +49,4 @@
 #include "math\vector4.h"
 #endif
 
-#endif    //MG_MATH_H_
+#endif

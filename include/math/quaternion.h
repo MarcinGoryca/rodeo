@@ -21,7 +21,7 @@ class Quaternion
 {
 public:
     Quaternion()
-        :x_(0.0f), y_(0.0f), z_(0.0f), w_(1.0f)
+        :_x(0.0f), _y(0.0f), _z(0.0f), _w(1.0f)
     {}
 
     // Constructing quaternion by vector
@@ -32,7 +32,7 @@ public:
 
     // ---- //
     Quaternion(float fx, float fy, float fz, float fw)
-        :x_(fx), y_(fy), z_(fz), w_(fw)
+        :_x(fx), _y(fy), _z(fz), _w(fw)
     {}
     
     ~Quaternion(){}
@@ -82,12 +82,11 @@ public:
     Vector3 getRotationAxis()const;
     inline float dot(const Quaternion& q1, const Quaternion& q2)
     {
-        return q1.w_ * q2.w_ + q1.x_ * q2.x_ + q1.y_ * q2.y_ + q1.z_ * q2.z_;
+        return q1._w * q2._w + q1._x * q2._x + q1._y * q2._y + q1._z * q2._z;
     }
 
-    float x_, y_, z_, w_;
-
 private:
+	float _x, _y, _z, _w;
 };
 
 // Dot Product of two quaternions
@@ -108,8 +107,8 @@ const void printQ(const Quaternion& q);
 // Helper function - prints out Quaternion to standard output
 // Parameter message - Message to console
 const void printQ(const char* message, const Quaternion& q);
-}    // end of math namespace
-}    // end of mg namespace
+}
+}
 #endif
 
 /*

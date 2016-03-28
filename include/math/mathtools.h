@@ -127,6 +127,6 @@ inline float cotangent(float angle)
 {
     return (1.0f / ::tan(angle));
 }
-}    // end of math namespace
-}    // end of mg namespace
+}
+}
 #endif

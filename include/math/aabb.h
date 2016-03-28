@@ -22,8 +22,8 @@ class AABB
 {
 public:
     AABB()
-    :min_(0.0f, 0.0f, 0.0f),
-     max_(0.0f, 0.0f, 0.0f)
+    :_min(0.0f, 0.0f, 0.0f),
+     _max(0.0f, 0.0f, 0.0f)
     {
         reset();
     }
@@ -32,39 +32,38 @@ public:
 
     inline void add(const Vector3& p)
     {
-        if(p.x_ < min_.x_)min_.x_ = p.x_;
-        if(p.x_ > max_.x_)max_.x_ = p.x_;
-        if(p.y_ < min_.y_)min_.y_ = p.y_;
-        if(p.y_ > max_.y_)max_.y_ = p.y_;
-        if(p.z_ < min_.z_)min_.z_ = p.z_;
-        if(p.z_ > max_.z_)max_.z_ = p.z_;
+        if(p._x < _min._x)_min._x = p._x;
+        if(p._x > _max._x)_max._x = p._x;
+        if(p._y < _min._y)_min._y = p._y;
+        if(p._y > _max._y)_max._y = p._y;
+        if(p._z < _min._z)_min._z = p._z;
+        if(p._z > _max._z)_max._z = p._z;
     }
 
     void construct();
     void resize();
 
-    Vector3 getMinimun() const { return min_; }
+    Vector3 getMinimun() const { return _min; }
 
-    Vector3 getMaximum() const { return max_; }
-
-private:
-    // Before any operations with AABB we must reset it 
-    inline void reset()
-    {
-        const float bignumber = 1e37f;
-
-        min_.x_ = min_.y_ = min_.z_ = bignumber;
-        max_.x_ = max_.y_ = max_.z_ = -bignumber;
-    }
+    Vector3 getMaximum() const { return _max; }
 
 private:
-    Vector3 min_;
-    Vector3 max_;
+    Vector3 _min;
+    Vector3 _max;
+
+	// Before any operations with AABB we must reset it 
+	inline void reset()
+	{
+		const float bignumber = 1e37f;
+
+		_min._x = _min._y = _min._z = bignumber;
+		_max._x = _max._y = _max._z = -bignumber;
+	}
 };
-}    // end of math namespace
-}    // end of mg namespace
+}
+}
 
-#endif    //ENGINE_MATH_AABB_H_
+#endif
 
 /*
     NOTES:

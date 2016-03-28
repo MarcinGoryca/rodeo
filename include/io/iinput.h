@@ -29,6 +29,6 @@ public:
     IInput(){}
     virtual ~IInput(){}
 };
-}    // end of io namespace
-}    // end of mg namespace
+}
+}
 #endif
