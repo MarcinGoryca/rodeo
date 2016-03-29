@@ -10,11 +10,17 @@
 #ifndef MG_RENDERER_EFFECTS_H_
 #define MG_RENDERER_EFFECTS_H_
 
+//#include "core\common.h"
+
+#ifndef MG_ENTITY_ENTITY_H_
+#include "entity\entity.h"
+#endif
+
 namespace mg
 {
     namespace renderer
     {
-        class Effects : public Entity
+        class Effects : public mg::entity::Entity
         {
             public:
                 Effects(std::string filename);
@@ -22,6 +28,6 @@ namespace mg
             private:
                 Effects(){}
         };
-    }    // end of renderer namespace
-}    // end of mg namespace
+    }
+}
 #endif

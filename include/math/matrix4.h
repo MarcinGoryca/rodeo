@@ -388,6 +388,6 @@ Matrix4 multiply(const Matrix4* m1, const Matrix4* m2);
 
 // Helper function
 void printM4(const Matrix4& m);
-}    // end of math namespace
-}    // end of mg namespace
+}
+}
 #endif

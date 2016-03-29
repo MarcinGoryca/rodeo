@@ -1,47 +1,47 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 ----------------------------------------------
 */
 #ifndef MG_PHYSICS_PHYSICSYSTEM_H_
 #define MG_PHYSICS_PHYSICSYSTEM_H_
 
-#ifndef MG_CORE_MASTERMANAGER_H_
-#include "core/mastermanager.h"
+#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#include "controllers/mastercontroller.h"
 #endif
 
 namespace mg
 {
-namespace physics
-{
-class PhysicSystem : public core::MasterManager
-{
-public:
+	namespace physics
+	{
+		class PhysicSystem : public controllers::MasterController
+		{
+		public:
 
-    PhysicSystem()
-        :MasterManager()
-    {
-        init();
-    }
+			PhysicSystem()
+				:MasterController()
+			{
+				init();
+			}
 
-    ~PhysicSystem()
-    {
-        clear();
-    }
+			~PhysicSystem()
+			{
+				clear();
+			}
 
-    // Implement this method in your application
-    virtual void update();
+			// Implement this method in your application
+			virtual void update();
 
-    // Implement this method in your application
-    virtual void update(float delta);
+			// Implement this method in your application
+			virtual void update(float delta);
 
-private:
-    void init();
-    void clear();
-};
-}    // end of physics namespace
-}    // end of mg namespace
+		private:
+			void init();
+			void clear();
+		};
+	}
+}
 #endif

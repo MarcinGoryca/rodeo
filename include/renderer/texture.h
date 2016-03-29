@@ -1,9 +1,9 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 ----------------------------------------------
 */
 #ifndef MG_RENDERER_TEXTURE_H_
@@ -19,33 +19,33 @@
 
 namespace mg
 {
-namespace renderer
-{
-class Texture
-{
-public:
-    Texture(){}
+	namespace renderer
+	{
+		class Texture
+		{
+		public:
+			Texture() {}
 
-    ~Texture()
-    {
-        reset();
-    }
+			~Texture()
+			{
+				reset();
+			}
 
-    virtual bool load(Image* image, const char* filename, core::ui& tid);
-    //virtual void load(Image* image, std::string filename, ui numberOfTextures);
-    virtual void release(Image* image);
-    virtual void bind(Image* image, core::ui& tid);
+			virtual bool load(Image* image, const char* filename, core::ui& tid);
+			//virtual void load(Image* image, std::string filename, ui numberOfTextures);
+			virtual void release(Image* image);
+			virtual void bind(Image* image, core::ui& tid);
 
-    // This will clean up all generated textures 
-    bool reset();
+			// This will clean up all generated textures 
+			bool reset();
 
-    core::ui texture_id_;
-private:
-    virtual void build(Image* image, core::ui& tid);
+		private:
+			// Used for counting number of generated textures 
+			static int _s_texture_count;
+			unsigned int _texture_id;
 
-    // Used for counting number of generated textures 
-    static int s_texture_count_;
-};
-}    // end of renderer namespace
-}    // end of mg namespace
+			virtual void build(Image* image, core::ui& tid);
+		};
+	}
+}
 #endif

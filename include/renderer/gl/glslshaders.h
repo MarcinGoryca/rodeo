@@ -1,6 +1,6 @@
 /*
  |  ----------------------------------------------
- |    MG GAME ENGINE 
+ |    MG GAME ENGINE
  |    [ GLSLShaders.h ] [ mg\renderere\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
@@ -20,116 +20,116 @@
 
 namespace mg
 {
-namespace renderer
-{
-class GLSLShaders : public IShaders
-{
-public:
-    GLSLShaders()
-    {}
+	namespace renderer
+	{
+		class GLSLShaders : public IShaders
+		{
+		public:
+			GLSLShaders()
+			{}
 
-    virtual ~GLSLShaders()
-    {}
+			virtual ~GLSLShaders()
+			{}
 
-    /*
-	 |  ----------------------------------------------------
-	 |    Loads Shader from File
-     |    Parameter const char* string of shader filename
-     |    Parameter ShaderType - MG_VS, MG_FS
-     |    Returns unsigned int shader program id
-	 |  ----------------------------------------------------
-	 */
-    virtual core::ui loadShaderFromFile(const char* filename, core::ShaderType st);
+			/*
+			 |  ----------------------------------------------------
+			 |    Loads Shader from File
+			 |    Parameter const char* string of shader filename
+			 |    Parameter ShaderType - MG_VS, MG_FS
+			 |    Returns unsigned int shader program id
+			 |  ----------------------------------------------------
+			 */
+			virtual core::ui loadShaderFromFile(const char* filename, core::ShaderType st);
 
-    /*
-	 |  ----------------------------------------------------
-	 |    Loads Shaders from files
-	 |  ----------------------------------------------------
-	 */
-    void loadShaders(std::string vertex_file, std::string fragment_file);
+			/*
+			 |  ----------------------------------------------------
+			 |    Loads Shaders from files
+			 |  ----------------------------------------------------
+			 */
+			void loadShaders(std::string vertex_file, std::string fragment_file);
 
-    /*
-	 |  ----------------------------------------------------
-	 |    Inits Shaders
-	 |  ----------------------------------------------------
-	 */
-    virtual void init();
+			/*
+			 |  ----------------------------------------------------
+			 |    Inits Shaders
+			 |  ----------------------------------------------------
+			 */
+			virtual void init();
 
-    /*
-	 |  ----------------------------------------------------
-	 |    Uses ShaderProgram
-	 |  ----------------------------------------------------
-	 */
-    virtual void useShaderProgram(core::ui shader_program);
-  
-    virtual const char* getVertexProgramFile() const 
-    {
-        return vertex_program_file_;
-    }
+			/*
+			 |  ----------------------------------------------------
+			 |    Uses ShaderProgram
+			 |  ----------------------------------------------------
+			 */
+			virtual void useShaderProgram(core::ui shader_program);
 
-    virtual void setVertexProgramFile(const char* vpf)
-    {
-        vertex_program_file_ = vpf;
-    }
+			virtual const char* getVertexProgramFile() const
+			{
+				return vertex_program_file_;
+			}
 
-    virtual const char* getFragmentProgramFile() const
-    {
-        return fragment_program_file_;
-    }
+			virtual void setVertexProgramFile(const char* vpf)
+			{
+				vertex_program_file_ = vpf;
+			}
 
-    virtual void setFragmentProgramFile(const char* fpf)
-    {
-        fragment_program_file_ = fpf;
-    }
+			virtual const char* getFragmentProgramFile() const
+			{
+				return fragment_program_file_;
+			}
 
-    virtual core::ui getVertexShader() const
-    {
-        return vertex_shader_;
-    }
+			virtual void setFragmentProgramFile(const char* fpf)
+			{
+				fragment_program_file_ = fpf;
+			}
 
-    virtual void setVertexShader(core::ui id)
-    {
-        vertex_shader_ = id;
-    }
+			virtual core::ui getVertexShader() const
+			{
+				return vertex_shader_;
+			}
 
-    virtual core::ui getFragmentShader() const
-    {
-        return fragment_shader_;
-    }
+			virtual void setVertexShader(core::ui id)
+			{
+				vertex_shader_ = id;
+			}
 
-    virtual void setFragmentShader(core::ui id)
-    {
-        fragment_shader_ = id;
-    }
+			virtual core::ui getFragmentShader() const
+			{
+				return fragment_shader_;
+			}
 
-    virtual core::ui getProgram() const { return program_; }
+			virtual void setFragmentShader(core::ui id)
+			{
+				fragment_shader_ = id;
+			}
 
-    virtual void setProgram(core::ui program) { program_ = program; }
+			virtual core::ui getProgram() const { return program_; }
 
-private:
-    /*
-	 |  ---------------------------------
-	 |    Copy constructor
-	 |  ---------------------------------
-	 */
-    GLSLShaders(const GLSLShaders& copy);
+			virtual void setProgram(core::ui program) { program_ = program; }
 
-    /*
-	 |  ---------------------------------
-	 |    Copy operator
-	 |  ---------------------------------
-	 */
-    GLSLShaders operator=(const GLSLShaders& copy);
+		private:
+			unsigned int program_;
 
-    /*
-	 |  -----------------------------------
-	 |    Helper method to read shader file
-	 |  -----------------------------------
-	 */
-    char* readFile(const char* file);
+			/*
+			 |  ---------------------------------
+			 |    Copy constructor
+			 |  ---------------------------------
+			 */
+			GLSLShaders(const GLSLShaders& copy);
 
-    core::ui program_;
-};
-}    // end of renderer namespace
-}    // end of mg namespace
+			/*
+			 |  ---------------------------------
+			 |    Copy operator
+			 |  ---------------------------------
+			 */
+			GLSLShaders operator=(const GLSLShaders& copy);
+
+			/*
+			 |  -----------------------------------
+			 |    Helper method to read shader file
+			 |  -----------------------------------
+			 */
+			char* readFile(const char* file);
+		};
+	}
+}
 #endif

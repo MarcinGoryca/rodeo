@@ -61,5 +61,5 @@ namespace mg {
         {
             glCullFace(mode);
         }
-    }    // end of renderer namespace
-}    // end of mg namespace
+    }
+}

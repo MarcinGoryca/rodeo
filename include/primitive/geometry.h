@@ -29,10 +29,10 @@ class RenderBuffers
 {
 public:
     ~RenderBuffers(){}
-    core::ui vb;
-    core::ui nb;
-    core::ui tb;
-    core::ui ib;
+    unsigned int _vertex_buffer;
+    unsigned int _normal_buffer;
+    unsigned int _texture_buffer;
+    unsigned int _index_buffer;
 protected:
     RenderBuffers(){}
 };
@@ -57,9 +57,9 @@ struct Point : public entity::Entity
     virtual void draw();
     virtual void setPosition(float px, float py, float pz);
 
-    float x_;
-    float y_;
-    float size_;
+    float _x;
+    float _y;
+    float _size;
 };
 
 // ---- SPHERE ---- //
@@ -75,6 +75,25 @@ public:
 // ---- GRID ---- //
 struct Grid : public entity::Model3D
 {
+	// size of one quad in x 
+	float _quad_x;
+
+	// size of one quad in z 
+	float _quad_z;
+
+	// size of whole grid in x 
+	float _size_in_x;
+
+	// size of whole grid in z 
+	float _size_in_z;
+
+	// how many quads in a row (width) \n
+	// width = (row_quads - 1) * quad_x
+	float _row_quads;
+
+	// how many quads in a column (depth)
+	//depth = (column_quads - 1) * quad_z
+	float _column_quads;
 
     // override method from enginecore::Entity 
     virtual void draw();
@@ -89,27 +108,6 @@ struct Grid : public entity::Model3D
     // Generates grid 
     // Parameter qw, qh - width and height of single quad 
     void generate(core::us n, core::us m, float qw, float qh);
-
-    // size of one quad in x 
-    float quad_x;
-
-    // size of one quad in z 
-    float quad_z;
-
-    // size of whole grid in x 
-    float size_in_x;
-
-    // size of whole grid in z 
-    float size_in_z;
-
-    // how many quads in a row (width) \n
-    // width = (row_quads - 1) * quad_x
-    float row_quads;
-
-    // how many quads in a column (depth)
-    //depth = (column_quads - 1) * quad_z
-    float column_quads;
-
 };
 
 class Geometry
@@ -119,6 +117,6 @@ public:
 
     ~Geometry(){}
 };
-}    // end of primitive namespace
-}    // end of mg namespace
+}
+}
 #endif

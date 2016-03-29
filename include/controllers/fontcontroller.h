@@ -25,7 +25,7 @@
 
 namespace mg
 {
-	namespace core
+	namespace controllers
 	{
 		class FontController : public Singleton<FontController>, public MasterController
 		{

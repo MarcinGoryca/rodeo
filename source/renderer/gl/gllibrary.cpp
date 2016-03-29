@@ -279,5 +279,5 @@ bool texturingOff()
     glDisable(GL_TEXTURE_2D);
     return true;
 }
-}    // end of renderer namespace
-}    // end of mg namespace
+}
+}

@@ -18,6 +18,6 @@ namespace mg
 namespace primitive
 {
 
-}    // end of primitive namespace
-}    // end of mg namespace
+}
+}
 #endif

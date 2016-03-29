@@ -29,40 +29,40 @@
 
 namespace mg
 {
-namespace core
-{
-class ObjectController : public Singleton<ObjectController>
-{
-public:
-    ObjectController();
+	namespace controllers
+	{
+		class ObjectController : public mg::core::Singleton<ObjectController>
+		{
+		public:
+			ObjectController();
 
-    virtual ~ObjectController(){}
+			virtual ~ObjectController() {}
 
-    //scene::Model3D* object3d_;
-    //scene::Model3D* objects_container_[MAX_OBJECTS_];
-    //geometry::BoundingVolume* bounding_volume_[MAX_OBJECTS_];
+			//scene::Model3D* object3d_;
+			//scene::Model3D* objects_container_[MAX_OBJECTS_];
+			//geometry::BoundingVolume* bounding_volume_[MAX_OBJECTS_];
 
-    void create(mg::entity::Model3D* object3d);
+			void create(mg::entity::Model3D* object3d);
 
-    void add(mg::entity::Model3D* object3d);
+			void add(mg::entity::Model3D* object3d);
 
-    void remove(mg::entity::Model3D* object3d);
+			void remove(mg::entity::Model3D* object3d);
 
-    void remove();
+			void remove();
 
-    entity::Model3D* getObject(ui id)const;
+			entity::Model3D* getObject(unsigned int id)const;
 
-private:
-	// Container for Model3D objects
-	std::vector<mg::entity::Model3D*> _objects;
-	// Used to counting objects
-	static ui _s_objects_counter;
-    // Copy constructor
-    ObjectController(const ObjectController& copy);
+		private:
+			// Container for Model3D objects
+			std::vector<mg::entity::Model3D*> _objects;
+			// Used to counting objects
+			static unsigned int _s_objects_counter;
+			// Copy constructor
+			ObjectController(const ObjectController& copy);
 
-    // Copy operator
-    ObjectController operator=(const ObjectController& copy);
-};
-}    // end of core namespace
-}    // end of mg namespace
+			// Copy operator
+			ObjectController operator=(const ObjectController& copy);
+		};
+	}
+}
 #endif

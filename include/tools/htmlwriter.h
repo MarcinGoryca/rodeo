@@ -1,9 +1,9 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 -----------------------------------
 */
 #ifndef MG_TOOLS_HTMLWRITER_H_
@@ -15,30 +15,30 @@
 
 namespace mg
 {
-namespace tools
-{
-class HtmlWriter
-{
-public:
-    HtmlWriter()
-        :hfile_(NULL)
-    {}
+	namespace tools
+	{
+		class HtmlWriter
+		{
+		public:
+			HtmlWriter()
+				:_hfile(NULL)
+			{}
 
-    ~HtmlWriter(){}
+			~HtmlWriter() {}
 
-    // filename - specify your destination HTML file e.g. index.html 
-    // add your website content
-    bool writeToHTML(std::wstring filename, std::string s);
+			// filename - specify your destination HTML file e.g. index.html 
+			// add your website content
+			bool writeToHTML(std::wstring filename, std::string s);
 
-protected:
+		protected:
 
-    bool create(std::wstring filename);
-    void writeHeader();
-    void writeFooter();
-    void addToPage(std::string s); 
+			bool create(std::wstring filename);
+			void writeHeader();
+			void writeFooter();
+			void addToPage(std::string s);
 
-    HANDLE hfile_;
-};
-}    // end of tools namespace
-}    // end of mg namespace
+			HANDLE _hfile;
+		};
+	}
+}
 #endif

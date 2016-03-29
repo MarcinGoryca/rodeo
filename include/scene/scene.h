@@ -1,9 +1,9 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 -----------------------------------
 */
 #ifndef MG_SCENE_SCENE_H_
@@ -27,44 +27,44 @@
 
 namespace mg
 {
-namespace renderer
-{
-class RenderState;
+	namespace renderer
+	{
+		class RenderState;
+	}
+	namespace scene
+	{
+		class Scene
+		{
+		public:
+			Scene()
+				:_node_count(0)
+			{}
+
+			~Scene() {}
+
+			void addChild(entity::Entity* entity);
+			void removeChild(entity::Entity* entity);
+			void removeChild();
+
+			// Allows clear entire scene
+			void clear();
+
+			void render();
+			void update(float dt);
+
+			void onEvent();
+
+			renderer::RenderState* getState()const { return _render_state; }
+
+			core::ui getNodeCount()const { return _node_count; }
+
+		protected:
+			renderer::RenderState* _render_state;
+			std::list<entity::Entity*> _node;
+		private:
+			unsigned int _node_count;
+			static unsigned int _children;
+		};
+	}
 }
-namespace scene
-{
-class Scene
-{
-public:
-    Scene()
-    :node_count_(0)
-    {}
-    
-    ~Scene(){}
-
-    void addChild(entity::Entity* entity);
-    void removeChild(entity::Entity* entity);
-    void removeChild();
-
-    // Allows clear entire scene
-    void clear();
-
-    void render();
-    void update(float dt);
-
-    void onEvent();
-
-    renderer::RenderState* getState()const { return render_state_; }
-
-    core::ui getNodeCount()const { return node_count_; }
-
-protected:
-    renderer::RenderState* render_state_;
-    std::list<entity::Entity*> node_;
-private:
-    core::ui node_count_;
-    static core::ui children_;
-};
-}    // end of scene namespace
-}    // end of mg namespace
 #endif

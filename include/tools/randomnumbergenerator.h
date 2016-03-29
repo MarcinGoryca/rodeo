@@ -1,22 +1,22 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 -----------------------------------
 */
 /*
 --------------------------------------------------------------------------
-    RandomNumberGenerator.h
- 
-    !IMPORTANT NOTES!
-    Code comes from "Game Coding Complete" by Mike McShaffry
-    RNG Core name: Mersenne Twister by Takuji Nishimura and Makoto Matsumoto
-    Usage:
-    CRandom r; 
-    r.Randomize();
-    unsigned int a = r.Random(1000) //returns a number from 0 - 999
+	RandomNumberGenerator.h
+
+	!IMPORTANT NOTES!
+	Code comes from "Game Coding Complete" by Mike McShaffry
+	RNG Core name: Mersenne Twister by Takuji Nishimura and Makoto Matsumoto
+	Usage:
+	CRandom r;
+	r.Randomize();
+	unsigned int a = r.Random(1000) //returns a number from 0 - 999
 --------------------------------------------------------------------------
 */
 #ifndef MG_TOOLS_RANDOMNUMBERGENERATOR_H_
@@ -37,27 +37,27 @@
 
 namespace mg
 {
-namespace tools
-{
-class CRandom
-{
-public:
-    CRandom()
-        :seed_(1), mti_(CMATH_N+1){}
+	namespace tools
+	{
+		class CRandom
+		{
+		public:
+			CRandom()
+				:_seed(1), _mti(CMATH_N + 1) {}
 
-    // Returns number from 0 to n (excluding n)	
-    unsigned int random(unsigned int n);
-    void setRandomSeed(unsigned int n);
-    unsigned int getRandomSeed(){ return seed_; }
-    void randomize();
+			// Returns number from 0 to n (excluding n)	
+			unsigned int random(unsigned int n);
+			void randomize();
 
-private:
-    unsigned int seed_;
-    unsigned long mt_[CMATH_N];
+			void setRandomSeed(unsigned int n);
+			unsigned int getRandomSeed() { return _seed; }
+		private:
+			unsigned int _seed;
+			unsigned long _mt[CMATH_N];
 
-    // mti == N+1 (mt[N] is not initialized)
-    int mti_;
-};
-}    // end of tools namespace
-}    // end of mg namespace
+			// mti == N+1 (mt[N] is not initialized)
+			int _mti;
+		};
+	}
+}
 #endif

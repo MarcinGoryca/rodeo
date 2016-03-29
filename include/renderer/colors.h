@@ -935,65 +935,65 @@ class Colors
 {
 public:
     Colors()
-        :red_(0.0f),
-         green_(0.0f),
-         blue_(0.0f),
-         alpha_(0.0f)
+        :_red(0.0f),
+         _green(0.0f),
+         _blue(0.0f),
+         _alpha(0.0f)
     {}
 
     Colors(float red, float green, float blue)
-        :red_(red),
-         green_(green),
-         blue_(blue)
+        :_red(red),
+         _green(green),
+         _blue(blue)
     {}
 
     Colors(float red, float green, float blue, float alpha)
-        :red_(red),
-         green_(green),
-         blue_(blue),
-         alpha_(alpha)
+        :_red(red),
+         _green(green),
+         _blue(blue),
+         _alpha(alpha)
     {}
 
     Colors(float colors[4])
-        :red_(colors[0]),
-         green_(colors[1]),
-         blue_(colors[2]),
-         alpha_(colors[3])
+        :_red(colors[0]),
+         _green(colors[1]),
+         _blue(colors[2]),
+         _alpha(colors[3])
     {}
     
     ~Colors(){}
 
-    void setRed(float red){ red_ = red; }
-    void setGreen(float green){ green_ = green; }
-    void setBlue(float blue){ blue_ = blue; }
-    void setAlpha(float alpha){ alpha_ = alpha; }
+    void setRed(float red){ _red = red; }
+    void setGreen(float green){ _green = green; }
+    void setBlue(float blue){ _blue = blue; }
+    void setAlpha(float alpha){ _alpha = alpha; }
     
     void setColors(float red, float green, float blue)
     {
-        red_ = red;
-        green_ = green;
-        blue_ = blue;
+        _red = red;
+        _green = green;
+        _blue = blue;
     }
 
     void setColors(float red, float green, float blue, float alpha)
     {
-        red_ = red;
-        green_ = green;
-        blue_ = blue;
-        alpha_ = alpha; 
+        _red = red;
+        _green = green;
+        _blue = blue;
+        _alpha = alpha; 
     }
 
-    float getRed() const {  return red_; }
-    float getGreen() const { return green_; }
-    float getBlue() const { return blue_; }
-    float getAlpha() const { return alpha_; }
+    float getRed() const {  return _red; }
+    float getGreen() const { return _green; }
+    float getBlue() const { return _blue; }
+    float getAlpha() const { return _alpha; }
 
 private:
-    float red_;
-    float green_;
-    float blue_;
-    float alpha_;
+    float _red;
+    float _green;
+    float _blue;
+    float _alpha;
 };
-}    // end of renderer namespace
-}    // end of mg namespace
+}
+}
 #endif

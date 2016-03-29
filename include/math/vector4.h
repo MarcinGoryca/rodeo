@@ -1,9 +1,9 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 ----------------------------------------------
 */
 #ifndef MG_MATH_VECTOR4_H_
@@ -15,206 +15,206 @@
 
 namespace mg
 {
-namespace math
-{
-class Vector4
-{
-public:
-    Vector4()
-        :x_(0.0f),
-         y_(0.0f),
-         z_(0.0f),
-         w_(0.0f)
-    {}
+	namespace math
+	{
+		class Vector4
+		{
+		public:
+			Vector4()
+				:_x(0.0f),
+				_y(0.0f),
+				_z(0.0f),
+				_w(0.0f)
+			{}
 
-    // ---- //
-    Vector4(float x, float y, float z, float w)
-       :x_(x),
-        y_(y),
-        z_(z),
-        w_(w)
-    {}
+			// ---- //
+			Vector4(float x, float y, float z, float w)
+				:_x(x),
+				_y(y),
+				_z(z),
+				_w(w)
+			{}
 
-    // Copy constructor
-    Vector4(const Vector4& v)
-        :x_(v.x_), y_(v.y_), z_(v.z_), w_(v.w_)
-    {}
+			// Copy constructor
+			Vector4(const Vector4& v)
+				:_x(v._x), _y(v._y), _z(v._z), _w(v._w)
+			{}
 
-    // ---- //
-    ~Vector4(){}
+			// ---- //
+			~Vector4() {}
 
-    // Returning the Vector
-    Vector4 get() const { return *this; }
+			// Returning the Vector
+			Vector4 get() const { return *this; }
 
-    // Setting the Vector
-    inline void set(float x, float y, float z, float w)
-    { 
-        x_ = x; y_ = y; z_ = z; w_ = w; 
-    }
+			// Setting the Vector
+			inline void set(float x, float y, float z, float w)
+			{
+				_x = x; _y = y; _z = z; _w = w;
+			}
 
-    // Setting the vector
-    inline void set(const Vector4& v)
-    {
-        x_ = v.x_;
-        y_ = v.y_;
-        z_ = v.z_;
-        w_ = v.w_;
-    }
+			// Setting the vector
+			inline void set(const Vector4& v)
+			{
+				_x = v._x;
+				_y = v._y;
+				_z = v._z;
+				_w = v._w;
+			}
 
-    // ---- //
-    inline void set(const Vector3& v)
-    {
-        x_ = v.x_;
-        y_ = v.y_;
-        z_ = v.z_;
-        w_ = 1.0f;
-    }
+			// ---- //
+			inline void set(const Vector3& v)
+			{
+				_x = v._x;
+				_y = v._y;
+				_z = v._z;
+				_w = 1.0f;
+			}
 
-    // Dot Product
-    // Returns float value as dot product
-    inline float dot(const Vector4& v1)
-    {
-        return x_ * v1.x_ + y_ * v1.y_ + z_ * v1.z_ + w_ * v1.w_;
-    }
+			// Dot Product
+			// Returns float value as dot product
+			inline float dot(const Vector4& v1)
+			{
+				return _x * v1._x + _y * v1._y + _z * v1._z + _w * v1._w;
+			}
 
-    // Length of the Vector (Magnitude)
-    // Returns float value of the Length
-    float length();
+			// Length of the Vector (Magnitude)
+			// Returns float value of the Length
+			float length();
 
-    // ---- //
-    inline Vector4 operator+(const Vector4& v)
-    {
-        return Vector4(x_ + v.x_, y_ + v.y_, z_ + v.z_, v.w_);
-    }
+			// ---- //
+			inline Vector4 operator+(const Vector4& v)
+			{
+				return Vector4(_x + v._x, _y + v._y, _z + v._z, v._w);
+			}
 
-    // ---- //
-    inline Vector4 operator-(Vector4 v)
-    {
-        return Vector4(x_ - v.x_, y_ - v.y_, z_ - v.z_, v.w_);
-    }
+			// ---- //
+			inline Vector4 operator-(Vector4 v)
+			{
+				return Vector4(_x - v._x, _y - v._y, _z - v._z, v._w);
+			}
 
-    // ---- //
-    inline const Vector4 operator-(const Vector4& v)const
-    {
-        return Vector4(x_ - v.x_, y_ - v.y_, z_ - v.z_, v.w_);
-    }
+			// ---- //
+			inline const Vector4 operator-(const Vector4& v)const
+			{
+				return Vector4(_x - v._x, _y - v._y, _z - v._z, v._w);
+			}
 
-    // ---- //
-    inline Vector4 operator*(const float& number)
-    {
-        return Vector4(x_ * number, y_ * number, z_ * number, w_ * number);
-    }
+			// ---- //
+			inline Vector4 operator*(const float& number)
+			{
+				return Vector4(_x * number, _y * number, _z * number, _w * number);
+			}
 
-    // ---- //
-    inline Vector4& operator*(const Vector4& v)
-    {
-        x_ = x_ * v.x_;
-        y_ = y_ * v.y_;
-        z_ = z_ * v.z_;
-        w_ = w_ * v.w_;
-        return *this;
-    }
+			// ---- //
+			inline Vector4& operator*(const Vector4& v)
+			{
+				_x = _x * v._x;
+				_y = _y * v._y;
+				_z = _z * v._z;
+				_w = _w * v._w;
+				return *this;
+			}
 
-    // ---- //
-    inline Vector4 operator/(const float& number)
-    {
-        if(number == 0.0f)
-        {
-            std::cout << "Trying to dividing by 0, resetting the vector" << std::endl;
-            return Vector4(x_, y_, z_, w_);
-        }
-        else
-        {
-            return Vector4(x_ / number, y_ / number, z_ / number, w_ / number);
-        }
-    }
+			// ---- //
+			inline Vector4 operator/(const float& number)
+			{
+				if (number == 0.0f)
+				{
+					std::cout << "Trying to dividing by 0, resetting the vector" << std::endl;
+					return Vector4(_x, _y, _z, _w);
+				}
+				else
+				{
+					return Vector4(_x / number, _y / number, _z / number, _w / number);
+				}
+			}
 
-    // ---- //
-    inline Vector4& operator+=(const Vector4& v1)
-    {
-        this->x_ += v1.x_;
-        this->y_ += v1.y_;
-        this->z_ += v1.z_;
-        this->w_ += v1.w_;
-        return *this;
-    }
+			// ---- //
+			inline Vector4& operator+=(const Vector4& v1)
+			{
+				this->_x += v1._x;
+				this->_y += v1._y;
+				this->_z += v1._z;
+				this->_w += v1._w;
+				return *this;
+			}
 
-    // ---- //
-    inline Vector4& operator-=(const Vector4& v1)
-    {
-        this->x_ -= v1.x_;
-        this->y_ -= v1.y_;
-        this->z_ -= v1.z_;
-        this->w_ -= v1.w_;
-        return *this;
-    }
+			// ---- //
+			inline Vector4& operator-=(const Vector4& v1)
+			{
+				this->_x -= v1._x;
+				this->_y -= v1._y;
+				this->_z -= v1._z;
+				this->_w -= v1._w;
+				return *this;
+			}
 
-    // ---- //
-    inline Vector4& operator*=(const Vector4& v1)
-    {
-        this->x_ *= v1.x_;
-        this->y_ *= v1.y_;
-        this->z_ *= v1.z_;
-        this->w_ *= v1.w_;
-        return *this;
-    }
+			// ---- //
+			inline Vector4& operator*=(const Vector4& v1)
+			{
+				this->_x *= v1._x;
+				this->_y *= v1._y;
+				this->_z *= v1._z;
+				this->_w *= v1._w;
+				return *this;
+			}
 
-    // ---- //
-    inline Vector4& operator /=(const Vector4& v1)
-    {
-        this->x_ /= v1.x_;
-        this->y_ /= v1.y_;
-        this->z_ /= v1.z_;
-        this->w_ /= v1.w_;
-        return *this;
-    }
+			// ---- //
+			inline Vector4& operator /=(const Vector4& v1)
+			{
+				this->_x /= v1._x;
+				this->_y /= v1._y;
+				this->_z /= v1._z;
+				this->_w /= v1._w;
+				return *this;
+			}
 
-    // ---- //
-    inline Vector4& operator =(const Vector4& v1)
-    {
-        x_ = v1.x_;
-        y_ = v1.y_;
-        z_ = v1.z_;
-        w_ = v1.w_;
-        return *this;
-    }
+			// ---- //
+			inline Vector4& operator =(const Vector4& v1)
+			{
+				_x = v1._x;
+				_y = v1._y;
+				_z = v1._z;
+				_w = v1._w;
+				return *this;
+			}
 
-    // ---- //
-    inline bool operator == (const Vector4& v1) const
-    {
-        return (x_ == v1.x_ && y_ == v1.y_ && z_ == v1.z_ && w_ == v1.w_);
-    }
+			// ---- //
+			inline bool operator == (const Vector4& v1) const
+			{
+				return (_x == v1._x && _y == v1._y && _z == v1._z && _w == v1._w);
+			}
 
-    // ---- //
-    inline bool operator != (const Vector4& v1) const
-    {
-        return (x_ != v1.x_ || y_ != v1.y_ || z_ != v1.z_);
-    }
+			// ---- //
+			inline bool operator != (const Vector4& v1) const
+			{
+				return (_x != v1._x || _y != v1._y || _z != v1._z);
+			}
 
-    // ---- //
-    friend std::ostream& operator<<(std::ostream& os, const Vector4& v)
-    {
-        return os << "Vector4(" << v.x_ << ", " << v.y_ << ", " << v.z_ << ", " << v.w_ << ")"; 
-    }
+			// ---- //
+			friend std::ostream& operator<<(std::ostream& os, const Vector4& v)
+			{
+				return os << "Vector4(" << v._x << ", " << v._y << ", " << v._z << ", " << v._w << ")";
+			}
 
-    // ---- //
-    Vector4* operator&()
-    {
-        return this;
-    }
+			// ---- //
+			Vector4* operator&()
+			{
+				return this;
+			}
 
-    float x_;
-    float y_;
-    float z_;
-    float w_;
-};
+			float _x;
+			float _y;
+			float _z;
+			float _w;
+		};
 
-    // Helper function, prints the Vector to standard output  
-    void printV4(const Vector4& v);
+		// Helper function, prints the Vector to standard output  
+		void printV4(const Vector4& v);
 
-    // Helper function - prints out the Vector to the standard output
-    // Parameter message - Message to the console
-    void printV4(const char* message, const Vector4& v);
-}    // end of math namespace
+		// Helper function - prints out the Vector to the standard output
+		// Parameter message - Message to the console
+		void printV4(const char* message, const Vector4& v);
+	}    // end of math namespace
 }    // end of mg namespace
 #endif

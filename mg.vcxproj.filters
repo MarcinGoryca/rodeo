@@ -109,6 +109,9 @@
     <Filter Include="Header Files\front">
       <UniqueIdentifier>{82e43ea0-c3b0-4877-b4d4-e8550f82b3b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\controllers">
+      <UniqueIdentifier>{fa92353f-6721-41d5-a848-67ba660f560c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\audio\audio.h">
@@ -470,37 +473,7 @@
     <ClCompile Include="source\audio\soundobject.cpp">
       <Filter>Source Files\audio</Filter>
     </ClCompile>
-    <ClCompile Include="source\core\audiomanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\eventmanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\fontmanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
     <ClCompile Include="source\core\framework.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\objectmanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\outputmanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\rendermanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\scenemanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\shadersmanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\texturemanager.cpp">
-      <Filter>Source Files\core</Filter>
-    </ClCompile>
-    <ClCompile Include="source\core\timemanager.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
     <ClCompile Include="source\core\timer.cpp">
@@ -706,6 +679,36 @@
     </ClCompile>
     <ClCompile Include="source\renderer\gl\gldrawing.cpp">
       <Filter>Source Files\renderer\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\audiocontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\eventcontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\fontcontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\objectcontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\outputcontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\rendercontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\scenecontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\shaderscontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\texturecontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\controllers\timecontroller.cpp">
+      <Filter>Source Files\controllers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

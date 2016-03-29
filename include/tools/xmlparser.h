@@ -1,9 +1,9 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 -----------------------------------
 */
 #ifndef MG_TOOLS_XMLPARSER_H_
@@ -31,67 +31,67 @@
 
 namespace mg
 {
-namespace tools
-{
-typedef std::map<std::string, std::string> XmlStringMap;
-typedef std::map<std::string, int>XmlIntMap;
-typedef std::map<std::string, float>XmlFloatMap;
+	namespace tools
+	{
+		typedef std::map<std::string, std::string> XmlStringMap;
+		typedef std::map<std::string, int>XmlIntMap;
+		typedef std::map<std::string, float>XmlFloatMap;
 
-class XmlParser: public core::Singleton<XmlParser>
-{
-public:
-    XmlParser()
-         :root_(0)
-    {}
+		class XmlParser : public core::Singleton<XmlParser>
+		{
+		public:
+			XmlParser()
+				:_root(0)
+			{}
 
-    ~XmlParser(){}
+			~XmlParser() {}
 
-    bool read(const std::wstring filepath);
+			bool read(const std::wstring filepath);
 
-    XmlIntMap getIntMap() const
-    {
-        return map_int_;
-    }
+			XmlIntMap getIntMap() const
+			{
+				return _map_int;
+			}
 
-    XmlFloatMap getFloatMap() const
-    {
-        return map_float_;
-    }
+			XmlFloatMap getFloatMap() const
+			{
+				return _map_float;
+			}
 
-    XmlStringMap getStringMap() const
-    {
-        return map_string_;
-    }
+			XmlStringMap getStringMap() const
+			{
+				return _map_string;
+			}
 
-    TiXmlDocument getXmlDocument() const
-    {
-        return xml_document_;
-    }
+			TiXmlDocument getXmlDocument() const
+			{
+				return _xml_document;
+			}
 
-    TiXmlElement* getXmlElement() const
-    {
-        return xml_element_;
-    }
+			TiXmlElement* getXmlElement() const
+			{
+				return _xml_element;
+			}
 
-    TiXmlNode* getXmlNode() const
-    {
-        return xml_node_;
-    }
+			TiXmlNode* getXmlNode() const
+			{
+				return _xml_node;
+			}
 
-    TiXmlHandle getRoot() const
-    {
-        return root_;
-    }
+			TiXmlHandle getRoot() const
+			{
+				return _root;
+			}
 
-private:
-    TiXmlHandle root_;
-    TiXmlDocument xml_document_;
-    TiXmlElement* xml_element_;
-    TiXmlNode* xml_node_;
-    XmlIntMap map_int_;
-    XmlFloatMap map_float_;
-    XmlStringMap map_string_;
-};
-}    // end of tools namespace
-}    // end of mg namespace
+		private:
+			TiXmlHandle _root;
+			TiXmlDocument _xml_document;
+			TiXmlElement* _xml_element;
+			TiXmlNode* _xml_node;
+			XmlIntMap _map_int;
+			XmlFloatMap _map_float;
+			XmlStringMap _map_string;
+		};
+	}
+}
 #endif

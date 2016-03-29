@@ -129,5 +129,5 @@ namespace audio
 //    file_ = NULL;
 //    system_->release();
 //}
-}    // end of audio namespace
-}    // end of mg namespace
+}
+}

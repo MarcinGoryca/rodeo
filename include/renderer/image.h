@@ -1,9 +1,9 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 ----------------------------------------------
 */
 #ifndef MG_RENDERER_IMAGE_H
@@ -15,97 +15,97 @@
 
 namespace mg
 {
-namespace renderer
-{
-class Image
-{
-public:
-    Image(){}
-    virtual ~Image(){}
+	namespace renderer
+	{
+		class Image
+		{
+		public:
+			Image() {}
+			virtual ~Image() {}
 
-    // Opens image file (tga, bmp, dds)
-    virtual bool open(const char* fileName)=0;
+			// Opens image file (tga, bmp, dds)
+			virtual bool open(const char* fileName) = 0;
 
-    // Draw your image on the screen with arguments x, y
-    virtual void release()=0;
+			// Draw your image on the screen with arguments x, y
+			virtual void release() = 0;
 
-    // Simple Rtti system
-    // TODO: Replace with more advenced one
-    virtual const char* getClassName() const =0;
+			// Simple Rtti system
+			// TODO: Replace with more advenced one
+			virtual const char* getClassName() const = 0;
 
-    core::ui getWidth() const
-    {
-        return width_;
-    }
+			unsigned int getWidth() const
+			{
+				return _width;
+			}
 
-    core::ui getHeight() const
-    {
-        return height_;
-    }
+			unsigned int getHeight() const
+			{
+				return _height;
+			}
 
-    core::ucp getImageData() const
-    {
-        return data_;
-    }
+			unsigned char* getImageData() const
+			{
+				return _data;
+			}
 
-    core::ui getBpp() const
-    {
-        return bpp_;
-    }
+			unsigned int getBpp() const
+			{
+				return _bpp;
+			}
 
-    core::ui getBlockSize() const
-    {
-         return blocksize_;
-    }
+			unsigned int getBlockSize() const
+			{
+				return _blocksize;
+			}
 
-    core::ui getBitDepth() const
-    {
-        return bitdepth_;
-    }
+			unsigned int getBitDepth() const
+			{
+				return _bitdepth;
+			}
 
-    core::ui getMipmapCount() const
-    {
-        return mipmapcount_;
-    }
+			unsigned int getMipmapCount() const
+			{
+				return _mipmapcount;
+			}
 
-    int getPixelFormat() const
-    {
-        return pixelformat_;
-    }
+			int getPixelFormat() const
+			{
+				return _pixelformat;
+			}
 
-    GLenum getCompressionFormat() const
-    {
-        return compression_format_;
-    }
+			GLenum getCompressionFormat() const
+			{
+				return _compression_format;
+			}
 
-    GLubyte* getPixels() const
-    {
-        return pixels_;
-    }
+			GLubyte* getPixels() const
+			{
+				return _pixels;
+			}
 
-protected:
-    core::ucp data_;
-    core::ui height_;
-    core::ui width_;
-    core::ui bpp_;
+		protected:
+			unsigned char* _data;
+			unsigned int _height;
+			unsigned int _width;
+			unsigned int _bpp;
 
-    // Specific data members for DDS Files
-    core::ui factor_;
-    core::ui linearsize_;
-    HANDLE hfile_;
-    GLenum compression_format_;
-    char readbuff_[4];
-    core::ui buffersize_;
+			// Specific data members for DDS Files
+			unsigned int _factor;
+			unsigned int _linearsize;
+			HANDLE _hfile;
+			GLenum _compression_format;
+			char _readbuff[4];
+			unsigned int _buffersize;
 
-    // blockSize - 8 bytes for DXT1\n16 bytes for DXT3, DXT5
-    core::ui blocksize_;
-    core::ui bitdepth_;
-    core::ui mipmapcount_;
-    int pixelformat_;
+			// blockSize - 8 bytes for DXT1\n16 bytes for DXT3, DXT5
+			unsigned int _blocksize;
+			unsigned int _bitdepth;
+			unsigned int _mipmapcount;
+			int _pixelformat;
 
-    // Holds actual image data 
-    GLubyte* pixels_;
-};
-}    // end of renderer namespace
-}    // end of mg namespace
+			// Holds actual image data 
+			GLubyte* _pixels;
+		};
+	}
+}
 #endif

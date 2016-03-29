@@ -24,64 +24,64 @@
 
 namespace mg
 {
-namespace renderer
-{
-class QueryRenderer
-{
-public:
-    QueryRenderer(){  }
-    ~QueryRenderer(){ reset();}
+	namespace renderer
+	{
+		class QueryRenderer
+		{
+		public:
+			QueryRenderer() {  }
+			~QueryRenderer() { reset(); }
 
-    const GLubyte* getVendor()const{ return glvendor_; }
-    const GLubyte* getRenderer()const{ return glrenderer_; }
-    const GLubyte* getVersion()const { return glversion_; }
-    const GLubyte* getExtensions()const { return glextensions_; }
-    void run();
+			const GLubyte* getVendor()const { return _glvendor; }
+			const GLubyte* getRenderer()const { return _glrenderer; }
+			const GLubyte* getVersion()const { return _glversion; }
+			const GLubyte* getExtensions()const { return _glextensions; }
+			void run();
 
-    enum Vendor
-    {
-        NVIDIA = 1,
-        ATI = 2,
-        OTHER = 3
-    };
+			enum Vendor
+			{
+				NVIDIA = 1,
+				ATI = 2,
+				OTHER = 3
+			};
 
-    enum Version
-    {
-        OPENGL_1 = 1,
-        OPENGL_2 = 2,
-        OPENGL_3 = 3,
-        OPENGL_4 = 4
-    };
+			enum Version
+			{
+				OPENGL_1 = 1,
+				OPENGL_2 = 2,
+				OPENGL_3 = 3,
+				OPENGL_4 = 4
+			};
 
-/**
- *	TODO:
- *	1. Check for GL_VENDOR
- *	2. Check for GL_VERSION
- *	3. Check for GL_RENDERER
- *	4. Check for GL_EXTENSIONS
- *	5. Check for Resolution
- * 6. Check for Color Mode
- */
+			/**
+			 *	TODO:
+			 *	1. Check for GL_VENDOR
+			 *	2. Check for GL_VERSION
+			 *	3. Check for GL_RENDERER
+			 *	4. Check for GL_EXTENSIONS
+			 *	5. Check for Resolution
+			 * 6. Check for Color Mode
+			 */
 
-    // Calls glGetIntegerv(GL_SAMPLE_BUFFERS)<br/>
-    // If the returned value is 1 - there is MULTISAMPLING on this platform
-    void checkMultisampling();
+			 // Calls glGetIntegerv(GL_SAMPLE_BUFFERS)<br/>
+			 // If the returned value is 1 - there is MULTISAMPLING on this platform
+			void checkMultisampling();
 
-private:
-    std::string print(std::string s)const;
-    bool reset();
+		private:
+			const GLubyte* _glrenderer;
+			const GLubyte* _glvendor;
+			const GLubyte* _glversion;
+			const GLubyte* _glextensions;
 
-    const GLubyte* glrenderer_;
-    const GLubyte* glvendor_;
-    const GLubyte* glversion_;
-    const GLubyte* glextensions_;
-    
-    int gl21supported_;
-    int gl31supported_;
-    int gl32supported_;
-    int gl33supported_;
-    int gl41supported_;
-};
-}    // end of renderer namespace
-}    // end of mg namespace
+			int _gl21supported;
+			int _gl31supported;
+			int _gl32supported;
+			int _gl33supported;
+			int _gl41supported;
+
+			std::string print(std::string s)const;
+			bool reset();
+		};
+	}
+}
 #endif

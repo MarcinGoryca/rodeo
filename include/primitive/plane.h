@@ -21,8 +21,8 @@ public:
     //Plane(const enginemath::Vector3& normal, const enginemath::Vector3& point);
     //~Plane(){}
 };
-}    // end of primitive namespace
-}    // end of mg namespace
+}
+}
 #endif
 
 /*

@@ -41,18 +41,18 @@ namespace mg
         {
             public:
                 Font()
-                    :text_(""),
-                    fontfile_(""),
-                    error_(0),
-                    pen_(),
-                    library_(NULL),
-                    face_(NULL),
-                    slot_(NULL),
-                    glyph_(),
-                    position_x_(0.0f),
-                    position_y_(0.0f),
-                    scale_x_(0.0f),
-                    scale_y_(0.0f)
+                    :_text(""),
+                    _fontfile(""),
+                    _error(0),
+                    _pen(),
+                    _library(NULL),
+                    _face(NULL),
+                    _slot(NULL),
+                    _glyph(),
+                    _position_x(0.0f),
+                    _position_y(0.0f),
+                    _scale_x(0.0f),
+                    _scale_y(0.0f)
                 {}
 
                 /*
@@ -63,19 +63,19 @@ namespace mg
                  |  -------------------------------------------------------------------------
                  */
                 Font(const char* fontfile)
-                    :text_(""),
-                    error_(0),
-                    pen_(),
-                    library_(NULL),
-                    face_(NULL),
-                    slot_(NULL),
-                    glyph_(),
-                    position_x_(0.0f),
-                    position_y_(0.0f),
-                    scale_x_(0.0f),
-                    scale_y_(0.0f)
+                    :_text(""),
+                    _error(0),
+                    _pen(),
+                    _library(NULL),
+                    _face(NULL),
+                    _slot(NULL),
+                    _glyph(),
+                    _position_x(0.0f),
+                    _position_y(0.0f),
+                    _scale_x(0.0f),
+                    _scale_y(0.0f)
                 {
-                    fontfile_ = fontfile;
+                    _fontfile = fontfile;
                 }
 
                 virtual ~Font() {}
@@ -112,42 +112,42 @@ namespace mg
                 // Sets new Size for the font
                 void setFontSize(core::ui height);
 
-                void setText(const char* text) { text_ = text; }
-                const char* getText()const { return text_; }
+                void setText(const char* text) { _text = text; }
+                const char* getText()const { return _text; }
 
-                void setFontfile(const char* fontfile) { fontfile_ = fontfile; }
-                const char* getFontfile()const { return fontfile_; }
+                void setFontfile(const char* fontfile) { _fontfile = fontfile; }
+                const char* getFontfile()const { return _fontfile; }
 
                 // Gets the error code
                 // Returns Code of the error 0 - success, 1 - fail
-                FT_Error getError()const { return error_; }
+                FT_Error getError()const { return _error; }
 
                 // Gets the 2D vector structure
-                FT_Vector getPen()const { return pen_; }
+                FT_Vector getPen()const { return _pen; }
 
                 // Get the handle of the library
                 // Returns The handle to a library
-                FT_Library getLibrary()const { return library_; }
+                FT_Library getLibrary()const { return _library; }
 
                 // Get the handle to the face object
                 // Returns The handle to the face object
-                FT_Face getFace()const { return face_; }
+                FT_Face getFace()const { return _face; }
 
                 // Get the slot for glyphs
                 // Returns The slot (container)
-                FT_GlyphSlot getGlyphSlot()const { return slot_; }
+                FT_GlyphSlot getGlyphSlot()const { return _slot; }
 
-                float getPositionX()const { return position_x_; }
-                void setPositionX(float npx) { position_x_ = npx; }
+                float getPositionX()const { return _position_x; }
+                void setPositionX(float npx) { _position_x = npx; }
 
-                float getPositionY()const { return position_y_; }
-                void setPositionY(float npy) { position_y_ = npy; }
+                float getPositionY()const { return _position_y; }
+                void setPositionY(float npy) { _position_y = npy; }
 
-                float getScaleX()const { return scale_x_; }
-                void setScaleX(float nsx) { scale_x_ = nsx; }
+                float getScaleX()const { return _scale_x; }
+                void setScaleX(float nsx) { _scale_x = nsx; }
 
-                float getScaleY()const { return scale_y_; }
-                void setScaleY(float nsy) { scale_y_ = nsy; }
+                float getScaleY()const { return _scale_y; }
+                void setScaleY(float nsy) { _scale_y = nsy; }
 
                 //TODO
                 // Remove this members and use other struct/class for OpenGL-specific members
@@ -158,32 +158,32 @@ namespace mg
                 GLint attr_;
 
         private:
-            const char* text_;
-            const char* fontfile_;
+            const char* _text;
+            const char* _fontfile;
 
             // Error code type.
             // A value of 0 is always interpreted as a successful operation.
-            FT_Error error_;
+            FT_Error _error;
 
             // A simple structure used to store 2D Vector.
-            FT_Vector pen_;
+            FT_Vector _pen;
 
             // A handle to library instance
-            FT_Library library_;
+            FT_Library _library;
 
             // A handle to a given typographic face object
-            FT_Face face_;
+            FT_Face _face;
 
             // A handle to a given 'glyph slot'.<br/>
             // A slot is a container where it is possible<br/>
             // to load any of the glyphs contained in its parent face.
-            FT_GlyphSlot slot_;
-            Glyph glyph_;
-            float position_x_;
-            float position_y_;
-            float scale_x_;
-            float scale_y_;
+            FT_GlyphSlot _slot;
+            Glyph _glyph;
+            float _position_x;
+            float _position_y;
+            float _scale_x;
+            float _scale_y;
         };
-    }    // end of renderer namespace
-}    // end of mg namespace
+    }
+}
 #endif

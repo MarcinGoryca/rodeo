@@ -16,7 +16,7 @@
 #endif
 
 #ifndef MG_CORE_SINGLETON_H_
-#include "singleton.h"
+#include "core\singleton.h"
 #endif
 
 #ifndef MG_CORE_MASTERCONTROLLER_H_
@@ -30,9 +30,9 @@ namespace mg
 		class Event;
 	}
 
-	namespace core
+	namespace controllers
 	{
-		class EventController : public Singleton<EventController>, public MasterController
+		class EventController : public mg::core::Singleton<EventController>, public MasterController
 		{
 		public:
 			/*

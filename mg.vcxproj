@@ -190,17 +190,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\audio\soundobject.cpp" />
-    <ClCompile Include="source\core\audiomanager.cpp" />
-    <ClCompile Include="source\core\eventmanager.cpp" />
-    <ClCompile Include="source\core\fontmanager.cpp" />
+    <ClCompile Include="source\controllers\audiocontroller.cpp" />
+    <ClCompile Include="source\controllers\eventcontroller.cpp" />
+    <ClCompile Include="source\controllers\fontcontroller.cpp" />
+    <ClCompile Include="source\controllers\objectcontroller.cpp" />
+    <ClCompile Include="source\controllers\outputcontroller.cpp" />
+    <ClCompile Include="source\controllers\rendercontroller.cpp" />
+    <ClCompile Include="source\controllers\scenecontroller.cpp" />
+    <ClCompile Include="source\controllers\shaderscontroller.cpp" />
+    <ClCompile Include="source\controllers\texturecontroller.cpp" />
+    <ClCompile Include="source\controllers\timecontroller.cpp" />
     <ClCompile Include="source\core\framework.cpp" />
-    <ClCompile Include="source\core\objectmanager.cpp" />
-    <ClCompile Include="source\core\outputmanager.cpp" />
-    <ClCompile Include="source\core\rendermanager.cpp" />
-    <ClCompile Include="source\core\scenemanager.cpp" />
-    <ClCompile Include="source\core\shadersmanager.cpp" />
-    <ClCompile Include="source\core\texturemanager.cpp" />
-    <ClCompile Include="source\core\timemanager.cpp" />
     <ClCompile Include="source\core\timer.cpp" />
     <ClCompile Include="source\core\window.cpp" />
     <ClCompile Include="source\entity\entity.cpp" />

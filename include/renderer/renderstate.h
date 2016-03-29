@@ -11,24 +11,24 @@
 
 namespace mg
 {
-namespace renderer
-{
-class RenderState : public entity::Object
-{
-public:
-    virtual ~RenderState(){}
+	namespace renderer
+	{
+		class RenderState : public entity::Object
+		{
+		public:
+			virtual ~RenderState() {}
 
-    virtual int getState()const = 0;
+			virtual int getState()const = 0;
 
-    enum State 
-    {
-        GLOBAL,
-        LIGHT,
-        EFFECT
-    };
-protected:
-    RenderState(){}
-};
-}    // end of renderer namespace
-}    // end of mg namespace
+			enum State
+			{
+				GLOBAL,
+				LIGHT,
+				EFFECT
+			};
+		protected:
+			RenderState() {}
+		};
+	}
+}
 #endif

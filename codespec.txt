@@ -14,3 +14,4 @@ CODE SPECIFICATION
 11) Constants are always UPPERCASE
 12) Static constants start with _ followed by S, eg. _S_MAX
 13) In public section members (if any) go at the bottom
+14) Const members go before static members followed by casual members
