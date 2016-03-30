@@ -14,8 +14,8 @@
 #include "core\constants.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLLIBRARY_H_
-#include "renderer\gl\gllibrary.h"
+#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#include "renderer\gl\glcommon.h"
 #endif
 
 #ifndef MG_ENTITY_MODEL_H_
@@ -42,7 +42,7 @@ namespace mg
 			 |    Parameter const float* data - actual geometry of the object
 			 |  ----------------------------------------------------------------------------------
 			 */
-			void init(ArrayType at, core::ui count, core::ui buffer, const float* data, ArrayDraw ad);
+			void init(gl::ArrayType at, core::ui count, core::ui buffer, const float* data, gl::ArrayDraw ad);
 
 			/*
 			 |  ----------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ namespace mg
 			 |    Parameter ArrayDraw RODEO_STATIC, RODEO_STREAM, RODEO_DYNAMIC
 			 |  ----------------------------------------------------------------------------------
 			 */
-			void initBuffers(ArrayType array_type, ArrayDraw array_draw, const float* data);
+			void initBuffers(gl::ArrayType array_type, gl::ArrayDraw array_draw, const float* data);
 
 			/*
 			 |  ----------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ namespace mg
 			 |    Parameter const float* data to draw
 			 |  ----------------------------------------------------------------------------------
 			 */
-			void draw(ArrayType array_type, int attrib, const float* data);
+			void draw(gl::ArrayType array_type, int attrib, const float* data);
 
 			/*
 			 |  -----------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ namespace mg
 			 |    Parameter const float* data to draw
 			 |  ------------------------------------------------------------------------------------
 			 */
-			void draw(ArrayType array_type, DrawingMode drawing_mode, int& attrib, const float* data);
+			void draw(gl::ArrayType array_type, gl::DrawingMode drawing_mode, int& attrib, const float* data);
 
 			/*
 			 |  ---------------------------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ namespace mg
 			 |    Parameter enumeration BufferType - RODEO_VBO, RODEO_CBO, RODEO_NBO, RODEO_TBO, RODEO_EBO
 			 |  ---------------------------------------------------------------------------------------------------
 			 */
-			void createBuffer(core::ui buffer, BufferType bt);
+			void createBuffer(core::ui buffer, gl::BufferType bt);
 
 
 			void fill(const entity::Model& model, core::ui stride);
@@ -91,7 +91,7 @@ namespace mg
 			void reset();
 
 			void draw(core::ui& vb);
-			void draw(core::ui& vb, DrawingMode dm);
+			void draw(core::ui& vb, gl::DrawingMode dm);
 
 			void draw(const entity::Model& model, core::ui stride);
 

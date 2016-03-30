@@ -54,7 +54,7 @@ namespace mg
 
 			virtual void enableShaders() = 0;
 			virtual void disableShaders() = 0;
-			IShaders* getShader()const { return shader_; }
+			IShaders* getShader()const { return _shader; }
 
 			virtual void setShader(IShaders* si) = 0;
 
@@ -64,9 +64,9 @@ namespace mg
 			virtual void enableBlending() = 0;
 			virtual void disableBlending() = 0;
 
-			HWND getHWND() const { return hwnd_; }
+			HWND getHWND() const { return _hwnd; }
 
-			void setHWND(HWND hwnd) { hwnd_ = hwnd; }
+			void setHWND(HWND hwnd) { _hwnd = hwnd; }
 
 			// Checks if GL state is enabled,
 			// it can take any GL state as a parameter  

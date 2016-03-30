@@ -30,7 +30,13 @@ namespace mg
 {
 	namespace controllers
 	{
-		class RenderController : public Singleton<RenderController>, public MasterController
+		enum RendererType
+		{
+			DX,
+			GL
+		};
+
+		class RenderController : public mg::core::Singleton<RenderController>, public MasterController
 		{
 		public:
 			RenderController(RendererType renderer);

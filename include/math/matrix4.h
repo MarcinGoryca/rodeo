@@ -77,9 +77,9 @@ public:
         _m4[9] = 0.0f;
         _m4[10] = 1.0f;
         _m4[11] = 0.0f;
-        _m4[12] = v3.x_;
-        _m4[13] = v3.y_;
-        _m4[14] = v3.z_;
+        _m4[12] = v3._x;
+        _m4[13] = v3._y;
+        _m4[14] = v3._z;
         _m4[15] = 1.0f;
     }
 
@@ -143,7 +143,7 @@ public:
     // Returns Matrix
     inline Matrix4 operator*(Matrix4& mc)
     {
-        Matrix4 out = _S_IDENTITY_;
+        Matrix4 out = _S_IDENTIT_y;
         out._m4[0] = _m4[0] * mc._m4[0] + _m4[1] * mc._m4[4] + _m4[2] * mc._m4[8] + _m4[3] * mc._m4[12];
         out._m4[1] = _m4[0] * mc._m4[1] + _m4[1] * mc._m4[5] + _m4[2] * mc._m4[9] + _m4[3] * mc._m4[13];
         out._m4[2] = _m4[0] * mc._m4[2] + _m4[1] * mc._m4[6] + _m4[2] * mc._m4[10] + _m4[3] * mc._m4[14];
@@ -314,10 +314,10 @@ public:
     inline Vector4 operator* (const Vector4& v)
     {
         Vector4 result;
-        result.x_ = _m4[0] * v.x_ + _m4[4] * v.y_ + _m4[8] * v.z_ + _m4[12] * v.w_;
-        result.y_ = _m4[1] * v.x_ + _m4[5] * v.y_ + _m4[9] * v.z_ + _m4[13] * v.w_;
-        result.z_ = _m4[2] * v.x_ + _m4[6] * v.y_ + _m4[10] * v.z_ + _m4[14] * v.w_;
-        result.w_ = _m4[3] * v.x_ + _m4[7] * v.y_ + _m4[11] * v.z_ + _m4[15] * v.w_;
+        result._x = _m4[0] * v._x + _m4[4] * v._y + _m4[8] * v._z + _m4[12] * v._w;
+        result._y = _m4[1] * v._x + _m4[5] * v._y + _m4[9] * v._z + _m4[13] * v._w;
+        result._z = _m4[2] * v._x + _m4[6] * v._y + _m4[10] * v._z + _m4[14] * v._w;
+        result._w = _m4[3] * v._x + _m4[7] * v._y + _m4[11] * v._z + _m4[15] * v._w;
         return result;
     }
 
@@ -373,7 +373,7 @@ public:
     }
 
     float _m4[16];
-    static const Matrix4 _S_IDENTITY_;
+    static const Matrix4 _S_IDENTIT_y;
     static const Matrix4 _S_ZERO_;
 
 private:

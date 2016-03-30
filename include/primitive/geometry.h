@@ -103,11 +103,11 @@ struct Grid : public entity::Model3D
     // Generates grid
     // Parameter n - how many quads in x axis
     // Parameter m - how many quads in z axis
-    void generate(core::us n, core::us m);
+    void generate(unsigned short n, unsigned short m);
 
     // Generates grid 
     // Parameter qw, qh - width and height of single quad 
-    void generate(core::us n, core::us m, float qw, float qh);
+    void generate(unsigned short n, unsigned short m, float qw, float qh);
 };
 
 class Geometry

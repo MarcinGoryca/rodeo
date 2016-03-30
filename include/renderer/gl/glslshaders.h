@@ -39,7 +39,7 @@ namespace mg
 			 |    Returns unsigned int shader program id
 			 |  ----------------------------------------------------
 			 */
-			virtual core::ui loadShaderFromFile(const char* filename, core::ShaderType st);
+			virtual core::ui loadShaderFromFile(const char* filename, ShaderType st);
 
 			/*
 			 |  ----------------------------------------------------
@@ -64,42 +64,42 @@ namespace mg
 
 			virtual const char* getVertexProgramFile() const
 			{
-				return vertex_program_file_;
+				return _vertex_program_file;
 			}
 
 			virtual void setVertexProgramFile(const char* vpf)
 			{
-				vertex_program_file_ = vpf;
+				_vertex_program_file = vpf;
 			}
 
 			virtual const char* getFragmentProgramFile() const
 			{
-				return fragment_program_file_;
+				return _fragment_program_file;
 			}
 
 			virtual void setFragmentProgramFile(const char* fpf)
 			{
-				fragment_program_file_ = fpf;
+				_fragment_program_file = fpf;
 			}
 
 			virtual core::ui getVertexShader() const
 			{
-				return vertex_shader_;
+				return _vertex_shader;
 			}
 
 			virtual void setVertexShader(core::ui id)
 			{
-				vertex_shader_ = id;
+				_vertex_shader = id;
 			}
 
 			virtual core::ui getFragmentShader() const
 			{
-				return fragment_shader_;
+				return _fragment_shader;
 			}
 
 			virtual void setFragmentShader(core::ui id)
 			{
-				fragment_shader_ = id;
+				_fragment_shader = id;
 			}
 
 			virtual core::ui getProgram() const { return program_; }

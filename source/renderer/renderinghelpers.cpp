@@ -15,7 +15,7 @@ namespace renderer
 {
 void RenderingHelpers::init()
 {
-    has_pivot_axes_ = false;
+    _has_pivot_axes = false;
 }
 
 

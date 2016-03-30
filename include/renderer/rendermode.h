@@ -9,8 +9,8 @@
 #ifndef MG_RENDERER_RENDERMODE_H_
 #define MG_RENDERER_RENDERMODE_H_
 
-#ifndef MG_RENDERER_GL_GLLIBRARY_H_
-#include "renderer\gl\gllibrary.h"
+#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#include "renderer\gl\glcommon.h"
 #endif
 
 namespace mg

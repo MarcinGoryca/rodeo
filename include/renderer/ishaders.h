@@ -17,6 +17,11 @@ namespace mg
 {
 	namespace renderer
 	{
+		enum ShaderType
+		{
+			MG_VS,
+			MG_FS
+		};
 		class IShaders
 		{
 		public:
@@ -25,8 +30,8 @@ namespace mg
 
 			// [Pure Virtual]
 			// Loads Shader Program from specified file
-			// Parameter ShaderType use JENNIE_VS (VERTEX SHADER), JENNIE_FS (FRAGMENT SHADER)
-			virtual unsigned int loadShaderFromFile(const char* filename, core::ShaderType st) = 0;
+			// Parameter ShaderType use MG_VS (VERTEX SHADER), MG_FS (FRAGMENT SHADER)
+			virtual unsigned int loadShaderFromFile(const char* filename, ShaderType st) = 0;
 
 			// [Pure Virtual]
 			// Inits Shaders

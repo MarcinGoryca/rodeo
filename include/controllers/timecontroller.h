@@ -43,13 +43,13 @@ namespace mg
             }
 
             // Get pointer to Timer Object
-            Timer* getTimer() const { return _time; }
+            mg::core::Timer* getTimer() const { return _time; }
 
             // Get FPSShow
             bool getFpsShow() const { return _fps_show; }
 
         private:
-			Timer* _time;
+			mg::core::Timer* _time;
 			bool _fps_show;
 
             // This method is responsible for initiliazation of member objects

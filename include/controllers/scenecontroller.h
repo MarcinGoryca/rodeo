@@ -36,7 +36,7 @@ namespace mg
 {
     namespace controllers
     {
-        class SceneController : public Singleton<SceneController>, public MasterController
+        class SceneController : public mg::core::Singleton<SceneController>, public MasterController
         {
         public:
             SceneController()

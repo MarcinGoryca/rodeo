@@ -31,8 +31,8 @@
 #include "math\matrix4.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLLIBRARY_H_
-#include "renderer\gl\gllibrary.h"
+#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#include "renderer\gl\glcommon.h"
 #endif
 
 #ifndef MG_RENDERERGL_GL_QUERYRENDERER_H_
@@ -101,7 +101,7 @@ namespace mg
 			virtual void onSize(int w, int h);
 
 			// ChooseViewportType(GLViewportType type) --
-			bool chooseViewportType(GLViewportType type);
+			bool chooseViewportType(gl::GLViewportType type);
 
 			// Enter the frame of rendering, 
 			// it should initialize OpenGL pipeline, clear all buffers
@@ -128,7 +128,7 @@ namespace mg
 			virtual void disableShaders();
 
 			//virtual ShadersInterface* shaderFactory(enginecore::ShadersVendor sv);
-			virtual void setShader(IShaders* si) { shader_ = si; }
+			virtual void setShader(IShaders* si) { _shader = si; }
 
 			// TEXTURING
 
@@ -152,10 +152,10 @@ namespace mg
 
 			virtual void cullMode(GLenum mode);
 
-			int getWidth()const { return width_; }
-			int getHeight()const { return height_; }
-			void setWidth(int w) { width_ = w; }
-			void setHeight(int h) { height_ = h; }
+			int getWidth()const { return _width; }
+			int getHeight()const { return _height; }
+			void setWidth(int w) { _width = w; }
+			void setHeight(int h) { _height = h; }
 
 
 		private:

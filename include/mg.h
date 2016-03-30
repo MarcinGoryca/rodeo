@@ -50,8 +50,8 @@
 #include "tools/tools.h"
 #endif
 
-#ifndef MG_FRONTEND_FRONTEND_H_
-#include "frontend/frontend.h"
+#ifndef MG_FRONT_FRONT_H_
+#include "front/front.h"
 #endif
 
 #ifndef MG_PRIMITIVE_PRIMITIVE_H_
