@@ -85,6 +85,16 @@ public:
         return q1._w * q2._w + q1._x * q2._x + q1._y * q2._y + q1._z * q2._z;
     }
 
+	float getX() const { return _x; }
+	float getY() const { return _y; }
+	float getZ() const { return _z; }
+	float getW() const { return _w; }
+
+	void setX(float x) { _x = x; }
+	void setY(float y) { _y = y; }
+	void setZ(float z) { _z = z; }
+	void setW(float w) { _w = w; }
+
 private:
 	float _x, _y, _z, _w;
 };

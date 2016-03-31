@@ -14,6 +14,10 @@
 #include "core\error.h"
 #endif
 
+#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#include "renderer\gl\glcommon.h"
+#endif
+
 #ifndef MG_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
@@ -31,10 +35,10 @@ namespace mg
     {
         struct Glyph
         {
-            float x_;
-            float y_;
-            float s_;
-            float t_;
+            float _x;
+            float _y;
+            float _s;
+            float _t;
         };
 
         class Font : public entity::Entity
@@ -151,11 +155,11 @@ namespace mg
 
                 //TODO
                 // Remove this members and use other struct/class for OpenGL-specific members
-                GLuint vbo_;
-                GLuint tex_;
-                GLint uniform_tex_;
-                GLint uniform_color_;
-                GLint attr_;
+                GLuint _vbo;
+                GLuint _tex;
+                GLint _uniform_tex;
+                GLint _uniform_color;
+                GLint _attr;
 
         private:
             const char* _text;

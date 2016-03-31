@@ -176,7 +176,7 @@ namespace mg
 			float _x;
 			float _y;
 
-			static const Vector2 _S_VECTOR2_ZERO_;
+			static const Vector2 _S_VECTOR2_ZERO;
 
 		private:
 		};

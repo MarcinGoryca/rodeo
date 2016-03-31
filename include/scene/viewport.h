@@ -17,6 +17,11 @@ namespace mg
 {
 	namespace scene
 	{
+		enum ViewportType
+		{
+			PERSPECTIVE=1,
+			ORTHOGONAL=0
+		};
 		class Viewport
 		{
 		public:
@@ -27,7 +32,7 @@ namespace mg
 			// Parameter x, y - starting points
 			// Parameter w, h - width, height respectively
 			// Parameter GLViewportType - RODEO_ORTHOGONAL, RODEO_PERSPECTIVE
-			void set(int x, int y, int w, int h, renderer::GLViewportType vt);
+			void set(int x, int y, int w, int h, ViewportType vt);
 			//virtual void update();
 			//virtual void draw();
 

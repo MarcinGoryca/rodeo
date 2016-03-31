@@ -114,43 +114,43 @@ namespace mg
 			virtual void endFrame();
 
 			// LIGHTING METHODS
-			virtual bool enableLighting();
-			virtual bool disableLighting();
+			//virtual bool enableLighting();
+			//virtual bool disableLighting();
 
 			// DEPTH TESTING
 
-			virtual bool enableDepthTest();
-			virtual bool disableDepthTest();
+			//virtual bool enableDepthTest();
+			//virtual bool disableDepthTest();
 
 			// SHADERS
 
-			virtual void enableShaders();
-			virtual void disableShaders();
+			//virtual void enableShaders();
+			//virtual void disableShaders();
 
 			//virtual ShadersInterface* shaderFactory(enginecore::ShadersVendor sv);
 			virtual void setShader(IShaders* si) { _shader = si; }
 
 			// TEXTURING
 
-			virtual void enableTexturing();
-			virtual void disableTexturing();
+			//virtual void enableTexturing();
+			//virtual void disableTexturing();
 
 			// BLENDING
 
-			virtual void enableBlending();
-			virtual void disableBlending();
+			//virtual void enableBlending();
+			//virtual void disableBlending();
 
-			virtual bool checkEnabled(GLenum state);
+			//virtual bool checkEnabled(GLenum state);
 
 			// CULLING
 
 			// Calls glEnable(GL_CULL_FACE)
-			virtual void enableCulling();
+			//virtual void enableCulling();
 
 			// Calls glDisable(GL_CULL_FACE)
-			virtual void disableCulling();
+			//virtual void disableCulling();
 
-			virtual void cullMode(GLenum mode);
+			//virtual void cullMode(GLenum mode);
 
 			int getWidth()const { return _width; }
 			int getHeight()const { return _height; }
@@ -209,7 +209,7 @@ namespace mg
 			|    Calls glFlush()
 			|  -------------------------------------------------------
 			*/
-			void flush();
+			//void flush();
 
 			QueryRenderer* getQueryRenderer() const { return query_renderer_; }
 		};

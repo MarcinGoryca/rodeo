@@ -14,7 +14,7 @@ namespace mg
 {
 	namespace scene
 	{
-		void Viewport::set(int x, int y, int w, int h, GLViewportType vt)
+		void Viewport::set(int x, int y, int w, int h, ViewportType vt)
 		{
 			switch (vt)
 			{

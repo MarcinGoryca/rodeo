@@ -61,7 +61,7 @@ namespace mg
 			glActiveTexture(GL_TEXTURE0);
 			glGenTextures(1, &tex);
 			glBindTexture(GL_TEXTURE_2D, tex);
-			glUniform1i(uniform_tex_, 0);
+			glUniform1i(_uniform_tex, 0);
 
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -71,9 +71,9 @@ namespace mg
 
 			glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
-			glEnableVertexAttribArray(attr_);
+			glEnableVertexAttribArray(_attr);
 			glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-			glVertexAttribPointer(attr_, 4, GL_FLOAT, GL_FALSE, 0, 0);
+			glVertexAttribPointer(_attr, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
 
 			for (tp = text.c_str(); *tp; tp++) {
@@ -98,7 +98,7 @@ namespace mg
 				x += (_slot->advance.x >> 6) * sx;
 				y += (_slot->advance.y >> 6) * sy;
 			}
-			glDisableVertexAttribArray(attr_);
+			glDisableVertexAttribArray(_attr);
 			glDeleteTextures(1, &tex);
 		}
 
@@ -122,7 +122,7 @@ namespace mg
 			glActiveTexture(GL_TEXTURE0);
 			glGenTextures(1, &tex);
 			glBindTexture(GL_TEXTURE_2D, tex);
-			glUniform1i(uniform_tex_, 0);
+			glUniform1i(_uniform_tex, 0);
 
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -159,7 +159,7 @@ namespace mg
 				_position_x += (_slot->advance.x >> 6) * getScaleX();
 				_position_y += (_slot->advance.y >> 6) * getScaleY();
 			}
-			glDisableVertexAttribArray(attr_);
+			glDisableVertexAttribArray(_attr);
 			glDeleteTextures(1, &tex);
 		}
 

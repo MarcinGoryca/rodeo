@@ -17,19 +17,19 @@ namespace math
 {
 Quaternion::Quaternion(const Vector4& v)
 {
-    x_ = v.x_;
-    y_ = v.y_;
-    z_ = v.z_;
-    w_ = v.w_;
+    setX(v._x);
+    setY(v._y);
+    setZ(v._z);
+    setW(v._w);
 }
 
 //--------------------------------------------------------------------------------------------------
 Quaternion::Quaternion(const Vector3& v, float w)
 {
-    x_ = v.x_;
-    y_ = v.y_;
-    z_ = v.z_;
-    w_ = w;
+    setX(v._x);
+    setY(v._y);
+    setZ(v._z);
+    setW(w);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -58,10 +58,10 @@ const void Quaternion::negativeIdentity()
 //--------------------------------------------------------------------------------------------------
 void Quaternion::identity()
 {
-    x_ = 0.0f;
-    y_ = 0.0f;
-    z_ = 0.0f;
-    w_ = 1.0f;
+    setX(0.0f);
+    setY(0.0f);
+    setZ(0.0f);
+    setW(1.0f);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -69,10 +69,10 @@ void Quaternion::rotateAboutX(float angle)
 {
     float halfAngle = angle * 0.5f;
 
-    x_ = ::sin(halfAngle);
-    y_ = 0.0f;
-    z_ = 0.0f;
-    w_ = ::cos(halfAngle);
+    setX(::sin(halfAngle));
+    setY(0.0f);
+    setZ(0.0f);
+    setW(::cos(halfAngle));
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -80,10 +80,10 @@ void Quaternion::rotateAboutY(float angle)
 {
     float halfAngle = angle * 0.5f;
 
-    x_ = 0.0f;
-    y_ = ::sin(halfAngle);
-    z_ = 0.0f;
-    w_ = ::cos(halfAngle);
+    setX(0.0f);
+    setY(::sin(halfAngle));
+    setZ(0.0f);
+    setW(::cos(halfAngle));
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -91,10 +91,10 @@ void Quaternion::rotateAboutZ(float angle)
 {
     float halfAngle = angle * 0.5f;
 
-    x_ = 0.0f;
-    y_ = 0.0f;
-    z_ = ::sin(halfAngle);
-    w_ = ::cos(halfAngle);
+    setX(0.0f);
+    setY(0.0f);
+    setZ(::sin(halfAngle));
+    setW(::cos(halfAngle));
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -105,9 +105,9 @@ void Quaternion::rotateAboutAxis(const Vector3& axis, float angle)
     float halfAngle = angle * 0.5f;
     float sinHalfAngle = ::sin(halfAngle);
 
-    x_ = axis.x_ * sinHalfAngle;
-    y_ = axis.y_ * sinHalfAngle;
-    z_ = axis.z_ * sinHalfAngle;
+    setX(axis._x * sinHalfAngle);
+    setY(axis._y * sinHalfAngle);
+    setZ(axis._z * sinHalfAngle);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ void Quaternion::inverse(const Quaternion& q)
 //--------------------------------------------------------------------------------------------------
 float Quaternion::length()
 {
-    return ::sqrt(w_ * w_ + x_ * x_ + y_ * y_ + z_ * z_);
+    return ::sqrt(getW() * getW() + getX() * getX() + getY() * getY() + getZ() * getZ());
 }
 
 //void Quaternion::SetToRotateObjectToInertial(const EulerAngles& orientation)
@@ -159,10 +159,10 @@ Quaternion Quaternion::operator*(const Quaternion& q)const
 {
     Quaternion result;
 
-    result.x_ = w_ * q.x_ + x_ * q.w_ + z_ * q.y_ - y_ * q.z_;
-    result.y_ = w_ * q.y_ + y_ * q.w_ + x_ * q.z_ - z_ * q.x_;
-    result.z_ = w_ * q.z_ + z_ * q.w_ + y_ * q.x_ - x_ * q.y_;
-    result.w_ = w_ * q.w_ - x_ * q.x_ - y_ * q.y_ - z_ * q.z_;
+    result.setX(getW() * q.getX() + getX() * q.getW() + getZ() * q.getY() - getY() * q.getZ());
+    result.setY(getW() * q.getY() + getY() * q.getW() + getX() * q.getZ() - getZ() * q.getX());
+    result.setZ(getW() * q.getZ() + getZ() * q.getW() + getY() * q.getX() - getX() * q.getY());
+    result.setW(getW() * q.getW() - getX() * q.getX() - getY() * q.getY() - getZ() * q.getZ());
 
     return result;
 }
@@ -178,16 +178,16 @@ Quaternion& Quaternion::operator *= (const Quaternion& q)
 //--------------------------------------------------------------------------------------------------
 void Quaternion::normalize()
 {
-    float magnitude = static_cast<float>(sqrt(w_ * w_ + x_ * x_ + y_ * y_ + z_ * z_));
+    float magnitude = static_cast<float>(sqrt(getW() * getW() + getX() * getX() + getY() * getY() + getZ() * getZ()));
 
     if(magnitude > 0.0f)
     {
         float temp = 1.0f / magnitude;
 
-        w_ *= temp;
-        x_ *= temp;
-        y_ *= temp;
-        z_ *= temp;
+        setW(getW() * temp);
+        setX(getX() * temp);
+        setY(getY() * temp);
+        setZ(getZ() * temp);
     }
     else
     {
@@ -198,10 +198,10 @@ void Quaternion::normalize()
 //--------------------------------------------------------------------------------------------------
 void Quaternion::negate()
 {
-    x_ = -x_;
-    y_ = -y_;
-    z_ = -z_;
-    w_ = -w_;
+    setX(-getX());
+    setY(-getY());
+    setZ(-getZ());
+    setW(-getW());
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -215,7 +215,7 @@ float Quaternion::getRotationAngle()const
 //--------------------------------------------------------------------------------------------------
 Vector3 Quaternion::getRotationAxis()const
 {
-    float temp = 1.0f - w_ * w_;
+    float temp = 1.0f - getW() * getW();
 
     if(temp <= 0.0f)
     {
@@ -224,7 +224,7 @@ Vector3 Quaternion::getRotationAxis()const
 
     float temp2 = 1.0f / sqrt(temp);
 
-    return Vector3(x_ * temp2, y_ * temp2, z_ * temp2);
+    return Vector3(getX() * temp2, getY() * temp2, getZ() * temp2);
 }
 
 //float DotProduct(const Quaternion& q1, const Quaternion& q2)
@@ -240,10 +240,10 @@ Quaternion slerp(const Quaternion& q1, const Quaternion& q2, float t)
 
     float cosOmega = 0.0f;// = Dot(q1, q2);
 
-    float qw = q2.w_;
-    float qx = q2.x_;
-    float qy = q2.y_;
-    float qz = q2.z_;
+    float qw = q2.getW();
+    float qx = q2.getX();
+    float qy = q2.getY();
+    float qz = q2.getZ();
 
     if(cosOmega < 0.0f)
     {
@@ -276,10 +276,10 @@ Quaternion slerp(const Quaternion& q1, const Quaternion& q2, float t)
 
     Quaternion result;
 
-    result.x_ = k0 * q1.x_ + k1 * qx;
-    result.y_ = k0 * q1.y_ + k1 * qy;
-    result.z_ = k0 * q1.z_ + k1 * qz;
-    result.w_ = k0 * q1.w_ + k1 * qw;
+	result.setX(k0 * q1.getX() + k1 * qx);
+    result.setY(k0 * q1.getY() + k1 * qy);
+    result.setZ(k0 * q1.getZ() + k1 * qz);
+    result.setW(k0 * q1.getW() + k1 * qw);
 
     return result;
 }
@@ -289,11 +289,11 @@ Quaternion conjugate(const Quaternion& q)
 {
     Quaternion result;
 
-    result.w_ = q.w_;
+    result.setW(q.getW());
 
-    result.x_ = -q.x_;
-    result.y_ = -q.y_;
-    result.z_ = -q.z_; 
+    result.setX(-q.getX());
+    result.setY(-q.getY());
+    result.setZ(-q.getZ()); 
 
     return result;
 }
@@ -301,19 +301,19 @@ Quaternion conjugate(const Quaternion& q)
 //--------------------------------------------------------------------------------------------------
 Quaternion power(const Quaternion& q, float exp)
 {
-    if(::fabs(q.w_) > 0.9999f) return q;
+    if(::fabs(q.getW()) > 0.9999f) return q;
 
-    float alpha = ::acos(q.w_);
+    float alpha = ::acos(q.getW());
     float newAlpha = alpha * exp;
 
     Quaternion result;
-    result.w_ = ::cos(newAlpha);
+    result.setW(::cos(newAlpha));
 
     float mult = ::sin(newAlpha) / ::sin(alpha);
 
-    result.x_ = q.x_ * mult;
-    result.y_ = q.y_ * mult;
-    result.z_ = q.z_ * mult;
+    result.setX(q.getX() * mult);
+    result.setY(q.getY() * mult);
+    result.setZ(q.getZ() * mult);
 
     return result;
 }
@@ -321,13 +321,13 @@ Quaternion power(const Quaternion& q, float exp)
 //--------------------------------------------------------------------------------------------------
 const void printQ(const Quaternion& q)
 {
-    std::cout << "Quaternion(" << q.x_ << ", " << q.y_ << ", " << q.z_ << ", " << q.w_ << ")" << std::endl;
+    std::cout << "Quaternion(" << q.getX() << ", " << q.getY() << ", " << q.getZ() << ", " << q.getW() << ")" << std::endl;
 }
 
 //--------------------------------------------------------------------------------------------------
 const void printQ(const char* message, const Quaternion& q)
 {
-    std::cout << message << "\tQuaternion(" << q.x_ << ", " << q.y_ << ", " << q.z_ << ", " << q.w_ << ")" << std::endl;
+    std::cout << message << "\tQuaternion(" << q.getX() << ", " << q.getY() << ", " << q.getZ() << ", " << q.getW() << ")" << std::endl;
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -335,10 +335,10 @@ Quaternion multiply(const Quaternion& q1, const Quaternion& q2)
 {
     Quaternion result;
 
-    result.w_ = q1.w_ * q2.w_ - q1.x_ * q2.x_ - q1.y_ * q2.y_ - q1.z_ * q2.z_;
-    result.x_ = q1.w_ * q2.x_ + q1.x_ * q2.w_ + q1.y_ * q2.z_ - q1.z_ * q2.y_;
-    result.y_ = q1.w_ * q2.y_ - q1.x_ * q2.z_ + q1.y_ * q2.w_ + q1.z_ * q2.x_;
-    result.z_ = q1.w_ * q2.z_ + q1.x_ * q2.y_ - q1.y_ * q2.x_ + q1.z_ * q2.w_;
+    result.setW(q1.getW() * q2.getW() - q1.getX() * q2.getX() - q1.getY() * q2.getY() - q1.getZ() * q2.getZ());
+    result.setX(q1.getW() * q2.getX() + q1.getX() * q2.getW() + q1.getY() * q2.getZ() - q1.getZ() * q2.getY());
+    result.setY(q1.getW() * q2.getY() - q1.getX() * q2.getZ() + q1.getY() * q2.getW() + q1.getZ() * q2.getX());
+    result.setZ(q1.getW() * q2.getZ() + q1.getX() * q2.getY() - q1.getY() * q2.getX() + q1.getZ() * q2.getW());
 
     return result;
 }

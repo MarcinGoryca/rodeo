@@ -15,7 +15,7 @@ namespace mg
 {
 	namespace renderer
 	{
-		void Buffers::init(ArrayType at, ui count, ui buffer, const float* data, ArrayDraw ad)
+		void Buffers::init(gl::ArrayType at, ui count, ui buffer, const float* data, gl::ArrayDraw ad)
 		{
 			glGenBuffers(count, &buffer);
 			glBindBuffer(at, buffer);
@@ -23,10 +23,10 @@ namespace mg
 		}
 
 		//..................//
-		void Buffers::initBuffers(ArrayType array_type, ArrayDraw array_draw, const float* data)
+		void Buffers::initBuffers(gl::ArrayType array_type, gl::ArrayDraw array_draw, const float* data)
 		{
-			glGenBuffers(1, &vbo);
-			glBindBuffer(array_type, vbo);
+			glGenBuffers(1, &_vbo);
+			glBindBuffer(array_type, _vbo);
 
 			//data_ = data;
 
@@ -34,7 +34,7 @@ namespace mg
 		}
 
 		//........................//
-		void Buffers::draw(ArrayType array_type, int attrib, const float* data)
+		void Buffers::draw(gl::ArrayType array_type, int attrib, const float* data)
 		{
 			glEnableVertexAttribArray(attrib);
 			//glBindBuffer(array_type, vbo);
@@ -44,7 +44,7 @@ namespace mg
 		}
 
 		//......................//
-		void Buffers::draw(ArrayType array_type, DrawingMode drawing_mode, int& attrib, const float* data)
+		void Buffers::draw(gl::ArrayType array_type, gl::DrawingMode drawing_mode, int& attrib, const float* data)
 		{
 			glEnableVertexAttribArray(attrib);
 			glVertexAttribPointer(attrib, 4, GL_FLOAT, GL_FALSE, 0, data);
@@ -53,7 +53,7 @@ namespace mg
 		}
 
 		//......................//
-		void Buffers::createBuffer(core::ui buffer, BufferType bt)
+		void Buffers::createBuffer(core::ui buffer, gl::BufferType bt)
 		{
 			//switch(bt)
 			//{
@@ -109,7 +109,7 @@ namespace mg
 		}
 
 		//..................//
-		void Buffers::draw(ui& vb, DrawingMode dm)
+		void Buffers::draw(ui& vb, gl::DrawingMode dm)
 		{
 			glBindBuffer(GL_ARRAY_BUFFER, vb);
 			glVertexPointer(3, GL_FLOAT, 0, 0);

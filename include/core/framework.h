@@ -715,14 +715,14 @@ namespace mg
 			}
 
 		public:
-			std::unique_ptr<OutputController> _output_controller;
-			std::unique_ptr<AudioController> _audio_controller;
+			std::unique_ptr<mg::controllers::OutputController> _output_controller;
+			std::unique_ptr<mg::controllers::AudioController> _audio_controller;
 
 			//io::Mouse mouse_;
 
 			std::unique_ptr<mg::math::MathSystem> _mathsystem;
 
-			std::unique_ptr<RenderController> _render_controller;
+			std::unique_ptr<mg::controllers::RenderController> _render_controller;
 
 			//renderer::RendererInterface* renderer_;
 
@@ -730,15 +730,15 @@ namespace mg
 
 			std::unique_ptr<mg::tools::XmlParser> _xml_parser;
 
-			std::unique_ptr<ObjectController> _object_controller;
+			std::unique_ptr<mg::controllers::ObjectController> _object_controller;
 
-			std::unique_ptr<TimeController> _time_controller;
+			std::unique_ptr<mg::controllers::TimeController> _time_controller;
 
-			std::unique_ptr<SceneController> _scene_controller;
+			std::unique_ptr<mg::controllers::SceneController> _scene_controller;
 
 			//FontManager fontMgr_;
 
-			std::unique_ptr<EventController> _event_controller;
+			std::unique_ptr<mg::controllers::EventController> _event_controller;
 
 			//TextureManager textureMgr_;
 

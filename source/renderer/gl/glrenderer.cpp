@@ -79,10 +79,10 @@ namespace mg
 
 		void GLRenderer::backColor(float r, float g, float b, float a)
 		{
-			_gl_red = r;
-			_gl_green = g;
-			_gl_blue = b;
-			_gl_alpha = a;
+			//_gl_red = r;
+			//_gl_green = g;
+			//_gl_blue = b;
+			//_gl_alpha = a;
 		}
 
 		void GLRenderer::onSize(int w, int h)
@@ -90,16 +90,16 @@ namespace mg
 			setGL(w, h);
 		}
 
-		bool GLRenderer::chooseViewportType(GLViewportType type)
+		bool GLRenderer::chooseViewportType(gl::GLViewportType type)
 		{
 			switch (type)
 			{
-			case MG_ORTHOGONAL:
+			case gl::MG_ORTHOGONAL:
 			{
 				enter2d();
 			}
 			break;
-			case MG_PERSPECTIVE:
+			case gl::MG_PERSPECTIVE:
 			{
 				enter3d();
 			}
@@ -110,7 +110,7 @@ namespace mg
 
 		void GLRenderer::enterFrame()
 		{
-			glClearColor(_gl_red, _gl_green, _gl_blue, _gl_alpha);
+			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 			glClearDepth(1.0);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 			glViewport(0, 0, _width, _height);
@@ -146,116 +146,116 @@ namespace mg
 			return true;
 		}
 
-		void GLRenderer::flush()
+		/*void GLRenderer::flush()
 		{
 			glFlush();
-		}
+		}*/
 
-		bool GLRenderer::enableLighting()
-		{
-			lightingOn();
-			return true;
-		}
+		//bool GLRenderer::enableLighting()
+		//{
+		//	//lightingOn();
+		//	return true;
+		//}
 
-		bool GLRenderer::disableLighting()
-		{
-			lightingOff();
-			return true;
-		}
+		//bool GLRenderer::disableLighting()
+		//{
+		//	//lightingOff();
+		//	return true;
+		//}
 
-		bool GLRenderer::enableDepthTest()
-		{
-			depthTestOn();
-			return true;
-		}
+		//bool GLRenderer::enableDepthTest()
+		//{
+		//	//depthTestOn();
+		//	return true;
+		//}
 
-		bool GLRenderer::disableDepthTest()
-		{
-			depthTestOff();
-			return true;
-		}
+		//bool GLRenderer::disableDepthTest()
+		//{
+		//	//depthTestOff();
+		//	return true;
+		//}
 
-		void GLRenderer::enableShaders()
-		{
-			//shader_->loadShaderFromFile("", enginecore::RODEO_VS);
-			/**
-			shader_->bindCG(shader_->getCGVertexShaderProgram());
-			shader_->enableCG(shader_->getCGVertexShaderProfile());
+		//void GLRenderer::enableShaders()
+		//{
+		//	//shader_->loadShaderFromFile("", enginecore::RODEO_VS);
+		//	/**
+		//	shader_->bindCG(shader_->getCGVertexShaderProgram());
+		//	shader_->enableCG(shader_->getCGVertexShaderProfile());
 
-			shader_->bindCG(shader_->getCGFragmentShaderProgram());
-			shader_->enableCG(shader_->getCGFragmentShaderProfile());
+		//	shader_->bindCG(shader_->getCGFragmentShaderProgram());
+		//	shader_->enableCG(shader_->getCGFragmentShaderProfile());
 
-			shader_->enableTextureParameter(shader_->parameter_);
-			*/
-		}
+		//	shader_->enableTextureParameter(shader_->parameter_);
+		//	*/
+		//}
 
-		void GLRenderer::disableShaders()
-		{
-			/**
-			shader_->disableCG(shader_->getCGVertexShaderProfile());
-			shader_->disableCG(shader_->getCGFragmentShaderProfile());
-			shader_->disableTextureParameter(shader_->parameter_);
-			*/
-		}
+		//void GLRenderer::disableShaders()
+		//{
+		//	/**
+		//	shader_->disableCG(shader_->getCGVertexShaderProfile());
+		//	shader_->disableCG(shader_->getCGFragmentShaderProfile());
+		//	shader_->disableTextureParameter(shader_->parameter_);
+		//	*/
+		//}
 
-		void GLRenderer::enableTexturing()
-		{
-			glEnable(GL_TEXTURE_2D);
-		}
+		//void GLRenderer::enableTexturing()
+		//{
+		//	glEnable(GL_TEXTURE_2D);
+		//}
 
-		void GLRenderer::disableTexturing()
-		{
-			glDisable(GL_TEXTURE_2D);
-		}
+		//void GLRenderer::disableTexturing()
+		//{
+		//	glDisable(GL_TEXTURE_2D);
+		//}
 
-		void GLRenderer::enableBlending()
-		{
-			glEnable(GL_BLEND);
-		}
+		//void GLRenderer::enableBlending()
+		//{
+		//	glEnable(GL_BLEND);
+		//}
 
-		void GLRenderer::disableBlending()
-		{
-			glDisable(GL_BLEND);
-		}
+		//void GLRenderer::disableBlending()
+		//{
+		//	glDisable(GL_BLEND);
+		//}
 
-		bool GLRenderer::checkEnabled(GLenum state)
-		{
-			if (glIsEnabled(state))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		//bool GLRenderer::checkEnabled(GLenum state)
+		//{
+		//	if (glIsEnabled(state))
+		//	{
+		//		return true;
+		//	}
+		//	else
+		//	{
+		//		return false;
+		//	}
+		//}
 
-		void GLRenderer::enableCulling()
-		{
-			glEnable(GL_CULL_FACE);
-		}
+		//void GLRenderer::enableCulling()
+		//{
+		//	glEnable(GL_CULL_FACE);
+		//}
 
-		void GLRenderer::disableCulling()
-		{
-			glDisable(GL_CULL_FACE);
-		}
+		//void GLRenderer::disableCulling()
+		//{
+		//	glDisable(GL_CULL_FACE);
+		//}
 
-		void GLRenderer::cullMode(GLenum mode)
-		{
-			switch (mode)
-			{
-			case GL_FRONT:
-				cullFrontOn();
-				break;
+		//void GLRenderer::cullMode(GLenum mode)
+		//{
+		//	switch (mode)
+		//	{
+		//	case GL_FRONT:
+		//		//cullFrontOn();
+		//		break;
 
-			case GL_BACK:
-				cullBackOn();
-				break;
+		//	case GL_BACK:
+		//		//cullBackOn();
+		//		break;
 
-			case GL_FRONT_AND_BACK:
-				cullFrontBackOn();
-				break;
-			}
-		}
+		//	case GL_FRONT_AND_BACK:
+		//		//cullFrontBackOn();
+		//		break;
+		//	}
+		//}
 	}
 }

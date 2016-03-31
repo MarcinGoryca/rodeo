@@ -47,6 +47,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\other;$(ProjectDir)\other\freetype;$(ProjectDir)\other\freetype\include;$(ProjectDir)\other\freetype\include\freetype2;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4820;4668;4571;4456;4710;4365;4514;4458</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

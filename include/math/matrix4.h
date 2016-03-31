@@ -143,7 +143,7 @@ public:
     // Returns Matrix
     inline Matrix4 operator*(Matrix4& mc)
     {
-        Matrix4 out = _S_IDENTIT_y;
+        Matrix4 out = _S_IDENTITY;
         out._m4[0] = _m4[0] * mc._m4[0] + _m4[1] * mc._m4[4] + _m4[2] * mc._m4[8] + _m4[3] * mc._m4[12];
         out._m4[1] = _m4[0] * mc._m4[1] + _m4[1] * mc._m4[5] + _m4[2] * mc._m4[9] + _m4[3] * mc._m4[13];
         out._m4[2] = _m4[0] * mc._m4[2] + _m4[1] * mc._m4[6] + _m4[2] * mc._m4[10] + _m4[3] * mc._m4[14];
@@ -373,8 +373,8 @@ public:
     }
 
     float _m4[16];
-    static const Matrix4 _S_IDENTIT_y;
-    static const Matrix4 _S_ZERO_;
+    static const Matrix4 _S_IDENTITY;
+    static const Matrix4 _S_ZERO;
 
 private:
 };

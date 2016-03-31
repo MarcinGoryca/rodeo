@@ -14,7 +14,7 @@ namespace math
 {
 void MathSystem::runGenerator()
 {
-    random_number_.randomize();
+    _random_number.randomize();
 }
 
 /**
@@ -33,8 +33,8 @@ void MathSystem::runGenerator()
 
 void MathSystem::init()
 {
-    buildSinusTable(sinus_table_);
-    buildCosinusTable(cosinus_table_);
+    buildSinusTable(_sinus_table);
+    buildCosinusTable(_cosinus_table);
 
     runGenerator();
 }

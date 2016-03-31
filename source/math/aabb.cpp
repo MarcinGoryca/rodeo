@@ -1,21 +1,21 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 ----------------------------------------------
 */
 #include "math\aabb.h"
 
 namespace mg
 {
-namespace math
-{
-void AABB::resize()
-{
-    min_ = min_ * 1.2f;
-    max_ = max_ * 1.2f;
+	namespace math
+	{
+		void AABB::resize()
+		{
+			_min = _min * 1.2f;
+			_max = _max * 1.2f;
+		}
+	}
 }
-}    // end of math namespace
-}    // end of mg namespace

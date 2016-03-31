@@ -248,7 +248,7 @@ namespace mg
 			Mesh mesh;
 			mesh.reset();
 			mesh._mesh_name = "MG Standard Grid";
-			memcpy(mesh._mesh_name, mesh._mesh_name, sizeof(mesh._mesh_name));
+			//memcpy(mesh._mesh_name, mesh._mesh_name, sizeof(mesh._mesh_name));
 
 			_model._mesh.push_back(mesh);
 			_model._mesh_count++;

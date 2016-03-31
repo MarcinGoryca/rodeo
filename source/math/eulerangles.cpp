@@ -14,31 +14,31 @@ namespace math
 {
 void EulerAngles::canonize()
 {
-    pitch_ = wrapPI(pitch_);
+    _pitch = wrapPI(_pitch);
 
-    if(pitch_ < -core::MG_HALFPI)
+    if(_pitch < -core::MG_HALFPI)
     {
-        pitch_ = -core::MG_PI - pitch_;
-        yaw_ += core::MG_PI;
-        roll_ += core::MG_PI;
+        _pitch = -core::MG_PI - _pitch;
+        _yaw += core::MG_PI;
+        _roll += core::MG_PI;
     }
-    else if(pitch_ > core::MG_HALFPI)
+    else if(_pitch > core::MG_HALFPI)
     {
-        pitch_ = core::MG_PI - pitch_;
-        yaw_ += core::MG_PI;
-        roll_ += core::MG_PI;
+        _pitch = core::MG_PI - _pitch;
+        _yaw += core::MG_PI;
+        _roll += core::MG_PI;
     }
 //Checking for gimbal lock case
-    if(fabs(pitch_) > core::MG_HALFPI - 1e-4)
+    if(fabs(_pitch) > core::MG_HALFPI - 1e-4)
     {
-        yaw_ += roll_;
-        roll_ = 0.0f;
+        _yaw += _roll;
+        _roll = 0.0f;
     }
     else
     {
-        roll_ = wrapPI(roll_);
+        _roll = wrapPI(_roll);
     }
-    yaw_ = wrapPI(yaw_);
+    _yaw = wrapPI(_yaw);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -53,41 +53,41 @@ float EulerAngles::wrapPI(float theta)
 //--------------------------------------------------------------------------------------------------
 void EulerAngles::fromObjectToInertialQuaternion(const Quaternion& q)
 {
-    float sp = -2.0f * (q.y_ * q.z_ - q.w_ * q.x_);
+    float sp = -2.0f * (q.getY() * q.getZ() - q.getW() * q.getX());
 
 //Checking for gimbal lock
     if(fabs(sp) > 0.9999f)
     {
-        pitch_ = hpi_ * sp;
-        yaw_ = atan2(-q.x_ * q.z_ + q.w_ * q.y_, 0.5f - q.y_ * q.y_ - q.z_ * q.z_);
-        roll_ = 0.0f;
+        _pitch = _hpi * sp;
+        _yaw = atan2(-q.getX() * q.getZ() + q.getW() * q.getY(), 0.5f - q.getY() * q.getY() - q.getZ() * q.getZ());
+        _roll = 0.0f;
     }
     else
     {
-        pitch_ = asin(sp);
-        yaw_ = atan2(q.x_ * q.z_ + q.w_ * q.y_, 0.5f - q.x_ * q.x_ - q.y_ * q.y_);
-        roll_ = atan2(q.x_ * q.y_ + q.w_ * q.z_, 0.5f - q.x_ * q.x_ - q.z_ * q.z_);
+        _pitch = asin(sp);
+        _yaw = atan2(q.getX() * q.getZ() + q.getW() * q.getY(), 0.5f - q.getX() * q.getX() - q.getY() * q.getY());
+        _roll = atan2(q.getX() * q.getY() + q.getW() * q.getZ(), 0.5f - q.getX() * q.getX() - q.getZ() * q.getZ());
     }
 }
 
 //--------------------------------------------------------------------------------------------------
 void EulerAngles::fromInertialToObjectQuaternion(const Quaternion& q)
 {
-    float sp = -2.0f * (q.y_ * q.z_ + q.w_ * q.x_);
+    float sp = -2.0f * (q.getY() * q.getZ() + q.getW() * q.getX());
 
 //Checking for gimbal lock
     if(fabs(sp) > 0.9999f)
     {
-        pitch_ = hpi_ * sp;
+        _pitch = _hpi * sp;
 
-        yaw_ = atan2(-q.x_ * q.z_  - q.w_ * q.y_, 0.5f -q.y_ * q.y_ - q.z_ * q.z_);
-        roll_ = 0.0f;
+        _yaw = atan2(-q.getX() * q.getZ()  - q.getW() * q.getY(), 0.5f -q.getY() * q.getY() - q.getZ() * q.getZ());
+        _roll = 0.0f;
     }
     else
     {
-        pitch_ = asin(sp);
-        yaw_ = atan2(q.x_ * q.z_ - q.w_ * q.y_, 0.5f - q.x_ * q.x_ - q.y_ * q.y_);
-        roll_ = atan2(q.x_ * q.y_ - q.w_ * q.z_, 0.5f - q.x_ * q.x_ - q.z_ * q.z_);
+        _pitch = asin(sp);
+        _yaw = atan2(q.getX() * q.getZ() - q.getW() * q.getY(), 0.5f - q.getX() * q.getX() - q.getY() * q.getY());
+        _roll = atan2(q.getX() * q.getY() - q.getW() * q.getZ(), 0.5f - q.getX() * q.getX() - q.getZ() * q.getZ());
     }
 }
 

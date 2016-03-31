@@ -12,7 +12,7 @@
 #define MG_CORE_MASTERCONTROLLER_H
 
 #ifndef MG_CORE_COMMON_H_
-#include "common.h"
+#include "core\common.h"
 #endif
 
 namespace mg
