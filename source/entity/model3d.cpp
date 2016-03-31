@@ -19,16 +19,16 @@ namespace entity
 
 Model3D::Model3D(const char* filename, File3DFactory::File3DType type)
 {
-    winding_ = GL_CCW;
+    _winding = GL_CCW;
     load(filename, type);
 }
 
 //.................................//
 Model3D::~Model3D()
 {
-    for(ui i=0; i < model_.mesh_count_; ++i)
+    for(ui i=0; i < _model._mesh_count; ++i)
     {
-        buffer_.destroy(model_, i);
+        _buffer.destroy(_model, i);
     }
 }
 
@@ -46,7 +46,7 @@ void Model3D::load(const char* filename, File3DFactory::File3DType type)
   importer = File3DFactory::create(type);
   importer->import(filename);
 
-  //model_ = importer->model_;
+  //_model = importer->_model;
 
   delete importer;
 
@@ -59,37 +59,37 @@ void Model3D::load(const char* filename, File3DFactory::File3DType type)
 void Model3D::create()
 {
     
-    for(ui i = 0; i < model_.mesh_count_; ++i)
+    for(ui i = 0; i < _model._mesh_count; ++i)
     {
-        model_.mesh_[i].generateNormals();
-        buffer_.fill(model_, i);
+        _model._mesh[i].generateNormals();
+        _buffer.fill(_model, i);
     }
 }
 
 //.................................//
 void Model3D::render()
 {
-    push();
-    glPolygonMode(face_type_, face_mode_);
-    polygonWinding(winding_);
+    //push();
+    glPolygonMode(_face_type, _face_mode);
+    //polygonWinding(_winding);
 
-    for(ui i=0; i < model_.mesh_count_; ++i)
+    for(ui i=0; i < _model._mesh_count; ++i)
     {
-        if(model_.mesh_[i].has_texture_)
+        if(_model._mesh[i]._has_texture)
         {
-            bindTexture(texture_id_);
+            bindTexture(_texture_id);
         }
-        buffer_.draw(model_, i);
+        _buffer.draw(_model, i);
     }
-    pop();
+    //pop();
 }
 
 //.................................//
 void Model3D::scale(float scale_factor)
 {
-    for(ui i=0; i < model_.mesh_count_; ++i)
+    for(ui i=0; i < _model._mesh_count; ++i)
     {
-        buffer_.scale(model_, scale_factor, i);
+        _buffer.scale(_model, scale_factor, i);
     }
 }
 
@@ -104,11 +104,11 @@ void Model3D::buildAABB()
 {	
     //box_.reset();
 
-    for(ui i = 0; i < model_.mesh_count_; ++i)
+    for(ui i = 0; i < _model._mesh_count; ++i)
     {
-         for(ui j = 0; j < model_.mesh_[i].vertex_count_; ++j)
+         for(ui j = 0; j < _model._mesh[i]._vertex_count; ++j)
          {
-            box_.add(model_.mesh_[i].vertex_[j].vertex_);
+            _box.add(_model._mesh[i]._vertex[j]._vertex);
          }
     }
 }
@@ -116,9 +116,9 @@ void Model3D::buildAABB()
 //.................................//
 void Model3D::bindTexture(ui& texture_id)
 {
-    for(ui i = 0; i < model_.mesh_count_; ++i)
+    for(ui i = 0; i < _model._mesh_count; ++i)
     {
-        if(model_.mesh_[i].has_texture_)
+        if(_model._mesh[i]._has_texture)
         {
             glBindTexture(GL_TEXTURE_2D, texture_id);
         }
@@ -128,16 +128,16 @@ void Model3D::bindTexture(ui& texture_id)
 //.................................//
 void Model3D::update()
 {
-    buffer_.reset();
+    _buffer.reset();
     create();
 }
 
 //.................................//
 void Model3D::release()
 {
-    for(ui i = 0; i < model_.mesh_count_; ++i)
+    for(ui i = 0; i < _model._mesh_count; ++i)
     {
-        buffer_.destroy(model_, i);
+        _buffer.destroy(_model, i);
     }
 }
 

@@ -21,11 +21,16 @@ namespace mg
 {
     namespace controllers
     {
+		enum ShadersVendor
+		{
+			MG_GLSL
+		};
+
         class ShadersController
         {
         public:
             ShadersController()
-                :shader_(nullptr)
+                :_shader(nullptr)
             {}
             ~ShadersController() {}
 

@@ -19,8 +19,8 @@ namespace mg
 			case MG_GLSL:
 			{
 				_glsl_shader = std::unique_ptr<renderer::GLSLShaders>(new renderer::GLSLShaders);
-				_glsl_shader->setVertexShader(_glsl_shader->loadShaderFromFile(vertex_shader.c_str(), MG_VS));
-				_glsl_shader->setFragmentShader(_glsl_shader->loadShaderFromFile(fragment_shader.c_str(), MG_FS));
+				_glsl_shader->setVertexShader(_glsl_shader->loadShaderFromFile(vertex_shader.c_str(), mg::renderer::MG_VS));
+				_glsl_shader->setFragmentShader(_glsl_shader->loadShaderFromFile(fragment_shader.c_str(), mg::renderer::MG_FS));
 				_glsl_shader->init();
 			}
 			}

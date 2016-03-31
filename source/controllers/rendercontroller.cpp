@@ -19,13 +19,13 @@ namespace mg
 			{
 			case MG_DX:
 			{
-				_renderer = new renderer::DxRenderer;
+				_renderer = new mg::renderer::DxRenderer;
 			}
 			break;
 
 			case MG_GL:
 			{
-				_renderer = new renderer::GLRenderer;
+				_renderer = new mg::renderer::GLRenderer;
 			}
 			break;
 			}

@@ -23,46 +23,46 @@ namespace mg
 			IRenderer() {}
 			virtual ~IRenderer() {}
 
-			virtual bool run(int w, int h) = 0;
-			virtual void render() = 0;
-			virtual void update() = 0;
+			//virtual bool run(int w, int h) = 0;
+			//virtual void render() = 0;
+			//virtual void update() = 0;
 
 			// Enters the rendering frame
-			virtual void enterFrame() = 0;
+			//virtual void enterFrame() = 0;
 
 			// Ends of the rendering frame
-			virtual void endFrame() = 0;
+			//virtual void endFrame() = 0;
 
 			// Event when the window is resized
-			virtual void onSize(int w, int h) = 0;
+			//virtual void onSize(int w, int h) = 0;
 
 			// Orthographic projection
-			virtual void enter2d() = 0;
+			//virtual void enter2d() = 0;
 
 			// Perspective projection
-			virtual void enter3d() = 0;
+			//virtual void enter3d() = 0;
 			//virtual bool chooseViewportType(GLViewportType vt) = 0;
 
 			// Enables Lighting on the scene
-			virtual bool enableLighting() = 0;
+			/*virtual bool enableLighting() = 0;
 			virtual bool disableLighting() = 0;
 			virtual bool enableDepthTest() = 0;
-			virtual bool disableDepthTest() = 0;
+			virtual bool disableDepthTest() = 0;*/
 
 			// Changes Backgound color of the renderer 
-			virtual void backColor(float r, float g, float b, float a) = 0;
+			/*virtual void backColor(float r, float g, float b, float a) = 0;*/
 
-			virtual void enableShaders() = 0;
-			virtual void disableShaders() = 0;
-			IShaders* getShader()const { return _shader; }
+			//virtual void enableShaders() = 0;
+			//virtual void disableShaders() = 0;
+			//IShaders* getShader()const { return _shader; }
 
-			virtual void setShader(IShaders* si) = 0;
+			//virtual void setShader(IShaders* si) = 0;
 
-			virtual void enableTexturing() = 0;
+			/*virtual void enableTexturing() = 0;
 			virtual void disableTexturing() = 0;
 
 			virtual void enableBlending() = 0;
-			virtual void disableBlending() = 0;
+			virtual void disableBlending() = 0;*/
 
 			HWND getHWND() const { return _hwnd; }
 

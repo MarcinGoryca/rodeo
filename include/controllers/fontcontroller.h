@@ -8,8 +8,8 @@
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_MASTERCONTROLLER_H_
-#include "core\mastermanager.h"
+#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#include "controllers\mastercontroller.h"
 #endif
 
 #ifndef MG_CORE_FONTCONTROLLER_H_
@@ -27,7 +27,7 @@ namespace mg
 {
 	namespace controllers
 	{
-		class FontController : public Singleton<FontController>, public MasterController
+		class FontController : public mg::core::Singleton<FontController>, public MasterController
 		{
 		public:
 			FontController() {}

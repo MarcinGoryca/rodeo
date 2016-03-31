@@ -32,8 +32,8 @@ namespace mg
 	{
 		enum RendererType
 		{
-			DX,
-			GL
+			MG_DX,
+			MG_GL
 		};
 
 		class RenderController : public mg::core::Singleton<RenderController>, public MasterController

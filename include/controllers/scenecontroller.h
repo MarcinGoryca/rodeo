@@ -61,14 +61,14 @@ namespace mg
 
             //void removeChildren();
 
-            scene::Scene* getScene()const { return scene_; }
+            scene::Scene* getScene()const { return _scene; }
 
         protected:
             void init();
             void clear();
 
         private:
-            scene::Scene* scene_;
+            scene::Scene* _scene;
         };
     }
 }

@@ -16,7 +16,7 @@ namespace mg
 {
 namespace entity
 {
-ui Object::s_object_counter_ = 0;
+ui Object::_s_object_counter = 0;
 
 //Object* Object::getObjectById(enginecore::ui id)
 //{
@@ -31,7 +31,7 @@ ui Object::s_object_counter_ = 0;
 //.................................//
 void Object::init()
 {
-    s_object_counter_++;
+    _s_object_counter++;
 //    setId(s_object_counter_);
 //    renderable_ = true;
 }
@@ -39,9 +39,9 @@ void Object::init()
 //.................................//
 void Object::clear()
 {
-    while(s_object_counter_ > 0)
+    while(_s_object_counter > 0)
     {
-        s_object_counter_--;
+        _s_object_counter--;
     }
 }
 
@@ -55,7 +55,7 @@ void Object::clear()
 //.................................//
 Object::Object(Object& copy)
 {
-    this->id_ = copy.id_;
+    this->_id = copy._id;
 //    this->renderable_ = copy.renderable_;
     //this->has_material_ = copy.has_material_;
     //this->has_color_ = copy.has_color_;

@@ -1,68 +1,68 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
+	MG Game Engine
+	Copyright(c) Marcin Goryca
+	marcin.goryca@gmail.com
+	http://marcingoryca.pl
 ----------------------------------------------
 */
 #include "core\timer.h"
 
 namespace mg
 {
-namespace core
-{
-void Timer::countFramesPerSecond()
-{
-    current_time_ = getSecs();
-    delta_ = current_time_ - last_time_;
+	namespace core
+	{
+		void Timer::countFramesPerSecond()
+		{
+			_current_time = getSecs();
+			_delta = _current_time - _last_time;
 
-    last_time_ = current_time_;
+			_last_time = _current_time;
 
-    ++frames_;
-    fps_time_ += delta_;
+			++_frames;
+			_fps_time += _delta;
 
-//Does a second past?
-    if(fps_time_ > 1.0f)
-    {
-        fps_ = frames_ / fps_time_;
-        frames_ = 0;
-        fps_time_ = 0.0f;
-    }
+			//Does a second past?
+			if (_fps_time > 1.0f)
+			{
+				_fps = _frames / _fps_time;
+				_frames = 0;
+				_fps_time = 0.0f;
+			}
+		}
+
+		//--------------------------------------------------------------------------------------------------
+		void Timer::countFPS()
+		{
+			_current_time = GetTickCount() * 0.001f;
+			if (_current_time - _last_time > 1.0f)
+			{
+				_last_time = _current_time;
+
+				_fps = 0.0;
+			}
+			++_fps;
+		}
+
+		//--------------------------------------------------------------------------------------------------
+		float Timer::getSecs()
+		{
+			_use_query_performance_frequency = (QueryPerformanceFrequency(&_frequency) != 0);
+			if (!_use_query_performance_frequency)
+			{
+				return GetTickCount() / 1000.0f;
+			}
+			else
+			{
+				QueryPerformanceCounter(&_ticks);
+				return static_cast<float>(_ticks.QuadPart / static_cast<double>(_frequency.QuadPart));
+			}
+		}
+
+		//--------------------------------------------------------------------------------------------------
+		void Timer::init()
+		{
+			_last_time = getSecs();
+		}
+	}
 }
-
-//--------------------------------------------------------------------------------------------------
-void Timer::countFPS()
-{
-    current_time_ = GetTickCount() * 0.001f;
-    if(current_time_ - last_time_ > 1.0f)
-    {
-        last_time_ = current_time_;
-        
-        fps_ = 0.0;
-    }
-    ++fps_;
-}
-
-//--------------------------------------------------------------------------------------------------
-float Timer::getSecs()
-{
-    use_query_performance_frequency_ = (QueryPerformanceFrequency(&frequency_) != 0);
-    if(!use_query_performance_frequency_)
-    {
-        return GetTickCount() / 1000.0f;
-    }
-    else
-    {
-        QueryPerformanceCounter(&ticks_);
-        return static_cast<float>(ticks_.QuadPart / static_cast<double>(frequency_.QuadPart));
-    }
-}
-
-//--------------------------------------------------------------------------------------------------
-void Timer::init()
-{
-    last_time_ = getSecs();
-}
-}    // end of core namespace
-}    // end of mg namespace
