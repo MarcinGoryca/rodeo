@@ -59,7 +59,7 @@ void Model3D::load(const char* filename, File3DFactory::File3DType type)
 void Model3D::create()
 {
     
-    for(ui i = 0; i < _model._mesh_count; ++i)
+    for(unsigned int i = 0; i < _model._mesh_count; ++i)
     {
         _model._mesh[i].generateNormals();
         _buffer.fill(_model, i);
@@ -73,7 +73,7 @@ void Model3D::render()
     glPolygonMode(_face_type, _face_mode);
     //polygonWinding(_winding);
 
-    for(ui i=0; i < _model._mesh_count; ++i)
+    for(unsigned int i=0; i < _model._mesh_count; ++i)
     {
         if(_model._mesh[i]._has_texture)
         {

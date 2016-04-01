@@ -721,5 +721,8 @@
     <Text Include="codespec.txt">
       <Filter>Docs</Filter>
     </Text>
+    <Text Include="docs\ogl_functions.txt">
+      <Filter>Docs</Filter>
+    </Text>
   </ItemGroup>
 </Project>

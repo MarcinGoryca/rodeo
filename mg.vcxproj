@@ -273,6 +273,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="codespec.txt" />
+    <Text Include="docs\ogl_functions.txt" />
     <Text Include="docs\structure.txt" />
     <Text Include="todo.txt" />
   </ItemGroup>

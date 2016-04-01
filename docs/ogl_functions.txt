@@ -1,0 +1,12 @@
+// Sets the fixed size in pixels, that will be used for points 
+// when GL_PROGRAM_POINT_SIZE is not enabled.
+// Default point size equals 1.0f
+
+glPointSize(GLfloat size);
+
+
+// Sets the fixed width of lines. The default value is 1.0. width is the new
+// value of line width and must be greater than 0.0, otherwise an error is
+// generated.
+
+void glLineWidth(GLfloat width);

@@ -15,19 +15,19 @@ namespace mg
 	{
 		LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		{
-			static Framework* rodeo_application = 0;
+			static Framework* mg_engine = 0;
 
 			switch (msg)
 			{
 			case WM_CREATE:
 			{
 				CREATESTRUCT* cs = (CREATESTRUCT*)lparam;
-				rodeo_application = (Framework*)cs->lpCreateParams;
+				mg_engine = (Framework*)cs->lpCreateParams;
 				return 0;
 			}
 			}
-			if (rodeo_application)
-				return rodeo_application->messageProcessor(msg, wparam, lparam);
+			if (mg_engine)
+				return mg_engine->messageProcessor(msg, wparam, lparam);
 			else
 				return DefWindowProc(hwnd, msg, wparam, lparam);
 		}
