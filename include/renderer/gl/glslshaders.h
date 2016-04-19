@@ -39,7 +39,7 @@ namespace mg
 			 |    Returns unsigned int shader program id
 			 |  ----------------------------------------------------
 			 */
-			virtual core::ui loadShaderFromFile(const char* filename, ShaderType st);
+			virtual unsigned int loadShaderFromFile(const char* filename, ShaderType st);
 
 			/*
 			 |  ----------------------------------------------------
@@ -60,7 +60,7 @@ namespace mg
 			 |    Uses ShaderProgram
 			 |  ----------------------------------------------------
 			 */
-			virtual void useShaderProgram(core::ui shader_program);
+			virtual void useShaderProgram(unsigned int shader_program);
 
 			virtual const char* getVertexProgramFile() const
 			{
@@ -82,7 +82,7 @@ namespace mg
 				_fragment_program_file = fpf;
 			}
 
-			virtual core::ui getVertexShader() const
+			virtual unsigned int getVertexShader() const
 			{
 				return _vertex_shader;
 			}
@@ -92,7 +92,7 @@ namespace mg
 				_vertex_shader = id;
 			}
 
-			virtual core::ui getFragmentShader() const
+			virtual unsigned int getFragmentShader() const
 			{
 				return _fragment_shader;
 			}
@@ -102,12 +102,12 @@ namespace mg
 				_fragment_shader = id;
 			}
 
-			virtual core::ui getProgram() const { return program_; }
+			virtual unsigned int getProgram() const { return _program; }
 
-			virtual void setProgram(core::ui program) { program_ = program; }
+			virtual void setProgram(unsigned int program) { _program = program; }
 
 		private:
-			unsigned int program_;
+			unsigned int _program;
 
 			/*
 			 |  ---------------------------------

@@ -42,6 +42,11 @@ namespace mg {
 			// mode = GL_FRONT / GL_BACK / GL_FRONT_AND_BACK
             // Culling must be enabled by glEnable(GL_CULL_FACE)
             // and can be disabled by glDisable(GL_CULL_FACE)
+
+			// void glBuffers(GLsizei n, GLuint* buffers)
+			// Returns n currently unused names for buffer objects in the array buffers
+
+
 		};
 
 
