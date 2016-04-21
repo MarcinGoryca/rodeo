@@ -39,7 +39,7 @@ namespace mg
                 exstyles_(-1),
                 fullscreen_(false),
                 window_classname_(L"engine"),
-                windowname_(L"JENNIE Game Engine")
+                windowname_(L"MG Game Engine")
             {
             }
 

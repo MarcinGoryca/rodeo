@@ -159,7 +159,7 @@ namespace mg
 
 
 		private:
-			QueryRenderer* query_renderer_;
+			QueryRenderer* _query_renderer;
 
 			/*
 			|  ----------------------------------
@@ -211,7 +211,7 @@ namespace mg
 			*/
 			//void flush();
 
-			QueryRenderer* getQueryRenderer() const { return query_renderer_; }
+			QueryRenderer* getQueryRenderer() const { return _query_renderer; }
 		};
 	}
 }

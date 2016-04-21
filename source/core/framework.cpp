@@ -605,7 +605,7 @@ namespace mg
 				0
 			};
 
-			if (wglewIsSupported("WGL_ARB_create_context") == 1)
+			if (glewIsSupported("WGL_ARB_create_context") == 1)
 			{
 				setHrc(wglCreateContextAttribsARB(getHdc(), 0, attributes));
 				wglMakeCurrent(NULL, NULL);

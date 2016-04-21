@@ -23,9 +23,9 @@
 #ifndef MG_RENDERER_IRENDERER_H_
 #include "renderer\irenderer.h"
 #endif
-//
-//#include <D3DX10.h>
-//
+
+#include <D3DX10.h>
+
 namespace mg
 {
 	namespace renderer

@@ -219,7 +219,7 @@ private:
     void readHeaderChunk(Chunk& chunk);
     void readVersionChunk(Chunk& chunk);
     void readChunk(Chunk& chunk);
-    core::ui skipChunk(Chunk& chunk);
+    unsigned int skipChunk(Chunk& chunk);
     void readNextChunk(Chunk& chunk);
 
     void readMeshChunk(entity::Mesh& m, Chunk& c);
