@@ -1,7 +1,7 @@
 /*
  |  ------------------------------------------------------
  |    MG GAME ENGINE
- |    [ GLDrawing.h ] / [ renderer/gl ]
+ |    [ GLDraw.h ] / [ renderer/gl ]
  |    Copyright (c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -10,17 +10,17 @@
 
 #pragma once
 
-#ifndef MG_RENDERER_GL_GLDRAWINGENUMS_H_
-#include "gldrawingenums.h"
+#ifndef MG_RENDERER_GL_GLDRAWENUMS_H_
+#include "gldrawenums.h"
 #endif
 
 namespace mg {
 	namespace renderer {
-		class GLDrawing {
+		class GLDraw {
 		public:
-			GLDrawing() {}
+			GLDraw() {}
 
-			~GLDrawing() {}
+			~GLDraw() {}
 
 			// glPointSize(GLfloat size)
 			// Sets the fixed size, in pixels, that will be used for points

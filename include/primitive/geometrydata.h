@@ -14,21 +14,21 @@ namespace mg
 	namespace primitive
 	{
 		// --- A triangle --- //
-		extern GLfloat triangle[] =
+		/*extern GLfloat triangle[] =
 		{
 			-1.0f, -1.0f, 0.0f,
 			1.0f, -1.0f, 0.0f,
 			0.0f, 1.0f, 0.0f
-		};
+		};*/
 
 		// ---- A rectangle ---- //
-		GLfloat rectangle[] =
+		/*GLfloat rectangle[] =
 		{
 			-0.5f, -0.5f, 0.0f,
 			0.5f, -0.5f, 0.0f,
 			0.5f, 0.5f, 0.0f,
 			-0.5f, 0.5f, 0.0f
-		};
+		};*/
 
 		// ---- Rectangle Elements (indexes) ---- //
 		//GLushort rectangle_elements[] = 
@@ -37,20 +37,20 @@ namespace mg
 		//};
 
 		// ---- A box ---- //
-		extern GLfloat box[] =
-		{
-			//Front Side
-			-1.0f, -1.0f, 1.0f,
-			1.0f, -1.0f, 1.0f,
-			1.0f, 1.0f, 1.0f,
-			-1.0f, 1.0f, 1.0f,
+		//extern GLfloat box[] =
+		//{
+		//	//Front Side
+		//	-1.0f, -1.0f, 1.0f,
+		//	1.0f, -1.0f, 1.0f,
+		//	1.0f, 1.0f, 1.0f,
+		//	-1.0f, 1.0f, 1.0f,
 
-			//Back Side
-			-1.0f, -1.0f, -1.0f,
-			1.0f, -1.0f, -1.0f,
-			1.0f, 1.0f, -1.0f,
-			-1.0f, 1.0f, -1.0f
-		};
+		//	//Back Side
+		//	-1.0f, -1.0f, -1.0f,
+		//	1.0f, -1.0f, -1.0f,
+		//	1.0f, 1.0f, -1.0f,
+		//	-1.0f, 1.0f, -1.0f
+		//};
 	}
 }
 #endif

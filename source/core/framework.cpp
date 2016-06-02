@@ -94,7 +94,7 @@ namespace mg
 				_time_controller->getTimer()->countFramesPerSecond();
 				setGlobalDeltaTime(_time_controller->getTimer()->getDelta());
 
-				_event_controller->getUserInput();
+				//_event_controller->getUserInput();
 
 				//Start Physics calculations
 				//physicsystem_->update(getGlobalDeltaTime());
@@ -107,8 +107,8 @@ namespace mg
 				//Override this method in your application
 				onRender();
 
-				_scene_controller->render();
-				_scene_controller->update(getGlobalDeltaTime());
+				//_scene_controller->render();
+				//_scene_controller->update(getGlobalDeltaTime());
 
 				//End Rendering Phase
 				//_render_controller->getRenderer()->disableShaders();

@@ -411,12 +411,6 @@
     <ClInclude Include="test\game1.h">
       <Filter>Header Files\test</Filter>
     </ClInclude>
-    <ClInclude Include="include\renderer\gl\gldrawing.h">
-      <Filter>Header Files\renderer\gl</Filter>
-    </ClInclude>
-    <ClInclude Include="source\renderer\gl\gldrawingenums.h">
-      <Filter>Header Files\renderer\gl</Filter>
-    </ClInclude>
     <ClInclude Include="include\entity\entityheader.h">
       <Filter>Header Files\entity</Filter>
     </ClInclude>
@@ -467,6 +461,15 @@
     </ClInclude>
     <ClInclude Include="include\front\front.h">
       <Filter>Header Files\front</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer\gl\gldraw.h">
+      <Filter>Header Files\renderer\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\renderer\gl\gldrawenums.h">
+      <Filter>Header Files\renderer\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="test\Console.h">
+      <Filter>Header Files\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -709,6 +712,9 @@
     </ClCompile>
     <ClCompile Include="source\controllers\timecontroller.cpp">
       <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="test\Console.cpp">
+      <Filter>Source Files\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
