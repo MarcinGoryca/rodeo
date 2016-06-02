@@ -1,4 +1,4 @@
-MG Game Engine
+MG Game Engine [ Project ]
 -----------------------------
 <h2>It is based on first project Rodeo Game Engine.</h2>
 <h3>Off hours right now, to learn and have fun</h3>
