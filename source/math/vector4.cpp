@@ -19,16 +19,25 @@ float Vector4::length()
     return length;
 }
 
-//...............................//
+
+/*
+ * ----------------------------------------------------------------
+ *		Helper method
+ * ----------------------------------------------------------------
+ */
 void printV4(const Vector4& v)
 {
-    std::cout << "Vector4(" << v._x << ", " << v._y << ", " << v._z << ", " << v._w << ")" << std::endl;
+    std::cout << "Vector4(" << v.getX() << ", " << v.getY() << ", " << v.getZ() << ", " << v.getW() << ")" << std::endl;
 }
 
-//................................//
+/*
+ * ----------------------------------------------------------------
+ *		Helper method
+ * ----------------------------------------------------------------
+ */
 void printV4(const char* message, const Vector4& v)
 {
-    std::cout << message << "\t" << "Vector4(" << v._x << ", " << v._y << ", " << v._z << ", " << v._w << ")" << std::endl;
+    std::cout << message << "\t" << "Vector4(" << v.getX() << ", " << v.getY() << ", " << v.getZ() << ", " << v.getW() << ")" << std::endl;
 }
 }    // end of math namespace
 }    // end of mg namespace

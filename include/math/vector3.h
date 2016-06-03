@@ -26,43 +26,66 @@ namespace mg
 				_z(0.0f)
 			{}
 
-			// ---- //
 			Vector3(float x, float y, float z)
 				:_x(x),
 				_y(y),
 				_z(z)
 			{}
 
-			// Copy Constructor 
+			/*
+			 * --------------------------------------------------------------------
+			 *		Copy Constructor 
+			 * --------------------------------------------------------------------
+			 */
 			Vector3(const Vector3& v)
 				:_x(v._x),
 				_y(v._y),
 				_z(v._z)
 			{}
 
-			// ---- //
 			~Vector3() {}
 
-			// Static Vector, Vector3(0.0f, 0.0f, 0.0f);
-			// Example: enginemath::Vector3::S_VECTOR3_ZERO_;
+			/*
+			 * --------------------------------------------------------------------
+			 *      Static Vector, Vector3(0.0f, 0.0f, 0.0f);
+			 *      Example: mg::math::Vector3::S_VECTOR3_ZERO_;
+			 * --------------------------------------------------------------------
+			 */
 			static const Vector3 S_VECTOR3_ZERO_;
 
-			// Returns this Vector
+			/*
+			 * --------------------------------------------------------------------
+			 *		Gets this Vector
+			 *		Returns Vector3
+			 * --------------------------------------------------------------------
+			 */
 			Vector3 get() const { return *this; }
 
-			// Length [Magnitude] = sqrt( x * x + y * y + z * z )
-			// Returns float value - length of a vector
+			/*
+			 * --------------------------------------------------------------------
+			 *		Length [Magnitude] = sqrt( x * x + y * y + z * z )
+			 *      Returns float value - length of a vector
+			 * --------------------------------------------------------------------
+			 */
 			float length();
 
-			// Dot Product of two Vectors
-			// Returns float scalar value 
+			/*
+			 * --------------------------------------------------------------------
+			 *		Dot Product of two Vectors
+			 *		Returns float scalar value 
+			 * --------------------------------------------------------------------
+			 */
 			inline float dot(const Vector3& v1)
 			{
 				return _x * v1._x + _y * v1._y + _z * v1._z;
 			}
 
-			// Negating vector
-			// Returns Vector3
+			/*
+			 * --------------------------------------------------------------------
+			 *		Negating vector
+			 *		Returns Vector3
+			 * --------------------------------------------------------------------
+			 */
 			Vector3& negate()
 			{
 				_x = -_x;
@@ -71,9 +94,13 @@ namespace mg
 				return *this;
 			}
 
-			// Cross Product of two 3D vectors
-			// Cross Product returns third vector perpendicular to other two\n
-			//   IF Cross AND Dot are used together, the Cross is first in equation
+			/*
+			 * ---------------------------------------------------------------------
+			 *		Cross Product of two 3D vectors
+			 *      Cross Product returns third vector perpendicular to other two\n
+			 *      IF Cross AND Dot are used together, the Cross is first in equation
+			 * ---------------------------------------------------------------------
+			 */
 			inline Vector3 cross(Vector3& v1, Vector3& v2)
 			{
 				return Vector3(v1._y * v2._z - v1._z * v2._y,
@@ -301,6 +328,55 @@ namespace mg
 				return result;
 			}*/
 
+			/*
+			 * -----------------------------------------------------------------
+			 *	Gets X Component of the Vector
+			 *	Returns float value
+			 * -----------------------------------------------------------------
+			 */
+			float getX() const { return _x; }
+
+			/*
+			 * -----------------------------------------------------------------
+			 *	Get Y Component of the Vector
+			 *  Returns float value
+			 * -----------------------------------------------------------------
+			 */
+			float getY() const { return _y; }
+
+			/*
+			 * -----------------------------------------------------------------
+			 *	Get Z Component of the Vector
+			 *	Returns float value
+			 * -----------------------------------------------------------------
+			 */
+			float getZ() const { return _z; }
+
+			/*
+			 * -----------------------------------------------------------------
+			 *	Sets X Component of the Vector
+			 *	Parameter float value of the x
+			 * -----------------------------------------------------------------
+			 */
+			void setX(float x) { _x = x; }
+
+			/*
+			 * -----------------------------------------------------------------
+			 *	Sets Y Component of the Vector
+			 *	Parameter float value of the y
+			 * -----------------------------------------------------------------
+			 */
+			void setY(float y) { _y = y; }
+
+			/*
+			 * -----------------------------------------------------------------
+			 *	Sets Z Component of the Vector
+			 *	Parameter float value of the z
+			 * -----------------------------------------------------------------
+			 */
+			void setZ(float z) { _z = z; }
+
+		private:
 			float _x;
 			float _y;
 			float _z;
@@ -324,9 +400,9 @@ namespace mg
 		// Returns product Vector of two Vectors
 		inline Vector3 add(Vector3& result, const Vector3& v1, const Vector3& v2)
 		{
-			result._x = v1._x + v2._x;
-			result._y = v1._y + v2._y;
-			result._z = v1._z + v2._z;
+			result.setX(v1.getX() + v2.getX());
+			result.setY(v1.getY() + v2.getY());
+			result.setZ(v1.getZ() + v2.getZ());
 			return result;
 		}
 
@@ -335,9 +411,9 @@ namespace mg
 		inline Vector3 divideByScalar(const Vector3& v1, float scalar)
 		{
 			Vector3 result;
-			result._x = v1._x / scalar;
-			result._y = v1._y / scalar;
-			result._z = v1._z / scalar;
+			result.setX(v1.getX() / scalar);
+			result.setY(v1.getY() / scalar);
+			result.setZ(v1.getZ() / scalar);
 			return result;
 		}
 
@@ -360,9 +436,9 @@ namespace mg
 		{
 			Vector3 middle;
 
-			middle._x = (1 - range) * start._x + range * end._x;
-			middle._y = (1 - range) * start._y + range * end._y;
-			middle._z = (1 - range) * start._z + range * end._z;
+			middle.setX((1 - range) * start.getX() + range * end.getX());
+			middle.setY((1 - range) * start.getY() + range * end.getY());
+			middle.setZ((1 - range) * start.getZ() + range * end.getZ());
 
 			return middle;
 		}
@@ -395,12 +471,12 @@ namespace mg
 		/** Normalization */
 		inline void norm(Vector3& v)
 		{
-			float length = ::sqrt(v._x * v._x + v._y * v._y + v._z * v._z);
+			float length = ::sqrt(v.getX() * v.getX() + v.getY() * v.getY() + v.getZ() * v.getZ());
 			if (length > 0.0f)
 			{
-				v._x = v._x / length;
-				v._y = v._y / length;
-				v._z = v._z / length;
+				v.setX(v.getX() / length);
+				v.setY(v.getY() / length);
+				v.setZ(v.getZ() / length);
 			}
 		}
 
@@ -408,12 +484,12 @@ namespace mg
 		inline Vector3 normalize(Vector3& v)
 		{
 			Vector3 result;
-			float length = ::sqrt(v._x * v._x + v._y * v._y + v._z * v._z);
+			float length = ::sqrt(v.getX() * v.getX() + v.getY() * v.getY() + v.getZ() * v.getZ());
 			if (length > 0.0f)
 			{
-				v._x = v._x / length;
-				v._y = v._y / length;
-				v._z = v._z / length;
+				v.setX(v.getX() / length);
+				v.setY(v.getY() / length);
+				v.setZ(v.getZ() / length);
 				result = v;
 			}
 			return result;
@@ -424,9 +500,9 @@ namespace mg
 		 */
 		inline float distance(const Vector3 &v1, const Vector3 &v2)
 		{
-			float vx = v1._x - v2._x;
-			float vy = v1._y - v2._y;
-			float vz = v1._z - v2._z;
+			float vx = v1.getX() - v2.getX();
+			float vy = v1.getY() - v2.getY();
+			float vz = v1.getZ() - v2.getZ();
 			return sqrt(vx*vx + vy*vy + vz*vz);
 		}
 
@@ -436,9 +512,9 @@ namespace mg
 		 */
 		inline Vector3 subtract(Vector3& result, const Vector3& v1, const Vector3& v2)
 		{
-			result._x = v1._x - v2._x;
-			result._y = v1._y - v2._y;
-			result._z = v1._z - v2._z;
+			result.setX(v1.getX() - v2.getX());
+			result.setY(v1.getY() - v2.getY());
+			result.setZ(v1.getZ() - v2.getZ());
 
 			return result;
 		}
