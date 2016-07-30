@@ -42,10 +42,11 @@ namespace mg
 
 
 		private:
+			mg::renderer::Font* _font;
+
 			void init();
 			void clear();
-
-			mg::renderer::Font* _font;
+			
 		};
 	}
 }

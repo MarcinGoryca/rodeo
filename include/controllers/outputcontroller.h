@@ -1,11 +1,11 @@
 ﻿/*
- |  -----------------------------------
+ |  -----------------------------------------------
  |    MG GAME ENGINE
  |    [ OutputController.h ] [ mg\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
- |  -----------------------------------
+ |  -----------------------------------------------
  */
 
 #ifndef MG_CORE_OUTPUTCONTROLLER_H
@@ -38,7 +38,14 @@ namespace mg
 				clear();
 			}
 
-			mg::io::Log* getLog() const
+			/*
+			 * --------------------------------------------
+			 *    Gets Log
+			 *    Returns Log log
+			 * --------------------------------------------
+			 */
+
+			std::unique_ptr<io::Log*> getLog() const
 			{
 				return _log;
 			}
@@ -47,7 +54,8 @@ namespace mg
 			void init();
 			void clear();
 
-			io::Log* _log;
+			//io::Log* _log;
+			std::unique_ptr<io::Log*> _log;
 		};
 	}
 }

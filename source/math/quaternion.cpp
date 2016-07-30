@@ -17,18 +17,18 @@ namespace math
 {
 Quaternion::Quaternion(const Vector4& v)
 {
-    setX(v._x);
-    setY(v._y);
-    setZ(v._z);
-    setW(v._w);
+    setX(v.getX());
+    setY(v.getY());
+    setZ(v.getZ());
+    setW(v.getW());
 }
 
 //--------------------------------------------------------------------------------------------------
 Quaternion::Quaternion(const Vector3& v, float w)
 {
-    setX(v._x);
-    setY(v._y);
-    setZ(v._z);
+    setX(v.getX());
+    setY(v.getY());
+    setZ(v.getZ());
     setW(w);
 }
 
@@ -105,9 +105,9 @@ void Quaternion::rotateAboutAxis(const Vector3& axis, float angle)
     float halfAngle = angle * 0.5f;
     float sinHalfAngle = ::sin(halfAngle);
 
-    setX(axis._x * sinHalfAngle);
-    setY(axis._y * sinHalfAngle);
-    setZ(axis._z * sinHalfAngle);
+    setX(axis.getX() * sinHalfAngle);
+    setY(axis.getY() * sinHalfAngle);
+    setZ(axis.getZ() * sinHalfAngle);
 }
 
 //--------------------------------------------------------------------------------------------------

@@ -69,15 +69,15 @@ namespace mg
 
 			// Sets X position of the Camera
 			// Parameter float value of new x position
-			void setPositionX(float new_x) { _camera_position._x = new_x; }
+			void setPositionX(float new_x) { _camera_position.setX(new_x); }
 
 			// Sets Y position of the Camera
 			// Parameter float value of new y position
-			void setPositionY(float new_y) { _camera_position._y = new_y; }
+			void setPositionY(float new_y) { _camera_position.setY(new_y); }
 
 			// Sets Z position of the Camera
 			// Parameter float value of new z position
-			void setPositionZ(float new_z) { _camera_position._z = new_z; }
+			void setPositionZ(float new_z) { _camera_position.setZ(new_z); }
 
 			// Sets position of the Camera
 			// Parameter Vector3 value of new camera position
@@ -85,15 +85,15 @@ namespace mg
 
 			// Sets view in x of the Camera
 			// Parameter float new x value of the view
-			void setViewX(float new_x) { _camera_target._x = new_x; }
+			void setViewX(float new_x) { _camera_target.setX(new_x); }
 
 			// Sets view in y of the Camera
 			// Parameter float new y value of the view
-			void setViewY(float new_y) { _camera_target._y = new_y; }
+			void setViewY(float new_y) { _camera_target.setY(new_y); }
 
 			// Sets view in z of the Camera
 			// Parameter float new z value of the view
-			void setViewZ(float new_z) { _camera_target._z = new_z; }
+			void setViewZ(float new_z) { _camera_target.setZ(new_z); }
 
 			// Sets view of the Camera
 			// Parameter Vector3 value of new view
@@ -101,15 +101,15 @@ namespace mg
 
 			// Sets pointing in x of the Camera
 			// Parameter float new x value of pointing
-			void setUpX(float new_x) { _up._x = new_x; }
+			void setUpX(float new_x) { _up.setX(new_x); }
 
 			// Sets pointing in y of the Camera
 			// Parameter flaot new y value of pointing
-			void setUpY(float new_y) { _up._y = new_y; }
+			void setUpY(float new_y) { _up.setY(new_y); }
 
 			// Sets pointing in z of the Camera
 			// Parameter float new z value of pointing
-			void setUpZ(float new_z) { _up._z = new_z; }
+			void setUpZ(float new_z) { _up.setZ(new_z); }
 
 			// Sets pointing of the Camera
 			// Parameter Vector3 value of pointing
@@ -121,39 +121,39 @@ namespace mg
 
 			// Gets x position of the Camera
 			// Returns float value of x position
-			float getPositionX()const { return _camera_position._x; }
+			float getPositionX()const { return _camera_position.getX(); }
 
 			// Gets y position of the Camera
 			// Returns float value of y position
-			float getPositionY()const { return _camera_position._y; }
+			float getPositionY()const { return _camera_position.getY(); }
 
 			// Gets z position of the Camera
 			// Returns float value of z position
-			float getPositionZ()const { return _camera_position._z; }
+			float getPositionZ()const { return _camera_position.getZ(); }
 
 			// Gets x view value of the Camera
 			// Returns float view value in x
-			float getViewX()const { return _camera_target._x; }
+			float getViewX()const { return _camera_target.getX(); }
 
 			// Gets y view value of the Camera
 			// Parameter float view value in y
-			float getViewY()const { return _camera_target._y; }
+			float getViewY()const { return _camera_target.getY(); }
 
 			// Gets z view value of the Camera
 			// Returns float view value in z
-			float getViewZ()const { return _camera_target._z; }
+			float getViewZ()const { return _camera_target.getZ(); }
 
 			// Gets x value of pointing
 			// Returns float value of x pointing
-			float getUpX()const { return _up._x; }
+			float getUpX()const { return _up.getX(); }
 
 			// Gets y value of pointing
 			// Returns float value of y pointing
-			float getUpY()const { return _up._y; }
+			float getUpY()const { return _up.getY(); }
 
 			// Gets z value of pointing
 			// Returns float value of z pointing
-			float getUpZ()const { return _up._z; }
+			float getUpZ()const { return _up.getZ(); }
 
 			// Gets Near plane of the Camera
 			// Returns float value of near plane

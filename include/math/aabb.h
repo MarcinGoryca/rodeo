@@ -30,14 +30,19 @@ public:
 
     ~AABB(){}
 
+	/*
+	 * --------------------------------------------------------------------------
+	 *
+	 * --------------------------------------------------------------------------
+	 */
     inline void add(const Vector3& p)
     {
-        if(p._x < _min._x)_min._x = p._x;
-        if(p._x > _max._x)_max._x = p._x;
-        if(p._y < _min._y)_min._y = p._y;
-        if(p._y > _max._y)_max._y = p._y;
-        if(p._z < _min._z)_min._z = p._z;
-        if(p._z > _max._z)_max._z = p._z;
+        if(p.getX() < _min.getX())_min.setX(p.getX());
+        if(p.getX() > _max.getX())_max.setX(p.getX());
+        if(p.getY() < _min.getY())_min.setY(p.getY());
+        if(p.getY() > _max.getY())_max.setY(p.getY());
+        if(p.getZ() < _min.getZ())_min.setZ(p.getZ());
+        if(p.getZ() > _max.getZ())_max.setZ(p.getZ());
     }
 
     void construct();
@@ -56,8 +61,12 @@ private:
 	{
 		const float bignumber = 1e37f;
 
-		_min._x = _min._y = _min._z = bignumber;
-		_max._x = _max._y = _max._z = -bignumber;
+		_min.setX(bignumber);
+		_min.setY(bignumber);
+		_min.setZ(bignumber);
+		_max.setX(-bignumber);
+		_max.setY(-bignumber);
+		_max.setZ(-bignumber);
 	}
 };
 }

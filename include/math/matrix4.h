@@ -77,9 +77,9 @@ public:
         _m4[9] = 0.0f;
         _m4[10] = 1.0f;
         _m4[11] = 0.0f;
-        _m4[12] = v3._x;
-        _m4[13] = v3._y;
-        _m4[14] = v3._z;
+        _m4[12] = v3.getX();
+        _m4[13] = v3.getY();
+        _m4[14] = v3.getZ();
         _m4[15] = 1.0f;
     }
 
@@ -314,10 +314,10 @@ public:
     inline Vector4 operator* (const Vector4& v)
     {
         Vector4 result;
-        result._x = _m4[0] * v._x + _m4[4] * v._y + _m4[8] * v._z + _m4[12] * v._w;
-        result._y = _m4[1] * v._x + _m4[5] * v._y + _m4[9] * v._z + _m4[13] * v._w;
-        result._z = _m4[2] * v._x + _m4[6] * v._y + _m4[10] * v._z + _m4[14] * v._w;
-        result._w = _m4[3] * v._x + _m4[7] * v._y + _m4[11] * v._z + _m4[15] * v._w;
+        result.setX(_m4[0] * v.getX() + _m4[4] * v.getY() + _m4[8] * v.getZ() + _m4[12] * v.getW());
+        result.setY(_m4[1] * v.getX() + _m4[5] * v.getY() + _m4[9] * v.getZ() + _m4[13] * v.getW());
+        result.setZ(_m4[2] * v.getX() + _m4[6] * v.getY() + _m4[10] * v.getZ() + _m4[14] * v.getW());
+        result.setW(_m4[3] * v.getX() + _m4[7] * v.getY() + _m4[11] * v.getZ() + _m4[15] * v.getW());
         return result;
     }
 

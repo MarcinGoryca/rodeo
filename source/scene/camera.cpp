@@ -234,13 +234,21 @@ namespace mg
 
 			tempView.normalize();
 
-			_camera_position._x += tempView._x * speed;
+			/*_camera_position.getX() +=tempView._x * speed;
 			_camera_position._y += tempView._y * speed;
 			_camera_position._z += tempView._z * speed;
 
 			_camera_target._x += tempView._x * speed;
 			_camera_target._y += tempView._y * speed;
-			_camera_target._z += tempView._z * speed;
+			_camera_target._z += tempView._z * speed;*/
+
+			_camera_position.setX(_camera_position.getX() + (tempView.getX() * speed));
+			_camera_position.setY(_camera_position.getY() + (tempView.getY() * speed));
+			_camera_position.setZ(_camera_position.getZ() + (tempView.getZ() * speed));
+
+			_camera_target.setX(_camera_target.getX() + (tempView.getX() * speed));
+			_camera_target.setY(_camera_target.getY() + (tempView.getY() * speed));
+			_camera_target.setZ(_camera_target.getZ() + (tempView.getZ() * speed));
 		}
 
 		//------------------------------------------------------------------------------------------------
@@ -528,14 +536,14 @@ namespace mg
 			Vector3::cross(b, a, up);
 			Vector3 c;
 			Vector3::cross(c, b, a);
-			Matrix4 m = Matrix4(Vector4(b._x, c._x, -a._x, 0.0f),
-				Vector4(b._y, c._y, -a._y, 0.0f),
-				Vector4(b._z, c._z, -a._z, 0.0f),
+			Matrix4 m = Matrix4(Vector4(b.getX(), c.getX(), -a.getX(), 0.0f),
+				Vector4(b.getY(), c.getY(), -a.getY(), 0.0f),
+				Vector4(b.getZ(), c.getZ(), -a.getZ(), 0.0f),
 				Vector4(0.0f, 0.0f, 0.0f, 1.0f));
 
 			Transform t;
 			_view = Matrix4::_S_IDENTITY;
-			_view = m * t.translate(-_camera_position._x, -_camera_position._y, -_camera_position._z);
+			_view = m * t.translate(-_camera_position.getX(), -_camera_position.getY(), -_camera_position.getZ());
 			return _view;
 		}
 	}

@@ -31,15 +31,46 @@ namespace mg
 			virtual ~MasterController()
 			{
 				_initstr.clear();
-				_module_initialized = false;
+				//_module_initialized = false;
+				setModuleInitialized(false);
 			}
 
-			bool _module_initialized;
-
+			/*
+			 * ---------------------------------------------------------------
+			 *	Gets initialization string
+			 *  Returns std::wstring
+			 * ---------------------------------------------------------------
+			 */
 			virtual std::wstring getString() const { return _initstr; }
+
+			/*
+			 * ---------------------------------------------------------------
+			 *	Sets initialization string
+			 *  Parameter std::wstring new initialization string
+			 * ---------------------------------------------------------------
+			 */
+			virtual void setString(std::wstring str) { _initstr = str; }
+
+			/*
+			 * ---------------------------------------------------------------
+			 *	Gets if module is initialized
+			 *  Returns bool
+			 * ---------------------------------------------------------------
+			 */
+			virtual bool getModuleInitialized() const { return _module_initialized; }
+
+			/*
+			 *----------------------------------------------------------------
+			 *  Sets module initalized
+			 *  Parameter bool module initialized
+			 * ---------------------------------------------------------------
+			 */
+			virtual void setModuleInitialized(bool mi) { _module_initialized = mi; }
+			
 
 		protected:
 			std::wstring _initstr;
+			bool _module_initialized;
 		};
 	}
 }

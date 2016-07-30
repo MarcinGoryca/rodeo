@@ -1,17 +1,23 @@
 ﻿/*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ |    MG Game Engine
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ | ----------------------------------------------
+ */
 #include "..\include\math\vector4.h"
 
 namespace mg
 {
 namespace math
 {
+
+/*
+ * ------------------------------------------------------
+ *    Vector length
+ * ------------------------------------------------------
+ */
 float Vector4::length()
 {
     float length = 0.0f;
@@ -19,15 +25,16 @@ float Vector4::length()
     return length;
 }
 
-
 /*
- * ----------------------------------------------------------------
+ * ------------------------------------------------------
  *		Helper method
- * ----------------------------------------------------------------
+ * ------------------------------------------------------
  */
 void printV4(const Vector4& v)
 {
-    std::cout << "Vector4(" << v.getX() << ", " << v.getY() << ", " << v.getZ() << ", " << v.getW() << ")" << std::endl;
+    std::cout << "Vector4(" << v.getX() << ", " 
+		<< v.getY() << ", " << v.getZ() << ", " 
+		<< v.getW() << ")" << std::endl;
 }
 
 /*
@@ -37,7 +44,10 @@ void printV4(const Vector4& v)
  */
 void printV4(const char* message, const Vector4& v)
 {
-    std::cout << message << "\t" << "Vector4(" << v.getX() << ", " << v.getY() << ", " << v.getZ() << ", " << v.getW() << ")" << std::endl;
+    std::cout << message << "\t" << "Vector4(" 
+		<< v.getX() << ", " << v.getY() << ", " 
+		<< v.getZ() << ", " << v.getW() << ")" 
+		<< std::endl;
 }
 }    // end of math namespace
 }    // end of mg namespace

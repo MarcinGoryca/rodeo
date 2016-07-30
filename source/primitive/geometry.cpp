@@ -201,9 +201,9 @@ namespace mg
 					float x = -0.5f - j * _quad_x;
 					float y = 0.0f;
 
-					_model._mesh[0]._vertex[i * n + j]._vertex._x = x;
-					_model._mesh[0]._vertex[i * n + j]._vertex._y = y;
-					_model._mesh[0]._vertex[i * n + j]._vertex._z = z;
+					_model._mesh[0]._vertex[i * n + j]._vertex.setX(x);
+					_model._mesh[0]._vertex[i * n + j]._vertex.setY(y);
+					_model._mesh[0]._vertex[i * n + j]._vertex.setZ(z);
 				}
 			}
 
@@ -270,9 +270,9 @@ namespace mg
 					float x = -0.5f - j * _quad_x;
 					float y = 0.0f;
 
-					_model._mesh[0]._vertex[i * n + j]._vertex._x = x;
-					_model._mesh[0]._vertex[i * n + j]._vertex._y = y;
-					_model._mesh[0]._vertex[i * n + j]._vertex._z = z;
+					_model._mesh[0]._vertex[i * n + j]._vertex.setX(x);
+					_model._mesh[0]._vertex[i * n + j]._vertex.setY(y);
+					_model._mesh[0]._vertex[i * n + j]._vertex.setZ(z);
 				}
 			}
 

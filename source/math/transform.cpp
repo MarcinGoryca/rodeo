@@ -1,11 +1,11 @@
 /*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ |   MG Game Engine
+ |   Copyright(c) Marcin Goryca
+ |   marcin.goryca@gmail.com
+ |   http://marcingoryca.pl
+ | ----------------------------------------------
+ */
 #include "..\include\math\transform.h"
 #include "..\include\math\matrix3.h"
 #include "..\include\math\matrix4.h"
@@ -14,7 +14,11 @@ namespace mg
 {
 namespace math
 {
-// -- Scale Transformation
+/*
+ * ----------------------------------------------------
+ *    Scale Transformation
+ * ----------------------------------------------------
+ */
 Matrix4 Transform::scale(float x, float y, float z)
 {
     Matrix4 scaleMatrix;
@@ -27,7 +31,11 @@ Matrix4 Transform::scale(float x, float y, float z)
     return scaleMatrix;
 }
 
-// -- Rotation Transformation
+/*
+ * -----------------------------------------------------
+ *     Rotation Transformation
+ * -----------------------------------------------------
+ */
 Matrix4 Transform::rotate(float angle, float x, float y, float z)
 {
     Matrix4 rotation;
@@ -61,7 +69,11 @@ Matrix4 Transform::rotate(float angle, float x, float y, float z)
     return rotation;
 }
 
-// -- Translate 
+/* 
+ * ------------------------------------------------
+ *     Translate 
+ * ------------------------------------------------
+ */
 Matrix4 Transform::translate(const float x, const float y, const float z)
 {
     Matrix4 m;

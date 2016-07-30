@@ -285,9 +285,9 @@ namespace mg
 			//In FBX export dialog box there is option to flip it automatically
 			for (ui i = 0; i < m._vertex_count; ++i)
 			{
-				float temp = m._vertex[i]._vertex._y;
-				m._vertex[i]._vertex._y = m._vertex[i]._vertex._z;
-				m._vertex[i]._vertex._z = -temp;
+				float temp = m._vertex[i]._vertex.getY();
+				m._vertex[i]._vertex.setY(m._vertex[i]._vertex.getZ());
+				m._vertex[i]._vertex.setZ(-temp);
 			}
 		}
 

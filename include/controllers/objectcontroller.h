@@ -50,6 +50,12 @@ namespace mg
 
 			void remove();
 
+			/*
+			 * --------------------------------------------------------------
+			 *    Gets object by ID
+			 *    Returns Model3D object
+			 * --------------------------------------------------------------
+			 */
 			entity::Model3D* getObject(unsigned int id)const;
 
 		private:
@@ -57,6 +63,7 @@ namespace mg
 			std::vector<mg::entity::Model3D*> _objects;
 			// Used to counting objects
 			static unsigned int _s_objects_counter;
+
 			// Copy constructor
 			ObjectController(const ObjectController& copy);
 

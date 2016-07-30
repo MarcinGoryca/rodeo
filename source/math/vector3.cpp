@@ -1,11 +1,11 @@
 /*
-----------------------------------------------
-    MG Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ |   MG Game Engine
+ |   Copyright(c) Marcin Goryca
+ |   marcin.goryca@gmail.com
+ |   http://marcingoryca.pl
+ | ----------------------------------------------
+ */
 #include "math\vector3.h"
 
 using namespace std;
@@ -16,7 +16,11 @@ namespace math
 {
 const Vector3 Vector3::S_VECTOR3_ZERO_(0.0f, 0.0f, 0.0f);
 
-//--------------------------------------------------------------------------------------------------
+/*
+ * ------------------------------------------------------------
+ *     Vector length
+ * ------------------------------------------------------------
+ */
 float Vector3::length()
 {
 	float length = 0.0f;

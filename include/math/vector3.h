@@ -108,12 +108,16 @@ namespace mg
 					v1._x * v2._y - v1._y * v2._x);
 			}
 
-			// Overloaded Operator+
-			// Returns Vector3
-			// Example:
-			// Vector3 a;
-			// Vector3 b;
-			// a = a + b;
+			/*
+			 * ---------------------------------------------------------------------
+			 *		Overloaded Operator+
+			 *		Returns Vector3
+			 *		Example:
+			 *		Vector3 a;
+			 *		Vector3 b;
+			 *		a = a + b;
+			 * ---------------------------------------------------------------------
+			 */
 			inline Vector3 operator+(const Vector3& vector3)
 			{
 				Vector3 result;
@@ -418,19 +422,18 @@ namespace mg
 		}
 
 		/**
-		 * -- Linear Interpolation (LERP)
-		 * <ul>
-		 * <li>A - first vector</li>
-		 * <li>B - second vector</li>
-		 * <li>c - number, ranges from 0 to 1</li>
-		 * </ul>
-		 * <h3>L = LERP(A, B, c) = (1 - c) * A + c * B = [(1 - c) * Ax + c * Bx, (1 - c) * Ay + c * By, (1 - c) * Az + c * Bz]</h3>
-		 * Result position is determined by c
-		 * <ul>
-		 * <li>if c = 0.0, position = start (first vector A)</li>
-		 * <li>if c = 1.0, position = end (second vector B)</li>
-		 * <li>if c = 0.5, position = middle point between A and B</li>
-		 * </ul>
+		 * -----------------------------------------------------------------------------------------
+		 *		Linear Interpolation (LERP)
+		 * 
+		 *		A - first vector
+		 *		B - second vector
+		 *		c - number, ranges from 0 to 1
+		 *		L = LERP(A, B, c) = (1 - c) * A + c * B = [(1 - c) * Ax + c * Bx, (1 - c) * Ay + c * By, (1 - c) * Az + c * Bz]
+		 *		Result position is determined by c
+		 *		if c = 0.0, position = start (first vector A)
+		 *		if c = 1.0, position = end (second vector B)
+		 *		if c = 0.5, position = middle point between A and B
+		 * -----------------------------------------------------------------------------------------
 		 */
 		inline Vector3 interpolate(Vector3 start, Vector3 end, float range = 0.5f)
 		{

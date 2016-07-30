@@ -40,17 +40,17 @@ public:
     // ---- //
     Matrix3(const Vector3& a, const Vector3& b, const Vector3& c)
     {
-        _m3[0] = a._x;
-        _m3[1] = b._x;
-        _m3[2] = c._x;
+        _m3[0] = a.getX();
+        _m3[1] = b.getX();
+        _m3[2] = c.getX();
 
-        _m3[3] = a._y;
-        _m3[4] = b._y;
-        _m3[5] = c._y;
+        _m3[3] = a.getY();
+        _m3[4] = b.getY();
+        _m3[5] = c.getY();
 
-        _m3[6] = a._z;
-        _m3[7] = b._z;
-        _m3[8] = c._z;
+        _m3[6] = a.getZ();
+        _m3[7] = b.getZ();
+        _m3[8] = c.getZ();
     }
 
     ~Matrix3(){}
@@ -99,8 +99,25 @@ public:
     // ---- //
     Matrix3& multiplyByScalar(const float& scalar);
 
-    float _m3[9];
+	/*
+	 * ----------------------------------------------------------
+	 *	Returns member of a matrix
+	 *  Parameter member of the matrix (int)
+	 * ----------------------------------------------------------
+	 */
+	float getM3(int index) const { return _m3[index]; }
+
+	/*
+	 * ----------------------------------------------------------
+	 *	Sets a member of a matrix
+	 *	Parameter index (int) number of a member
+	 *  Parameter m3 (float) value of the member
+	 * ----------------------------------------------------------
+	 */
+	void setM3(int index, float m3) { _m3[index] = m3; }
+
 private:
+	float _m3[9];
 };
 
 // Determinant of the matrix

@@ -44,17 +44,25 @@ Matrix3::Matrix3()
 float determinant(const Matrix3& m)
 {
     float determinant = 0.0f; 
-    determinant = (m._m3[0] * m._m3[5] * m._m3[8]) + (m._m3[3] * m._m3[7] * m._m3[2]) + (m._m3[6] * m._m3[1] * m._m3[5])
-        - (m._m3[6] * m._m3[4] * m._m3[2]) - (m._m3[3] * m._m3[1] * m._m3[8]) - (m._m3[0] * m._m3[7] * m._m3[5]);
+    /*determinant = (m._m3[0] * m._m3[5] * m._m3[8]) + (m._m3[3] * m._m3[7] * m._m3[2]) + (m._m3[6] * m._m3[1] * m._m3[5])
+        - (m._m3[6] * m._m3[4] * m._m3[2]) - (m._m3[3] * m._m3[1] * m._m3[8]) - (m._m3[0] * m._m3[7] * m._m3[5]);*/
+
+	determinant = (m.getM3(0) * m.getM3(5) * m.getM3(8)) +
+		(m.getM3(3) * m.getM3(7) * m.getM3(2)) +
+		(m.getM3(6) * m.getM3(1) * m.getM3(5)) -
+		(m.getM3(6) * m.getM3(4) * m.getM3(2)) -
+		(m.getM3(3) * m.getM3(1) * m.getM3(8)) -
+		(m.getM3(0) * m.getM3(7) * m.getM3(5));
+	
     return determinant;
 }
 
 //--------------------------------------------------------------------------------------------------
 void printM3(const Matrix3& m)
 {
-    std::cout << "[" << m._m3[0] << ", " << m._m3[1] << ", " << m._m3[2] << std::endl;
-    std::cout << m._m3[3] << ", " << m._m3[4] << ", " << m._m3[5] << std::endl;
-    std::cout << m._m3[6] << ", " << m._m3[7] << ", " << m._m3[8] << "]" << std::endl;
+    std::cout << "[" << m.getM3(0) << ", " << m.getM3(1) << ", " << m.getM3(2) << std::endl;
+    std::cout << m.getM3(3) << ", " << m.getM3(4) << ", " << m.getM3(5) << std::endl;
+    std::cout << m.getM3(6) << ", " << m.getM3(7) << ", " << m.getM3(8) << "]" << std::endl;
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -62,7 +70,7 @@ Matrix3 multiply(const Matrix3& m1, const Matrix3& m2)
 {
     Matrix3 m;
 
-    m._m3[0] = m1._m3[0] * m2._m3[0] + m1._m3[1] * m2._m3[3] + m1._m3[2] * m2._m3[6];
+    /*m._m3[0] = m1._m3[0] * m2._m3[0] + m1._m3[1] * m2._m3[3] + m1._m3[2] * m2._m3[6];
     m._m3[1] = m1._m3[0] * m2._m3[1] + m1._m3[1] * m2._m3[4] + m1._m3[2] * m2._m3[7];
     m._m3[2] = m1._m3[0] * m2._m3[2] + m1._m3[1] * m2._m3[5] + m1._m3[2] * m2._m3[8];
 
@@ -72,7 +80,17 @@ Matrix3 multiply(const Matrix3& m1, const Matrix3& m2)
 
     m._m3[6] = m1._m3[6] * m2._m3[0] + m1._m3[7] * m2._m3[3] + m1._m3[8] * m2._m3[6];
     m._m3[7] = m1._m3[6] * m2._m3[1] + m1._m3[7] * m2._m3[4] + m1._m3[8] * m2._m3[7];
-    m._m3[8] = m1._m3[6] * m2._m3[2] + m1._m3[7] * m2._m3[5] + m1._m3[8] * m2._m3[8];
+    m._m3[8] = m1._m3[6] * m2._m3[2] + m1._m3[7] * m2._m3[5] + m1._m3[8] * m2._m3[8];*/
+
+	m.setM3(0, m1.getM3(0) * m2.getM3(0) + m1.getM3(1) * m2.getM3(3) + m1.getM3(2) * m2.getM3(6));
+	m.setM3(1, m1.getM3(0) * m2.getM3(1) + m1.getM3(1) * m2.getM3(4) + m1.getM3(2) * m2.getM3(7));
+	m.setM3(2, m1.getM3(0) * m2.getM3(2) + m1.getM3(1) * m2.getM3(5) + m1.getM3(2) * m2.getM3(8));
+	m.setM3(3, m1.getM3(3) * m2.getM3(0) + m1.getM3(4) * m2.getM3(3) + m1.getM3(5) * m2.getM3(6));
+	m.setM3(4, m1.getM3(3) * m2.getM3(1) + m1.getM3(4) * m2.getM3(4) + m1.getM3(5) * m2.getM3(7));
+	m.setM3(5, m1.getM3(3) * m2.getM3(2) + m1.getM3(4) * m2.getM3(5) + m1.getM3(5) * m2.getM3(8));
+	m.setM3(6, m1.getM3(6) * m2.getM3(0) + m1.getM3(7) * m2.getM3(3) + m1.getM3(8) * m2.getM3(6));
+	m.setM3(7, m1.getM3(6) * m2.getM3(1) + m1.getM3(7) * m2.getM3(4) + m1.getM3(8) * m2.getM3(7));
+	m.setM3(8, m1.getM3(6) * m2.getM3(2) + m1.getM3(7) * m2.getM3(5) + m1.getM3(8) * m2.getM3(8));
 
     return m;
 }
@@ -81,9 +99,14 @@ Matrix3 multiply(const Matrix3& m1, const Matrix3& m2)
 Vector3 multiplyByVector(const Matrix3& m, const Vector3& v)
 {
     Vector3 vout;
-    vout._x = m._m3[0] * v._x + m._m3[1] * v._y + m._m3[2] * v._z;
+    /*vout._x = m._m3[0] * v._x + m._m3[1] * v._y + m._m3[2] * v._z;
     vout._y = m._m3[3] * v._x + m._m3[4] * v._y + m._m3[5] * v._z;
-    vout._z = m._m3[6] * v._x + m._m3[7] * v._y + m._m3[8] * v._z;
+    vout._z = m._m3[6] * v._x + m._m3[7] * v._y + m._m3[8] * v._z;*/
+
+	vout.setX(m.getM3(0) * v.getX() + m.getM3(1) * v.getY() + m.getM3(2) * v.getZ());
+	vout.setY(m.getM3(3) * v.getX() + m.getM3(4) * v.getY() + m.getM3(5) * v.getZ());
+	vout.setZ(m.getM3(6) * v.getX() + m.getM3(7) * v.getY() + m.getM3(8) * v.getZ());
+
     return vout;
 }
 

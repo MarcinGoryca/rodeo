@@ -19,14 +19,20 @@ namespace mg
 			temp = m;
 
 			//inverse translation
-			_origin._x -= temp._m3[12];
+			/*_origin._x -= temp._m3[12];
 			_origin._y -= temp._m3[13];
-			_origin._z -= temp._m3[14];
+			_origin._z -= temp._m3[14];*/
+
+			_origin.setX(_origin.getX() - temp.getM3(12));
 
 			//delete translation in the matrix
-			temp._m3[12] = 0.0f;
+			/*temp._m3[12] = 0.0f;
 			temp._m3[13] = 0.0f;
-			temp._m3[14] = 0.0f;
+			temp._m3[14] = 0.0f;*/
+
+			temp.setM3(12, 0.0f);
+			temp.setM3(13, 0.0f);
+			temp.setM3(14, 0.0f);
 		}
 
 		//--------------------------------------------------------------------------------------------------

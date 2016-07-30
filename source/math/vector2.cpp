@@ -43,21 +43,21 @@ namespace mg
 		// ---- //
 		void printV2(const Vector2& v)
 		{
-			std::cout << "v2(" << v._x << ", " << v._y << ")" << std::endl;
+			std::cout << "v2(" << v.getX() << ", " << v.getY() << ")" << std::endl;
 		}
 
 		// ---- //
 		float distance(const Vector2 &v1, const Vector2 &v2)
 		{
-			float vx = v1._x - v2._x;
-			float vy = v1._y - v2._y;
+			float vx = v1.getX() - v2.getX();
+			float vy = v1.getY() - v2.getY();
 			return sqrt(vx*vx + vy*vy);
 		}
 
 		// ---- //
 		float dot(const Vector2& v1, const Vector2& v2)
 		{
-			return v1._x * v2._x + v1._y * v2._y;
+			return v1.getX() * v2.getX() + v1.getY() * v2.getY();
 		}
 
 		// ---- //
@@ -65,8 +65,8 @@ namespace mg
 		{
 			Vector2 result;
 
-			result._x = v1._x + v2._x;
-			result._y = v1._y + v2._y;
+			result.setX(v1.getX() + v2.getX());
+			result.setY(v1.getY() + v2.getY());
 
 			return result;
 		}
@@ -76,8 +76,8 @@ namespace mg
 		{
 			Vector2 result;
 
-			result._x = v1._x - v2._x;
-			result._y = v1._y - v2._y;
+			result.setX(v1.getX() - v2.getX());
+			result.setY(v1.getY() - v2.getY());
 
 			return result;
 		}
