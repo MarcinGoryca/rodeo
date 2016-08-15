@@ -1,7 +1,8 @@
-MG Game Engine [ Project ]
+Rodeo Game Engine [ Project ]
 -----------------------------
-<h2>It is based on first project Rodeo Game Engine.</h2>
-<h3>Off hours right now, to learn and have fun</h3>
+<h2>This was my thesis project, but I didn't finish it within required time.</h2>
+<h2>I still want to get it working in some way. I think it is a great subject to explore.</h2>
+<h2>Great to learn and have fun</h2>
 <h4>Features:</h4>
 <ul>
 <li>DirectX</li>
@@ -22,7 +23,4 @@ MG Game Engine [ Project ]
 <li>Whole project is being redesigned</li>
 <h5>06/08/2015</h5>
 <li>Since nVidia doesn't recommend using CG it is not available</li>
-<h5>17/07/2015</h5>
-<li>Renamed whole project</li>
-<li>Main namespace is now mg</li>
 </ul>
