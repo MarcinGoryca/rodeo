@@ -7,6 +7,7 @@ Mona (Rodeo Game Engine) [ Project ]
 <h3>Another thing to consider is to make it more multimedia program, with wide use for animation, designing etc.</h3>
 <h4>Features:</h4>
 <ul>
+<li>Qt</li>
 <li>DirectX</li>
 <li>OpenGL 3+</li>
 <li>FMOD</li>
@@ -21,6 +22,8 @@ Mona (Rodeo Game Engine) [ Project ]
 </ul>
 <h4>#Updates</h4>
 <ul>
+<h5>24/08/2016</h5>
+<li>It's not game engine anymore. Not pure game engine. It will be considered for wider usage.</li>
 <h5>26/11/2015</h5>
 <li>Whole project is being redesigned</li>
 <h5>06/08/2015</h5>
