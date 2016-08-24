@@ -1,21 +1,21 @@
 /*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Sprite.h ] [ mg\entity ]
+ |    mona GAME ENGINE
+ |    [ Sprite.h ] [ mona\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_ENTITY_SPRITE_H_
-#define MG_ENTITY_SPRITE_H_
+#ifndef MONA_ENTITY_SPRITE_H_
+#define MONA_ENTITY_SPRITE_H_
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace entity
     {

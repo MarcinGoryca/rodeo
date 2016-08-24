@@ -1,18 +1,18 @@
 /*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-//#ifndef MG_RENDERER_GAMEMAP_H_
-//#define MG_RENDERER_GAMEMAP_H_
+//#ifndef MONA_RENDERER_GAMEMAP_H_
+//#define MONA_RENDERER_GAMEMAP_H_
 //
 //#include "renderer\map.h"
 //#include "core\error.h"
 //
-//namespace mg
+//namespace mona
 //{
 //namespace renderer
 //{
@@ -25,5 +25,5 @@
 //    virtual void create();
 //};
 //}    // end of renderer namespace
-//}    // end of mg namespace
+//}    // end of mona namespace
 //#endif

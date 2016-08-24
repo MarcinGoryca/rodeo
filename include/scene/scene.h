@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_SCENE_SCENE_H_
-#define MG_SCENE_SCENE_H_
+#ifndef MONA_SCENE_SCENE_H_
+#define MONA_SCENE_SCENE_H_
 
-#ifndef MG_RENDERER_GL_GLLIBRARY_H_
+#ifndef MONA_RENDERER_GL_GLLIBRARY_H_
 #include "renderer\gl\gllibrary.h"
 #endif
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
@@ -25,7 +25,7 @@
 #include <list>
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{

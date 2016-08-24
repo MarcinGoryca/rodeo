@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Constants.h ] [ mg\core ]
+ |    MONA
+ |    [ Constants.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_CONSTANTS_H_
-#define MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
+#define MONA_CORE_CONSTANTS_H_
 
-#ifndef MG_COMMON_H_
+#ifndef MONA_COMMON_H_
 #include "common.h"
 #endif
 
-#ifndef MG_RENDERER_COLORS_H_
+#ifndef MONA_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace core
 	{
@@ -39,20 +39,20 @@ namespace mg
 		 |    MATH
 		 |  -----------------
 		 */
-		const float MG_ONE = 1.0f;
-		const float MG_ZERO = 0.0f;
-		const float MG_HALF = 0.5f;
-		const float MG_NEGATIVE_ONE = -1.0f;
-		const float MG_PI = 3.14159265f;
-		const float MG_TWOPI = 6.2831852f;
-		const float MG_HALFPI = 1.5707963f;
-		const float MG_ONEBYPI = 1.0f / MG_PI;
-		const float MG_ONEBY2PI = 1.0f / MG_TWOPI;
-		const unsigned int MG_FULL_CIRCLE = 360;
+		const float MONA_ONE = 1.0f;
+		const float MONA_ZERO = 0.0f;
+		const float MONA_HALF = 0.5f;
+		const float MONA_NEGATIVE_ONE = -1.0f;
+		const float MONA_PI = 3.14159265f;
+		const float MONA_TWOPI = 6.2831852f;
+		const float MONA_HALFPI = 1.5707963f;
+		const float MONA_ONEBYPI = 1.0f / MONA_PI;
+		const float MONA_ONEBY2PI = 1.0f / MONA_TWOPI;
+		const unsigned int MONA_FULL_CIRCLE = 360;
 
 		// DEGREE - Degrees From Radians [180 / PI] 
-		const float MG_DEGREE = 57.2957f;
-		const float MG_RADIAN = 0.01745f;
+		const float MONA_DEGREE = 57.2957f;
+		const float MONA_RADIAN = 0.01745f;
 
 
 

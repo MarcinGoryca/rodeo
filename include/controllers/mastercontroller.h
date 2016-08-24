@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ MasterController.h ] [ mg\ controllers ]
+ |    mona GAME ENGINE
+ |    [ MasterController.h ] [ mona\ controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_MASTERCONTROLLER_H
-#define MG_CORE_MASTERCONTROLLER_H
+#ifndef MONA_CORE_MASTERCONTROLLER_H
+#define MONA_CORE_MASTERCONTROLLER_H
 
-#ifndef MG_CORE_COMMON_H_
+#ifndef MONA_CORE_COMMON_H_
 #include "core\common.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{

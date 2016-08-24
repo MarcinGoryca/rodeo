@@ -1,27 +1,27 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_PRIMITIVE_GEOMETRY_H_
-#define MG_PRIMITIVE_GEOMETRY_H_
+#ifndef MONA_PRIMITIVE_GEOMETRY_H_
+#define MONA_PRIMITIVE_GEOMETRY_H_
 
-#ifndef MG_RENDERER_RENDERMODE_H_
+#ifndef MONA_RENDERER_RENDERMODE_H_
 #include "renderer\rendermode.h"
 #endif
 
-#ifndef MG_ENTITY_MODEL3D_H_
+#ifndef MONA_ENTITY_MODEL3D_H_
 #include "entity\model3d.h"
 #endif
 
-#ifndef MG_MATH_VECTOR3_H_
+#ifndef MONA_MATH_VECTOR3_H_
 #include "math\vector3.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace primitive
 {

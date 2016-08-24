@@ -1,28 +1,28 @@
 ﻿/*
  |  ----------------------------------------------
- |    MG GAME ENGINE
- |    [ QueryRenderer.h ] [ mg\renderer\gl ]
+ |    mona GAME ENGINE
+ |    [ QueryRenderer.h ] [ mona\renderer\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MG_RENDERER_QUERYRENDERER_H_
-#define MG_RENDERER_QUERYRENDERER_H_
+#ifndef MONA_RENDERER_QUERYRENDERER_H_
+#define MONA_RENDERER_QUERYRENDERER_H_
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "glcommon.h"
 #endif
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MG_CORE_RENDEREREXCEPTION_H_
+#ifndef MONA_CORE_RENDEREREXCEPTION_H_
 #include "core\rendererexception.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{

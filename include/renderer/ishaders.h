@@ -1,26 +1,26 @@
 /*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_RENDERER_ISHADERS_H_
-#define MG_RENDERER_ISHADERS_H_
+#ifndef MONA_RENDERER_ISHADERS_H_
+#define MONA_RENDERER_ISHADERS_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
 		enum ShaderType
 		{
-			MG_VS,
-			MG_FS
+			MONA_VS,
+			MONA_FS
 		};
 		class IShaders
 		{
@@ -33,7 +33,7 @@ namespace mg
 			 |     [Pure Virtual]
 			 |     Loads Shader Program from specified file
 			 |     Parameter ShaderType use: 
-			 |     MG_VS (VERTEX SHADER), MG_FS (FRAGMENT SHADER)
+			 |     MONA_VS (VERTEX SHADER), MONA_FS (FRAGMENT SHADER)
 			 | ---------------------------------------------------------
 			 */
 			virtual unsigned int loadShaderFromFile(const char* filename, ShaderType st) = 0;

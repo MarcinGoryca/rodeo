@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -9,7 +9,7 @@
 #include "io\importer.h"
 #include "io\file3Dfactory.h"
 
-namespace mg
+namespace mona
 {
 namespace io
 {
@@ -19,13 +19,13 @@ Importer* File3DFactory::create(File3DType type)
 
     switch(type)
     {
-    case MG_FILE_3DS:
+    case MONA_FILE_3DS:
         {
             importer = new File3DS;
             break;
         }
 
-    case MG_FILE_FBX:
+    case MONA_FILE_FBX:
         {
             //importer = new FileFBX;
             break;
@@ -38,4 +38,4 @@ Importer* File3DFactory::create(File3DType type)
     return importer;
 }
 }    // end of io namespace
-}    // end of mg namespace
+}    // end of mona namespace

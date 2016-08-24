@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "..\include\renderer\gl\glrenderer.h"
 
 using namespace std;
-using namespace mg::core;
+using namespace mona::core;
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
@@ -46,7 +46,7 @@ namespace mg
 			glewInit();
 			if (!GLEW_VERSION_3_0)
 			{
-				MessageBox(NULL, OPENGL_VERSION_NOT_SUPPORTED.c_str(), MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, OPENGL_VERSION_NOT_SUPPORTED.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 			//query_renderer_->run();
@@ -94,12 +94,12 @@ namespace mg
 		{
 			switch (type)
 			{
-			case gl::MG_ORTHOGONAL:
+			case gl::MONA_ORTHOGONAL:
 			{
 				enter2d();
 			}
 			break;
-			case gl::MG_PERSPECTIVE:
+			case gl::MONA_PERSPECTIVE:
 			{
 				enter3d();
 			}

@@ -1,39 +1,39 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Model3d.h ] [ mg\entity ]
+ |    mona GAME ENGINE
+ |    [ Model3d.h ] [ mona\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_ENTITY_MODEL3D_H_
-#define MG_ENTITY_MODEL3D_H_
+#ifndef MONA_ENTITY_MODEL3D_H_
+#define MONA_ENTITY_MODEL3D_H_
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-#ifndef MG_IO_FILE3DFACTORY_H_
+#ifndef MONA_IO_FILE3DFACTORY_H_
 #include "io\file3dfactory.h"
 #endif
 
-#ifndef MG_RENDERER_BUFFERS_H_
+#ifndef MONA_RENDERER_BUFFERS_H_
 #include "renderer\buffers.h"
 #endif
 
-#ifndef MG_RENDERER_RENDERMODE_H_
+#ifndef MONA_RENDERER_RENDERMODE_H_
 #include "renderer\rendermode.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace entity
     {
         class Texture;
         class Vector3;
-        class Model3D : public mg::renderer::RenderMode, public Entity
+        class Model3D : public mona::renderer::RenderMode, public Entity
         {
         public:
             Model3D()
@@ -45,11 +45,11 @@ namespace mg
                 _winding(GL_CCW)
             {}
 
-            Model3D(const char* filename, mg::io::File3DFactory::File3DType type);
+            Model3D(const char* filename, mona::io::File3DFactory::File3DType type);
 
             virtual ~Model3D();
 
-            void load(const char* filename, mg::io::File3DFactory::File3DType type);
+            void load(const char* filename, mona::io::File3DFactory::File3DType type);
 
             void update();
             void scale(float scale_factor);
@@ -71,7 +71,7 @@ namespace mg
 
         protected:
 			Model _model;
-			mg::renderer::Buffers _buffer;
+			mona::renderer::Buffers _buffer;
 
 			unsigned int _texture_id;
 			unsigned int _mesh_count;
@@ -88,7 +88,7 @@ namespace mg
 
             void render();
 
-            void bindTexture(mg::core::ui& texture_id);
+            void bindTexture(mona::core::ui& texture_id);
 
 
         };

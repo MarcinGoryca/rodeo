@@ -1,21 +1,21 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_MATH_MATRIX3_H_
-#define MG_MATH_MATRIX3_H_
+#ifndef MONA_MATH_MATRIX3_H_
+#define MONA_MATH_MATRIX3_H_
 
 #include <iostream>
 
-#ifndef MG_MATH_VECTOR3_H_
+#ifndef MONA_MATH_VECTOR3_H_
 #include "vector3.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace math
 {

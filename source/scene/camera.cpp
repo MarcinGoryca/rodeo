@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "scene\Camera.h"
 
-using namespace mg::math;
+using namespace mona::math;
 //using namespace core;
 //using namespace scene;
 
-namespace mg
+namespace mona
 {
 	namespace scene
 	{

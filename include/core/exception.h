@@ -1,19 +1,19 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Exception.h ] [ mg\core ]
+ |    mona GAME ENGINE
+ |    [ Exception.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_EXCEPTION_H_
-#define MG_CORE_EXCEPTION_H_
+#ifndef MONA_CORE_EXCEPTION_H_
+#define MONA_CORE_EXCEPTION_H_
 
 #include <string>
 
-namespace mg
+namespace mona
 {
 	namespace core
 	{
@@ -27,7 +27,7 @@ namespace mg
 			/*
 			 |  ---------------------------------------------------
 			 |    Constructor
-			 |    parameter wstring the string to output
+			 |    parameter [ wstring ]: the string to output
 			 |  ---------------------------------------------------
 			 */
 			explicit Exception(std::wstring str)
@@ -44,7 +44,7 @@ namespace mg
 			/* 
 			 |  ---------------------------------------------------
 			 |    Gets exception string
-			 |    Returns wstring 
+			 |    Returns [ wstring ]
 			 |  ---------------------------------------------------
 			 */
 			std::wstring getExceptionString() const { return _exception_string; }

@@ -1,24 +1,24 @@
 /*
  |  ----------------------------------------------
- |    MG GAME ENGINE
- |    [ GLSLShaders.h ] [ mg\renderere\gl ]
+ |    mona GAME ENGINE
+ |    [ GLSLShaders.h ] [ mona\renderere\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MG_RENDERER_GLSLSHADERS_H_
-#define MG_RENDERER_GLSLSHADERS_H_
+#ifndef MONA_RENDERER_GLSLSHADERS_H_
+#define MONA_RENDERER_GLSLSHADERS_H_
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "glcommon.h"
 #endif
 
-#ifndef MG_RENDERER_ISHADERS_H_
+#ifndef MONA_RENDERER_ISHADERS_H_
 #include "renderer\ishaders.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
@@ -35,7 +35,7 @@ namespace mg
 			 |  ----------------------------------------------------
 			 |    Loads Shader from File
 			 |    Parameter const char* string of shader filename
-			 |    Parameter ShaderType - MG_VS, MG_FS
+			 |    Parameter ShaderType - MONA_VS, MONA_FS
 			 |    Returns unsigned int shader program id
 			 |  ----------------------------------------------------
 			 */

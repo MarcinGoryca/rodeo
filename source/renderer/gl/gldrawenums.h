@@ -1,17 +1,17 @@
 //#pragma once
 //
-//#ifndef MG_RENDERER_GL_GLCOMMON_H_
+//#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 //#include "renderer\gl\glcommon.h"
 //#endif
 //
-//namespace mg {
+//namespace mona {
 //    namespace renderer {
 //        /*enum Primitives {
-//            MGPOINTS = GL_POINTS,
-//            MGLINES = GL_LINES,
-//            MGLINESTRIP = GL_LINE_STRIP,
-//            MGLINELOOP = GL_LINE_LOOP,
-//            MGTRIANGLES = GL_TRIANGLES,
+//            monaPOINTS = GL_POINTS,
+//            monaLINES = GL_LINES,
+//            monaLINESTRIP = GL_LINE_STRIP,
+//            monaLINELOOP = GL_LINE_LOOP,
+//            monaTRIANGLES = GL_TRIANGLES,
 //            GL_TRIANGLE_STRIP,
 //            GL_TRIANGLE_FAN
 //        };*/
@@ -62,4 +62,4 @@
 //        };
 //    }   // end of renderer namespace
 //
-//}   // end of mg namespace
+//}   // end of mona namespace

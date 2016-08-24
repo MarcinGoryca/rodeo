@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "..\include\math\matrix3.h"
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -172,4 +172,4 @@ Matrix3 rotateAboutZ(const float& angle, const float& z)
 }
 */
 }    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace

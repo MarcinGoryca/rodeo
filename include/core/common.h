@@ -1,14 +1,14 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Common.h ] [ mg\core ]
+ |    mona GAME ENGINE
+ |    [ Common.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |   http://marcingoryca.pl
  |  -----------------------------------
  */
-#ifndef MG_CORE_COMMON_H_
-#define MG_CORE_COMMON_H_
+#ifndef MONA_CORE_COMMON_H_
+#define MONA_CORE_COMMON_H_
 
 
 #include <windows.h>

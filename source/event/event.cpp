@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "event\event.h"
 
-namespace mg
+namespace mona
 {
 namespace event
 {
@@ -47,4 +47,4 @@ void Event::removedFromScene()
 {
 }
 }    // end of event namespace
-}    // end of mg namespace
+}    // end of mona namespace

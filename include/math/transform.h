@@ -1,15 +1,15 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_MATH_TRANSFORM_H_
-#define MG_MATH_TRANSFORM_H_
+#ifndef MONA_MATH_TRANSFORM_H_
+#define MONA_MATH_TRANSFORM_H_
 
-namespace mg
+namespace mona
 {
 	namespace math
 	{

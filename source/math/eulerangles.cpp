@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "math\eulerangles.h"
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -16,20 +16,20 @@ void EulerAngles::canonize()
 {
     _pitch = wrapPI(_pitch);
 
-    if(_pitch < -core::MG_HALFPI)
+    if(_pitch < -core::MONA_HALFPI)
     {
-        _pitch = -core::MG_PI - _pitch;
-        _yaw += core::MG_PI;
-        _roll += core::MG_PI;
+        _pitch = -core::MONA_PI - _pitch;
+        _yaw += core::MONA_PI;
+        _roll += core::MONA_PI;
     }
-    else if(_pitch > core::MG_HALFPI)
+    else if(_pitch > core::MONA_HALFPI)
     {
-        _pitch = core::MG_PI - _pitch;
-        _yaw += core::MG_PI;
-        _roll += core::MG_PI;
+        _pitch = core::MONA_PI - _pitch;
+        _yaw += core::MONA_PI;
+        _roll += core::MONA_PI;
     }
 //Checking for gimbal lock case
-    if(fabs(_pitch) > core::MG_HALFPI - 1e-4)
+    if(fabs(_pitch) > core::MONA_HALFPI - 1e-4)
     {
         _yaw += _roll;
         _roll = 0.0f;
@@ -44,9 +44,9 @@ void EulerAngles::canonize()
 //--------------------------------------------------------------------------------------------------
 float EulerAngles::wrapPI(float theta)
 {
-    theta *= core::MG_PI;
-    theta -= floor(theta * core::MG_ONEBYPI) * core::MG_TWOPI;
-    theta -= core::MG_PI;
+    theta *= core::MONA_PI;
+    theta -= floor(theta * core::MONA_ONEBYPI) * core::MONA_TWOPI;
+    theta -= core::MONA_PI;
     return theta;
 }
 
@@ -149,4 +149,4 @@ void EulerAngles::fromInertialToObjectQuaternion(const Quaternion& q)
 //	}
 //}
 }    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace

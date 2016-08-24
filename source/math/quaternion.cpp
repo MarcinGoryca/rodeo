@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -11,7 +11,7 @@
 
 using namespace std;
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -343,4 +343,4 @@ Quaternion multiply(const Quaternion& q1, const Quaternion& q2)
     return result;
 }
 }    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace

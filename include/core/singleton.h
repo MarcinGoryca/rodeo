@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
- |     MG GAME ENGINE
- |     [ Singleton.h ] [ mg\core ]
+ |     mona GAME ENGINE
+ |     [ Singleton.h ] [ mona\core ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -30,10 +30,10 @@
  |-----------------------------------------
  */
 
-#ifndef MG_CORE_SINGLETON_H_
-#define MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
+#define MONA_CORE_SINGLETON_H_
 
-namespace mg
+namespace mona
 {
     namespace core
     {

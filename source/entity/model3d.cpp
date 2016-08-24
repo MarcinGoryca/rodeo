@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "entity\model3D.h"
 
-using namespace mg::io;
-using namespace mg::core;
-using namespace mg::renderer;
+using namespace mona::io;
+using namespace mona::core;
+using namespace mona::renderer;
 
-namespace mg
+namespace mona
 {
 namespace entity
 {
@@ -147,4 +147,4 @@ void Model3D::update(float dt)
     //rotate(15.0f, 1.0f, 0.0f, 0.0f);
 }
 }    // end of entity namespace
-}    // end of mg namespace
+}    // end of mona namespace

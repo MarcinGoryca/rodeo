@@ -1,35 +1,35 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_IO_FILEASE_H_
-#define MG_IO_FILEASE_H_
+#ifndef MONA_IO_FILEASE_H_
+#define MONA_IO_FILEASE_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_ENTITY_MESH_H_
+#ifndef MONA_ENTITY_MESH_H_
 #include "entity\mesh.h"
 #endif
 
-#ifndef MG_IO_LOG_H_
+#ifndef MONA_IO_LOG_H_
 #include "io\log.h"
 #endif
 
-#ifndef MG_IO_IMPORTER_H_
+#ifndef MONA_IO_IMPORTER_H_
 #include "io\importer.h"
 #endif
 
-namespace mg 
+namespace mona 
 {
 namespace io
 {

@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Object.h ] [ mg\entity ]
+ |    mona GAME ENGINE
+ |    [ Object.h ] [ mona\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_ENTITY_OBJECT_H_
-#define MG_ENTITY_OBJECT_H_
+#ifndef MONA_ENTITY_OBJECT_H_
+#define MONA_ENTITY_OBJECT_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MG_MATH_MATRIX4_H_
+#ifndef MONA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace entity
     {
@@ -234,5 +234,5 @@ namespace mg
 
         };
     }    // end of entity namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

@@ -1,8 +1,8 @@
 //#include "renderer\dx\dxrenderer.h"
 //
-//using namespace mg::core;
+//using namespace mona::core;
 //
-//namespace mg
+//namespace mona
 //{
 //namespace renderer
 //{
@@ -254,4 +254,4 @@
 //	v.TopLeftY = top_left_y;
 //}
 //}    // end of renderer namespace
-//}    // end of mg namespace
+//}    // end of mona namespace

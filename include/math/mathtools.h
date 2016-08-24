@@ -1,19 +1,19 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_MATH_MATHTOOLS_H_
-#define MG_MATH_MATHTOOLS_H_
+#ifndef MONA_MATH_MATHTOOLS_H_
+#define MONA_MATH_MATHTOOLS_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -25,17 +25,17 @@ inline void sinCos(float* s, float* c, float theta)
 
 inline void buildSinusTable(float* angles)
 {
-    for(core::ui i=0; i < core::MG_FULL_CIRCLE; ++i)
+    for(core::ui i=0; i < core::MONA_FULL_CIRCLE; ++i)
     {
-        angles[i] = ::sin(i * core::MG_RADIAN);
+        angles[i] = ::sin(i * core::MONA_RADIAN);
     }
 }
 
 inline void buildCosinusTable(float* angles)
 {
-    for(core::ui i=0; i < core::MG_FULL_CIRCLE; ++i)
+    for(core::ui i=0; i < core::MONA_FULL_CIRCLE; ++i)
     {
-        angles[i] = ::cos(i * core::MG_RADIAN);
+        angles[i] = ::cos(i * core::MONA_RADIAN);
     }
 }
 
@@ -59,7 +59,7 @@ inline void buildCosinusTable(float* angles)
 inline float radiansToDegrees(float radian)
 {
     float degree = 0.0f;
-    degree = radian * (180 / core::MG_PI);
+    degree = radian * (180 / core::MONA_PI);
     return degree;
 }
 
@@ -68,7 +68,7 @@ inline float radiansToDegrees(float radian)
 inline float degreesToRadians(float degree)
 {
     float radian = 0.0f;
-    radian = degree * (core::MG_PI / 180);
+    radian = degree * (core::MONA_PI / 180);
     return radian;
 }
 

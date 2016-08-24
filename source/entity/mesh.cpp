@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "entity\mesh.h"
 
-using namespace mg::math;
+using namespace mona::math;
 using namespace std;
 
-namespace mg
+namespace mona
 {
 	namespace entity
 	{

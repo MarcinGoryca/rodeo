@@ -1,26 +1,26 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_IO_IINPUT_H_
-#define MG_IO_IINPUT_H_
+#ifndef MONA_IO_IINPUT_H_
+#define MONA_IO_IINPUT_H_
 
-namespace mg
+namespace mona
 {
 namespace io
 {
 enum InputType
 {
-    MG_KEYBOARD_INPUT = 1,
-    MG_MOUSE_INPUT = 2,
-	MG_JOY_INPUT = 3,
-	MG_GAMEPAD_INPUT = 4,
-	MG_WHEEL_INPUT = 5,
-	MG_TOUCH_INPUT = 6
+    MONA_KEYBOARD_INPUT = 1,
+    MONA_MOUSE_INPUT = 2,
+	MONA_JOY_INPUT = 3,
+	MONA_GAMEPAD_INPUT = 4,
+	MONA_WHEEL_INPUT = 5,
+	MONA_TOUCH_INPUT = 6
 };
 
 class IInput

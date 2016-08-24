@@ -1,19 +1,19 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_ENTITY_BOUNDINGVOLUME_H_
-#define MG_ENTITY_BOUNDINGVOLUME_H_
+#ifndef MONA_ENTITY_BOUNDINGVOLUME_H_
+#define MONA_ENTITY_BOUNDINGVOLUME_H_
 
-#ifndef MG_PRIMITIVE_GEOMETRY_H_
+#ifndef MONA_PRIMITIVE_GEOMETRY_H_
 #include "primitive\geometry.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace entity
 	{

@@ -1,6 +1,6 @@
 /*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "controllers\rendercontroller.h"
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
@@ -17,15 +17,15 @@ namespace mg
 		{
 			switch (renderer)
 			{
-			case MG_DX:
+			case MONA_DX:
 			{
-				_renderer = new mg::renderer::DxRenderer;
+				_renderer = new mona::renderer::DxRenderer;
 			}
 			break;
 
-			case MG_GL:
+			case MONA_GL:
 			{
-				_renderer = new mg::renderer::GLRenderer;
+				_renderer = new mona::renderer::GLRenderer;
 			}
 			break;
 			}

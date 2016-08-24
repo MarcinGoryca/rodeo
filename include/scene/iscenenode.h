@@ -1,15 +1,15 @@
 ﻿/*
 -----------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_SCENE_ISCENENODE_H_
-#define MG_SCENE_ISCENENODE_H_
+#ifndef MONA_SCENE_ISCENENODE_H_
+#define MONA_SCENE_ISCENENODE_H_
 
-namespace mg
+namespace mona
 {
 	namespace scene
 	{

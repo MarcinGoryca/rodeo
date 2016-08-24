@@ -1,29 +1,29 @@
 ﻿/*
  |  -----------------------------------
- |     MG GAME ENGINE
- |     [ SceneController.h ] [ mg\controllers ]
+ |     mona GAME ENGINE
+ |     [ SceneController.h ] [ mona\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CONTROLLERS_SCENECONTROLLER_H_
-#define MG_CONTROLLERS_SCENECONTROLLER_H_
+#ifndef MONA_CONTROLLERS_SCENECONTROLLER_H_
+#define MONA_CONTROLLERS_SCENECONTROLLER_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
-#ifndef MG_SCENE_SCENE_H_
+#ifndef MONA_SCENE_SCENE_H_
 #include "scene\scene.h"
 #endif
 
@@ -32,11 +32,11 @@
 #include <list>
 #endif    //LIST_H_
 */
-namespace mg
+namespace mona
 {
     namespace controllers
     {
-        class SceneController : public mg::core::Singleton<SceneController>, public MasterController
+        class SceneController : public mona::core::Singleton<SceneController>, public MasterController
         {
         public:
             SceneController()

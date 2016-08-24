@@ -1,19 +1,19 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_PHYSICS_PHYSICSYSTEM_H_
-#define MG_PHYSICS_PHYSICSYSTEM_H_
+#ifndef MONA_PHYSICS_PHYSICSYSTEM_H_
+#define MONA_PHYSICS_PHYSICSYSTEM_H_
 
-#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers/mastercontroller.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace physics
 	{

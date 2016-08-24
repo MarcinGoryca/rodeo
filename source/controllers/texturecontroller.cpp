@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "controllers\TextureController.h"
 
-using namespace mg::io;
-using namespace mg::renderer;
+using namespace mona::io;
+using namespace mona::renderer;
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
@@ -29,9 +29,9 @@ namespace mg
 		}
 
 		//--------------------------------------------------------------------------------------------------
-		void TextureController::load(renderer::Image* img, const char* filename, unsigned int& tid)
+		void TextureController::load(renderer::Image* imona, const char* filename, unsigned int& tid)
 		{
-			_texture->load(img, filename, tid);
+			_texture->load(imona, filename, tid);
 
 			_s_texture_count += 1;
 

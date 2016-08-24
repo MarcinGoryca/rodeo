@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,11 +9,11 @@
 #include "primitive\geometry.h"
 #include "io\log.h"
 
-using namespace mg::entity;
-using namespace mg::math;
-using namespace mg::core;
+using namespace mona::entity;
+using namespace mona::math;
+using namespace mona::core;
 
-namespace mg
+namespace mona
 {
 	namespace primitive
 	{
@@ -247,7 +247,7 @@ namespace mg
 			//d = (m-1) * dz
 			Mesh mesh;
 			mesh.reset();
-			mesh._mesh_name = "MG Standard Grid";
+			mesh._mesh_name = "mona Standard Grid";
 			//memcpy(mesh._mesh_name, mesh._mesh_name, sizeof(mesh._mesh_name));
 
 			_model._mesh.push_back(mesh);

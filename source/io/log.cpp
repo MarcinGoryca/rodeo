@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "io\log.h"
 
-using namespace mg::core;
+using namespace mona::core;
 using namespace std;
 
-namespace mg
+namespace mona
 {
 	namespace io
 	{
@@ -28,7 +28,7 @@ namespace mg
 
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, LOGFILE_ERROR.c_str(), MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, LOGFILE_ERROR.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 
@@ -42,7 +42,7 @@ namespace mg
 			getDate += actualData;
 			getDate += L", ";
 			getDate += actualTime;
-			save(MG_HEADER);
+			save(MONA_HEADER);
 			save(getDate);
 
 			return true;

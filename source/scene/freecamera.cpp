@@ -3,7 +3,7 @@
 //	{FreeCamera.cpp}
 //	Rodeo Game Engine source file
 //	Copyright(c) 2010-2011 Marcin Goryca
-//	http://rodeo.mgdev.pl
+//	http://rodeo.monadev.pl
 //======================================
 //*/
 //#include "renderer\freecamera.h"

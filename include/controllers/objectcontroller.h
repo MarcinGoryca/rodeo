@@ -1,37 +1,37 @@
 ﻿/*
  |  -----------------------------------
- |   MG GAME ENGINE
- |   [ ObjectController.h ] [ mg\controllers ]
+ |   mona GAME ENGINE
+ |   [ ObjectController.h ] [ mona\controllers ]
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_OBJECTCONTROLLER_H_
-#define MG_CORE_OBJECTCONTROLLER_H_
+#ifndef MONA_CORE_OBJECTCONTROLLER_H_
+#define MONA_CORE_OBJECTCONTROLLER_H_
 
 #ifndef VECTOR_H_
 #include <vector>
 #endif
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_ENTITY_MODEL3D_H_
+#ifndef MONA_ENTITY_MODEL3D_H_
 #include "entity\model3d.h"
 #endif
 
-#ifndef MG_PRIMITVE_BOUNDINGVOLUME_H_
+#ifndef MONA_PRIMITVE_BOUNDINGVOLUME_H_
 #include "primitive\boundingvolume.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
-		class ObjectController : public mg::core::Singleton<ObjectController>
+		class ObjectController : public mona::core::Singleton<ObjectController>
 		{
 		public:
 			ObjectController();
@@ -42,11 +42,11 @@ namespace mg
 			//scene::Model3D* objects_container_[MAX_OBJECTS_];
 			//geometry::BoundingVolume* bounding_volume_[MAX_OBJECTS_];
 
-			void create(mg::entity::Model3D* object3d);
+			void create(mona::entity::Model3D* object3d);
 
-			void add(mg::entity::Model3D* object3d);
+			void add(mona::entity::Model3D* object3d);
 
-			void remove(mg::entity::Model3D* object3d);
+			void remove(mona::entity::Model3D* object3d);
 
 			void remove();
 
@@ -60,7 +60,7 @@ namespace mg
 
 		private:
 			// Container for Model3D objects
-			std::vector<mg::entity::Model3D*> _objects;
+			std::vector<mona::entity::Model3D*> _objects;
 			// Used to counting objects
 			static unsigned int _s_objects_counter;
 

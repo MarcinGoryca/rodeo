@@ -1,6 +1,6 @@
 /*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,4 +8,4 @@
 */
 #include "math\mathtools.h"
 
-using namespace mg::math;
+using namespace mona::math;

@@ -1,33 +1,33 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ TimeController.h ] [ mg\controllers ]
+ |    mona GAME ENGINE
+ |    [ TimeController.h ] [ mona\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CONTROLLERS_TIMECONTROLLER_H_
-#define MG_CONTROLLERS_TIMECONTROLLER_H_
+#ifndef MONA_CONTROLLERS_TIMECONTROLLER_H_
+#define MONA_CONTROLLERS_TIMECONTROLLER_H_
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_CORE_TIMER_H_
+#ifndef MONA_CORE_TIMER_H_
 #include "core\Timer.h"
 #endif
 
-#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace controllers
     {
-        class TimeController : public mg::core::Singleton<TimeController>, public MasterController
+        class TimeController : public mona::core::Singleton<TimeController>, public MasterController
         {
         public:
             TimeController()
@@ -43,13 +43,13 @@ namespace mg
             }
 
             // Get pointer to Timer Object
-            mg::core::Timer* getTimer() const { return _time; }
+            mona::core::Timer* getTimer() const { return _time; }
 
             // Get FPSShow
             bool getFpsShow() const { return _fps_show; }
 
         private:
-			mg::core::Timer* _time;
+			mona::core::Timer* _time;
 			bool _fps_show;
 
             // This method is responsible for initiliazation of member objects

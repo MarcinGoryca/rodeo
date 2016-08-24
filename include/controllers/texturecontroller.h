@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |     MG GAME ENGINE
- |     [ TextureController.h ] [ mg\controllers ]
+ |     mona GAME ENGINE
+ |     [ TextureController.h ] [ mona\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CONTROLLERS_TEXTURECONTROLLER_H_
-#define MG_CONTROLLERS_TEXTURECONTROLLER_H_
+#ifndef MONA_CONTROLLERS_TEXTURECONTROLLER_H_
+#define MONA_CONTROLLERS_TEXTURECONTROLLER_H_
 
-#ifndef MG_CORE_SINGLETON_H
+#ifndef MONA_CORE_SINGLETON_H
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MG_RENDERER_TEXTURE_H_
+#ifndef MONA_RENDERER_TEXTURE_H_
 #include "renderer\texture.h"
 #endif
 
@@ -27,11 +27,11 @@
 #include <vector>
 #endif
 
-namespace mg
+namespace mona
 {
     namespace controllers
     {
-        class TextureController : public mg::core::Singleton<TextureController>
+        class TextureController : public mona::core::Singleton<TextureController>
         {
         public:
             TextureController()
@@ -48,7 +48,7 @@ namespace mg
 
             //Parameter texid is an id of actually loaded texture,
             // from 1 to MAX_TEXTURES
-            void load(mg::renderer::Image* img, const char* filename, unsigned int& tid);
+            void load(mona::renderer::Image* imona, const char* filename, unsigned int& tid);
 
             void load();
 
@@ -56,13 +56,13 @@ namespace mg
 
             unsigned int loadTGA(const char* filename);
 
-            mg::renderer::Texture* getTexture() const { return _texture; }
+            mona::renderer::Texture* getTexture() const { return _texture; }
 
             static int getTextureCount() { return _s_texture_count; }
 
         private:
 			// Texture object 
-			mg::renderer::Texture* _texture;
+			mona::renderer::Texture* _texture;
 
 			// Counting How many textures are loaded
 			static int _s_texture_count;
@@ -73,7 +73,7 @@ namespace mg
 			// Unique Id of a texture
 			unsigned int _texture_id[_S_MAX_TEXTURES];
 
-			mg::renderer::Image* _image_data[_S_MAX_TEXTURES];
+			mona::renderer::Image* _image_data[_S_MAX_TEXTURES];
 
 			std::vector<unsigned int> _texObj;
 

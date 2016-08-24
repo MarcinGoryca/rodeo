@@ -1,6 +1,6 @@
 /*
  | ----------------------------------------------
- |   MG Game Engine
+ |   mona Game Engine
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -62,4 +62,4 @@ void printV3(const char* message, const Vector3& v)
     std::cout << message << "\t" << "Vector3(" << v.getX() << ", " << v.getY() << ", " << v.getZ() << ")" << std::endl;
 }
 }    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace

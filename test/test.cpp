@@ -3,8 +3,8 @@
 #include "Console.h"
 
 using namespace std;
-using namespace mg::core;
-using namespace mg;
+using namespace mona::core;
+using namespace mona;
 
 int main()
 {
@@ -27,7 +27,7 @@ int main()
 //	return 0;
 //}
 //
-//void mg::controllers::EventController::getUserInput()
+//void mona::controllers::EventController::getUserInput()
 //{
 //
 //}

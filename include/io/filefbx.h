@@ -49,7 +49,7 @@
 //    void readstring(const char* header, const char* value, const char* suffix);
 //
 //// ---- < MEMBERS > ---- //
-//    FbxManager* fbx_mgr_;
+//    FbxManager* fbx_monar_;
 //    FbxNode* node_;
 //    std::string classname_;
 //};

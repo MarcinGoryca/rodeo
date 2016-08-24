@@ -1,6 +1,6 @@
 ///*
 //----------------------------------------------
-//    MG Game Engine
+//    mona Game Engine
 //    Copyright(c) Marcin Goryca
 //    marcin.goryca@gmail.com
 //    http://marcingoryca.pl
@@ -10,7 +10,7 @@
 //
 //using namespace std;
 //
-//namespace mg
+//namespace mona
 //{
 //namespace core
 //{
@@ -148,7 +148,7 @@
 //
 //    if(!EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm))
 //    {
-//        MessageBox(NULL, L"Couldn't Enum Display Settings", MG_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Couldn't Enum Display Settings", MONA_HEADER.c_str(), ERR_ICON_OK);
 //        return;
 //    }
 //
@@ -163,7 +163,7 @@
 //        
 //    if(result != DISP_CHANGE_SUCCESSFUL)
 //    {
-//        MessageBox(NULL, L"Display Mode Not Compatible", MG_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Display Mode Not Compatible", MONA_HEADER.c_str(), ERR_ICON_OK);
 //        onDestroy();
 //    }
 //}
@@ -188,13 +188,13 @@
 //
 //    if(!pixelFormat)
 //    {
-//        MessageBox(NULL, L"Choose PixelFormat FAIL!", MG_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Choose PixelFormat FAIL!", MONA_HEADER.c_str(), ERR_ICON_OK);
 //        return;
 //    }
 //
 //    if(!SetPixelFormat(hdc, pixelFormat, &pfd))
 //    {
-//        MessageBox(NULL, L"Set PixelFormat FAIL!", MG_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Set PixelFormat FAIL!", MONA_HEADER.c_str(), ERR_ICON_OK);
 //        return;
 //    }
 //}
@@ -233,10 +233,10 @@
 ////--------------------------------------------------------------------------------------------------
 //int Window::shutdown()
 //{
-//    //if(timeMgr_ != NULL)
+//    //if(timemonar_ != NULL)
 //    //{
-//    //    delete timeMgr_;
-//    //    timeMgr_ = NULL;
+//    //    delete timemonar_;
+//    //    timemonar_ = NULL;
 //    //}
 //
 //    /*if(renderer_ != NULL)
@@ -439,7 +439,7 @@
 //void Window::onMouseMove(int x, int y)
 //{
 //    //Implement your onMouseMove(int x, int y) method in derivied class
-//    MessageBox(NULL, L"mc", MG_HEADER.c_str(), ERR_ICON_OK);
+//    MessageBox(NULL, L"mc", MONA_HEADER.c_str(), ERR_ICON_OK);
 //}
 //
 ////--------------------------------------------------------------------------------------------------
@@ -457,7 +457,7 @@
 //{
 //    //time_manager_->time_.init();
 //    //mathcore_->init();
-//    //fontMgr_.init();
+//    //fontmonar_.init();
 //}
 //
 ////--------------------------------------------------------------------------------------------------
@@ -609,7 +609,7 @@
 //
 //    case WM_MOUSELEAVE:
 //        {
-//            MessageBox(NULL, L"Mouse outside the framework!", MG_HEADER.c_str(), ERR_ICON_OK);
+//            MessageBox(NULL, L"Mouse outside the framework!", MONA_HEADER.c_str(), ERR_ICON_OK);
 //        }
 //        break;
 //
@@ -637,4 +637,4 @@
 //    return DefWindowProc(hwnd_, msg, wparam, lparam);
 //}
 //}    // end of core namespace
-//}    // end of mg namespace
+//}    // end of mona namespace

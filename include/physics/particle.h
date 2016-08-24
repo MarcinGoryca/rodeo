@@ -1,15 +1,15 @@
 /*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_PHYSICS_PARTICLE_H_
-#define MG_PHYSICS_PARTICLE_H_
+#ifndef MONA_PHYSICS_PARTICLE_H_
+#define MONA_PHYSICS_PARTICLE_H_
 
-namespace mg
+namespace mona
 {
 	namespace physics
 	{

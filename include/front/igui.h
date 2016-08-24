@@ -1,15 +1,15 @@
 /*
  | -----------------------------------
- |    MG Game Engine
+ |    mona Game Engine
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  | -----------------------------------
  */
-#ifndef MG_FRONTEND_IGUI_H_
-#define MG_FRONTEND_IGUI_H_
+#ifndef MONA_FRONTEND_IGUI_H_
+#define MONA_FRONTEND_IGUI_H_
 
-namespace mg
+namespace mona
 {
 namespace front
 {
@@ -20,5 +20,5 @@ public:
     virtual ~IGui(){}
 };
 }    // end of front namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

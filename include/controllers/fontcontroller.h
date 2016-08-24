@@ -1,33 +1,33 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ FontController.h ] [ mg\controllers ]
+ |    mona GAME ENGINE
+ |    [ FontController.h ] [ mona\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
-#ifndef MG_CORE_FONTCONTROLLER_H_
-#define MG_CORE_FONTCONTROLLER_H_
+#ifndef MONA_CORE_FONTCONTROLLER_H_
+#define MONA_CORE_FONTCONTROLLER_H_
 
-#ifndef MG_RENDERER_FONT_H_
+#ifndef MONA_RENDERER_FONT_H_
 #include "renderer\font.h"
 #endif
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\Singleton.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
-		class FontController : public mg::core::Singleton<FontController>, public MasterController
+		class FontController : public mona::core::Singleton<FontController>, public MasterController
 		{
 		public:
 			FontController() {}
@@ -38,11 +38,11 @@ namespace mg
 			}
 
 			// Gets Font object pointer
-			mg::renderer::Font* getFont() const { return _font; }
+			mona::renderer::Font* getFont() const { return _font; }
 
 
 		private:
-			mg::renderer::Font* _font;
+			mona::renderer::Font* _font;
 
 			void init();
 			void clear();

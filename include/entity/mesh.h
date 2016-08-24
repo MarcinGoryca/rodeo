@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Mesh.h ] [ mg\entity ]
+ |    mona GAME ENGINE
+ |    [ Mesh.h ] [ mona\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_ENTITY_MESH_H_
-#define MG_ENTITY_MESH_H_
+#ifndef MONA_ENTITY_MESH_H_
+#define MONA_ENTITY_MESH_H_
 
-#ifndef MG_MATH_VECTOR2_H_
+#ifndef MONA_MATH_VECTOR2_H_
 #include "math\vector2.h"
 #endif
 
-#ifndef MG_PRIMITIVE_GEOMETRYTOOLS_H_
+#ifndef MONA_PRIMITIVE_GEOMETRYTOOLS_H_
 #include "primitive\geometrytools.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace entity
 {
@@ -32,9 +32,9 @@ struct Mesh
 {
     std::vector<MeshTriangle*> _triangles;
     std::vector<MeshUV*> _coordinates;
-    std::vector<mg::math::Vector3> _normals;
-    std::vector<mg::math::Vector3> _vertex_normals;
-    std::vector<mg::math::Vector3> _surface_normals;
+    std::vector<mona::math::Vector3> _normals;
+    std::vector<mona::math::Vector3> _vertex_normals;
+    std::vector<mona::math::Vector3> _surface_normals;
 
     MeshVertex* _vertex;
     MeshTriangle* _triangle;
@@ -63,7 +63,7 @@ struct Mesh
 // MeshVertex
 struct MeshVertex
 {
-    mg::math::Vector3 _vertex;
+    mona::math::Vector3 _vertex;
 };
 
 
@@ -76,13 +76,13 @@ struct MeshTriangle
 // MeshUV
 struct MeshUV
 {
-    mg::math::Vector2 _uv;
+    mona::math::Vector2 _uv;
 };
 
 // MeshNormal
 struct MeshNormal
 {
-    mg::math::Vector3 _normal;
+    mona::math::Vector3 _normal;
 };
 
 

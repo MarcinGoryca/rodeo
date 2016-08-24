@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -10,7 +10,7 @@
 
 //using namespace enginecore;
 
-namespace mg
+namespace mona
 {
 	namespace io
 	{

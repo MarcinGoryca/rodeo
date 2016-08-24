@@ -1,6 +1,6 @@
 /*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "event\event.h"
 #include "controllers\eventcontroller.h"
 
-using namespace mg::event;
+using namespace mona::event;
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{

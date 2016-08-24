@@ -1,39 +1,39 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_IO_FILE3DS_H_
-#define MG_IO_FILE3DS_H_
+#ifndef MONA_IO_FILE3DS_H_
+#define MONA_IO_FILE3DS_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_IO_IMPORTER_H_
+#ifndef MONA_IO_IMPORTER_H_
 #include "io\importer.h"
 #endif
 
-#ifndef MG_IO_LOG_H_
+#ifndef MONA_IO_LOG_H_
 #include "io\log.h"
 #endif
 
-#ifndef MG_MATH_MATRIX4_H_
+#ifndef MONA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-#ifndef MG_MATH_VECTOR2_H_
+#ifndef MONA_MATH_VECTOR2_H_
 #include "math\vector2.h"
 #endif
 
-#ifndef MG_RENDERER_COLORS_H_
+#ifndef MONA_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace io
 {

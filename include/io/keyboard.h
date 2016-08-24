@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_IO_KEYBOARD_H_
-#define MG_IO_KEYBOARD_H_
+#ifndef MONA_IO_KEYBOARD_H_
+#define MONA_IO_KEYBOARD_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_IO_IINPUT_H_
+#ifndef MONA_IO_IINPUT_H_
 #include "io\iinput.h"
 #endif
 
-namespace mg 
+namespace mona 
 {
 namespace io
 {

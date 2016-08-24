@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_SCENE_INODE_H_
-#define MG_SCENE_INODE_H_
+#ifndef MONA_SCENE_INODE_H_
+#define MONA_SCENE_INODE_H_
 
-#ifndef MG_MATH_MATRIX4_H_
+#ifndef MONA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-#ifndef MG_SCENE_SCENE_H_
+#ifndef MONA_SCENE_SCENE_H_
 #include "scene\scene.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace scene
 	{

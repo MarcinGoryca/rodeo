@@ -1,21 +1,21 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_IO_MOUSE_H_
-#define MG_IO_MOUSE_H_
+#ifndef MONA_IO_MOUSE_H_
+#define MONA_IO_MOUSE_H_
 
 //#include "core\framework.h"
 
-#ifndef MG_MATH_VECTOR2_H_
+#ifndef MONA_MATH_VECTOR2_H_
 #include "math\vector2.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace io
 {

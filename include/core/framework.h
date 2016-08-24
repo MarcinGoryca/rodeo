@@ -1,33 +1,33 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Framework.h ] [ mg\core ]
+ |    mona GAME ENGINE
+ |    [ Framework.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_FRAMEWORK_H_
-#define MG_CORE_FRAMEWORK_H_
+#ifndef MONA_CORE_FRAMEWORK_H_
+#define MONA_CORE_FRAMEWORK_H_
 
-#ifndef MG_CONTROLLERS_OBJECTCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_OBJECTCONTROLLER_H_
 #include "controllers\objectcontroller.h"
 #endif
 
-#ifndef MG_CONTROLLERS_AUDIOCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_AUDIOCONTROLLER_H_
 #include "controllers\audiocontroller.h"
 #endif
 
-#ifndef MG_CONTROLLERS_SCENECONTROLLER_H_
+#ifndef MONA_CONTROLLERS_SCENECONTROLLER_H_
 #include "controllers\scenecontroller.h"
 #endif
 
-#ifndef MG_CONTROLLERS_TIMECONTROLLER_H_
+#ifndef MONA_CONTROLLERS_TIMECONTROLLER_H_
 #include "controllers\timecontroller.h"
 #endif
 
-#ifndef MG_CONTROLLERS_RENDERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_RENDERCONTROLLER_H_
 #include "controllers\rendercontroller.h"
 #endif
 
@@ -35,7 +35,7 @@
  //#include "core\fontmanager.h"
  //#endif
 
-#ifndef MG_CONTROLLERS_EVENTCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_EVENTCONTROLLER_H_
 #include "controllers\eventcontroller.h"
 #endif
 
@@ -43,7 +43,7 @@
 //#include "core\texturemanager.h"
 //#endif
 
-#ifndef MG_CONTROLLERS_OUTPUTCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_OUTPUTCONTROLLER_H_
 #include "controllers\outputcontroller.h"
 #endif
 
@@ -51,7 +51,7 @@
 //#include "io\mouse.h"
 //#endif
 
-#ifndef MG_MATH_MATHSYSTEM_H_
+#ifndef MONA_MATH_MATHSYSTEM_H_
 #include "math\mathsystem.h"
 #endif    //MATH_MATHSYSTEM_H_
 
@@ -67,15 +67,15 @@
 //#include "renderer\glrenderer.h"
 //#endif
 
-#ifndef MG_TOOLS_XMLPARSER_H_
+#ifndef MONA_TOOLS_XMLPARSER_H_
 #include "tools\xmlparser.h"
 #endif
 
-#ifndef MG_PHYSICS_PHYSICSYSTEM_H_
+#ifndef MONA_PHYSICS_PHYSICSYSTEM_H_
 #include "physics\physicsystem.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace core
 	{
@@ -715,36 +715,36 @@ namespace mg
 			}
 
 		public:
-			std::unique_ptr<mg::controllers::OutputController> _output_controller;
-			std::unique_ptr<mg::controllers::AudioController> _audio_controller;
+			std::unique_ptr<mona::controllers::OutputController> _output_controller;
+			std::unique_ptr<mona::controllers::AudioController> _audio_controller;
 
 			//io::Mouse mouse_;
 
-			std::unique_ptr<mg::math::MathSystem> _mathsystem;
+			std::unique_ptr<mona::math::MathSystem> _mathsystem;
 
-			std::unique_ptr<mg::controllers::RenderController> _render_controller;
+			std::unique_ptr<mona::controllers::RenderController> _render_controller;
 
 			//renderer::RendererInterface* renderer_;
 
 			//scene::Camera camera_;
 
-			std::unique_ptr<mg::tools::XmlParser> _xml_parser;
+			std::unique_ptr<mona::tools::XmlParser> _xml_parser;
 
-			std::unique_ptr<mg::controllers::ObjectController> _object_controller;
+			std::unique_ptr<mona::controllers::ObjectController> _object_controller;
 
-			std::unique_ptr<mg::controllers::TimeController> _time_controller;
+			std::unique_ptr<mona::controllers::TimeController> _time_controller;
 
-			std::unique_ptr<mg::controllers::SceneController> _scene_controller;
+			std::unique_ptr<mona::controllers::SceneController> _scene_controller;
 
-			//FontManager fontMgr_;
+			//FontManager fontmonar_;
 
-			std::unique_ptr<mg::controllers::EventController> _event_controller;
+			std::unique_ptr<mona::controllers::EventController> _event_controller;
 
-			//TextureManager textureMgr_;
+			//TextureManager texturemonar_;
 
 			//scene::Viewport viewport_;
 
-			std::unique_ptr<mg::physics::PhysicSystem> _physicsystem;
+			std::unique_ptr<mona::physics::PhysicSystem> _physicsystem;
 
 		private:
 			// Global Delta Time,
@@ -811,5 +811,5 @@ namespace mg
 			bool _use_gl;
 		};
 	}    // end of core namespace
-}    // end of mg namespace
-#endif    // MG_CORE_FRAMEWORK_H_
+}    // end of mona namespace
+#endif    // MONA_CORE_FRAMEWORK_H_

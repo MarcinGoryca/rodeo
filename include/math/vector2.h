@@ -1,19 +1,19 @@
 /*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_MATH_VECTOR2_H_
-#define MG_MATH_VECTOR2_H_
+#ifndef MONA_MATH_VECTOR2_H_
+#define MONA_MATH_VECTOR2_H_
 
-#ifndef MG_MATH_MATHTOOLS_H_
+#ifndef MONA_MATH_MATHTOOLS_H_
 #include "mathtools.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace math
 	{
@@ -325,5 +325,5 @@ namespace mg
 		 */
 		Vector2 subtract(const Vector2& v1, const Vector2& v2);
 	}    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

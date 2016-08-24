@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -10,9 +10,9 @@
 #include "event\event.h"
 
 using namespace std;
-using namespace mg::core;
+using namespace mona::core;
 
-namespace mg 
+namespace mona 
 {
 namespace entity
 {
@@ -157,4 +157,4 @@ Object::Object(Object& copy)
 //    }
 //}
 }    // end of entity namespace
-}    // end of mg namespace
+}    // end of mona namespace

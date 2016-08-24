@@ -1,15 +1,15 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_RENDERER_RENDERSTATE_H_
-#define MG_RENDERER_RENDERSTATE_H_
+#ifndef MONA_RENDERER_RENDERSTATE_H_
+#define MONA_RENDERER_RENDERSTATE_H_
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{

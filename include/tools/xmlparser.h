@@ -1,27 +1,27 @@
 ﻿/*
 -----------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_TOOLS_XMLPARSER_H_
-#define MG_TOOLS_XMLPARSER_H_
+#ifndef MONA_TOOLS_XMLPARSER_H_
+#define MONA_TOOLS_XMLPARSER_H_
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_MATH_MATHTOOLS_H_
+#ifndef MONA_MATH_MATHTOOLS_H_
 #include "math\mathtools.h"
 #endif
 
-#ifndef MG_TINYXML_TINYXML_H_
+#ifndef MONA_TINYXML_TINYXML_H_
 #include "tinyxml\tinyxml.h"
 #endif
 
@@ -29,7 +29,7 @@
 
 #define TIXML_USE_STL
 
-namespace mg
+namespace mona
 {
 	namespace tools
 	{

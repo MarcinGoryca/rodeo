@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,13 +9,13 @@
 #include "core\timer.h"
 #include "controllers\timecontroller.h"
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
 		void TimeController::init()
 		{
-			_time = new mg::core::Timer;
+			_time = new mona::core::Timer;
 		}
 
 		//--------------------------------------------------------------------------------------------------

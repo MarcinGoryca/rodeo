@@ -1,39 +1,39 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_IO_FILETGA_H_
-#define MG_IO_FILETGA_H_
+#ifndef MONA_IO_FILETGA_H_
+#define MONA_IO_FILETGA_H_
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "..\renderer\gl\glcommon.h"
 #endif
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_RENDERER_COLORS_H_
+#ifndef MONA_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-#ifndef MG_RENDERER_IMAGE_H_
+#ifndef MONA_RENDERER_IMAGE_H_
 #include "renderer\image.h"
 #endif
 
-#ifndef MG_RENDERER_FONT_H_
+#ifndef MONA_RENDERER_FONT_H_
 #include "renderer\font.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace io
 {

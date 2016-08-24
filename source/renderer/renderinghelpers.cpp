@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -9,7 +9,7 @@
 #include "renderer\renderinghelpers.h"
 #include "renderer\colors.h"
 
-namespace mg
+namespace mona
 {
 namespace renderer
 {
@@ -28,4 +28,4 @@ void RenderingHelpers::drawLine(float* start, float* end, Colors rgb)
     //glEnd();
 }
 }    // end of renderer namespace
-}    // end of mg namespace
+}    // end of mona namespace

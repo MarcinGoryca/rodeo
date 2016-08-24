@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,9 +8,9 @@
 */
 #include "io\filease.h"
 
-using namespace mg::core;
+using namespace mona::core;
 
-namespace mg
+namespace mona
 {
 	namespace io
 	{
@@ -31,7 +31,7 @@ namespace mg
 			}
 			catch (...)
 			{
-				MessageBox(NULL, L"Couldn't Load ASE file!", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Couldn't Load ASE file!", MONA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 

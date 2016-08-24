@@ -1,6 +1,6 @@
 /*
  | ----------------------------------------------
- |   MG Game Engine
+ |   mona Game Engine
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
@@ -10,7 +10,7 @@
 #include "..\include\math\matrix3.h"
 #include "..\include\math\matrix4.h"
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -87,4 +87,4 @@ Matrix4 Transform::translate(const float x, const float y, const float z)
     return m;
 }
 }    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace

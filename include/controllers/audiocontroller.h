@@ -1,33 +1,33 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ AudioController.h ] [ mg\controllers ]
+ |    mona GAME ENGINE
+ |    [ AudioController.h ] [ mona\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CONTROLLERS_AUDIOCONTROLLER_H_
-#define MG_CONTROLLERS_AUDIOCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_AUDIOCONTROLLER_H_
+#define MONA_CONTROLLERS_AUDIOCONTROLLER_H_
 
-#ifndef MG_MATH_VECTOR_H_
+#ifndef MONA_MATH_VECTOR_H_
 #include <vector>
 #endif
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_AUDIO_SOUNDOBJECT_H_
+#ifndef MONA_AUDIO_SOUNDOBJECT_H_
 #include "audio\soundobject.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
-		class AudioController : public mg::core::Singleton<AudioController>
+		class AudioController : public mona::core::Singleton<AudioController>
 		{
 		public:
 			/*
@@ -58,7 +58,7 @@ namespace mg
 			 |    Returns SounObject pointer to the sound object
 			 |  -------------------------------------------------
 			 */
-			mg::audio::SoundObject* getSoundObject() const
+			mona::audio::SoundObject* getSoundObject() const
 			{ 
 				return _sound_object;
 			}
@@ -68,7 +68,7 @@ namespace mg
 			 |    Sets SoundObject object
 			 |  -------------------------------------------------
 			 */
-			void setSoundObject(mg::audio::SoundObject* so)
+			void setSoundObject(mona::audio::SoundObject* so)
 			{ 
 				_sound_object = so;
 			}
@@ -79,7 +79,7 @@ namespace mg
 			 |    Returns Vector object, container of SoundObject objects
 			 |  --------------------------------------------------
 			 */
-			std::vector<mg::audio::SoundObject*> getSoundContainer() const
+			std::vector<mona::audio::SoundObject*> getSoundContainer() const
 			{ 
 				return _sound_container;
 			}
@@ -89,12 +89,12 @@ namespace mg
 			 |    Puts SoundObject into the container
 			 |  -------------------------------------------------
 			 */
-			void putSound(mg::audio::SoundObject* so);
+			void putSound(mona::audio::SoundObject* so);
 		protected:
 
 		private:
-			mg::audio::SoundObject* _sound_object;
-			std::vector<mg::audio::SoundObject*> _sound_container;
+			mona::audio::SoundObject* _sound_object;
+			std::vector<mona::audio::SoundObject*> _sound_container;
 
 			/*
 			|  ---------------------------------------------------

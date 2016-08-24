@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "entity\entity.h"
 
-using namespace mg::renderer;
+using namespace mona::renderer;
 //using namespace enginemath;
 //using namespace enginescene;
 
-namespace mg
+namespace mona
 {
 namespace entity
 {
@@ -98,4 +98,4 @@ void Entity::release()
 {
 }
 }    // end of entity namespace
-}    // end of mg namespace
+}    // end of mona namespace

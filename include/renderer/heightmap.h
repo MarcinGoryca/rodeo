@@ -1,19 +1,19 @@
 /*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_RENDERER_HEIGHTMAP_H_
-#define MG_RENDERER_HEIGHTMAP_H_
+#ifndef MONA_RENDERER_HEIGHTMAP_H_
+#define MONA_RENDERER_HEIGHTMAP_H_
 
 #include "core\constants.h"
 #include "core\error.h"
 #include "..\common\glheader.h"
 
-namespace mg
+namespace mona
 {
 namespace renderer
 {
@@ -63,5 +63,5 @@ struct Heightmap
 //	float heightRatio;
 //};
 }    // end of renderer namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

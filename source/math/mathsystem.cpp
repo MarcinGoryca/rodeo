@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "math\mathsystem.h"
 
-namespace mg
+namespace mona
 {
 namespace math
 {
@@ -39,4 +39,4 @@ void MathSystem::init()
     runGenerator();
 }
 }    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace

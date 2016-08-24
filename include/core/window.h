@@ -1,25 +1,25 @@
 /*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Window.h ] [ mg\core ]
+ |    mona GAME ENGINE
+ |    [ Window.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_WINDOW_H_
-#define MG_CORE_WINDOW_H_
+#ifndef MONA_CORE_WINDOW_H_
+#define MONA_CORE_WINDOW_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "..\renderer\gl\glcommon.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace core
     {
@@ -39,7 +39,7 @@ namespace mg
                 exstyles_(-1),
                 fullscreen_(false),
                 window_classname_(L"engine"),
-                windowname_(L"MG Game Engine")
+                windowname_(L"mona Game Engine")
             {
             }
 
@@ -212,5 +212,5 @@ namespace mg
             std::wstring windowname_;
         };
     }    // end of core namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

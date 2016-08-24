@@ -1,27 +1,27 @@
 ﻿/*
 ----------------------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_MATH_EULERANGLES_H_
-#define MG_MATH_EULERANGLES_H_
+#ifndef MONA_MATH_EULERANGLES_H_
+#define MONA_MATH_EULERANGLES_H_
 
-#ifndef MG_MATH_MATHTOOLS_H_
+#ifndef MONA_MATH_MATHTOOLS_H_
 #include "math\mathtools.h"
 #endif
 
-#ifndef MG_MATH_QUATERNION_H_
+#ifndef MONA_MATH_QUATERNION_H_
 #include "math\quaternion.h"
 #endif
 
-#ifndef MG_MATH_MATRIX4_H_
+#ifndef MONA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-namespace mg
+namespace mona
 {
 namespace math
 {

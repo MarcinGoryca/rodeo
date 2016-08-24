@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,9 +8,9 @@
 */
 #include "scene\viewport.h"
 
-using namespace mg::renderer;
+using namespace mona::renderer;
 
-namespace mg
+namespace mona
 {
 	namespace scene
 	{

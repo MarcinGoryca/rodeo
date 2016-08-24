@@ -1,29 +1,29 @@
 /*
  |  -----------------------------------
- |     MG Game Engine
- |     [ ShadersController.h ] [ mg\controllers ]
+ |     mona Game Engine
+ |     [ ShadersController.h ] [ mona\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CONTROLLERS_SHADERSCONTROLLER_H_
-#define MG_CONTROLLERS_SHADERSCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_SHADERSCONTROLLER_H_
+#define MONA_CONTROLLERS_SHADERSCONTROLLER_H_
 
  //#include <string>
 
-#ifndef MG_RENDERER_GL_GLSLSHADERS_H_
+#ifndef MONA_RENDERER_GL_GLSLSHADERS_H_
 #include "renderer\gl\glslshaders.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace controllers
     {
 		enum ShadersVendor
 		{
-			MG_GLSL
+			MONA_GLSL
 		};
 
         class ShadersController
@@ -51,8 +51,8 @@ namespace mg
             // Inits Shaders
             void init();
         public:
-            std::unique_ptr<mg::renderer::IShaders> _shader;
-            std::unique_ptr<mg::renderer::GLSLShaders> _glsl_shader;
+            std::unique_ptr<mona::renderer::IShaders> _shader;
+            std::unique_ptr<mona::renderer::GLSLShaders> _glsl_shader;
         };
     }
 }

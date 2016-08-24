@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "tools\htmlwriter.h"
 
 using namespace std;
-using namespace mg::core;
+using namespace mona::core;
 
-namespace mg
+namespace mona
 {
 	namespace tools
 	{
@@ -29,7 +29,7 @@ namespace mg
 
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, HTMLFILE_LOAD_FAIL.c_str(), MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, HTMLFILE_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 			return true;

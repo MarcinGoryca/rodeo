@@ -1,19 +1,19 @@
 /*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_PRIMITIVE_CUBE_H_
-#define MG_PRIMITIVE_CUBE_H_
+#ifndef MONA_PRIMITIVE_CUBE_H_
+#define MONA_PRIMITIVE_CUBE_H_
 
-#ifndef MG_PRIMITIVE_GEOMETRY_H_
+#ifndef MONA_PRIMITIVE_GEOMETRY_H_
 #include "primitive\geometry.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace primitive
 	{

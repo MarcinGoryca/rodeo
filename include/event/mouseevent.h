@@ -1,15 +1,15 @@
 ﻿/*
 -----------------------------------
-    MG Game Engine
+    mona Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_EVENT_MOUSEEVENT_H_
-#define MG_EVENT_MOUSEEVENT_H_
+#ifndef MONA_EVENT_MOUSEEVENT_H_
+#define MONA_EVENT_MOUSEEVENT_H_
 
-namespace mg
+namespace mona
 {
 namespace event
 {
@@ -49,5 +49,5 @@ public:
     virtual bool onMouseUp();
 };
 }    // end of event namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

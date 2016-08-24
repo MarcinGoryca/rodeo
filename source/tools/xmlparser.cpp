@@ -1,20 +1,20 @@
 ﻿/*
-----------------------------------------------
-	MG Game Engine
-	Copyright(c) Marcin Goryca
-	marcin.goryca@gmail.com
-	http://marcingoryca.pl
-----------------------------------------------
-*/
-#ifndef MG_TOOLS_XMLPARSER_H_
+ : ---------------------------------------------
+ :		MONA Game Engine
+ :		Copyright(c) Marcin Goryca
+ :		marcin.goryca@gmail.com
+ :		http://marcingoryca.pl
+ : ----------------------------------------------
+ */
+#ifndef MONA_TOOLS_XMLPARSER_H_
 #include "tools\xmlparser.h"
 #endif
 
-using namespace mg::core;
-using namespace mg::math;
+using namespace mona::core;
+using namespace mona::math;
 using namespace std;
 
-namespace mg
+namespace mona
 {
 	namespace tools
 	{
@@ -30,7 +30,7 @@ namespace mg
 			}
 			catch (...)
 			{
-				MessageBox(NULL, L"Couldn't load XML File!", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Couldn't load XML File!", MONA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 
@@ -41,7 +41,7 @@ namespace mg
 			if (_xml_element == NULL)
 			{
 				_xml_document.Clear();
-				MessageBox(NULL, L"Failed to load XML file. No root element", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Failed to load XML file. No root element", MONA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 

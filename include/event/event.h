@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Event.h ] [ mg\event ]
+ |    mona GAME ENGINE
+ |    [ Event.h ] [ mona\event ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_EVENT_EVENT_H_
-#define MG_EVENT_EVENT_H_
+#ifndef MONA_EVENT_EVENT_H_
+#define MONA_EVENT_EVENT_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace event
     {

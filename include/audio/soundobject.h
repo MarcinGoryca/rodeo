@@ -1,7 +1,7 @@
 ﻿/*
  |  --------------------------------------------------------
- |    MG GAME ENGINE
- |    [ SoundObject.h ] [ mg\audio ]
+ |    mona GAME ENGINE
+ |    [ SoundObject.h ] [ mona\audio ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -39,26 +39,26 @@
  |  --------------------------------------------------------
  */
 
-#ifndef MG_AUDIO_SOUNDOBJECT_H_
-#define MG_AUDIO_SOUNDOBJECT_H_
+#ifndef MONA_AUDIO_SOUNDOBJECT_H_
+#define MONA_AUDIO_SOUNDOBJECT_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-#ifndef MG_FMOD_FMOD_HPP_
+#ifndef MONA_FMOD_FMOD_HPP_
 #include "fmod\fmod.hpp"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace audio
 	{
-		class SoundObject : public mg::entity::Entity
+		class SoundObject : public mona::entity::Entity
 		{
 		public:
 			SoundObject()

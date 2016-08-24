@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_SCENE_CAMERA_H_
-#define MG_SCENE_CAMERA_H_
+#ifndef MONA_SCENE_CAMERA_H_
+#define MONA_SCENE_CAMERA_H_
 
-#ifndef MG_IO_KEYBOARD_H_
+#ifndef MONA_IO_KEYBOARD_H_
 #include "io\keyboard.h"
 #endif
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace scene
 	{

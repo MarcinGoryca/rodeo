@@ -1,8 +1,8 @@
-#include "mg.h"
+#include "mona.h"
 
 
 
-class Game1 : public mg::core::Framework
+class Game1 : public mona::core::Framework
 {
 public:
 	Game1() {}

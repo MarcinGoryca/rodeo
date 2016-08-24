@@ -1,107 +1,82 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Error.h ] [ mg\core ]
+ |    mona GAME ENGINE
+ |    [ Error.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_ERROR_H_
-#define MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
+#define MONA_CORE_ERROR_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "constants.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace core
 	{
+		//	WINDOWS ERRORS  
 		/*
-		 |  -------------------------------
-		 |   ***  WINDOWS ERRORS  ***
-		 |  -------------------------------
+		 :  ------------------------------------------------------------
+		 :    If RegisterClassEx fails this message will show up
+		 :  ------------------------------------------------------------
 		 */
-
-		 /*
-		  |  ------------------------------------------------------------
-		  |    If RegisterClassEx fails this message will show up
-		  |  ------------------------------------------------------------
-		  */
 		const std::wstring REGISTER_FAIL_MESSAGE = L"Cannot Register Window Class";
 
 		/*
-		 |  --------------------------------------------------------------
-		 |    If CreateWindowEx fails this message will show up
-		 |  --------------------------------------------------------------
+		 :  --------------------------------------------------------------
+		 :    If CreateWindowEx fails this message will show up
+		 :  --------------------------------------------------------------
 		 */
 		const std::wstring CREATE_FAIL_MESSAGE = L"Cannot Create Window Class";
 
+		//	TGA FILES ERRORS
 		/*
-		 |  ------------------------------
-		 |    ***  TGA FILES ERRORS  ***
-		 |  ------------------------------
+		 :  ------------------------------------------------
+		 :    If there are problems to find this file
+		 :  ------------------------------------------------
 		 */
-
-		 /*
-		  |  ------------------------------------------------
-		  |    If there are problems to find this file
-		  |  ------------------------------------------------
-		  */
 		const std::wstring TGA_LOAD_FAIL = L"Couldn't Load TGA File";
 
 		/*
-		 |  -------------------------------------------------
-		 |    If file has invalid size
-		 |  -------------------------------------------------
+		 :  -------------------------------------------------
+		 :    If file has invalid size
+		 :  -------------------------------------------------
 		 */
 		const std::wstring TGA_INVALID_SIZE = L"Invalid File Size";
 
+		//	3DS FILES ERRORS
 		/*
-		 |  -------------------------------
-		 |    ***  3DS FILES ERRORS  ***
-		 |  -------------------------------
-		 */
-
-		/*
-		 |  ------------------------------------------
-		 |    If system cannot find this file
-		 |  ------------------------------------------
+		 :  ------------------------------------------
+		 :    If system cannot find this file
+		 :  ------------------------------------------
 		 */
 		const std::wstring FILE3DS_FAIL = L"Couldn't Load 3ds File";
 
 		/*
-		 |  ------------------------------------------
-		 |    This is not proper .3DS file
-		 |  ------------------------------------------
+		 :  ------------------------------------------
+		 :    This is not proper .3DS file
+		 :  ------------------------------------------
 		 */
 		const std::wstring FILE3DS_ERROR = L"This is Not .3DS File OR is Not Supported";
 
+		//	HTML FILES ERRORS
 		/*
-		 |  ------------------------------
-		 |	 ***  HTML FILES ERRORS  ***
-		 |  ------------------------------
-		 */
-		
-		/*
-		 |  -----------------------------------------------
-		 |    If system cannot load HTML file
-		 |  -----------------------------------------------
+		 :  -----------------------------------------------
+		 :    If system cannot load HTML file
+		 :  -----------------------------------------------
 		 */
 		const std::wstring HTMLFILE_LOAD_FAIL = L"Couldn't Load HTML file";
-
+	
+		//	ALL FILES ERRORS
 		/*
-		 |  ------------------------------
-		 |    ***  ALL FILES ERRORS  ***
-		 |  ------------------------------
-		 */
-
-		/*
-		 |  --------------------------------------------
-		 |    If file cannot be opened
-		 |  --------------------------------------------
+		 :  --------------------------------------------
+		 :    If file cannot be opened
+		 :  --------------------------------------------
 		 */
 		const std::wstring FILE_FAIL = L"Couldn't open file";
 
@@ -245,17 +220,12 @@ namespace mg
 		/*
 		 |  -------------------------------------------------
 		 |    This is for Title Bar in the Message Box
-		 |	  MG GAME ENGINE header
+		 |	  mona GAME ENGINE header
 		 |  -------------------------------------------------
 		 */
-		const std::wstring MG_HEADER = L"MG GAME ENGINE";
+		const std::wstring MONA_HEADER = L"MONA";
 
-		/*
-		 |  ---------------------------------
-		 |     ***  FMOD Errors  ***
-		 |  ---------------------------------
-		 */
-
+		//	FMOD ERRORS
 		const char* const FMOD_SYSTEM_FAIL = "Couldn't Create FMOD System Object!";
 
 		const char* const FMOD_VERSION_FAIL = "Couldn't Get FMOD Version!";

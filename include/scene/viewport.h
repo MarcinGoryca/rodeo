@@ -1,19 +1,19 @@
 ﻿/*
 -----------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MG_SCENE_VIEWPORT_H_
-#define MG_SCENE_VIEWPORT_H_
+#ifndef MONA_SCENE_VIEWPORT_H_
+#define MONA_SCENE_VIEWPORT_H_
 
-#ifndef MG_RENDERER_GL_GLRENDERER_H_
+#ifndef MONA_RENDERER_GL_GLRENDERER_H_
 #include "renderer\gl\glrenderer.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace scene
 	{

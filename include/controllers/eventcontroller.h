@@ -1,29 +1,29 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ EventController.h ] [ mg\controllers ]
+ |    mona GAME ENGINE
+ |    [ EventController.h ] [ mona\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_EVENTCONTROLLER_H_
-#define MG_CORE_EVENTCONTROLLER_H_
+#ifndef MONA_CORE_EVENTCONTROLLER_H_
+#define MONA_CORE_EVENTCONTROLLER_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "constants.h"
 #endif
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_CORE_MASTERCONTROLLER_H_
+#ifndef MONA_CORE_MASTERCONTROLLER_H_
 #include "mastercontroller.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace event
 	{
@@ -32,7 +32,7 @@ namespace mg
 
 	namespace controllers
 	{
-		class EventController : public mg::core::Singleton<EventController>, public MasterController
+		class EventController : public mona::core::Singleton<EventController>, public MasterController
 		{
 		public:
 			/*
@@ -60,21 +60,21 @@ namespace mg
 			 |    Translates the event
 			 |  -----------------------------------------
 			 */
-			void translate(mg::event::Event* event);
+			void translate(mona::event::Event* event);
 
 			/*
 			 |  -----------------------------------------
 			 |    Dispatches the event
 			 |  -----------------------------------------
 			 */
-			void dispatch(mg::event::Event* event);
+			void dispatch(mona::event::Event* event);
 
 			/*
 			 |  -----------------------------------------
 			 |    Sends the event
 			 |  -----------------------------------------
 			 */
-			void send(mg::event::Event* event);
+			void send(mona::event::Event* event);
 
 			/*
 			 |  ----------------------------------------
@@ -83,7 +83,7 @@ namespace mg
 			 |    Parameter Event* type of the event
 			 |  ----------------------------------------
 			 */
-			virtual void addEventListener(mg::event::Event* event_type);
+			virtual void addEventListener(mona::event::Event* event_type);
 
 			/*
 			 |  ---------------------------------------
@@ -104,13 +104,13 @@ namespace mg
 			 |    Gets Event object pointer
 			 |  ---------------------------------------
 			 */
-			mg::event::Event* getEvent() const
+			mona::event::Event* getEvent() const
 			{
 				return _event;
 			}
 
 		private:
-			mg::event::Event* _event;
+			mona::event::Event* _event;
 
 			bool init();
 			void clear();

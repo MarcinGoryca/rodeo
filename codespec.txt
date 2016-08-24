@@ -1,8 +1,8 @@
-MG GAME ENGINE
+mona GAME ENGINE
 CODE SPECIFICATION
 ----------------------------------------------------------------------------------------------
 1) Interfaces have I prefix, eg. IController
-2) Namespaces start at lowercase, eg. mg
+2) Namespaces start at lowercase, eg. mona
 3) Class members start with _, eg. _width
 4) In private / protected class section members go before methods
 5) Static members are prefixed by _s, eg. _s_counter

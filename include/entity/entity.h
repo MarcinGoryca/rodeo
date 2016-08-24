@@ -1,37 +1,37 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Entity.h ] [ mg\entity ]
+ |    mona GAME ENGINE
+ |    [ Entity.h ] [ mona\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_ENTITY_ENTITY_H_
-#define MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
+#define MONA_ENTITY_ENTITY_H_
 
-#ifndef MG_ENTITY_OBJECT_H_
+#ifndef MONA_ENTITY_OBJECT_H_
 #include "object.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLLIBRARY_H_
+#ifndef MONA_RENDERER_GL_GLLIBRARY_H_
 #include "renderer\gl\gllibrary.h"
 #endif
 
-#ifndef MG_RENDERER_MATERIAL_H_
+#ifndef MONA_RENDERER_MATERIAL_H_
 #include "renderer\material.h"
 #endif
 
-#ifndef MG_MATH_AABB_H_
+#ifndef MONA_MATH_AABB_H_
 #include "math\aabb.h"
 #endif
 
-#ifndef MG_MATH_TRANSFORM_H_
+#ifndef MONA_MATH_TRANSFORM_H_
 #include "math\transform.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace entity
     {
@@ -80,7 +80,7 @@ namespace mg
 			 |    Returns AABB object
 			 | ------------------------------------------------
 			 */
-			mg::math::AABB getAabb() const
+			mona::math::AABB getAabb() const
 			{
 				return _box;
 			}
@@ -90,7 +90,7 @@ namespace mg
 			 |    Get Transform object
 			 | ------------------------------------------------
 			 */
-			mg::math::Transform getTransform() const
+			mona::math::Transform getTransform() const
 			{
 				return _transform;
 			}
@@ -111,7 +111,7 @@ namespace mg
 			 |    Set AABB box
 			 | ------------------------------------------------
 			 */
-			void setAabb(mg::math::AABB box)
+			void setAabb(mona::math::AABB box)
 			{
 				_box = box;
 			}
@@ -121,7 +121,7 @@ namespace mg
 			 |    Set Transform
 			 | ------------------------------------------------
 			 */
-			void setTransform(mg::math::Transform transform)
+			void setTransform(mona::math::Transform transform)
 			{
 				_transform = transform;
 			}
@@ -138,9 +138,9 @@ namespace mg
 
         protected:
             //enginerenderer::Material material_;
-            mg::math::AABB _box;
+            mona::math::AABB _box;
 
-            mg::math::Transform _transform;
+            mona::math::Transform _transform;
             bool _renderable;
 
             // Copy Constructor

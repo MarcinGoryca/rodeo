@@ -1,23 +1,23 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_RENDERER_LIGHT_H_
-#define MG_RENDERER_LIGHT_H_
+#ifndef MONA_RENDERER_LIGHT_H_
+#define MONA_RENDERER_LIGHT_H_
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "gl\glcommon.h"
 #endif
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
@@ -30,14 +30,14 @@ namespace mg
 
 			enum Lights
 			{
-				MG_LIGHT_0 = GL_LIGHT0,
-				MG_LIGHT_1 = GL_LIGHT1,
-				MG_LIGHT_2 = GL_LIGHT2,
-				MG_LIGHT_3 = GL_LIGHT3,
-				MG_LIGHT_4 = GL_LIGHT4,
-				MG_LIGHT_5 = GL_LIGHT5,
-				MG_LIGHT_6 = GL_LIGHT6,
-				MG_LIGHT_7 = GL_LIGHT7
+				MONA_LIGHT_0 = GL_LIGHT0,
+				MONA_LIGHT_1 = GL_LIGHT1,
+				MONA_LIGHT_2 = GL_LIGHT2,
+				MONA_LIGHT_3 = GL_LIGHT3,
+				MONA_LIGHT_4 = GL_LIGHT4,
+				MONA_LIGHT_5 = GL_LIGHT5,
+				MONA_LIGHT_6 = GL_LIGHT6,
+				MONA_LIGHT_7 = GL_LIGHT7
 			};
 
 			// For OpenGL it calls glEnable(GL_LIGHTING) 

@@ -1,33 +1,33 @@
 ﻿/*
  | ----------------------------------------------
- |   MG Game Engine
+ |   mona Game Engine
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
  | ----------------------------------------------
  */
 #include "core\framework.h"
-using namespace mg::controllers;
+using namespace mona::controllers;
 
-namespace mg
+namespace mona
 {
 	namespace core
 	{
 		LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		{
-			static Framework* mg_engine = 0;
+			static Framework* MONA_engine = 0;
 
 			switch (msg)
 			{
 			case WM_CREATE:
 			{
 				CREATESTRUCT* cs = (CREATESTRUCT*)lparam;
-				mg_engine = (Framework*)cs->lpCreateParams;
+				MONA_engine = (Framework*)cs->lpCreateParams;
 				return 0;
 			}
 			}
-			if (mg_engine)
-				return mg_engine->messageProcessor(msg, wparam, lparam);
+			if (MONA_engine)
+				return MONA_engine->messageProcessor(msg, wparam, lparam);
 			else
 				return DefWindowProc(hwnd, msg, wparam, lparam);
 		}
@@ -60,12 +60,12 @@ namespace mg
 
 			if (_use_gl)
 			{
-				_render_controller = std::unique_ptr<RenderController>(new RenderController(MG_GL));
+				_render_controller = std::unique_ptr<RenderController>(new RenderController(MONA_GL));
 				createGLContext(GetDC(getHwnd()));
 			}
 			if (_use_dx)
 			{
-				_render_controller = std::unique_ptr<RenderController>(new RenderController(MG_DX));
+				_render_controller = std::unique_ptr<RenderController>(new RenderController(MONA_DX));
 				_render_controller->getRenderer()->setHWND(getHwnd());
 			}
 
@@ -223,7 +223,7 @@ namespace mg
 
 			case WM_MOUSELEAVE:
 			{
-				MessageBox(NULL, L"Mouse outside the framework!", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Mouse outside the framework!", MONA_HEADER.c_str(), ERR_ICON_OK);
 			}
 			break;
 
@@ -376,7 +376,7 @@ namespace mg
 
 			if (!EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm))
 			{
-				MessageBox(NULL, L"Couldn't Enum Display Settings", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Couldn't Enum Display Settings", MONA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 
@@ -391,7 +391,7 @@ namespace mg
 
 			if (result != DISP_CHANGE_SUCCESSFUL)
 			{
-				MessageBox(NULL, L"Display Mode Not Compatible", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Display Mode Not Compatible", MONA_HEADER.c_str(), ERR_ICON_OK);
 				onDestroy();
 			}
 		}
@@ -425,13 +425,13 @@ namespace mg
 
 			if (!pixelFormat)
 			{
-				MessageBox(NULL, L"Choose PixelFormat FAIL!", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Choose PixelFormat FAIL!", MONA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 
 			if (!SetPixelFormat(hdc, pixelFormat, &pfd))
 			{
-				MessageBox(NULL, L"Set PixelFormat FAIL!", MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Set PixelFormat FAIL!", MONA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 		}

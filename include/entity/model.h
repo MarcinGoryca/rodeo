@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Model.h ] [ mg\entity ]
+ |    mona GAME ENGINE
+ |    [ Model.h ] [ mona\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  | -----------------------------------
  */
 
-#ifndef MG_ENTITY_MODEL_H_
-#define MG_ENTITY_MODEL_H_
+#ifndef MONA_ENTITY_MODEL_H_
+#define MONA_ENTITY_MODEL_H_
 
-#ifndef MG_ENTITY_MESH_H_
+#ifndef MONA_ENTITY_MESH_H_
 #include "entity\mesh.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace entity
     {

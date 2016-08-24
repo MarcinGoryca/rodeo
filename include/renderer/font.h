@@ -1,35 +1,35 @@
 ﻿/*
  |  ----------------------------------------------
- |      MG GAME ENGINE
- |      [ Font.h ] [ mg\renderer ]
+ |      mona GAME ENGINE
+ |      [ Font.h ] [ mona\renderer ]
  |      Copyright(c) Marcin Goryca
  |      marcin.goryca@gmail.com
  |      http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MG_RENDERER_FONT_H_
-#define MG_RENDERER_FONT_H_
+#ifndef MONA_RENDERER_FONT_H_
+#define MONA_RENDERER_FONT_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "renderer\gl\glcommon.h"
 #endif
 
-#ifndef MG_RENDERER_COLORS_H_
+#ifndef MONA_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-#ifndef MG_ENTITY_ENTITY_H_
+#ifndef MONA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
 #include "freetype\include\ft2build.h"
 #include FT_FREETYPE_H
 
-namespace mg
+namespace mona
 {
     namespace renderer
     {

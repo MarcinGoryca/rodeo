@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------------------
- |    MG GAME ENGINE
- |    [ OutputController.h ] [ mg\controllers ]
+ |    mona GAME ENGINE
+ |    [ OutputController.h ] [ mona\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------------------
  */
 
-#ifndef MG_CORE_OUTPUTCONTROLLER_H
-#define MG_CORE_OUTPUTCONTROLLER_H
+#ifndef MONA_CORE_OUTPUTCONTROLLER_H
+#define MONA_CORE_OUTPUTCONTROLLER_H
 
-#ifndef MG_IO_LOG_H_
+#ifndef MONA_IO_LOG_H_
 #include "io/log.h"
 #endif
 
-#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers/mastercontroller.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{

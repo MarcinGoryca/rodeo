@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "renderer\font.h"
 
-using namespace mg::core;
+using namespace mona::core;
 using namespace std;
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
@@ -21,17 +21,17 @@ namespace mg
 			_error = FT_Init_FreeType(&_library);
 			if (_error)
 			{
-				MessageBox(NULL, FREETYPE_LIBRARY_LOAD_FAIL.c_str(), MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, FREETYPE_LIBRARY_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
 				_library = NULL;
 			}
 			_error = FT_New_Face(_library, getFontfile(), 0, &_face);
 			if (_error == FT_Err_Unknown_File_Format)
 			{
-				MessageBox(NULL, FREETYPE_UNKNOWN_FILE_FORMAT.c_str(), MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, FREETYPE_UNKNOWN_FILE_FORMAT.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
 			}
 			else if (_error)
 			{
-				MessageBox(NULL, FREETYPE_BROKEN_FONT_FILE.c_str(), MG_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, FREETYPE_BROKEN_FONT_FILE.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
 				_face = NULL;
 			}
 			/*_error = FT_Set_Char_Size(_face, 0, 16*64, 300, 300);

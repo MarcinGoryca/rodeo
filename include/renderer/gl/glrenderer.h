@@ -5,45 +5,45 @@
 
 /*
  |  ----------------------------------------------
- |    MG Game Engine
+ |    mona Game Engine
  |    [ GLRenderer.h ] / [ renderer/gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MG_RENDERER_GLRENDERER_H_
-#define MG_RENDERER_GLRENDERER_H_
+#ifndef MONA_RENDERER_GLRENDERER_H_
+#define MONA_RENDERER_GLRENDERER_H_
 
-#ifndef MG_CORE_ERROR_H_
+#ifndef MONA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MG_CORE_EXCEPTION_H_
+#ifndef MONA_CORE_EXCEPTION_H_
 #include "core\exception.h"
 #endif
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_MATH_MATRIX4_H_
+#ifndef MONA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "renderer\gl\glcommon.h"
 #endif
 
-#ifndef MG_RENDERERGL_GL_QUERYRENDERER_H_
+#ifndef MONA_RENDERERGL_GL_QUERYRENDERER_H_
 #include "renderer\gl\queryrenderer.h"
 #endif
 
-#ifndef MG_RENDERER_IRENDERER_H_
+#ifndef MONA_RENDERER_IRENDERER_H_
 #include "renderer\irenderer.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
@@ -85,7 +85,7 @@ namespace mg
 			 |    Parameter g - green value of the color [range 0.0f - 1.0f]
 			 |    Parameter b - blue value of the color [range 0.0f - 1.0f]
 			 |    Use it to Change Background Color of the rendering window
-			 |    Using Colors from MG
+			 |    Using Colors from mona
 			 |    backColor(darkgreen, 1.0f)
 			 |    You must specify your alfa argument [range 0.0f[transparent] - 1.0f[opacity]]
 			 |    Colors in float manner are defined with only three values red, green, blue
@@ -188,7 +188,7 @@ namespace mg
 			/*
 			|  ------------------------------------------
 			|    Calls glClearColor(r, g, b, a)
-			|    In MG it's value is glClearColor(black, 1.0) but it is NOT called!
+			|    In mona it's value is glClearColor(black, 1.0) but it is NOT called!
 			|  -------------------------------------------
 			*/
 			bool initGL();

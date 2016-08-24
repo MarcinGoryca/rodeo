@@ -1,19 +1,19 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MG_MATH_VECTOR3_H_
-#define MG_MATH_VECTOR3_H_
+#ifndef MONA_MATH_VECTOR3_H_
+#define MONA_MATH_VECTOR3_H_
 
-#ifndef MG_MATH_MATHTOOLS_H_
+#ifndef MONA_MATH_MATHTOOLS_H_
 #include "mathtools.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace math
 	{
@@ -48,7 +48,7 @@ namespace mg
 			/*
 			 * --------------------------------------------------------------------
 			 *      Static Vector, Vector3(0.0f, 0.0f, 0.0f);
-			 *      Example: mg::math::Vector3::S_VECTOR3_ZERO_;
+			 *      Example: mona::math::Vector3::S_VECTOR3_ZERO_;
 			 * --------------------------------------------------------------------
 			 */
 			static const Vector3 S_VECTOR3_ZERO_;
@@ -522,5 +522,5 @@ namespace mg
 			return result;
 		}
 	}    // end of math namespace
-}    // end of mg namespace
+}    // end of mona namespace
 #endif

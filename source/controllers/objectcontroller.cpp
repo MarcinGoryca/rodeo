@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------------------------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 
 #include "controllers\objectcontroller.h"
 
-using namespace mg::entity;
+using namespace mona::entity;
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{

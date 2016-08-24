@@ -1,6 +1,6 @@
 /*
  |  ------------------------------------------------------
- |    MG GAME ENGINE
+ |    mona GAME ENGINE
  |    [ GLDraw.h ] / [ renderer/gl ]
  |    Copyright (c) Marcin Goryca
  |    marcin.goryca@gmail.com
@@ -10,11 +10,11 @@
 
 #pragma once
 
-#ifndef MG_RENDERER_GL_GLDRAWENUMS_H_
+#ifndef MONA_RENDERER_GL_GLDRAWENUMS_H_
 #include "gldrawenums.h"
 #endif
 
-namespace mg {
+namespace mona {
 	namespace renderer {
 		class GLDraw {
 		public:

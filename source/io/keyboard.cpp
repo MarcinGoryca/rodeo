@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,9 +8,9 @@
 */
 #include "io\keyboard.h"
 
-using namespace mg::core;
+using namespace mona::core;
 
-namespace mg
+namespace mona
 {
 	namespace io
 	{

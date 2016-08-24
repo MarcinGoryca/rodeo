@@ -1,55 +1,55 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
+ |    mona GAME ENGINE
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
-#ifndef MG_CONTROLLERS_RENDERCONTROLLER_H_
-#define MG_CONTROLLERS_RENDERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_RENDERCONTROLLER_H_
+#define MONA_CONTROLLERS_RENDERCONTROLLER_H_
 
-#ifndef MG_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
 
-#ifndef MG_CORE_SINGLETON_H_
+#ifndef MONA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLRENDERER_H_
+#ifndef MONA_RENDERER_GL_GLRENDERER_H_
 #include "renderer\gl\glrenderer.h"
 #endif
 
-#ifndef MG_RENDERER_DX_DXRENDERER_H_
+#ifndef MONA_RENDERER_DX_DXRENDERER_H_
 #include "renderer\dx\dxrenderer.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace controllers
 	{
 		enum RendererType
 		{
-			MG_DX,
-			MG_GL
+			MONA_DX,
+			MONA_GL
 		};
 
-		class RenderController : public mg::core::Singleton<RenderController>, public MasterController
+		class RenderController : public mona::core::Singleton<RenderController>, public MasterController
 		{
 		public:
 			RenderController(RendererType renderer);
 
 			~RenderController();
 
-			mg::renderer::IRenderer* getRenderer() const
+			mona::renderer::IRenderer* getRenderer() const
 			{
 				return _renderer;
 			}
 
 		private:
-			mg::renderer::IRenderer* _renderer;
+			mona::renderer::IRenderer* _renderer;
 
 			RenderController() {}
 

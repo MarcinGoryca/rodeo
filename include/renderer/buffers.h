@@ -1,28 +1,28 @@
 ﻿/*
  |  ----------------------------------------------
- |    MG GAME ENGINE
- |    [ Buffers.h ] [ mg\renderer ]
+ |    mona GAME ENGINE
+ |    [ Buffers.h ] [ mona\renderer ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MG_RENDERER_BUFFERS_H_
-#define MG_RENDERER_BUFFERS_H_
+#ifndef MONA_RENDERER_BUFFERS_H_
+#define MONA_RENDERER_BUFFERS_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MG_RENDERER_GL_GLCOMMON_H_
+#ifndef MONA_RENDERER_GL_GLCOMMON_H_
 #include "renderer\gl\glcommon.h"
 #endif
 
-#ifndef MG_ENTITY_MODEL_H_
+#ifndef MONA_ENTITY_MODEL_H_
 #include "entity\model.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{

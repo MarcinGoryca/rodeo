@@ -1,27 +1,27 @@
 ﻿/*
  |  ----------------------------------------------
- |    MG Game Engine
+ |    mona Game Engine
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
 */
-#ifndef MG_GLCOMMON_H_
-#define MG_GLCOMMON_H_
+#ifndef MONA_GLCOMMON_H_
+#define MONA_GLCOMMON_H_
 
 #pragma comment(lib, "libs\\glew32.lib")
 #pragma comment(lib, "libs\\glu32.lib")
 #pragma comment(lib, "libs\\opengl32.lib")
 
-#ifndef MG_RENDERER_GL_GLEW_H_
+#ifndef MONA_RENDERER_GL_GLEW_H_
 #include "glew.h"
 #endif
 
-#ifndef MG_RENDERER_GL_WGLEW_H_
+#ifndef MONA_RENDERER_GL_WGLEW_H_
 #include "wglew.h"
 #endif
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{
@@ -31,76 +31,76 @@ namespace mg
 			    // GL_ARRAY_BUFFER, GL_ELEMENT_ARRAY_BUFFER
 			    enum ArrayType
 			    {
-			        MG_ARRAY = GL_ARRAY_BUFFER,
-			        MG_ELEMENT = GL_ELEMENT_ARRAY_BUFFER
+			        MONA_ARRAY = GL_ARRAY_BUFFER,
+			        MONA_ELEMENT = GL_ELEMENT_ARRAY_BUFFER
 			    };
 
 				// ArrayDraw enumeration
 				// GL_STATIC_DRAW, GL_STREAM_DRAW, GL_DYNAMIC_DRAW
 				enum ArrayDraw
 				{
-				    MG_STATIC = GL_STATIC_DRAW,
-				    MG_STREAM = GL_STREAM_DRAW,
-				    MG_DYNAMIC = GL_DYNAMIC_DRAW
+				    MONA_STATIC = GL_STATIC_DRAW,
+				    MONA_STREAM = GL_STREAM_DRAW,
+				    MONA_DYNAMIC = GL_DYNAMIC_DRAW
 				};
 
 				// How to draw geometry
 				enum DrawingMode
 				{
-				    MG_TRIANGLES = GL_TRIANGLES,
-				    MG_TRIANGLE_STRIP = GL_TRIANGLE_STRIP,
-				    MG_TRIANGLE_FAN = GL_TRIANGLE_FAN,
-				    MG_POINTS = GL_POINTS,
-				    MG_LINES = GL_LINES,
-				    MG_LINE_STRIP = GL_LINE_STRIP,
-				    MG_LINE_LOOP = GL_LINE_LOOP,
-				    MG_QUADS = GL_QUADS
+				    MONA_TRIANGLES = GL_TRIANGLES,
+				    MONA_TRIANGLE_STRIP = GL_TRIANGLE_STRIP,
+				    MONA_TRIANGLE_FAN = GL_TRIANGLE_FAN,
+				    MONA_POINTS = GL_POINTS,
+				    MONA_LINES = GL_LINES,
+				    MONA_LINE_STRIP = GL_LINE_STRIP,
+				    MONA_LINE_LOOP = GL_LINE_LOOP,
+				    MONA_QUADS = GL_QUADS
 				};
 				
 				// Lights
 				enum LightType
 				{
-				    MG_AMBIENT = GL_AMBIENT,
-				    MG_DIFFUSE = GL_DIFFUSE, 
-				    MG_SPECULAR = GL_SPECULAR,
+				    MONA_AMBIENT = GL_AMBIENT,
+				    MONA_DIFFUSE = GL_DIFFUSE, 
+				    MONA_SPECULAR = GL_SPECULAR,
 				};
 				
 				// Data Types for rendering arrays
 				enum DataTypes
 				{
-				    MG_SHORT = GL_SHORT,
-				    MG_USHORT = GL_UNSIGNED_SHORT,
-				    MG_UINT = GL_UNSIGNED_INT,
-				    MG_FLOAT = GL_FLOAT,
-				    MG_DOUBLE = GL_DOUBLE,
-				    MG_BYTE = GL_BYTE,
-				    MG_INT = GL_INT,
-				    MG_UBYTE = GL_UNSIGNED_BYTE
+				    MONA_SHORT = GL_SHORT,
+				    MONA_USHORT = GL_UNSIGNED_SHORT,
+				    MONA_UINT = GL_UNSIGNED_INT,
+				    MONA_FLOAT = GL_FLOAT,
+				    MONA_DOUBLE = GL_DOUBLE,
+				    MONA_BYTE = GL_BYTE,
+				    MONA_INT = GL_INT,
+				    MONA_UBYTE = GL_UNSIGNED_BYTE
 				};
 				
 				// Viewport types supported by the engine
 				enum GLViewportType 
 				{
-				    MG_ORTHOGONAL = 0,
-				    MG_PERSPECTIVE = 1
+				    MONA_ORTHOGONAL = 0,
+				    MONA_PERSPECTIVE = 1
 				};
 				
 				
 
 				
 				// BufferType enumeration
-				// MG_VBO = VERTEX BUFFER OBJECT, 
-				// MG_CBO = COLOR BUFFER OBJECT, 
-				// MG_NBO = NORMAL BUFFER OBJECT, 
-				// MG_TBO = TEXTURE BUFFER OBJECT, 
-				// MG_EBO = ELEMENT BUFFER OBJECT
+				// MONA_VBO = VERTEX BUFFER OBJECT, 
+				// MONA_CBO = COLOR BUFFER OBJECT, 
+				// MONA_NBO = NORMAL BUFFER OBJECT, 
+				// MONA_TBO = TEXTURE BUFFER OBJECT, 
+				// MONA_EBO = ELEMENT BUFFER OBJECT
 				enum BufferType
 				{
-				    MG_VBO,
-				    MG_CBO,
-				    MG_NBO,
-				    MG_TBO,
-				    MG_EBO
+				    MONA_VBO,
+				    MONA_CBO,
+				    MONA_NBO,
+				    MONA_TBO,
+				    MONA_EBO
 				};
 		}
 	}

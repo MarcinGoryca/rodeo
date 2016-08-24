@@ -15,15 +15,15 @@
 // */
 //bool FileFBX::import(const char* filename)
 //{
-//    fbx_mgr_ = FbxManager::Create();
+//    fbx_monar_ = FbxManager::Create();
 //
-//    FbxIOSettings* ios = FbxIOSettings::Create(fbx_mgr_, IOSROOT);
+//    FbxIOSettings* ios = FbxIOSettings::Create(fbx_monar_, IOSROOT);
 //
-//    fbx_mgr_->SetIOSettings(ios);
+//    fbx_monar_->SetIOSettings(ios);
 //
-//    FbxImporter* importer = FbxImporter::Create(fbx_mgr_, "");
+//    FbxImporter* importer = FbxImporter::Create(fbx_monar_, "");
 //
-//    if(!importer->Initialize(filename, -1, fbx_mgr_->GetIOSettings()))
+//    if(!importer->Initialize(filename, -1, fbx_monar_->GetIOSettings()))
 //    {
 //        std::string error = "FBX Importer Failed.\n";
 //        error += "Error: ";
@@ -33,7 +33,7 @@
 //        return false;
 //    }
 //
-//    FbxScene* scene = FbxScene::Create(fbx_mgr_, "rodeo_scene");
+//    FbxScene* scene = FbxScene::Create(fbx_monar_, "rodeo_scene");
 //    importer->Import(scene);
 //    importer->Destroy();
 //

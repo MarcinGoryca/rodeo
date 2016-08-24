@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	MG Game Engine
+	mona Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "renderer\texture.h"
 
 using namespace std;
-using namespace mg::core;
+using namespace mona::core;
 
-namespace mg
+namespace mona
 {
 	namespace renderer
 	{

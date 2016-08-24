@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    MG GAME ENGINE
- |    [ Timer.h ] [ mg\core ]
+ |    mona GAME ENGINE
+ |    [ Timer.h ] [ mona\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MG_CORE_TIMER_H_
-#define MG_CORE_TIMER_H_
+#ifndef MONA_CORE_TIMER_H_
+#define MONA_CORE_TIMER_H_
 
-#ifndef MG_CORE_CONSTANTS_H_
+#ifndef MONA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mg
+namespace mona
 {
     namespace core
     {
