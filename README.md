@@ -1,9 +1,9 @@
 Mona (Rodeo Game Engine) [ Project ]
 -----------------------------
-<h2>This was my thesis project, but I didn't finish it within required time.</h2>
-<h2>I still want to get it working in some way. I think it is a great subject to explore.</h2>
-<h2>Great to learn and have fun.</h2>
-<h2>Actual name for the project is MONA</h2>
+<h3>This was my thesis project, but I didn't finish it within required time.</h3>
+<h3>I still want to get it working in some way. I think it is a great subject to explore.</h3>
+<h3>Great to learn and have fun.</h3>
+<h3>Actual name for the project is MONA</h3>
 <h3>Another thing to consider is to make it more multimedia program, with wide use for animation, designing etc.</h3>
 <h4>Features:</h4>
 <ul>
