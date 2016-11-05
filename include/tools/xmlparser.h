@@ -1,27 +1,27 @@
 ﻿/*
 -----------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_TOOLS_XMLPARSER_H_
-#define MONA_TOOLS_XMLPARSER_H_
+#ifndef LAURA_TOOLS_XMLPARSER_H_
+#define LAURA_TOOLS_XMLPARSER_H_
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_MATH_MATHTOOLS_H_
+#ifndef LAURA_MATH_MATHTOOLS_H_
 #include "math\mathtools.h"
 #endif
 
-#ifndef MONA_TINYXML_TINYXML_H_
+#ifndef LAURA_TINYXML_TINYXML_H_
 #include "tinyxml\tinyxml.h"
 #endif
 
@@ -29,7 +29,7 @@
 
 #define TIXML_USE_STL
 
-namespace mona
+namespace laura
 {
 	namespace tools
 	{

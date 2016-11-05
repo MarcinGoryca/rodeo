@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "io\filedds.h"
 
-using namespace mona::renderer;
-using namespace mona::core;
+using namespace laura::renderer;
+using namespace laura::core;
 using namespace std;
 
-namespace mona
+namespace laura
 {
 	namespace io
 	{
@@ -30,7 +30,7 @@ namespace mona
 
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 			read(filename);
@@ -52,7 +52,7 @@ namespace mona
 		{
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 

@@ -1,19 +1,19 @@
 /*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_RENDERER_HEIGHTMAP_H_
-#define MONA_RENDERER_HEIGHTMAP_H_
+#ifndef LAURA_RENDERER_HEIGHTMAP_H_
+#define LAURA_RENDERER_HEIGHTMAP_H_
 
 #include "core\constants.h"
 #include "core\error.h"
 #include "..\common\glheader.h"
 
-namespace mona
+namespace laura
 {
 namespace renderer
 {
@@ -63,5 +63,5 @@ struct Heightmap
 //	float heightRatio;
 //};
 }    // end of renderer namespace
-}    // end of mona namespace
+}    // end of laura namespace
 #endif

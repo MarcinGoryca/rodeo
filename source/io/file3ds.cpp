@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,15 +9,15 @@
 #include "..\include\io\file3ds.h"
 
 using namespace std;
-using namespace mona::core;
-using namespace mona::math;
-using namespace mona::renderer;
+using namespace laura::core;
+using namespace laura::math;
+using namespace laura::renderer;
 
 //================================================================
 //	3DS LOADER	BASED ON GAME TUTORIALS BY BEN HUMPHREY
 //================================================================
 
-namespace mona
+namespace laura
 {
 	namespace io
 	{
@@ -36,7 +36,7 @@ namespace mona
 			}
 			catch (...)
 			{
-				MessageBox(NULL, FILE3DS_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, FILE3DS_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 
@@ -62,7 +62,7 @@ namespace mona
 
 			if (chunk._id != MAIN3DS)
 			{
-				MessageBox(NULL, FILE3DS_ERROR.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, FILE3DS_ERROR.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 			else

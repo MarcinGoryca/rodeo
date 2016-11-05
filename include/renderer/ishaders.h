@@ -1,26 +1,26 @@
 /*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_RENDERER_ISHADERS_H_
-#define MONA_RENDERER_ISHADERS_H_
+#ifndef LAURA_RENDERER_ISHADERS_H_
+#define LAURA_RENDERER_ISHADERS_H_
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{
 		enum ShaderType
 		{
-			MONA_VS,
-			MONA_FS
+			LAURA_VS,
+			LAURA_FS
 		};
 		class IShaders
 		{
@@ -33,7 +33,7 @@ namespace mona
 			 |     [Pure Virtual]
 			 |     Loads Shader Program from specified file
 			 |     Parameter ShaderType use: 
-			 |     MONA_VS (VERTEX SHADER), MONA_FS (FRAGMENT SHADER)
+			 |     LAURA_VS (VERTEX SHADER), LAURA_FS (FRAGMENT SHADER)
 			 | ---------------------------------------------------------
 			 */
 			virtual unsigned int loadShaderFromFile(const char* filename, ShaderType st) = 0;

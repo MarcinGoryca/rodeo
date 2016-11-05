@@ -1,19 +1,19 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_RENDERER_RENDERINGHELPERS_H_
-#define MONA_RENDERER_RENDERINGHELPERS_H_
+#ifndef LAURA_RENDERER_RENDERINGHELPERS_H_
+#define LAURA_RENDERER_RENDERINGHELPERS_H_
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "gl\glcommon.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Object.h ] [ mona\entity ]
+ |    laura GAME ENGINE
+ |    [ Object.h ] [ laura\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_ENTITY_OBJECT_H_
-#define MONA_ENTITY_OBJECT_H_
+#ifndef LAURA_ENTITY_OBJECT_H_
+#define LAURA_ENTITY_OBJECT_H_
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MONA_MATH_MATRIX4_H_
+#ifndef LAURA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace entity
     {
@@ -234,5 +234,5 @@ namespace mona
 
         };
     }    // end of entity namespace
-}    // end of mona namespace
+}    // end of laura namespace
 #endif

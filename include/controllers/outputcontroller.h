@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------------------
- |    mona GAME ENGINE
- |    [ OutputController.h ] [ mona\controllers ]
+ |    laura GAME ENGINE
+ |    [ OutputController.h ] [ laura\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------------------
  */
 
-#ifndef MONA_CORE_OUTPUTCONTROLLER_H
-#define MONA_CORE_OUTPUTCONTROLLER_H
+#ifndef LAURA_CORE_OUTPUTCONTROLLER_H
+#define LAURA_CORE_OUTPUTCONTROLLER_H
 
-#ifndef MONA_IO_LOG_H_
+#ifndef LAURA_IO_LOG_H_
 #include "io/log.h"
 #endif
 
-#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers/mastercontroller.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{

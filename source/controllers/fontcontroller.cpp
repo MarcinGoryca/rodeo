@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,8 +9,8 @@
 #include "controllers\fontcontroller.h"
 #include "core\framework.h"
 
-using namespace mona::renderer;
-namespace mona
+using namespace laura::renderer;
+namespace laura
 {
 	namespace controllers
 	{

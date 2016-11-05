@@ -1,6 +1,6 @@
 ///*
 // |  --------------------------------------------------------------------------------------
-// |    mona GAME ENGINE
+// |    laura GAME ENGINE
 // |    [ GLDrawing.cpp ] / [ renderer/gl ]
 // |    Copyright (c) Marcin Goryca
 // |    marcin.goryca@gmail.com
@@ -10,7 +10,7 @@
 //
 //#include "renderer\gl\gldrawing.h"
 //
-//namespace mona {
+//namespace laura {
 //    namespace renderer {
 //        /*
 //         |  ---------------------------------------------------

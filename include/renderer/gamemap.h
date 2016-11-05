@@ -1,18 +1,18 @@
 /*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-//#ifndef MONA_RENDERER_GAMEMAP_H_
-//#define MONA_RENDERER_GAMEMAP_H_
+//#ifndef LAURA_RENDERER_GAMEMAP_H_
+//#define LAURA_RENDERER_GAMEMAP_H_
 //
 //#include "renderer\map.h"
 //#include "core\error.h"
 //
-//namespace mona
+//namespace laura
 //{
 //namespace renderer
 //{
@@ -25,5 +25,5 @@
 //    virtual void create();
 //};
 //}    // end of renderer namespace
-//}    // end of mona namespace
+//}    // end of laura namespace
 //#endif

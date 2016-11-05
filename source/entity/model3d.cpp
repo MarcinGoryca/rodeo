@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "entity\model3D.h"
 
-using namespace mona::io;
-using namespace mona::core;
-using namespace mona::renderer;
+using namespace laura::io;
+using namespace laura::core;
+using namespace laura::renderer;
 
-namespace mona
+namespace laura
 {
 namespace entity
 {
@@ -147,4 +147,4 @@ void Model3D::update(float dt)
     //rotate(15.0f, 1.0f, 0.0f, 0.0f);
 }
 }    // end of entity namespace
-}    // end of mona namespace
+}    // end of laura namespace

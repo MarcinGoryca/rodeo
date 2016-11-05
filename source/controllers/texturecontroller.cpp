@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "controllers\TextureController.h"
 
-using namespace mona::io;
-using namespace mona::renderer;
+using namespace laura::io;
+using namespace laura::renderer;
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{
@@ -29,9 +29,9 @@ namespace mona
 		}
 
 		//--------------------------------------------------------------------------------------------------
-		void TextureController::load(renderer::Image* imona, const char* filename, unsigned int& tid)
+		void TextureController::load(renderer::Image* ilaura, const char* filename, unsigned int& tid)
 		{
-			_texture->load(imona, filename, tid);
+			_texture->load(ilaura, filename, tid);
 
 			_s_texture_count += 1;
 

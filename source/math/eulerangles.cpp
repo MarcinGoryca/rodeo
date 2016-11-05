@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "math\eulerangles.h"
 
-namespace mona
+namespace laura
 {
 namespace math
 {
@@ -16,20 +16,20 @@ void EulerAngles::canonize()
 {
     _pitch = wrapPI(_pitch);
 
-    if(_pitch < -core::MONA_HALFPI)
+    if(_pitch < -core::LAURA_HALFPI)
     {
-        _pitch = -core::MONA_PI - _pitch;
-        _yaw += core::MONA_PI;
-        _roll += core::MONA_PI;
+        _pitch = -core::LAURA_PI - _pitch;
+        _yaw += core::LAURA_PI;
+        _roll += core::LAURA_PI;
     }
-    else if(_pitch > core::MONA_HALFPI)
+    else if(_pitch > core::LAURA_HALFPI)
     {
-        _pitch = core::MONA_PI - _pitch;
-        _yaw += core::MONA_PI;
-        _roll += core::MONA_PI;
+        _pitch = core::LAURA_PI - _pitch;
+        _yaw += core::LAURA_PI;
+        _roll += core::LAURA_PI;
     }
 //Checking for gimbal lock case
-    if(fabs(_pitch) > core::MONA_HALFPI - 1e-4)
+    if(fabs(_pitch) > core::LAURA_HALFPI - 1e-4)
     {
         _yaw += _roll;
         _roll = 0.0f;
@@ -44,9 +44,9 @@ void EulerAngles::canonize()
 //--------------------------------------------------------------------------------------------------
 float EulerAngles::wrapPI(float theta)
 {
-    theta *= core::MONA_PI;
-    theta -= floor(theta * core::MONA_ONEBYPI) * core::MONA_TWOPI;
-    theta -= core::MONA_PI;
+    theta *= core::LAURA_PI;
+    theta -= floor(theta * core::LAURA_ONEBYPI) * core::LAURA_TWOPI;
+    theta -= core::LAURA_PI;
     return theta;
 }
 
@@ -149,4 +149,4 @@ void EulerAngles::fromInertialToObjectQuaternion(const Quaternion& q)
 //	}
 //}
 }    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace

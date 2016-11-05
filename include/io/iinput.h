@@ -1,26 +1,26 @@
 ﻿/*
 -----------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_IO_IINPUT_H_
-#define MONA_IO_IINPUT_H_
+#ifndef LAURA_IO_IINPUT_H_
+#define LAURA_IO_IINPUT_H_
 
-namespace mona
+namespace laura
 {
 namespace io
 {
 enum InputType
 {
-    MONA_KEYBOARD_INPUT = 1,
-    MONA_MOUSE_INPUT = 2,
-	MONA_JOY_INPUT = 3,
-	MONA_GAMEPAD_INPUT = 4,
-	MONA_WHEEL_INPUT = 5,
-	MONA_TOUCH_INPUT = 6
+    LAURA_KEYBOARD_INPUT = 1,
+    LAURA_MOUSE_INPUT = 2,
+	LAURA_JOY_INPUT = 3,
+	LAURA_GAMEPAD_INPUT = 4,
+	LAURA_WHEEL_INPUT = 5,
+	LAURA_TOUCH_INPUT = 6
 };
 
 class IInput

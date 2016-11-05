@@ -1,6 +1,6 @@
 /*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,4 +8,4 @@
 */
 #include "math\mathtools.h"
 
-using namespace mona::math;
+using namespace laura::math;

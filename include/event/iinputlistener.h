@@ -1,21 +1,21 @@
 ﻿/*
 -----------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_EVENT_IINPUTLISTENER_H_
-#define MONA_EVENT_IINPUTLISTENER_H_
+#ifndef LAURA_EVENT_IINPUTLISTENER_H_
+#define LAURA_EVENT_IINPUTLISTENER_H_
 
 #include <list>
 
-#ifndef MONA_IO_IINPUT_H_
+#ifndef LAURA_IO_IINPUT_H_
 #include "io\iinput.h"
 #endif
 
-namespace mona
+namespace laura
 {
 namespace event
 {
@@ -28,26 +28,26 @@ public:
 
     int getInputType()const;
 
-    void addInputListener(mona::io::IInput* in);
+    void addInputListener(laura::io::IInput* in);
 
-    virtual void keyUp(mona::io::IInput key) = 0;
+    virtual void keyUp(laura::io::IInput key) = 0;
 
-    virtual void keyDown(mona::io::IInput key) = 0;
+    virtual void keyDown(laura::io::IInput key) = 0;
 
-    virtual void mouseDblClick(mona::io::IInput ms) = 0;
+    virtual void mouseDblClick(laura::io::IInput ms) = 0;
 
-    virtual void mouseMove(mona::io::IInput ms) = 0;
+    virtual void mouseMove(laura::io::IInput ms) = 0;
 
-    virtual void mouseExit(mona::io::IInput ms) = 0;
+    virtual void mouseExit(laura::io::IInput ms) = 0;
 
-    virtual void mouseScroll(mona::io::IInput ms) = 0;
+    virtual void mouseScroll(laura::io::IInput ms) = 0;
 
-    virtual void mouseClick(mona::io::IInput ms) = 0;
+    virtual void mouseClick(laura::io::IInput ms) = 0;
 
-    virtual void mouseDrag(mona::io::IInput ms) = 0;
+    virtual void mouseDrag(laura::io::IInput ms) = 0;
 
 protected:
-    std::list <mona::io::IInput*> _input_list;
+    std::list <laura::io::IInput*> _input_list;
 };
 }
 }

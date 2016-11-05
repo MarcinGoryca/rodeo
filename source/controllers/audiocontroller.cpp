@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "controllers\audiocontroller.h"
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{

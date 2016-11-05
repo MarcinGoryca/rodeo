@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "io\log.h"
 
-using namespace mona::core;
+using namespace laura::core;
 using namespace std;
 
-namespace mona
+namespace laura
 {
 	namespace io
 	{
@@ -28,7 +28,7 @@ namespace mona
 
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, LOGFILE_ERROR.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, LOGFILE_ERROR.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 
@@ -42,7 +42,7 @@ namespace mona
 			getDate += actualData;
 			getDate += L", ";
 			getDate += actualTime;
-			save(MONA_HEADER);
+			save(LAURA_HEADER);
 			save(getDate);
 
 			return true;

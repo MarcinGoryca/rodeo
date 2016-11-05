@@ -1,6 +1,6 @@
 ﻿/*
  | ----------------------------------------------
- |    mona Game Engine
+ |    laura Game Engine
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -8,7 +8,7 @@
  */
 #include "..\include\math\vector4.h"
 
-namespace mona
+namespace laura
 {
 namespace math
 {
@@ -50,4 +50,4 @@ void printV4(const char* message, const Vector4& v)
 		<< std::endl;
 }
 }    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace

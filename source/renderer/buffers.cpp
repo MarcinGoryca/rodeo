@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,10 +8,10 @@
 */
 #include "renderer\buffers.h"
 
-using namespace mona::core;
-using namespace mona::entity;
+using namespace laura::core;
+using namespace laura::entity;
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

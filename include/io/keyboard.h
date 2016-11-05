@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_IO_KEYBOARD_H_
-#define MONA_IO_KEYBOARD_H_
+#ifndef LAURA_IO_KEYBOARD_H_
+#define LAURA_IO_KEYBOARD_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_IO_IINPUT_H_
+#ifndef LAURA_IO_IINPUT_H_
 #include "io\iinput.h"
 #endif
 
-namespace mona 
+namespace laura 
 {
 namespace io
 {

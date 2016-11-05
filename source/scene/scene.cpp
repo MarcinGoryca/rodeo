@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,10 +9,10 @@
 #include "scene\scene.h"
 #include "renderer\renderstate.h"
 
-using namespace mona::core;
-using namespace mona::entity;
+using namespace laura::core;
+using namespace laura::entity;
 
-namespace mona
+namespace laura
 {
 	namespace scene
 	{

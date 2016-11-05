@@ -1,33 +1,33 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ AudioController.h ] [ mona\controllers ]
+ |    LAURA SOFTWARE
+ |    [ AudioController.h ] [ laura\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CONTROLLERS_AUDIOCONTROLLER_H_
-#define MONA_CONTROLLERS_AUDIOCONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_AUDIOCONTROLLER_H_
+#define LAURA_CONTROLLERS_AUDIOCONTROLLER_H_
 
-#ifndef MONA_MATH_VECTOR_H_
+#ifndef LAURA_MATH_VECTOR_H_
 #include <vector>
 #endif
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_AUDIO_SOUNDOBJECT_H_
+#ifndef LAURA_AUDIO_SOUNDOBJECT_H_
 #include "audio\soundobject.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{
-		class AudioController : public mona::core::Singleton<AudioController>
+		class AudioController : public laura::core::Singleton<AudioController>
 		{
 		public:
 			/*
@@ -55,10 +55,10 @@ namespace mona
 			/*
 			 |  -------------------------------------------------
 			 |    Gets sound object
-			 |    Returns SounObject pointer to the sound object
+			 |    Returns SoundObject pointer to the sound object
 			 |  -------------------------------------------------
 			 */
-			mona::audio::SoundObject* getSoundObject() const
+			laura::audio::SoundObject* getSoundObject() const
 			{ 
 				return _sound_object;
 			}
@@ -68,7 +68,7 @@ namespace mona
 			 |    Sets SoundObject object
 			 |  -------------------------------------------------
 			 */
-			void setSoundObject(mona::audio::SoundObject* so)
+			void setSoundObject(laura::audio::SoundObject* so)
 			{ 
 				_sound_object = so;
 			}
@@ -79,7 +79,7 @@ namespace mona
 			 |    Returns Vector object, container of SoundObject objects
 			 |  --------------------------------------------------
 			 */
-			std::vector<mona::audio::SoundObject*> getSoundContainer() const
+			std::vector<laura::audio::SoundObject*> getSoundContainer() const
 			{ 
 				return _sound_container;
 			}
@@ -89,12 +89,12 @@ namespace mona
 			 |    Puts SoundObject into the container
 			 |  -------------------------------------------------
 			 */
-			void putSound(mona::audio::SoundObject* so);
+			void putSound(laura::audio::SoundObject* so);
 		protected:
 
 		private:
-			mona::audio::SoundObject* _sound_object;
-			std::vector<mona::audio::SoundObject*> _sound_container;
+			laura::audio::SoundObject* _sound_object;
+			std::vector<laura::audio::SoundObject*> _sound_container;
 
 			/*
 			|  ---------------------------------------------------

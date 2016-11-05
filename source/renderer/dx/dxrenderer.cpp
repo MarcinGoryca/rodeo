@@ -1,8 +1,8 @@
 //#include "renderer\dx\dxrenderer.h"
 //
-//using namespace mona::core;
+//using namespace laura::core;
 //
-//namespace mona
+//namespace laura
 //{
 //namespace renderer
 //{
@@ -254,4 +254,4 @@
 //	v.TopLeftY = top_left_y;
 //}
 //}    // end of renderer namespace
-//}    // end of mona namespace
+//}    // end of laura namespace

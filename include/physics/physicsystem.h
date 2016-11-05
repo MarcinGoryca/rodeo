@@ -1,19 +1,19 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_PHYSICS_PHYSICSYSTEM_H_
-#define MONA_PHYSICS_PHYSICSYSTEM_H_
+#ifndef LAURA_PHYSICS_PHYSICSYSTEM_H_
+#define LAURA_PHYSICS_PHYSICSYSTEM_H_
 
-#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers/mastercontroller.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace physics
 	{

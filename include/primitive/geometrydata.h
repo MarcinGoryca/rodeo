@@ -1,15 +1,15 @@
 /*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_PRIMITIVE_GEOMETRYDATA_H_
-#define MONA_PRIMITIVE_GEOMETRYDATA_H_
+#ifndef LAURA_PRIMITIVE_GEOMETRYDATA_H_
+#define LAURA_PRIMITIVE_GEOMETRYDATA_H_
 
-namespace mona
+namespace laura
 {
 	namespace primitive
 	{

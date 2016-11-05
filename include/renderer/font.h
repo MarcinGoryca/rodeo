@@ -1,35 +1,35 @@
 ﻿/*
  |  ----------------------------------------------
- |      mona GAME ENGINE
- |      [ Font.h ] [ mona\renderer ]
+ |      laura GAME ENGINE
+ |      [ Font.h ] [ laura\renderer ]
  |      Copyright(c) Marcin Goryca
  |      marcin.goryca@gmail.com
  |      http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MONA_RENDERER_FONT_H_
-#define MONA_RENDERER_FONT_H_
+#ifndef LAURA_RENDERER_FONT_H_
+#define LAURA_RENDERER_FONT_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "renderer\gl\glcommon.h"
 #endif
 
-#ifndef MONA_RENDERER_COLORS_H_
+#ifndef LAURA_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-#ifndef MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
 #include "freetype\include\ft2build.h"
 #include FT_FREETYPE_H
 
-namespace mona
+namespace laura
 {
     namespace renderer
     {

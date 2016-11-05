@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "..\include\math\matrix3.h"
 
-namespace mona
+namespace laura
 {
 namespace math
 {
@@ -172,4 +172,4 @@ Matrix3 rotateAboutZ(const float& angle, const float& z)
 }
 */
 }    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace

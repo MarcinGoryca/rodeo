@@ -1,21 +1,21 @@
 /*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Sprite.h ] [ mona\entity ]
+ |    laura GAME ENGINE
+ |    [ Sprite.h ] [ laura\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_ENTITY_SPRITE_H_
-#define MONA_ENTITY_SPRITE_H_
+#ifndef LAURA_ENTITY_SPRITE_H_
+#define LAURA_ENTITY_SPRITE_H_
 
-#ifndef MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace entity
     {

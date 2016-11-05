@@ -3,8 +3,8 @@
 #include "Console.h"
 
 using namespace std;
-using namespace mona::core;
-using namespace mona;
+using namespace laura::core;
+using namespace laura;
 
 int main()
 {
@@ -27,7 +27,7 @@ int main()
 //	return 0;
 //}
 //
-//void mona::controllers::EventController::getUserInput()
+//void laura::controllers::EventController::getUserInput()
 //{
 //
 //}

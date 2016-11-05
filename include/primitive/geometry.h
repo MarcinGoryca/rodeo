@@ -1,27 +1,27 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_PRIMITIVE_GEOMETRY_H_
-#define MONA_PRIMITIVE_GEOMETRY_H_
+#ifndef LAURA_PRIMITIVE_GEOMETRY_H_
+#define LAURA_PRIMITIVE_GEOMETRY_H_
 
-#ifndef MONA_RENDERER_RENDERMODE_H_
+#ifndef LAURA_RENDERER_RENDERMODE_H_
 #include "renderer\rendermode.h"
 #endif
 
-#ifndef MONA_ENTITY_MODEL3D_H_
+#ifndef LAURA_ENTITY_MODEL3D_H_
 #include "entity\model3d.h"
 #endif
 
-#ifndef MONA_MATH_VECTOR3_H_
+#ifndef LAURA_MATH_VECTOR3_H_
 #include "math\vector3.h"
 #endif
 
-namespace mona
+namespace laura
 {
 namespace primitive
 {

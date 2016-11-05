@@ -1,19 +1,19 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Exception.h ] [ mona\core ]
+ |    laura GAME ENGINE
+ |    [ Exception.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CORE_EXCEPTION_H_
-#define MONA_CORE_EXCEPTION_H_
+#ifndef LAURA_CORE_EXCEPTION_H_
+#define LAURA_CORE_EXCEPTION_H_
 
 #include <string>
 
-namespace mona
+namespace laura
 {
 	namespace core
 	{

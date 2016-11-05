@@ -1,17 +1,17 @@
 /*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_PRIMITIVE_PLANE_H_
-#define MONA_PRIMITIVE_PLANE_H_
+#ifndef LAURA_PRIMITIVE_PLANE_H_
+#define LAURA_PRIMITIVE_PLANE_H_
 
 #include "math\vector3.h"
 
-namespace mona
+namespace laura
 {
 namespace primitive
 {

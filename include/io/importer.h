@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_IO_IMPORTER_H_
-#define MONA_IO_IMPORTER_H_
+#ifndef LAURA_IO_IMPORTER_H_
+#define LAURA_IO_IMPORTER_H_
 
-#ifndef MONA_ENTITY_MODEL_H_
+#ifndef LAURA_ENTITY_MODEL_H_
 #include "entity\model.h"
 #endif
 
-#ifndef MONA_CORE_RTTI_H_
+#ifndef LAURA_CORE_RTTI_H_
 #include "core\rtti.h"
 #endif
 
-namespace mona
+namespace laura
 {
 namespace io
 {

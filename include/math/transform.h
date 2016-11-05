@@ -1,15 +1,15 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_MATH_TRANSFORM_H_
-#define MONA_MATH_TRANSFORM_H_
+#ifndef LAURA_MATH_TRANSFORM_H_
+#define LAURA_MATH_TRANSFORM_H_
 
-namespace mona
+namespace laura
 {
 	namespace math
 	{

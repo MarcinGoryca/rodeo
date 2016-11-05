@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |     mona GAME ENGINE
- |     [ TextureController.h ] [ mona\controllers ]
+ |     laura GAME ENGINE
+ |     [ TextureController.h ] [ laura\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CONTROLLERS_TEXTURECONTROLLER_H_
-#define MONA_CONTROLLERS_TEXTURECONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_TEXTURECONTROLLER_H_
+#define LAURA_CONTROLLERS_TEXTURECONTROLLER_H_
 
-#ifndef MONA_CORE_SINGLETON_H
+#ifndef LAURA_CORE_SINGLETON_H
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MONA_RENDERER_TEXTURE_H_
+#ifndef LAURA_RENDERER_TEXTURE_H_
 #include "renderer\texture.h"
 #endif
 
@@ -27,11 +27,11 @@
 #include <vector>
 #endif
 
-namespace mona
+namespace laura
 {
     namespace controllers
     {
-        class TextureController : public mona::core::Singleton<TextureController>
+        class TextureController : public laura::core::Singleton<TextureController>
         {
         public:
             TextureController()
@@ -48,7 +48,7 @@ namespace mona
 
             //Parameter texid is an id of actually loaded texture,
             // from 1 to MAX_TEXTURES
-            void load(mona::renderer::Image* imona, const char* filename, unsigned int& tid);
+            void load(laura::renderer::Image* ilaura, const char* filename, unsigned int& tid);
 
             void load();
 
@@ -56,13 +56,13 @@ namespace mona
 
             unsigned int loadTGA(const char* filename);
 
-            mona::renderer::Texture* getTexture() const { return _texture; }
+            laura::renderer::Texture* getTexture() const { return _texture; }
 
             static int getTextureCount() { return _s_texture_count; }
 
         private:
 			// Texture object 
-			mona::renderer::Texture* _texture;
+			laura::renderer::Texture* _texture;
 
 			// Counting How many textures are loaded
 			static int _s_texture_count;
@@ -73,7 +73,7 @@ namespace mona
 			// Unique Id of a texture
 			unsigned int _texture_id[_S_MAX_TEXTURES];
 
-			mona::renderer::Image* _image_data[_S_MAX_TEXTURES];
+			laura::renderer::Image* _image_data[_S_MAX_TEXTURES];
 
 			std::vector<unsigned int> _texObj;
 

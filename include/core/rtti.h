@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |     mona GAME ENGINE
- |     [ Rtti.h ] [ mona\core ]
+ |     laura GAME ENGINE
+ |     [ Rtti.h ] [ laura\core ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CORE_RTTI_H_
-#define MONA_CORE_RTTI_H_
+#ifndef LAURA_CORE_RTTI_H_
+#define LAURA_CORE_RTTI_H_
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace core
     {

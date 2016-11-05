@@ -3,7 +3,7 @@
 //	{EyeCamera.cpp}
 //	Rodeo Game Engine source file
 //	Copyright(c) 2010-2011 Marcin Goryca
-//	http://rodeo.monadev.pl
+//	http://rodeo.lauradev.pl
 //==================================
 //*/
 //#include "scene\eyecamera.h"

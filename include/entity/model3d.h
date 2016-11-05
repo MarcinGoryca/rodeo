@@ -1,39 +1,39 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Model3d.h ] [ mona\entity ]
+ |    laura GAME ENGINE
+ |    [ Model3d.h ] [ laura\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_ENTITY_MODEL3D_H_
-#define MONA_ENTITY_MODEL3D_H_
+#ifndef LAURA_ENTITY_MODEL3D_H_
+#define LAURA_ENTITY_MODEL3D_H_
 
-#ifndef MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-#ifndef MONA_IO_FILE3DFACTORY_H_
+#ifndef LAURA_IO_FILE3DFACTORY_H_
 #include "io\file3dfactory.h"
 #endif
 
-#ifndef MONA_RENDERER_BUFFERS_H_
+#ifndef LAURA_RENDERER_BUFFERS_H_
 #include "renderer\buffers.h"
 #endif
 
-#ifndef MONA_RENDERER_RENDERMODE_H_
+#ifndef LAURA_RENDERER_RENDERMODE_H_
 #include "renderer\rendermode.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace entity
     {
         class Texture;
         class Vector3;
-        class Model3D : public mona::renderer::RenderMode, public Entity
+        class Model3D : public laura::renderer::RenderMode, public Entity
         {
         public:
             Model3D()
@@ -45,11 +45,11 @@ namespace mona
                 _winding(GL_CCW)
             {}
 
-            Model3D(const char* filename, mona::io::File3DFactory::File3DType type);
+            Model3D(const char* filename, laura::io::File3DFactory::File3DType type);
 
             virtual ~Model3D();
 
-            void load(const char* filename, mona::io::File3DFactory::File3DType type);
+            void load(const char* filename, laura::io::File3DFactory::File3DType type);
 
             void update();
             void scale(float scale_factor);
@@ -71,7 +71,7 @@ namespace mona
 
         protected:
 			Model _model;
-			mona::renderer::Buffers _buffer;
+			laura::renderer::Buffers _buffer;
 
 			unsigned int _texture_id;
 			unsigned int _mesh_count;
@@ -88,7 +88,7 @@ namespace mona
 
             void render();
 
-            void bindTexture(mona::core::ui& texture_id);
+            void bindTexture(laura::core::ui& texture_id);
 
 
         };

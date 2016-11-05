@@ -4,7 +4,7 @@
 //
 ///*
 // | ----------------------------------------------
-// |   mona Game Engine
+// |   laura Game Engine
 // |   [ GLLibrary.h ] / [renderer/gl]
 // |   Copyright(c) Marcin Goryca
 // |   marcin.goryca@gmail.com
@@ -12,14 +12,14 @@
 // | ----------------------------------------------
 // */
 //
-//#ifndef MONA_RENDERER_GLLIBRARY_H
-//#define MONA_RENDERER_GLLIBRARY_H
+//#ifndef LAURA_RENDERER_GLLIBRARY_H
+//#define LAURA_RENDERER_GLLIBRARY_H
 //
-//#ifndef MONA_GLCOMMON_H_
+//#ifndef LAURA_GLCOMMON_H_
 //#include "glcommon.h"
 //#endif
 //
-//namespace mona
+//namespace laura
 //{
 //namespace renderer
 //{
@@ -114,5 +114,5 @@
 //
 
 //}    // end of renderer namespace
-//}    // end of mona namespace
+//}    // end of laura namespace
 //#endif

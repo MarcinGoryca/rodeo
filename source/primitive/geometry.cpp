@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,11 +9,11 @@
 #include "primitive\geometry.h"
 #include "io\log.h"
 
-using namespace mona::entity;
-using namespace mona::math;
-using namespace mona::core;
+using namespace laura::entity;
+using namespace laura::math;
+using namespace laura::core;
 
-namespace mona
+namespace laura
 {
 	namespace primitive
 	{
@@ -247,7 +247,7 @@ namespace mona
 			//d = (m-1) * dz
 			Mesh mesh;
 			mesh.reset();
-			mesh._mesh_name = "mona Standard Grid";
+			mesh._mesh_name = "laura Standard Grid";
 			//memcpy(mesh._mesh_name, mesh._mesh_name, sizeof(mesh._mesh_name));
 
 			_model._mesh.push_back(mesh);

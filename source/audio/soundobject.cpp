@@ -1,6 +1,6 @@
 ﻿#include "audio\soundobject.h"
 
-namespace mona
+namespace laura
 {
 namespace audio
 {

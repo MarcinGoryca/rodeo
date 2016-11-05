@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,9 +8,9 @@
 */
 #include "io\filease.h"
 
-using namespace mona::core;
+using namespace laura::core;
 
-namespace mona
+namespace laura
 {
 	namespace io
 	{
@@ -31,7 +31,7 @@ namespace mona
 			}
 			catch (...)
 			{
-				MessageBox(NULL, L"Couldn't Load ASE file!", MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Couldn't Load ASE file!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 

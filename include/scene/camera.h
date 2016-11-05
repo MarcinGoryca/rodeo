@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_SCENE_CAMERA_H_
-#define MONA_SCENE_CAMERA_H_
+#ifndef LAURA_SCENE_CAMERA_H_
+#define LAURA_SCENE_CAMERA_H_
 
-#ifndef MONA_IO_KEYBOARD_H_
+#ifndef LAURA_IO_KEYBOARD_H_
 #include "io\keyboard.h"
 #endif
 
-#ifndef MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace scene
 	{

@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Error.h ] [ mona\core ]
+ |    laura GAME ENGINE
+ |    [ Error.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CORE_ERROR_H_
-#define MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
+#define LAURA_CORE_ERROR_H_
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "constants.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace core
 	{
@@ -220,10 +220,10 @@ namespace mona
 		/*
 		 |  -------------------------------------------------
 		 |    This is for Title Bar in the Message Box
-		 |	  mona GAME ENGINE header
+		 |	  laura GAME ENGINE header
 		 |  -------------------------------------------------
 		 */
-		const std::wstring MONA_HEADER = L"MONA";
+		const std::wstring LAURA_HEADER = L"LAURA";
 
 		//	FMOD ERRORS
 		const char* const FMOD_SYSTEM_FAIL = "Couldn't Create FMOD System Object!";

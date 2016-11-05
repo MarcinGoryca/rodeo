@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	Laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "..\include\renderer\gl\glrenderer.h"
 
 using namespace std;
-using namespace mona::core;
+using namespace laura::core;
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{
@@ -46,7 +46,7 @@ namespace mona
 			glewInit();
 			if (!GLEW_VERSION_3_0)
 			{
-				MessageBox(NULL, OPENGL_VERSION_NOT_SUPPORTED.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, OPENGL_VERSION_NOT_SUPPORTED.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 			//query_renderer_->run();
@@ -94,12 +94,12 @@ namespace mona
 		{
 			switch (type)
 			{
-			case gl::MONA_ORTHOGONAL:
+			case gl::LAURA_ORTHOGONAL:
 			{
 				enter2d();
 			}
 			break;
-			case gl::MONA_PERSPECTIVE:
+			case gl::LAURA_PERSPECTIVE:
 			{
 				enter3d();
 			}

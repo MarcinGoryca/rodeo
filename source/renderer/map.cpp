@@ -1,10 +1,10 @@
 #include "renderer\map.h"
 
-namespace mona
+namespace laura
 {
 namespace renderer
 {
 void Map::create(){}
 //-------------------------
 }    // end of renderer namespace
-}    // end of mona namespace
+}    // end of laura namespace

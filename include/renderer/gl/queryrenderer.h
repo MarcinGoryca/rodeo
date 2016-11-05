@@ -1,28 +1,28 @@
 ﻿/*
  |  ----------------------------------------------
- |    mona GAME ENGINE
- |    [ QueryRenderer.h ] [ mona\renderer\gl ]
+ |    laura GAME ENGINE
+ |    [ QueryRenderer.h ] [ laura\renderer\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MONA_RENDERER_QUERYRENDERER_H_
-#define MONA_RENDERER_QUERYRENDERER_H_
+#ifndef LAURA_RENDERER_QUERYRENDERER_H_
+#define LAURA_RENDERER_QUERYRENDERER_H_
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "glcommon.h"
 #endif
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MONA_CORE_RENDEREREXCEPTION_H_
+#ifndef LAURA_CORE_RENDEREREXCEPTION_H_
 #include "core\rendererexception.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

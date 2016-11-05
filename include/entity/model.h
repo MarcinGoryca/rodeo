@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Model.h ] [ mona\entity ]
+ |    laura GAME ENGINE
+ |    [ Model.h ] [ laura\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  | -----------------------------------
  */
 
-#ifndef MONA_ENTITY_MODEL_H_
-#define MONA_ENTITY_MODEL_H_
+#ifndef LAURA_ENTITY_MODEL_H_
+#define LAURA_ENTITY_MODEL_H_
 
-#ifndef MONA_ENTITY_MESH_H_
+#ifndef LAURA_ENTITY_MESH_H_
 #include "entity\mesh.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace entity
     {

@@ -1,15 +1,15 @@
 ﻿/*
 -----------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_EVENT_MOUSEEVENT_H_
-#define MONA_EVENT_MOUSEEVENT_H_
+#ifndef LAURA_EVENT_MOUSEEVENT_H_
+#define LAURA_EVENT_MOUSEEVENT_H_
 
-namespace mona
+namespace laura
 {
 namespace event
 {
@@ -49,5 +49,5 @@ public:
     virtual bool onMouseUp();
 };
 }    // end of event namespace
-}    // end of mona namespace
+}    // end of laura namespace
 #endif

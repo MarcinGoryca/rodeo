@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -11,7 +11,7 @@
 
 using namespace std;
 
-namespace mona
+namespace laura
 {
 namespace math
 {
@@ -343,4 +343,4 @@ Quaternion multiply(const Quaternion& q1, const Quaternion& q2)
     return result;
 }
 }    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace

@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,7 +9,7 @@
 #include <time.h>
 #include "tools\randomnumbergenerator.h"
 
-namespace mona
+namespace laura
 {
 	namespace tools
 	{

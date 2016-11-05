@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "entity\entity.h"
 
-using namespace mona::renderer;
+using namespace laura::renderer;
 //using namespace enginemath;
 //using namespace enginescene;
 
-namespace mona
+namespace laura
 {
 namespace entity
 {
@@ -98,4 +98,4 @@ void Entity::release()
 {
 }
 }    // end of entity namespace
-}    // end of mona namespace
+}    // end of laura namespace

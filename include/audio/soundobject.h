@@ -1,7 +1,7 @@
 ﻿/*
  |  --------------------------------------------------------
- |    mona GAME ENGINE
- |    [ SoundObject.h ] [ mona\audio ]
+ |    LAURA SOFTWARE
+ |    [ SoundObject.h ] [ laura\audio ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
@@ -39,26 +39,26 @@
  |  --------------------------------------------------------
  */
 
-#ifndef MONA_AUDIO_SOUNDOBJECT_H_
-#define MONA_AUDIO_SOUNDOBJECT_H_
+#ifndef LAURA_AUDIO_SOUNDOBJECT_H_
+#define LAURA_AUDIO_SOUNDOBJECT_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-#ifndef MONA_FMOD_FMOD_HPP_
+#ifndef LAURA_FMOD_FMOD_HPP_
 #include "fmod\fmod.hpp"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace audio
 	{
-		class SoundObject : public mona::entity::Entity
+		class SoundObject : public laura::entity::Entity
 		{
 		public:
 			SoundObject()

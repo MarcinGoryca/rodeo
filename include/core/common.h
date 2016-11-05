@@ -1,14 +1,14 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Common.h ] [ mona\core ]
+ |    laura GAME ENGINE
+ |    [ Common.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |   http://marcingoryca.pl
  |  -----------------------------------
  */
-#ifndef MONA_CORE_COMMON_H_
-#define MONA_CORE_COMMON_H_
+#ifndef LAURA_CORE_COMMON_H_
+#define LAURA_CORE_COMMON_H_
 
 
 #include <windows.h>

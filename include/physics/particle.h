@@ -1,15 +1,15 @@
 /*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_PHYSICS_PARTICLE_H_
-#define MONA_PHYSICS_PARTICLE_H_
+#ifndef LAURA_PHYSICS_PARTICLE_H_
+#define LAURA_PHYSICS_PARTICLE_H_
 
-namespace mona
+namespace laura
 {
 	namespace physics
 	{

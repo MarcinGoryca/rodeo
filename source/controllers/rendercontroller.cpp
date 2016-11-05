@@ -1,6 +1,6 @@
 /*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "controllers\rendercontroller.h"
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{
@@ -17,15 +17,15 @@ namespace mona
 		{
 			switch (renderer)
 			{
-			case MONA_DX:
+			case LAURA_DX:
 			{
-				_renderer = new mona::renderer::DxRenderer;
+				_renderer = new laura::renderer::DxRenderer;
 			}
 			break;
 
-			case MONA_GL:
+			case LAURA_GL:
 			{
-				_renderer = new mona::renderer::GLRenderer;
+				_renderer = new laura::renderer::GLRenderer;
 			}
 			break;
 			}

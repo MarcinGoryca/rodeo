@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,10 +9,10 @@
 #include "io\filetga.h"
 
 using namespace std;
-using namespace mona::core;
-using namespace mona::renderer;
+using namespace laura::core;
+using namespace laura::renderer;
 
-namespace mona
+namespace laura
 {
 	namespace io
 	{
@@ -26,7 +26,7 @@ namespace mona
 
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, TGA_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, TGA_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 			return true;
@@ -79,7 +79,7 @@ namespace mona
 		{
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, TGA_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, TGA_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 

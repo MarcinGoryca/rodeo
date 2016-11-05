@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ MasterController.h ] [ mona\ controllers ]
+ |    laura GAME ENGINE
+ |    [ MasterController.h ] [ laura\ controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CORE_MASTERCONTROLLER_H
-#define MONA_CORE_MASTERCONTROLLER_H
+#ifndef LAURA_CORE_MASTERCONTROLLER_H
+#define LAURA_CORE_MASTERCONTROLLER_H
 
-#ifndef MONA_CORE_COMMON_H_
+#ifndef LAURA_CORE_COMMON_H_
 #include "core\common.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{

@@ -1,23 +1,23 @@
 ﻿/*
 -----------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 -----------------------------------
 */
-#ifndef MONA_IO_FILE3DFACTORY_H_
-#define MONA_IO_FILE3DFACTORY_H_
+#ifndef LAURA_IO_FILE3DFACTORY_H_
+#define LAURA_IO_FILE3DFACTORY_H_
 
-#ifndef MONA_IO_FILE3DS_H_
+#ifndef LAURA_IO_FILE3DS_H_
 #include "io\file3ds.h"
 #endif
 
-#ifndef MONA_IO_FILEFBX_H_
+#ifndef LAURA_IO_FILEFBX_H_
 #include "io\filefbx.h"
 #endif
 
-namespace mona
+namespace laura
 {
 namespace io
 {
@@ -32,9 +32,9 @@ public:
 
     enum File3DType
     {
-        MONA_FILE_3DS,
-        MONA_FILE_FBX,
-		MONA_FILE_OBJ
+        LAURA_FILE_3DS,
+        LAURA_FILE_FBX,
+		LAURA_FILE_OBJ
     };
 
     static Importer* create(File3DType type);

@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "event\event.h"
 
-namespace mona
+namespace laura
 {
 namespace event
 {
@@ -47,4 +47,4 @@ void Event::removedFromScene()
 {
 }
 }    // end of event namespace
-}    // end of mona namespace
+}    // end of laura namespace

@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -10,9 +10,9 @@
 #include "..\include\math\matrix4.h"
 
 using namespace std;
-using namespace mona::core;
+using namespace laura::core;
 
-namespace mona
+namespace laura
 {
 namespace math
 {
@@ -124,4 +124,4 @@ void printM4(const Matrix4& m)
     std::cout << "\n";
 }
 }    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace

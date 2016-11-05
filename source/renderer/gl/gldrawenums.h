@@ -1,17 +1,17 @@
 //#pragma once
 //
-//#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+//#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 //#include "renderer\gl\glcommon.h"
 //#endif
 //
-//namespace mona {
+//namespace laura {
 //    namespace renderer {
 //        /*enum Primitives {
-//            monaPOINTS = GL_POINTS,
-//            monaLINES = GL_LINES,
-//            monaLINESTRIP = GL_LINE_STRIP,
-//            monaLINELOOP = GL_LINE_LOOP,
-//            monaTRIANGLES = GL_TRIANGLES,
+//            lauraPOINTS = GL_POINTS,
+//            lauraLINES = GL_LINES,
+//            lauraLINESTRIP = GL_LINE_STRIP,
+//            lauraLINELOOP = GL_LINE_LOOP,
+//            lauraTRIANGLES = GL_TRIANGLES,
 //            GL_TRIANGLE_STRIP,
 //            GL_TRIANGLE_FAN
 //        };*/
@@ -62,4 +62,4 @@
 //        };
 //    }   // end of renderer namespace
 //
-//}   // end of mona namespace
+//}   // end of laura namespace

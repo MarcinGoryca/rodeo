@@ -1,23 +1,23 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_RENDERER_LIGHT_H_
-#define MONA_RENDERER_LIGHT_H_
+#ifndef LAURA_RENDERER_LIGHT_H_
+#define LAURA_RENDERER_LIGHT_H_
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "gl\glcommon.h"
 #endif
 
-#ifndef MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
 #include "entity\entity.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{
@@ -30,14 +30,14 @@ namespace mona
 
 			enum Lights
 			{
-				MONA_LIGHT_0 = GL_LIGHT0,
-				MONA_LIGHT_1 = GL_LIGHT1,
-				MONA_LIGHT_2 = GL_LIGHT2,
-				MONA_LIGHT_3 = GL_LIGHT3,
-				MONA_LIGHT_4 = GL_LIGHT4,
-				MONA_LIGHT_5 = GL_LIGHT5,
-				MONA_LIGHT_6 = GL_LIGHT6,
-				MONA_LIGHT_7 = GL_LIGHT7
+				LAURA_LIGHT_0 = GL_LIGHT0,
+				LAURA_LIGHT_1 = GL_LIGHT1,
+				LAURA_LIGHT_2 = GL_LIGHT2,
+				LAURA_LIGHT_3 = GL_LIGHT3,
+				LAURA_LIGHT_4 = GL_LIGHT4,
+				LAURA_LIGHT_5 = GL_LIGHT5,
+				LAURA_LIGHT_6 = GL_LIGHT6,
+				LAURA_LIGHT_7 = GL_LIGHT7
 			};
 
 			// For OpenGL it calls glEnable(GL_LIGHTING) 

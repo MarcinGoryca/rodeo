@@ -1,6 +1,6 @@
 ﻿///*
 //----------------------------------------------
-//    mona Game Engine
+//    laura Game Engine
 //    Copyright(c) Marcin Goryca
 //    marcin.goryca@gmail.com
 //    http://marcingoryca.pl
@@ -9,9 +9,9 @@
 //#include "renderer\gl\queryrenderer.h"
 //
 //using namespace std;
-//using namespace mona::core;
+//using namespace laura::core;
 //
-//namespace mona 
+//namespace laura 
 //{
 //namespace renderer
 //{
@@ -84,4 +84,4 @@
 //    }
 //}
 //}    // end of renderer namespace
-//}    // end of mona namespace
+//}    // end of laura namespace

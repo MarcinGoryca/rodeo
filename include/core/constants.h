@@ -1,25 +1,25 @@
 ﻿/*
  |  -----------------------------------
- |    MONA
- |    [ Constants.h ] [ mona\core ]
+ |    LAURA
+ |    [ Constants.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CORE_CONSTANTS_H_
-#define MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
+#define LAURA_CORE_CONSTANTS_H_
 
-#ifndef MONA_COMMON_H_
+#ifndef LAURA_COMMON_H_
 #include "common.h"
 #endif
 
-#ifndef MONA_RENDERER_COLORS_H_
+#ifndef LAURA_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace core
 	{
@@ -39,20 +39,20 @@ namespace mona
 		 |    MATH
 		 |  -----------------
 		 */
-		const float MONA_ONE = 1.0f;
-		const float MONA_ZERO = 0.0f;
-		const float MONA_HALF = 0.5f;
-		const float MONA_NEGATIVE_ONE = -1.0f;
-		const float MONA_PI = 3.14159265f;
-		const float MONA_TWOPI = 6.2831852f;
-		const float MONA_HALFPI = 1.5707963f;
-		const float MONA_ONEBYPI = 1.0f / MONA_PI;
-		const float MONA_ONEBY2PI = 1.0f / MONA_TWOPI;
-		const unsigned int MONA_FULL_CIRCLE = 360;
+		const float LAURA_ONE = 1.0f;
+		const float LAURA_ZERO = 0.0f;
+		const float LAURA_HALF = 0.5f;
+		const float LAURA_NEGATIVE_ONE = -1.0f;
+		const float LAURA_PI = 3.14159265f;
+		const float LAURA_TWOPI = 6.2831852f;
+		const float LAURA_HALFPI = 1.5707963f;
+		const float LAURA_ONEBYPI = 1.0f / LAURA_PI;
+		const float LAURA_ONEBY2PI = 1.0f / LAURA_TWOPI;
+		const unsigned int LAURA_FULL_CIRCLE = 360;
 
 		// DEGREE - Degrees From Radians [180 / PI] 
-		const float MONA_DEGREE = 57.2957f;
-		const float MONA_RADIAN = 0.01745f;
+		const float LAURA_DEGREE = 57.2957f;
+		const float LAURA_RADIAN = 0.01745f;
 
 
 

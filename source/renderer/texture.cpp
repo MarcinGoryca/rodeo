@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "renderer\texture.h"
 
 using namespace std;
-using namespace mona::core;
+using namespace laura::core;
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

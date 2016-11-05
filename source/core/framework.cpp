@@ -1,33 +1,33 @@
 ﻿/*
  | ----------------------------------------------
- |   mona Game Engine
+ |   laura Game Engine
  |   Copyright(c) Marcin Goryca
  |   marcin.goryca@gmail.com
  |   http://marcingoryca.pl
  | ----------------------------------------------
  */
 #include "core\framework.h"
-using namespace mona::controllers;
+using namespace laura::controllers;
 
-namespace mona
+namespace laura
 {
 	namespace core
 	{
 		LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		{
-			static Framework* MONA_engine = 0;
+			static Framework* LAURA_engine = 0;
 
 			switch (msg)
 			{
 			case WM_CREATE:
 			{
 				CREATESTRUCT* cs = (CREATESTRUCT*)lparam;
-				MONA_engine = (Framework*)cs->lpCreateParams;
+				LAURA_engine = (Framework*)cs->lpCreateParams;
 				return 0;
 			}
 			}
-			if (MONA_engine)
-				return MONA_engine->messageProcessor(msg, wparam, lparam);
+			if (LAURA_engine)
+				return LAURA_engine->messageProcessor(msg, wparam, lparam);
 			else
 				return DefWindowProc(hwnd, msg, wparam, lparam);
 		}
@@ -60,12 +60,12 @@ namespace mona
 
 			if (_use_gl)
 			{
-				_render_controller = std::unique_ptr<RenderController>(new RenderController(MONA_GL));
+				_render_controller = std::unique_ptr<RenderController>(new RenderController(LAURA_GL));
 				createGLContext(GetDC(getHwnd()));
 			}
 			if (_use_dx)
 			{
-				_render_controller = std::unique_ptr<RenderController>(new RenderController(MONA_DX));
+				_render_controller = std::unique_ptr<RenderController>(new RenderController(LAURA_DX));
 				_render_controller->getRenderer()->setHWND(getHwnd());
 			}
 
@@ -223,7 +223,7 @@ namespace mona
 
 			case WM_MOUSELEAVE:
 			{
-				MessageBox(NULL, L"Mouse outside the framework!", MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Mouse outside the framework!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 			}
 			break;
 
@@ -376,7 +376,7 @@ namespace mona
 
 			if (!EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm))
 			{
-				MessageBox(NULL, L"Couldn't Enum Display Settings", MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Couldn't Enum Display Settings", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 
@@ -391,7 +391,7 @@ namespace mona
 
 			if (result != DISP_CHANGE_SUCCESSFUL)
 			{
-				MessageBox(NULL, L"Display Mode Not Compatible", MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Display Mode Not Compatible", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				onDestroy();
 			}
 		}
@@ -425,13 +425,13 @@ namespace mona
 
 			if (!pixelFormat)
 			{
-				MessageBox(NULL, L"Choose PixelFormat FAIL!", MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Choose PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 
 			if (!SetPixelFormat(hdc, pixelFormat, &pfd))
 			{
-				MessageBox(NULL, L"Set PixelFormat FAIL!", MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, L"Set PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 		}

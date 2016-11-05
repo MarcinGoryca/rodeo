@@ -1,25 +1,25 @@
 /*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Window.h ] [ mona\core ]
+ |    laura GAME ENGINE
+ |    [ Window.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CORE_WINDOW_H_
-#define MONA_CORE_WINDOW_H_
+#ifndef LAURA_CORE_WINDOW_H_
+#define LAURA_CORE_WINDOW_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "..\renderer\gl\glcommon.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace core
     {
@@ -39,7 +39,7 @@ namespace mona
                 exstyles_(-1),
                 fullscreen_(false),
                 window_classname_(L"engine"),
-                windowname_(L"mona Game Engine")
+                windowname_(L"laura Game Engine")
             {
             }
 
@@ -212,5 +212,5 @@ namespace mona
             std::wstring windowname_;
         };
     }    // end of core namespace
-}    // end of mona namespace
+}    // end of laura namespace
 #endif

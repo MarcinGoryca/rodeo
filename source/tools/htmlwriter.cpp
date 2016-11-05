@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,9 +9,9 @@
 #include "tools\htmlwriter.h"
 
 using namespace std;
-using namespace mona::core;
+using namespace laura::core;
 
-namespace mona
+namespace laura
 {
 	namespace tools
 	{
@@ -29,7 +29,7 @@ namespace mona
 
 			if (_hfile == INVALID_HANDLE_VALUE)
 			{
-				MessageBox(NULL, HTMLFILE_LOAD_FAIL.c_str(), MONA_HEADER.c_str(), ERR_ICON_OK);
+				MessageBox(NULL, HTMLFILE_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return false;
 			}
 			return true;

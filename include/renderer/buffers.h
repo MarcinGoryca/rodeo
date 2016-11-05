@@ -1,28 +1,28 @@
 ﻿/*
  |  ----------------------------------------------
- |    mona GAME ENGINE
- |    [ Buffers.h ] [ mona\renderer ]
+ |    laura GAME ENGINE
+ |    [ Buffers.h ] [ laura\renderer ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MONA_RENDERER_BUFFERS_H_
-#define MONA_RENDERER_BUFFERS_H_
+#ifndef LAURA_RENDERER_BUFFERS_H_
+#define LAURA_RENDERER_BUFFERS_H_
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "renderer\gl\glcommon.h"
 #endif
 
-#ifndef MONA_ENTITY_MODEL_H_
+#ifndef LAURA_ENTITY_MODEL_H_
 #include "entity\model.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

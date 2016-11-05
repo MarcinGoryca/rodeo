@@ -1,33 +1,33 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ FontController.h ] [ mona\controllers ]
+ |    LAURA SOFTWARE
+ |    [ FontController.h ] [ laura\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
-#ifndef MONA_CORE_FONTCONTROLLER_H_
-#define MONA_CORE_FONTCONTROLLER_H_
+#ifndef LAURA_CORE_FONTCONTROLLER_H_
+#define LAURA_CORE_FONTCONTROLLER_H_
 
-#ifndef MONA_RENDERER_FONT_H_
+#ifndef LAURA_RENDERER_FONT_H_
 #include "renderer\font.h"
 #endif
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\Singleton.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{
-		class FontController : public mona::core::Singleton<FontController>, public MasterController
+		class FontController : public laura::core::Singleton<FontController>, public MasterController
 		{
 		public:
 			FontController() {}
@@ -38,11 +38,11 @@ namespace mona
 			}
 
 			// Gets Font object pointer
-			mona::renderer::Font* getFont() const { return _font; }
+			laura::renderer::Font* getFont() const { return _font; }
 
 
 		private:
-			mona::renderer::Font* _font;
+			laura::renderer::Font* _font;
 
 			void init();
 			void clear();

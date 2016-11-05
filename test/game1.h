@@ -1,8 +1,8 @@
-#include "mona.h"
+#include "laura.h"
 
 
 
-class Game1 : public mona::core::Framework
+class Game1 : public laura::core::Framework
 {
 public:
 	Game1() {}

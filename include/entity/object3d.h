@@ -3,7 +3,7 @@
 //	{Object3D.h}
 //	Rodeo Renderer header file
 //	Copyright(c)2010-2011 Marcin Goryca
-//	http://rodeo.monadev.pl
+//	http://rodeo.lauradev.pl
 //	Rodeo Game Engine Module
 //============================================================================================================================================
 //*/
@@ -35,7 +35,7 @@
 //	virtual void setColor(Colors& rgb);
 //
 //	void setTexture(const char* texture_filename);
-//	//enginecore::TextureManager texturemonar_;
+//	//enginecore::TextureManager texturelaurar_;
 //protected:	
 //	Model3D model3d_;
 //	const char* file_;

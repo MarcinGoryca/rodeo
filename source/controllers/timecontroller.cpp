@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -9,13 +9,13 @@
 #include "core\timer.h"
 #include "controllers\timecontroller.h"
 
-namespace mona
+namespace laura
 {
 	namespace controllers
 	{
 		void TimeController::init()
 		{
-			_time = new mona::core::Timer;
+			_time = new laura::core::Timer;
 		}
 
 		//--------------------------------------------------------------------------------------------------

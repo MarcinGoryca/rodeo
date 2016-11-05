@@ -1,19 +1,19 @@
 /*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_MATH_VECTOR2_H_
-#define MONA_MATH_VECTOR2_H_
+#ifndef LAURA_MATH_VECTOR2_H_
+#define LAURA_MATH_VECTOR2_H_
 
-#ifndef MONA_MATH_MATHTOOLS_H_
+#ifndef LAURA_MATH_MATHTOOLS_H_
 #include "mathtools.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace math
 	{
@@ -325,5 +325,5 @@ namespace mona
 		 */
 		Vector2 subtract(const Vector2& v1, const Vector2& v2);
 	}    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace
 #endif

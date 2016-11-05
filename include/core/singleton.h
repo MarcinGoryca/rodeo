@@ -1,7 +1,7 @@
 ﻿/*
  |  -----------------------------------
- |     mona GAME ENGINE
- |     [ Singleton.h ] [ mona\core ]
+ |     laura GAME ENGINE
+ |     [ Singleton.h ] [ laura\core ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -30,10 +30,10 @@
  |-----------------------------------------
  */
 
-#ifndef MONA_CORE_SINGLETON_H_
-#define MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
+#define LAURA_CORE_SINGLETON_H_
 
-namespace mona
+namespace laura
 {
     namespace core
     {

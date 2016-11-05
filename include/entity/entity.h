@@ -1,37 +1,37 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Entity.h ] [ mona\entity ]
+ |    laura GAME ENGINE
+ |    [ Entity.h ] [ laura\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_ENTITY_ENTITY_H_
-#define MONA_ENTITY_ENTITY_H_
+#ifndef LAURA_ENTITY_ENTITY_H_
+#define LAURA_ENTITY_ENTITY_H_
 
-#ifndef MONA_ENTITY_OBJECT_H_
+#ifndef LAURA_ENTITY_OBJECT_H_
 #include "object.h"
 #endif
 
-#ifndef MONA_RENDERER_GL_GLLIBRARY_H_
+#ifndef LAURA_RENDERER_GL_GLLIBRARY_H_
 #include "renderer\gl\gllibrary.h"
 #endif
 
-#ifndef MONA_RENDERER_MATERIAL_H_
+#ifndef LAURA_RENDERER_MATERIAL_H_
 #include "renderer\material.h"
 #endif
 
-#ifndef MONA_MATH_AABB_H_
+#ifndef LAURA_MATH_AABB_H_
 #include "math\aabb.h"
 #endif
 
-#ifndef MONA_MATH_TRANSFORM_H_
+#ifndef LAURA_MATH_TRANSFORM_H_
 #include "math\transform.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace entity
     {
@@ -80,7 +80,7 @@ namespace mona
 			 |    Returns AABB object
 			 | ------------------------------------------------
 			 */
-			mona::math::AABB getAabb() const
+			laura::math::AABB getAabb() const
 			{
 				return _box;
 			}
@@ -90,7 +90,7 @@ namespace mona
 			 |    Get Transform object
 			 | ------------------------------------------------
 			 */
-			mona::math::Transform getTransform() const
+			laura::math::Transform getTransform() const
 			{
 				return _transform;
 			}
@@ -111,7 +111,7 @@ namespace mona
 			 |    Set AABB box
 			 | ------------------------------------------------
 			 */
-			void setAabb(mona::math::AABB box)
+			void setAabb(laura::math::AABB box)
 			{
 				_box = box;
 			}
@@ -121,7 +121,7 @@ namespace mona
 			 |    Set Transform
 			 | ------------------------------------------------
 			 */
-			void setTransform(mona::math::Transform transform)
+			void setTransform(laura::math::Transform transform)
 			{
 				_transform = transform;
 			}
@@ -138,9 +138,9 @@ namespace mona
 
         protected:
             //enginerenderer::Material material_;
-            mona::math::AABB _box;
+            laura::math::AABB _box;
 
-            mona::math::Transform _transform;
+            laura::math::Transform _transform;
             bool _renderable;
 
             // Copy Constructor

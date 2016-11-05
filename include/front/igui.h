@@ -1,15 +1,15 @@
 /*
  | -----------------------------------
- |    mona Game Engine
+ |    laura Game Engine
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  | -----------------------------------
  */
-#ifndef MONA_FRONTEND_IGUI_H_
-#define MONA_FRONTEND_IGUI_H_
+#ifndef LAURA_FRONTEND_IGUI_H_
+#define LAURA_FRONTEND_IGUI_H_
 
-namespace mona
+namespace laura
 {
 namespace front
 {
@@ -20,5 +20,5 @@ public:
     virtual ~IGui(){}
 };
 }    // end of front namespace
-}    // end of mona namespace
+}    // end of laura namespace
 #endif

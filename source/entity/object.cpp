@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -10,9 +10,9 @@
 #include "event\event.h"
 
 using namespace std;
-using namespace mona::core;
+using namespace laura::core;
 
-namespace mona 
+namespace laura 
 {
 namespace entity
 {
@@ -157,4 +157,4 @@ Object::Object(Object& copy)
 //    }
 //}
 }    // end of entity namespace
-}    // end of mona namespace
+}    // end of laura namespace

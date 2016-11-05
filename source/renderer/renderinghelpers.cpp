@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -9,7 +9,7 @@
 #include "renderer\renderinghelpers.h"
 #include "renderer\colors.h"
 
-namespace mona
+namespace laura
 {
 namespace renderer
 {
@@ -28,4 +28,4 @@ void RenderingHelpers::drawLine(float* start, float* end, Colors rgb)
     //glEnd();
 }
 }    // end of renderer namespace
-}    // end of mona namespace
+}    // end of laura namespace

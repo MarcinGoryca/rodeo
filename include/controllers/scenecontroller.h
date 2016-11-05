@@ -1,29 +1,29 @@
 ﻿/*
  |  -----------------------------------
- |     mona GAME ENGINE
- |     [ SceneController.h ] [ mona\controllers ]
+ |     laura GAME ENGINE
+ |     [ SceneController.h ] [ laura\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CONTROLLERS_SCENECONTROLLER_H_
-#define MONA_CONTROLLERS_SCENECONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_SCENECONTROLLER_H_
+#define LAURA_CONTROLLERS_SCENECONTROLLER_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
-#ifndef MONA_SCENE_SCENE_H_
+#ifndef LAURA_SCENE_SCENE_H_
 #include "scene\scene.h"
 #endif
 
@@ -32,11 +32,11 @@
 #include <list>
 #endif    //LIST_H_
 */
-namespace mona
+namespace laura
 {
     namespace controllers
     {
-        class SceneController : public mona::core::Singleton<SceneController>, public MasterController
+        class SceneController : public laura::core::Singleton<SceneController>, public MasterController
         {
         public:
             SceneController()

@@ -1,15 +1,15 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_RENDERER_MATERIAL_H_
-#define MONA_RENDERER_MATERIAL_H_
+#ifndef LAURA_RENDERER_MATERIAL_H_
+#define LAURA_RENDERER_MATERIAL_H_
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

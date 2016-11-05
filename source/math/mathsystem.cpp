@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
@@ -8,7 +8,7 @@
 */
 #include "math\mathsystem.h"
 
-namespace mona
+namespace laura
 {
 namespace math
 {
@@ -39,4 +39,4 @@ void MathSystem::init()
     runGenerator();
 }
 }    // end of math namespace
-}    // end of mona namespace
+}    // end of laura namespace

@@ -1,29 +1,29 @@
 /*
  |  -----------------------------------
- |     mona Game Engine
- |     [ ShadersController.h ] [ mona\controllers ]
+ |     laura Game Engine
+ |     [ ShadersController.h ] [ laura\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_CONTROLLERS_SHADERSCONTROLLER_H_
-#define MONA_CONTROLLERS_SHADERSCONTROLLER_H_
+#ifndef LAURA_CONTROLLERS_SHADERSCONTROLLER_H_
+#define LAURA_CONTROLLERS_SHADERSCONTROLLER_H_
 
  //#include <string>
 
-#ifndef MONA_RENDERER_GL_GLSLSHADERS_H_
+#ifndef LAURA_RENDERER_GL_GLSLSHADERS_H_
 #include "renderer\gl\glslshaders.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace controllers
     {
 		enum ShadersVendor
 		{
-			MONA_GLSL
+			LAURA_GLSL
 		};
 
         class ShadersController
@@ -51,8 +51,8 @@ namespace mona
             // Inits Shaders
             void init();
         public:
-            std::unique_ptr<mona::renderer::IShaders> _shader;
-            std::unique_ptr<mona::renderer::GLSLShaders> _glsl_shader;
+            std::unique_ptr<laura::renderer::IShaders> _shader;
+            std::unique_ptr<laura::renderer::GLSLShaders> _glsl_shader;
         };
     }
 }

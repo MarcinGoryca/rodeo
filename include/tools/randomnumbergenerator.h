@@ -1,6 +1,6 @@
 ﻿/*
 -----------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -19,8 +19,8 @@
 	unsigned int a = r.Random(1000) //returns a number from 0 - 999
 --------------------------------------------------------------------------
 */
-#ifndef MONA_TOOLS_RANDOMNUMBERGENERATOR_H_
-#define MONA_TOOLS_RANDOMNUMBERGENERATOR_H_
+#ifndef LAURA_TOOLS_RANDOMNUMBERGENERATOR_H_
+#define LAURA_TOOLS_RANDOMNUMBERGENERATOR_H_
 
 #define CMATH_N 624
 #define CMATH_M 397
@@ -35,7 +35,7 @@
 #define CMATH_TEMPERING_SHIFT_T(y) (y << 15)
 #define CMATH_TEMPERING_SHIFT_L(y) (y >> 18)
 
-namespace mona
+namespace laura
 {
 	namespace tools
 	{

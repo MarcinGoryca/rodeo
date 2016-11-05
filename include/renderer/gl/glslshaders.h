@@ -1,24 +1,24 @@
 /*
  |  ----------------------------------------------
- |    mona GAME ENGINE
- |    [ GLSLShaders.h ] [ mona\renderere\gl ]
+ |    laura GAME ENGINE
+ |    [ GLSLShaders.h ] [ laura\renderere\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MONA_RENDERER_GLSLSHADERS_H_
-#define MONA_RENDERER_GLSLSHADERS_H_
+#ifndef LAURA_RENDERER_GLSLSHADERS_H_
+#define LAURA_RENDERER_GLSLSHADERS_H_
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "glcommon.h"
 #endif
 
-#ifndef MONA_RENDERER_ISHADERS_H_
+#ifndef LAURA_RENDERER_ISHADERS_H_
 #include "renderer\ishaders.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{
@@ -35,7 +35,7 @@ namespace mona
 			 |  ----------------------------------------------------
 			 |    Loads Shader from File
 			 |    Parameter const char* string of shader filename
-			 |    Parameter ShaderType - MONA_VS, MONA_FS
+			 |    Parameter ShaderType - LAURA_VS, LAURA_FS
 			 |    Returns unsigned int shader program id
 			 |  ----------------------------------------------------
 			 */

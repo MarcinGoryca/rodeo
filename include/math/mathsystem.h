@@ -1,31 +1,31 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_MATH_MATHSYSTEM_H_
-#define MONA_MATH_MATHSYSTEM_H_
+#ifndef LAURA_MATH_MATHSYSTEM_H_
+#define LAURA_MATH_MATHSYSTEM_H_
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_MATH_MATHTOOLS_H_
+#ifndef LAURA_MATH_MATHTOOLS_H_
 #include "math\mathtools.h"
 #endif
 
-#ifndef MONA_TOOLS_RANDOMNUMBERGENERATOR_H_
+#ifndef LAURA_TOOLS_RANDOMNUMBERGENERATOR_H_
 #include "tools\randomnumbergenerator.h"
 #endif
 
-namespace mona
+namespace laura
 {
 namespace math
 {
-class MathSystem : public mona::core::Singleton<MathSystem>
+class MathSystem : public laura::core::Singleton<MathSystem>
 {
 public:
     MathSystem()
@@ -36,7 +36,7 @@ public:
     ~MathSystem(){}
 
     // Gets the random number
-    mona::tools::CRandom getRandomNumber() const { return _random_number; }
+    laura::tools::CRandom getRandomNumber() const { return _random_number; }
 
     // Gets specified member of sinus table
     // Returns float value of specified index from sinus table
@@ -48,13 +48,13 @@ public:
 
 private:
 	// Random Number
-	mona::tools::CRandom _random_number;
+	laura::tools::CRandom _random_number;
 
 	// Full Sinus Table
-	float _sinus_table[mona::core::MONA_FULL_CIRCLE];
+	float _sinus_table[laura::core::LAURA_FULL_CIRCLE];
 
 	// Full Sosinus Table
-	float _cosinus_table[mona::core::MONA_FULL_CIRCLE];
+	float _cosinus_table[laura::core::LAURA_FULL_CIRCLE];
     // Runs Random Number Generator (Mersenne Twister)
     void runGenerator();
     void init();
@@ -62,5 +62,5 @@ private:
 
 };
 }    // end of math namespace
-}    // end of mona namespace
-#endif    //MONA_MATH_MATHSYSTEM_H_
+}    // end of laura namespace
+#endif    //LAURA_MATH_MATHSYSTEM_H_

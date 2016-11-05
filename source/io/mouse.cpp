@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -10,7 +10,7 @@
 
 //using namespace enginecore;
 
-namespace mona
+namespace laura
 {
 	namespace io
 	{

@@ -1,23 +1,23 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_MATH_RAY_H_
-#define MONA_MATH_RAY_H_
+#ifndef LAURA_MATH_RAY_H_
+#define LAURA_MATH_RAY_H_
 
-#ifndef MONA_MATH_MATRIX3_H_
+#ifndef LAURA_MATH_MATRIX3_H_
 #include "math\matrix3.h"
 #endif
 
-#ifndef MONA_MATH_VECTOR4_H_
+#ifndef LAURA_MATH_VECTOR4_H_
 #include "math\vector4.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace math
 	{

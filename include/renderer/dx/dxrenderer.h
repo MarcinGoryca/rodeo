@@ -1,32 +1,32 @@
 //----------------------------------------------
-//    mona Game Engine
+//    laura Game Engine
 //    Copyright(c) Marcin Goryca
 //    marcin.goryca@gmail.com
 //    http://marcingoryca.pl
 //----------------------------------------------
 
-#ifndef MONA_RENDERER_DXRENDERER_H_
-#define MONA_RENDERER_DXRENDERER_H_
+#ifndef LAURA_RENDERER_DXRENDERER_H_
+#define LAURA_RENDERER_DXRENDERER_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_CORE_EXCEPTION_H_
+#ifndef LAURA_CORE_EXCEPTION_H_
 #include "core\exception.h"
 #endif
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_RENDERER_IRENDERER_H_
+#ifndef LAURA_RENDERER_IRENDERER_H_
 #include "renderer\irenderer.h"
 #endif
 
 #include <D3DX10.h>
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{

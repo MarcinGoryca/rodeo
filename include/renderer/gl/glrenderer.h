@@ -5,45 +5,45 @@
 
 /*
  |  ----------------------------------------------
- |    mona Game Engine
+ |    laura Game Engine
  |    [ GLRenderer.h ] / [ renderer/gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  ----------------------------------------------
  */
-#ifndef MONA_RENDERER_GLRENDERER_H_
-#define MONA_RENDERER_GLRENDERER_H_
+#ifndef LAURA_RENDERER_GLRENDERER_H_
+#define LAURA_RENDERER_GLRENDERER_H_
 
-#ifndef MONA_CORE_ERROR_H_
+#ifndef LAURA_CORE_ERROR_H_
 #include "core\error.h"
 #endif
 
-#ifndef MONA_CORE_EXCEPTION_H_
+#ifndef LAURA_CORE_EXCEPTION_H_
 #include "core\exception.h"
 #endif
 
-#ifndef MONA_CORE_SINGLETON_H_
+#ifndef LAURA_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef MONA_MATH_MATRIX4_H_
+#ifndef LAURA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-#ifndef MONA_RENDERER_GL_GLCOMMON_H_
+#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
 #include "renderer\gl\glcommon.h"
 #endif
 
-#ifndef MONA_RENDERERGL_GL_QUERYRENDERER_H_
+#ifndef LAURA_RENDERERGL_GL_QUERYRENDERER_H_
 #include "renderer\gl\queryrenderer.h"
 #endif
 
-#ifndef MONA_RENDERER_IRENDERER_H_
+#ifndef LAURA_RENDERER_IRENDERER_H_
 #include "renderer\irenderer.h"
 #endif
 
-namespace mona
+namespace laura
 {
 	namespace renderer
 	{
@@ -85,7 +85,7 @@ namespace mona
 			 |    Parameter g - green value of the color [range 0.0f - 1.0f]
 			 |    Parameter b - blue value of the color [range 0.0f - 1.0f]
 			 |    Use it to Change Background Color of the rendering window
-			 |    Using Colors from mona
+			 |    Using Colors from laura
 			 |    backColor(darkgreen, 1.0f)
 			 |    You must specify your alfa argument [range 0.0f[transparent] - 1.0f[opacity]]
 			 |    Colors in float manner are defined with only three values red, green, blue
@@ -188,7 +188,7 @@ namespace mona
 			/*
 			|  ------------------------------------------
 			|    Calls glClearColor(r, g, b, a)
-			|    In mona it's value is glClearColor(black, 1.0) but it is NOT called!
+			|    In laura it's value is glClearColor(black, 1.0) but it is NOT called!
 			|  -------------------------------------------
 			*/
 			bool initGL();

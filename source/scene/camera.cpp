@@ -1,6 +1,6 @@
 ﻿/*
 ----------------------------------------------
-	mona Game Engine
+	laura Game Engine
 	Copyright(c) Marcin Goryca
 	marcin.goryca@gmail.com
 	http://marcingoryca.pl
@@ -8,11 +8,11 @@
 */
 #include "scene\Camera.h"
 
-using namespace mona::math;
+using namespace laura::math;
 //using namespace core;
 //using namespace scene;
 
-namespace mona
+namespace laura
 {
 	namespace scene
 	{

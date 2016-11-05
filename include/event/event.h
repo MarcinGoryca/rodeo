@@ -1,21 +1,21 @@
 ﻿/*
  |  -----------------------------------
- |    mona GAME ENGINE
- |    [ Event.h ] [ mona\event ]
+ |    laura GAME ENGINE
+ |    [ Event.h ] [ laura\event ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl
  |  -----------------------------------
  */
 
-#ifndef MONA_EVENT_EVENT_H_
-#define MONA_EVENT_EVENT_H_
+#ifndef LAURA_EVENT_EVENT_H_
+#define LAURA_EVENT_EVENT_H_
 
-#ifndef MONA_CORE_CONSTANTS_H_
+#ifndef LAURA_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace mona
+namespace laura
 {
     namespace event
     {

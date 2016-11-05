@@ -1,27 +1,27 @@
 ﻿/*
 ----------------------------------------------
-    mona Game Engine
+    laura Game Engine
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl
 ----------------------------------------------
 */
-#ifndef MONA_MATH_EULERANGLES_H_
-#define MONA_MATH_EULERANGLES_H_
+#ifndef LAURA_MATH_EULERANGLES_H_
+#define LAURA_MATH_EULERANGLES_H_
 
-#ifndef MONA_MATH_MATHTOOLS_H_
+#ifndef LAURA_MATH_MATHTOOLS_H_
 #include "math\mathtools.h"
 #endif
 
-#ifndef MONA_MATH_QUATERNION_H_
+#ifndef LAURA_MATH_QUATERNION_H_
 #include "math\quaternion.h"
 #endif
 
-#ifndef MONA_MATH_MATRIX4_H_
+#ifndef LAURA_MATH_MATRIX4_H_
 #include "math\matrix4.h"
 #endif
 
-namespace mona
+namespace laura
 {
 namespace math
 {
