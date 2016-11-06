@@ -273,6 +273,7 @@
     <ClCompile Include="source\tools\xmlparser.cpp" />
     <ClCompile Include="test\Console.cpp" />
     <ClCompile Include="test\test.cpp" />
+    <ClCompile Include="vcrenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="codespec.txt" />

@@ -1,6 +1,6 @@
 ﻿/*
  |  --------------------------------------------------------
- |    LAURA SOFTWARE
+ |    Laura Game Engine
  |    [ SoundObject.h ] [ laura\audio ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

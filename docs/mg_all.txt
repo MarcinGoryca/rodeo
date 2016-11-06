@@ -1,0 +1,61 @@
+namespaces:
+
+mg
+    audio
+	controllers
+	core
+	entity
+	event
+	front
+	io
+	math
+	physics
+	primitive
+	renderer
+	    dx
+		gl
+		vulkan
+	scene
+    tools
+
+//------------------------------------------------------------------------------------
+
+classes
+
+mg::audio::SoundObject
+
+mg::controllers::AudioController
+mg::controllers::EventController
+mg::controllers::FontController
+mg::controllers::MasterController
+mg::controllers::ObjectController
+mg::controllers::OutputController
+mg::controllers::RenderController
+mg::controllers::SceneController
+mg::controllers::ShadersController
+mg::controllers::TextureController
+mg::controllers::TimeController
+
+mg::core::Exception
+mg::core::Framework
+mg::core::RendererException
+mg::core::Rtti
+mg::core::Singleton
+mg::core::Timer
+
+mg::entity::Entity
+mg::entity::Model
+mg::entity::Model3d
+mg::entity::Object
+mg::entity::Sprite
+
+mg::event::Event
+mg::event::IInputListener
+mg::event::KeyboardEvent
+mg::event::MgEvent
+mg::event::MouseEvent
+
+
+
+	
+	

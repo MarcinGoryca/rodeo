@@ -1,11 +1,11 @@
 ﻿/*
-----------------------------------------------
-	laura Game Engine
-	Copyright(c) Marcin Goryca
-	marcin.goryca@gmail.com
-	http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ | 	Laura Game Engine
+ |	Copyright(c) Marcin Goryca
+ |	marcin.goryca@gmail.com
+ |	http://marcingoryca.pl
+ | ----------------------------------------------
+ */
 #include "primitive\geometry.h"
 #include "io\log.h"
 

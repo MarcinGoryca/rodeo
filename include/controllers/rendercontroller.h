@@ -32,8 +32,12 @@ namespace laura
 	{
 		enum RendererType
 		{
+			// DirectX
 			LAURA_DX,
-			LAURA_GL
+			// OpenGL
+			LAURA_GL,
+			// Vulcan
+			LAURA_VC
 		};
 
 		class RenderController : public laura::core::Singleton<RenderController>, public MasterController

@@ -1,7 +1,7 @@
 /*
 ----------------------------------------------
-    laura Game Engine
-    laura Main Header file
+    Laura Game Engine
+    Laura Main Header file
     Copyright(c) Marcin Goryca
     marcin.goryca@gmail.com
     http://marcingoryca.pl

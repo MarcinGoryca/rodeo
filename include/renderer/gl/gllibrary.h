@@ -4,7 +4,7 @@
 //
 ///*
 // | ----------------------------------------------
-// |   laura Game Engine
+// |   Laura Game Engine
 // |   [ GLLibrary.h ] / [renderer/gl]
 // |   Copyright(c) Marcin Goryca
 // |   marcin.goryca@gmail.com

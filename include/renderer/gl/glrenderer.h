@@ -5,7 +5,7 @@
 
 /*
  |  ----------------------------------------------
- |    laura Game Engine
+ |    Laura Game Engine
  |    [ GLRenderer.h ] / [ renderer/gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

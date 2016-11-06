@@ -1,6 +1,6 @@
 /*
  |  -----------------------------------
- |     laura Game Engine
+ |     Laura Game Engine
  |     [ ShadersController.h ] [ laura\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com

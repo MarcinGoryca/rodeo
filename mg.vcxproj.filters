@@ -112,6 +112,9 @@
     <Filter Include="Source Files\controllers">
       <UniqueIdentifier>{fa92353f-6721-41d5-a848-67ba660f560c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\renderer\vc">
+      <UniqueIdentifier>{48a85fc4-503c-410e-b181-377d1a050867}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\audio\audio.h">
@@ -715,6 +718,9 @@
     </ClCompile>
     <ClCompile Include="test\Console.cpp">
       <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="vcrenderer.cpp">
+      <Filter>Header Files\renderer\vc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

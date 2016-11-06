@@ -39,7 +39,7 @@ namespace laura
                 exstyles_(-1),
                 fullscreen_(false),
                 window_classname_(L"engine"),
-                windowname_(L"laura Game Engine")
+                windowname_(L"Laura Game Engine")
             {
             }
 
