@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ Exception.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

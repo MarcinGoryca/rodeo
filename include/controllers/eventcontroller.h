@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ EventController.h ] [ laura\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

@@ -1,6 +1,6 @@
 /*
  |  ----------------------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ GLSLShaders.h ] [ laura\renderere\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

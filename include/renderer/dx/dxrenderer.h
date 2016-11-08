@@ -24,7 +24,11 @@
 #include "renderer\irenderer.h"
 #endif
 
-#include <D3DX10.h>
+// ! DEPRECATED !
+//#include <D3DX10.h>
+// ! DEPRECATED !
+
+
 
 namespace laura
 {

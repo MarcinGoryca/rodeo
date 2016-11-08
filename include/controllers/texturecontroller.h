@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------
- |     laura GAME ENGINE
+ |     LAURA GAME ENGINE
  |     [ TextureController.h ] [ laura\controllers ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com

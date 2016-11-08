@@ -1,4 +1,4 @@
-laura GAME ENGINE
+LAURA GAME ENGINE
 CODE SPECIFICATION
 ----------------------------------------------------------------------------------------------
 1) Interfaces have I prefix, eg. IController

@@ -1,6 +1,6 @@
 ﻿/*
  |  ----------------------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ QueryRenderer.h ] [ laura\renderer\gl ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ Event.h ] [ laura\event ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

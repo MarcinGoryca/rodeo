@@ -1,6 +1,6 @@
 /*
  |  -----------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
  |    http://marcingoryca.pl

@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ OutputController.h ] [ laura\controllers ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

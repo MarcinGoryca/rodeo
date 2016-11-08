@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ Object.h ] [ laura\entity ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com

@@ -1,6 +1,6 @@
 ///*
 // |  --------------------------------------------------------------------------------------
-// |    laura GAME ENGINE
+// |    LAURA GAME ENGINE
 // |    [ GLDrawing.cpp ] / [ renderer/gl ]
 // |    Copyright (c) Marcin Goryca
 // |    marcin.goryca@gmail.com

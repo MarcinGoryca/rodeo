@@ -1,6 +1,6 @@
 ﻿/*
  |  -----------------------------------
- |    laura GAME ENGINE
+ |    LAURA GAME ENGINE
  |    [ Error.h ] [ laura\core ]
  |    Copyright(c) Marcin Goryca
  |    marcin.goryca@gmail.com
@@ -220,7 +220,7 @@ namespace laura
 		/*
 		 |  -------------------------------------------------
 		 |    This is for Title Bar in the Message Box
-		 |	  laura GAME ENGINE header
+		 |	  LAURA GAME ENGINE header
 		 |  -------------------------------------------------
 		 */
 		const std::wstring LAURA_HEADER = L"LAURA";

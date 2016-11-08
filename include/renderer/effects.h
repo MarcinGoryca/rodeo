@@ -1,6 +1,6 @@
 ﻿/*
  |  ----------------------------------------------
- |     laura GAME ENGINE
+ |     LAURA GAME ENGINE
  |     [ Effects.h ] [ laura\renderer ]
  |     Copyright(c) Marcin Goryca
  |     marcin.goryca@gmail.com
