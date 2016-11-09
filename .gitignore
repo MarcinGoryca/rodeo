@@ -1,12 +1,7 @@
 Debug
-libs
-other
-resources
-test
+Release
+.vs
 *.sdf
 *.opensdf
-*.sln
-*.sln*
-*.vcxproj
-*.vcxproj*
 *.opendb
+*.VC.db
