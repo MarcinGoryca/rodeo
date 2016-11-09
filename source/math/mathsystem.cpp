@@ -14,7 +14,7 @@ namespace math
 {
 void MathSystem::runGenerator()
 {
-    _random_number.randomize();
+    //_random_number.randomize();
 }
 
 /**

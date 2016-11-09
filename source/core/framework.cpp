@@ -15,19 +15,19 @@ namespace laura
 	{
 		LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		{
-			static Framework* LAURA_engine = 0;
+			static Framework* laura = 0;
 
 			switch (msg)
 			{
 			case WM_CREATE:
 			{
 				CREATESTRUCT* cs = (CREATESTRUCT*)lparam;
-				LAURA_engine = (Framework*)cs->lpCreateParams;
+				laura = (Framework*)cs->lpCreateParams;
 				return 0;
 			}
 			}
-			if (LAURA_engine)
-				return LAURA_engine->messageProcessor(msg, wparam, lparam);
+			if (laura)
+				return laura->messageProcessor(msg, wparam, lparam);
 			else
 				return DefWindowProc(hwnd, msg, wparam, lparam);
 		}
@@ -58,7 +58,7 @@ namespace laura
 
 			//output_manager_->getLog()->write(L"Win32 Application is created");
 
-			if (_use_gl)
+			/*if (_use_gl)
 			{
 				_render_controller = std::unique_ptr<RenderController>(new RenderController(LAURA_GL));
 				createGLContext(GetDC(getHwnd()));
@@ -67,16 +67,16 @@ namespace laura
 			{
 				_render_controller = std::unique_ptr<RenderController>(new RenderController(LAURA_DX));
 				_render_controller->getRenderer()->setHWND(getHwnd());
-			}
+			}*/
 
 			//output_manager_->getLog()->write(L"Rendering Context is created");
 			//_render_controller->getRenderer()->run(getWidth(), getHeight());
 			//output_manager_->getLog()->write(L"Renderer is running...");
 
-			if (_physicsystem->_module_initialized)
-			{
-				//output_manager_->getLog()->write(physicsystem_->getString());
-			}
+			//if (_physicsystem->_module_initialized)
+			//{
+			//	//output_manager_->getLog()->write(physicsystem_->getString());
+			//}
 		}
 
 		//--------------------------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ namespace laura
 				update();
 			}
 
-			_output_controller->getLog()->write(L"Engine is exiting...");
+			//_output_controller->getLog()->write(L"Engine is exiting...");
 
 			shutdown();
 		}
@@ -223,7 +223,7 @@ namespace laura
 
 			case WM_MOUSELEAVE:
 			{
-				MessageBox(NULL, L"Mouse outside the framework!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+				//MessageBox(NULL, L"Mouse outside the framework!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 			}
 			break;
 
@@ -376,7 +376,7 @@ namespace laura
 
 			if (!EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm))
 			{
-				MessageBox(NULL, L"Couldn't Enum Display Settings", LAURA_HEADER.c_str(), ERR_ICON_OK);
+				//MessageBox(NULL, L"Couldn't Enum Display Settings", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 
@@ -391,7 +391,7 @@ namespace laura
 
 			if (result != DISP_CHANGE_SUCCESSFUL)
 			{
-				MessageBox(NULL, L"Display Mode Not Compatible", LAURA_HEADER.c_str(), ERR_ICON_OK);
+				//MessageBox(NULL, L"Display Mode Not Compatible", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				onDestroy();
 			}
 		}
@@ -425,13 +425,13 @@ namespace laura
 
 			if (!pixelFormat)
 			{
-				MessageBox(NULL, L"Choose PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+				//MessageBox(NULL, L"Choose PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 
 			if (!SetPixelFormat(hdc, pixelFormat, &pfd))
 			{
-				MessageBox(NULL, L"Set PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+				//MessageBox(NULL, L"Set PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
 				return;
 			}
 		}
@@ -524,7 +524,7 @@ namespace laura
 		{
 			//XML - based configuration
 
-			_width = _xml_parser->getIntMap()["width"];
+			/*_width = _xml_parser->getIntMap()["width"];
 			_height = _xml_parser->getIntMap()["height"];
 			_depth = _xml_parser->getIntMap()["depth"];
 			_frequency = _xml_parser->getIntMap()["frequency"];
@@ -538,7 +538,7 @@ namespace laura
 			else if (_xml_parser->getStringMap()["fullscreen"] == "false")
 			{
 				_fullscreen = false;
-			}
+			}*/
 
 			//viewports_ = _xml_parser->getIntMap()["count"];
 
@@ -597,15 +597,15 @@ namespace laura
 			HGLRC temporary_context = wglCreateContext(getHdc());
 			wglMakeCurrent(getHdc(), temporary_context);
 
-			int attributes[] =
-			{
-				WGL_CONTEXT_MAJOR_VERSION_ARB, 4,
-				WGL_CONTEXT_MINOR_VERSION_ARB, 2,
-				WGL_CONTEXT_FLAGS_ARB, 0,
-				0
-			};
+			//int attributes[] =
+			//{
+			//	/*WGL_CONTEXT_MAJOR_VERSION_ARB, 4,
+			//	WGL_CONTEXT_MINOR_VERSION_ARB, 2,
+			//	WGL_CONTEXT_FLAGS_ARB, 0,
+			//	0*/
+			//};
 
-			if (glewIsSupported("WGL_ARB_create_context") == 1)
+			/*if (glewIsSupported("WGL_ARB_create_context") == 1)
 			{
 				setHrc(wglCreateContextAttribsARB(getHdc(), 0, attributes));
 				wglMakeCurrent(NULL, NULL);
@@ -615,15 +615,15 @@ namespace laura
 			else
 			{
 				setHrc(temporary_context);
-			}
+			}*/
 
-			int opengl_version[2] = { 0 };
+			/*int opengl_version[2] = { 0 };
 			glGetIntegerv(GL_MAJOR_VERSION, &opengl_version[0]);
 			glGetIntegerv(GL_MINOR_VERSION, &opengl_version[1]);
 
 			if (!getHdc())
 				return false;
-
+*/
 			return true;
 		}
 

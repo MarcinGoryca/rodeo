@@ -36,7 +36,7 @@ public:
     ~MathSystem(){}
 
     // Gets the random number
-    laura::tools::CRandom getRandomNumber() const { return _random_number; }
+    //laura::tools::CRandom getRandomNumber() const { return _random_number; }
 
     // Gets specified member of sinus table
     // Returns float value of specified index from sinus table
@@ -48,7 +48,7 @@ public:
 
 private:
 	// Random Number
-	laura::tools::CRandom _random_number;
+	//laura::tools::CRandom _random_number;
 
 	// Full Sinus Table
 	float _sinus_table[laura::core::LAURA_FULL_CIRCLE];

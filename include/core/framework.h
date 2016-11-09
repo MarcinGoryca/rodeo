@@ -83,16 +83,16 @@ namespace laura
 		{
 		public:
 			Framework()
-				:_output_controller(nullptr),
-				_audio_controller(nullptr),
+				://_output_controller(nullptr),
+				//_audio_controller(nullptr),
 				_mathsystem(nullptr),
-				_render_controller(nullptr),
-				_xml_parser(nullptr),
-				_object_controller(nullptr),
+				//_render_controller(nullptr),
+				//_xml_parser(nullptr),
+				//_object_controller(nullptr),
 				_time_controller(nullptr),
-				_scene_controller(nullptr),
-				_event_controller(nullptr),
-				_physicsystem(nullptr),
+				//_scene_controller(nullptr),
+				//_event_controller(nullptr),
+				//_physicsystem(nullptr),
 				_width(0),
 				_height(0),
 				_depth(0),
@@ -113,16 +113,16 @@ namespace laura
 			}
 
 			Framework(const std::wstring window_name)
-				:_output_controller(nullptr),
-				_audio_controller(nullptr),
+				://_output_controller(nullptr),
+				//_audio_controller(nullptr),
 				_mathsystem(nullptr),
-				_render_controller(nullptr),
-				_xml_parser(nullptr),
-				_object_controller(nullptr),
+				//_render_controller(nullptr),
+				//_xml_parser(nullptr),
+				//_object_controller(nullptr),
 				_time_controller(nullptr),
-				_scene_controller(nullptr),
-				_event_controller(nullptr),
-				_physicsystem(nullptr),
+				//_scene_controller(nullptr),
+				//_event_controller(nullptr),
+				//_physicsystem(nullptr),
 				_width(0),
 				_height(0),
 				_depth(0),
@@ -715,36 +715,36 @@ namespace laura
 			}
 
 		public:
-			std::unique_ptr<laura::controllers::OutputController> _output_controller;
-			std::unique_ptr<laura::controllers::AudioController> _audio_controller;
+			//std::unique_ptr<laura::controllers::OutputController> _output_controller;
+			//std::unique_ptr<laura::controllers::AudioController> _audio_controller;
 
 			//io::Mouse mouse_;
 
 			std::unique_ptr<laura::math::MathSystem> _mathsystem;
 
-			std::unique_ptr<laura::controllers::RenderController> _render_controller;
+			//std::unique_ptr<laura::controllers::RenderController> _render_controller;
 
 			//renderer::RendererInterface* renderer_;
 
 			//scene::Camera camera_;
 
-			std::unique_ptr<laura::tools::XmlParser> _xml_parser;
+			//std::unique_ptr<laura::tools::XmlParser> _xml_parser;
 
-			std::unique_ptr<laura::controllers::ObjectController> _object_controller;
+			//std::unique_ptr<laura::controllers::ObjectController> _object_controller;
 
 			std::unique_ptr<laura::controllers::TimeController> _time_controller;
 
-			std::unique_ptr<laura::controllers::SceneController> _scene_controller;
+			//std::unique_ptr<laura::controllers::SceneController> _scene_controller;
 
 			//FontManager fontlaurar_;
 
-			std::unique_ptr<laura::controllers::EventController> _event_controller;
+			//std::unique_ptr<laura::controllers::EventController> _event_controller;
 
 			//TextureManager texturelaurar_;
 
 			//scene::Viewport viewport_;
 
-			std::unique_ptr<laura::physics::PhysicSystem> _physicsystem;
+			//std::unique_ptr<laura::physics::PhysicSystem> _physicsystem;
 
 		private:
 			// Global Delta Time,
