@@ -1,4 +1,4 @@
-Laura Game Engine) [ Project ]
+Laura Game Engine [ Project ]
 -----------------------------
 <h3>This was my thesis project, but I didn't finish it within required time.</h3>
 <h3>I still want to get it working in some way. I think it is a great subject to explore.</h3>
