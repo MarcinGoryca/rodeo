@@ -131,16 +131,17 @@ namespace laura
 		{
 			switch (msg)
 			{
-
+            // Message when application is closing
 			case WM_CLOSE:
 				onClose();
 				ShowCursor(true);
 				break;
-
+            // Message when application is removed from memory    
 			case WM_DESTROY:
 				onDestroy();
 				break;
 
+            // Message when application changes its size
 			case WM_SIZE:
 			{
 				int window_width = LOWORD(lparam);

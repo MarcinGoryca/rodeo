@@ -53,7 +53,7 @@ private:
 	// Full Sinus Table
 	float _sinus_table[laura::core::LAURA_FULL_CIRCLE];
 
-	// Full Sosinus Table
+	// Full Cosinus Table
 	float _cosinus_table[laura::core::LAURA_FULL_CIRCLE];
     // Runs Random Number Generator (Mersenne Twister)
     void runGenerator();
