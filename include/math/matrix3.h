@@ -24,7 +24,12 @@ class Matrix3
 public:
     Matrix3();
 
-    // Parameter mt - array of values
+    /*
+	 | -------------------------------------------------------------------
+	 |     Class constructor 
+	 |     Parameter mt - array of values
+	 | -------------------------------------------------------------------
+	 */
     Matrix3(const float* mt)
     {
         _m3[0] = mt[0];
@@ -37,7 +42,30 @@ public:
         _m3[7] = mt[7];
         _m3[8] = mt[8];
     }
-    // ---- //
+    
+	/*
+	 | -------------------------------------------------------------------
+	 |     Class Constructor
+	 |     Parameter a - Vector3
+	 |        You must note that it will produce x, y, z values
+	 |        for specified positions in the matrix
+	 |        first value (x) goes to the first position
+	 |        second value (y) goes to the fourth position
+	 |        third value (z) goes to the seventh position
+	 |     Parameter b - Vector3
+	 |        You must note that it will produce x, y, z values
+	 |        for specified positions in the matrix
+	 |        first value (x) goes to the second position
+	 |        second value (y) goes to the fifth position
+	 |        third value (z) goes to the eight position
+	 |     Parameter c - Vector3
+	 |        You must note that it will produce x, y, z values
+	 |        for specified positions in the matrix
+	 |        first value (x) goes to the third position
+	 |        second value (y) goes to the sixth position
+	 |        third value (z) goes to the ninth position
+	 | -------------------------------------------------------------------
+	 */
     Matrix3(const Vector3& a, const Vector3& b, const Vector3& c)
     {
         _m3[0] = a.getX();
@@ -53,10 +81,19 @@ public:
         _m3[8] = c.getZ();
     }
 
+	/*
+	 | -------------------------------------------------------------------
+	 |     Destructor
+	 | -------------------------------------------------------------------
+	 */
     ~Matrix3(){}
 
-    // Transpositing the Matrix
-    // Returns This Matrix
+    /*
+	 | -------------------------------------------------------------------
+	 |     Transpositing the Matrix
+	 |     Returns This Matrix
+	 | -------------------------------------------------------------------
+     */ 
     Matrix3& transpose()
     {
         float temp = 0.0f;
