@@ -44,10 +44,8 @@ Matrix3::Matrix3()
 float determinant(const Matrix3& m)
 {
     float determinant = 0.0f; 
-    /*determinant = (m._m3[0] * m._m3[5] * m._m3[8]) + (m._m3[3] * m._m3[7] * m._m3[2]) + (m._m3[6] * m._m3[1] * m._m3[5])
-        - (m._m3[6] * m._m3[4] * m._m3[2]) - (m._m3[3] * m._m3[1] * m._m3[8]) - (m._m3[0] * m._m3[7] * m._m3[5]);*/
-
-	determinant = (m.getM3(0) * m.getM3(5) * m.getM3(8)) +
+ 
+	determinant = (m.getM3(0) * m.getM3(4) * m.getM3(8)) +
 		(m.getM3(3) * m.getM3(7) * m.getM3(2)) +
 		(m.getM3(6) * m.getM3(1) * m.getM3(5)) -
 		(m.getM3(6) * m.getM3(4) * m.getM3(2)) -

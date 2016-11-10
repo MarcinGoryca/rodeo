@@ -116,8 +116,12 @@ public:
         return *this;
     }
 
-    // Resetting the Matrix to Identity
-    // Returns This Matrix
+    /*
+	 | ----------------------------------------------------------------------
+	 |     Resetting the Matrix to Identity
+     |     Returns This Matrix
+	 | ----------------------------------------------------------------------
+	 */
     Matrix3& identity()
     {
         _m3[0] = 1.0f;
@@ -133,23 +137,29 @@ public:
         return *this;
     }
 
-    // ---- //
+    /*
+	 | ------------------------------------------------------------
+	 |     Multiplying a matrix by a scalar
+	 |     Parameter float value of a scalar
+	 |     Returns this Matrix3 multiplied by a scalar
+	 | ------------------------------------------------------------
+	 */
     Matrix3& multiplyByScalar(const float& scalar);
 
 	/*
-	 * ----------------------------------------------------------
-	 *	Returns member of a matrix
-	 *  Parameter member of the matrix (int)
-	 * ----------------------------------------------------------
+	 | ----------------------------------------------------------
+	 |	Returns member of a matrix
+	 |  Parameter member of the matrix (int)
+	 | ----------------------------------------------------------
 	 */
 	float getM3(int index) const { return _m3[index]; }
 
 	/*
-	 * ----------------------------------------------------------
-	 *	Sets a member of a matrix
-	 *	Parameter index (int) number of a member
-	 *  Parameter m3 (float) value of the member
-	 * ----------------------------------------------------------
+	 | ----------------------------------------------------------
+	 |	Sets a member of a matrix
+	 |	Parameter index (int) number of a member
+	 |  Parameter m3 (float) value of the member
+	 | ----------------------------------------------------------
 	 */
 	void setM3(int index, float m3) { _m3[index] = m3; }
 
@@ -157,17 +167,35 @@ private:
 	float _m3[9];
 };
 
-// Determinant of the matrix
+/*
+ | ----------------------------------------------------------------------------
+ |     Determinant of the Matrix
+ |     Returns float value
+ | ----------------------------------------------------------------------------
+ */
 float determinant(const Matrix3& m);
 
-// Helper function - prints out the matrix to the standard output
+/*
+ | ----------------------------------------------------------------------------
+ |     Helper function - prints out the matrix to the standard output
+ | ----------------------------------------------------------------------------
+ */
 void printM3(const Matrix3& m);
 
-// Multiplying to matrices
+/*
+ | ----------------------------------------------------------------------------
+ |     Multiplying two matrices
+ |     Returns new Matrix3, result of multiplication
+ | ----------------------------------------------------------------------------
+ */
 Matrix3 multiply(const Matrix3& m1, const Matrix3& m2);
 
-// Multiplying the matrix by vector
-// Returns Vector
+/*
+ | ----------------------------------------------------------------------------
+ |     Multiplying the matrix by vector
+ |     Returns Vector3
+ | ----------------------------------------------------------------------------
+ */
 Vector3 multiplyByVector(const Matrix3& m, const Vector3& v);
 
 //Matrix3 rotateAboutX(const float& angle, const float& x);

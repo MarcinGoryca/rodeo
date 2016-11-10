@@ -1,11 +1,11 @@
 ﻿/*
-----------------------------------------------
-    Laura Game Engine
-    Copyright(c) Marcin Goryca
-    marcin.goryca@gmail.com
-    http://marcingoryca.pl
-----------------------------------------------
-*/
+ | ----------------------------------------------
+ |    Laura Game Engine
+ |    Copyright(c) Marcin Goryca
+ |    marcin.goryca@gmail.com
+ |    http://marcingoryca.pl
+ |----------------------------------------------
+ */
 #ifndef LAURA_MATH_MATRIX4_H_
 #define LAURA_MATH_MATRIX4_H_
 
@@ -21,7 +21,13 @@ class Matrix4
 {
 public:
     Matrix4();
-    // ---- //
+    
+	/*
+	 | --------------------------------------------------------------------------
+	 |     Class Constructor
+	 |     Parameters 16 float values
+	 | --------------------------------------------------------------------------
+	 */
     Matrix4(float m00, float m01, float m02, float m03,
             float m04, float m05, float m06, float m07,
             float m08, float m09, float m10, float m11,
