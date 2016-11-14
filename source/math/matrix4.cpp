@@ -91,7 +91,7 @@ Matrix4& Matrix4::loadIdentity()
 /**
  * Code solution comes from http://openglbook.com/the-book/chapter-4-entering-the-third-dimension/
  */
-Matrix4 multiply(const Matrix4* m1, const Matrix4* m2)
+Matrix4 multiply(Matrix4* m1, Matrix4* m2)
 {
     Matrix4 out = Matrix4::_S_IDENTITY;
 
@@ -99,13 +99,13 @@ Matrix4 multiply(const Matrix4* m1, const Matrix4* m2)
 
     for(row = 0, ro_woffset = row * 4; row < 4; ++row, ro_woffset = row * 4)
     {
-        for(column = 0; column < 4; ++column)
-        {
-            out._m4[ro_woffset + column] = 
-                (m1->_m4[ro_woffset + 0] * m2->_m4[column + 0]) + 
-                (m1->_m4[ro_woffset + 1] * m2->_m4[column + 4]) +
-                (m1->_m4[ro_woffset + 2] * m2->_m4[column + 8]) +
-                (m1->_m4[ro_woffset + 3] * m2->_m4[column + 12]);
+		for (column = 0; column < 4; ++column)
+		{
+			out._m4[ro_woffset + column] =
+                (m1->getM4(ro_woffset + 0) * m2->getM4(column + 0)) + 
+                (m1->getM4(ro_woffset + 1) * m2->getM4(column + 4)) +
+                (m1->getM4(ro_woffset + 2) * m2->getM4(column + 8)) +
+                (m1->getM4(ro_woffset + 3) * m2->getM4(column + 12));
         }
     }
     return out;
@@ -119,7 +119,7 @@ void printM4(const Matrix4& m)
         if(i == 4) std::cout << "\n";
         if(i == 8) std::cout << "\n";
         if(i == 12) std::cout << "\n";
-        std::cout << m._m4[i] << ", ";
+        std::cout << m.getM4(i) << ", ";
     }
     std::cout << "\n";
 }

@@ -51,24 +51,44 @@ public:
       _m4[15] = m15;
      }
 
-    // Parameter arr - Array of values
+    /*
+	 | ---------------------------------------------------------------------
+	 |     Constructor with one parameter
+	 |     Parameter arr - Array of values
+	 | ---------------------------------------------------------------------
+	 */
     Matrix4(const float* arr)
     {
         for(int i=0; i<16; ++i)
             _m4[i] = arr[i];
     }
 
+	/*
+	 | ---------------------------------------------------------------------
+	 |     Constructor with four parameters
+	 |     Parameters - Vector4 objects
+	 | ---------------------------------------------------------------------
+	 */
     Matrix4(Vector4 v1, Vector4 v2, Vector4 v3, Vector4 v4);
 
-    // Copy constructor
+    /*
+	 | ---------------------------------------------------------------------
+	 |     Copy constructor
+	 | ---------------------------------------------------------------------
+	 */
     Matrix4(const Matrix4& mc)
     {
         for(int i = 0; i < 16; ++i)
             _m4[i] = mc._m4[i];
     }
 
-    // Constructing Matrix with Vector
-    // Vector is assigned ONLY to three values of the matrix
+    /* 
+	 | ---------------------------------------------------------------------
+	 |     Constructing Matrix with Vector
+     |     Vector is assigned ONLY to three values of the matrix
+	 |     Positions affected 12,13,14
+	 | ---------------------------------------------------------------------
+	 */
     Matrix4(const Vector3& v3)
     {
         _m4[0] = 1.0f;
@@ -89,12 +109,25 @@ public:
         _m4[15] = 1.0f;
     }
 
+	/*
+	 | ----------------------------------------------------------------------------
+	 |     Destructor
+	 | ----------------------------------------------------------------------------
+	 */
     ~Matrix4(){}
 
-    // ---- ///
+    /*
+	 | ----------------------------------------------------------------------------
+	 |     Loads Identity Matrix
+	 | ----------------------------------------------------------------------------
+	 */
     Matrix4& loadIdentity();
 
-    // ---- //
+    /*
+	 | ----------------------------------------------------------------------------
+	 |     Transpose Matrix
+	 | ----------------------------------------------------------------------------
+	 */
     inline Matrix4& transpose()
     {
         float temp = 0.0f;
@@ -106,8 +139,6 @@ public:
 
         if(_m4[15] != 1.0f)
              _m4[15] = 1.0f;
-
-		//ENGINESwap(_m4[1], _m4[4]);
 
         temp = _m4[1];
         _m4[1] = _m4[4];
@@ -136,8 +167,12 @@ public:
         return *this;
     }
 
-    // Multiplying a matrix by a scalar
-    // Returns This Matrix
+    /* 
+	 | ----------------------------------------------------------------------------
+	 |     Multiplying a matrix by a scalar
+     |     Returns This Matrix
+	 | ----------------------------------------------------------------------------
+	 */
     inline Matrix4& operator*(float scalar)
     {
         for(int i = 0; i < 16; ++i)
@@ -378,11 +413,35 @@ public:
         return *this;
     }
 
-    float _m4[16];
+	/*
+	 | ----------------------------------------------------------------------------
+	 |     Gets member of a matrix
+	 |     Parameter - index of a member
+	 |     Returns float value 
+	 | ----------------------------------------------------------------------------
+	 */
+	float getM4(int index) const
+	{
+		return _m4[index];
+	}
+
+	/*
+	 | ----------------------------------------------------------------------------
+	 |     Sets member of a matrix
+	 |     Parameter - int index of a member { 0 .. 15 }
+	 |     Parameter - float value of a member
+	 | ----------------------------------------------------------------------------
+	 */
+	void setM4(int index, float value)
+	{
+		_m4[index] = value;
+	}
+    
     static const Matrix4 _S_IDENTITY;
     static const Matrix4 _S_ZERO;
-
+	float _m4[16];
 private:
+	
 };
 
 // Multiplying Matrices - return new matrix
