@@ -240,6 +240,61 @@ namespace LauraTests
 			Assert::AreEqual(3.0f, m1.getM4(15));
 		}
 
+		// Testing multiplying a matrix by a matrix
+		TEST_METHOD(TestMultiplyMatrix4ByMatrix4)
+		{
+			float arr[16] = {
+				-1.0f, 1.0f, 2.0f, 3.0f,
+				-3.0f, 2.0f, 2.0f, 1.0f,
+				-7.0f, -1.0f, -5.0f, 1.0f,
+				-4.0f, 1.0f, 1.0f, 3.0f
+			};
+
+			Vector4 v1(1.0f, -1.0f, 1.0f, -1.0f);
+			Vector4 v2(-1.0f, 2.0f, 1.0f, -2.0f);
+			Vector4 v3(0.0f, 1.0f, 2.0f, 3.0f);
+			Vector4 v4(1.0f, 0.0f, 1.0f, 0.0f);
+
+			Matrix4 m1(arr);
+			Matrix4 m2(v1, v2, v3, v4);
+
+			Matrix4 m3;
+
+			m3 = m1 * m2;
+
+			Assert::AreEqual(-3.0f, m3.getM4(0));
+			Assert::AreEqual(-1.0f, m3.getM4(1));
+			Assert::AreEqual(14.0f, m3.getM4(2));
+			Assert::AreEqual(1.0f, m3.getM4(3));
+			Assert::AreEqual(-4.0f, m3.getM4(4));
+			Assert::AreEqual(7.0f, m3.getM4(5));
+			Assert::AreEqual(9.0f, m3.getM4(6));
+			Assert::AreEqual(-1.0f, m3.getM4(7));
+			Assert::AreEqual(-12.0f, m3.getM4(8));
+			Assert::AreEqual(-2.0f, m3.getM4(9));
+			Assert::AreEqual(-8.0f, m3.getM4(10));
+			Assert::AreEqual(-12.0f, m3.getM4(11));
+			Assert::AreEqual(-7.0f, m3.getM4(12));
+			Assert::AreEqual(1.0f, m3.getM4(13));
+			Assert::AreEqual(12.0f, m3.getM4(14));
+			Assert::AreEqual(-3.0f, m3.getM4(15));
+		}
+
+		// Testing asigning one matrix to another
+		TEST_METHOD(TestAsigningMatrix4ToMatrix4)
+		{
+			Matrix4 m1;
+			Matrix4 m2;
+
+			m2.loadIdentity();
+
+			m1 = m2;
+
+			for (int i = 0; i < 16; ++i) {
+				Assert::AreEqual(m1._m4[i], m2._m4[i]);
+			}
+		}
+
 	private:
 		std::unique_ptr<Matrix4> _m4;
 	};

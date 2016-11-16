@@ -180,8 +180,12 @@ public:
         return *this;
     }
 
-    // Multpilying a matrix by a matrix
-    // Returns Matrix
+    /*
+	 | ----------------------------------------------------------------------------------------------------------
+	 |     Multiplying a matrix by a matrix
+     |     Returns Matrix
+	 | ----------------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4 operator*(Matrix4& mc)
     {
         Matrix4 out = _S_IDENTITY;
@@ -208,8 +212,12 @@ public:
         return out;
     }
 
-    // Asigning one matrix to another
-    // Returns This Matrix
+    /*
+	 | ------------------------------------------------------------------------------------------------------
+	 |     Asigning one matrix to another
+     |     Returns This Matrix
+	 | ------------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4& operator= (const Matrix4& mc)
     {
         for(int i=0; i<16; ++i)
