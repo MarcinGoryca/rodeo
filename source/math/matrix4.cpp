@@ -88,10 +88,12 @@ Matrix4& Matrix4::loadIdentity()
     return *this;
 }
 
-/**
- * Code solution comes from http://openglbook.com/the-book/chapter-4-entering-the-third-dimension/
+/*
+ | ----------------------------------------------------------------------------------------------------
+ |     Code solution comes from http://openglbook.com/the-book/chapter-4-entering-the-third-dimension/
+ | ----------------------------------------------------------------------------------------------------
  */
-Matrix4 multiply(Matrix4* m1, Matrix4* m2)
+Matrix4 multiply(const Matrix4* m1, const Matrix4* m2)
 {
     Matrix4 out = Matrix4::_S_IDENTITY;
 

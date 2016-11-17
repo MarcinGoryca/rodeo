@@ -226,8 +226,12 @@ public:
         return *this;
     }
 
-    // Checking equality of two matrices
-    // Returns TRUE if matrices are equal, FALSE otherwise
+    /*
+	 | --------------------------------------------------------------------------------------------
+	 |     Checking equality of two matrices
+     |     Returns TRUE if matrices are equal, FALSE otherwise
+	 | --------------------------------------------------------------------------------------------
+	 */
     inline bool operator== (const Matrix4& mc)const
     {
         if(_m4[0] == mc._m4[0] && _m4[1] == mc._m4[1] && _m4[2] == mc._m4[2] && _m4[3] == mc._m4[3] &&
@@ -239,8 +243,12 @@ public:
            return false;
     }
 
-    // Checking if two matrices are NOT equal
-    // Returns TRUE if two matrices are NOT equal, TRUE otherwise
+    /*
+	 | ---------------------------------------------------------------------------------------------
+	 |     Checking if two matrices are NOT equal
+     |     Returns TRUE if two matrices are NOT equal, TRUE otherwise
+	 | ---------------------------------------------------------------------------------------------
+	 */
     inline bool operator!= (const Matrix4& mc) const
     {
         if(
@@ -254,7 +262,12 @@ public:
         return false;
     }
 
-    // ---- //
+    /*
+	 | --------------------------------------------------------------------------------------------------
+	 |     Adding Two Matrices
+	 |     Returns Matrix4
+	 | --------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4 operator+(const Matrix4& mc)const
     {
         Matrix4 ret;
@@ -279,7 +292,12 @@ public:
         return ret;
     }
 
-    // ---- //
+    /*
+	 | ------------------------------------------------------------------------------------------------
+	 |     Subtracting two matrices
+	 |     Returns Matrix4
+	 | ------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4 operator-(const Matrix4& mc) const
     {
         Matrix4 ret;
@@ -304,7 +322,12 @@ public:
         return ret;
     }
 
-    // ---- //
+    /*
+	 | ------------------------------------------------------------------------------------------
+	 |      Adding two matrices
+	 |      Returns Matrix4
+	 | ------------------------------------------------------------------------------------------
+	 */
     inline Matrix4& operator+=(const Matrix4& mc)
     {
         _m4[0] += mc._m4[0];
@@ -327,7 +350,12 @@ public:
         return *this;
     }
 
-    // ---- //
+    /*
+	 | ----------------------------------------------------------------------------------------------
+	 |     Subtracting two matrices
+	 |     Returns Matrix4
+	 | ----------------------------------------------------------------------------------------------
+	 */
     inline Matrix4& operator-= (const Matrix4& mc)
     {
         _m4[0] -= mc._m4[0];
@@ -350,7 +378,12 @@ public:
         return *this;
     }
 
-    // ---- //
+    /*
+	 | ---------------------------------------------------------------------------------------------------
+	 |     Multiplying a matrix by a scalar
+	 |     Returns Matrix4
+	 | ---------------------------------------------------------------------------------------------------
+	 */
    inline Matrix4& operator *= (float scalar)
     {
         for(int i=0; i<16; ++i)
@@ -359,18 +392,12 @@ public:
        return *this;
     }
 
-    // ---- //
-    inline Vector4 operator* (const Vector4& v)
-    {
-        Vector4 result;
-        result.setX(_m4[0] * v.getX() + _m4[4] * v.getY() + _m4[8] * v.getZ() + _m4[12] * v.getW());
-        result.setY(_m4[1] * v.getX() + _m4[5] * v.getY() + _m4[9] * v.getZ() + _m4[13] * v.getW());
-        result.setZ(_m4[2] * v.getX() + _m4[6] * v.getY() + _m4[10] * v.getZ() + _m4[14] * v.getW());
-        result.setW(_m4[3] * v.getX() + _m4[7] * v.getY() + _m4[11] * v.getZ() + _m4[15] * v.getW());
-        return result;
-    }
-
-    // ---- //
+    /*
+	 | ---------------------------------------------------------------------------------------------------
+	 |     Assigning a value to the matrix
+	 |     Returns Matrix4
+	 | ---------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4& operator = (float value)
     {
         for(int i=0; i<16; ++i)
@@ -379,7 +406,12 @@ public:
         return *this;
     }
 
-    // ---- //
+    /*
+	 | ----------------------------------------------------------------------------------------------------
+	 |     Inversion of a Matrix
+	 |     Returns Matrix4
+	 | ----------------------------------------------------------------------------------------------------
+	 */
     inline void inverse(Matrix4& m)
     {
         for(int i=0; i<16; ++i)
@@ -388,7 +420,12 @@ public:
         }
     }
 
-    // ---- //
+    /*
+	 | ----------------------------------------------------------------------------------------------------
+	 |     Inversion of a Matrix
+	 |     Returns Matrix4
+	 | ----------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4& inverse()
     {
         for(int i=0; i < 16; ++i)
@@ -398,27 +435,34 @@ public:
         return *this;
     }
 
-    // ---- //
+	// TODO
+    /*
+	 | -----------------------------------------------------------------------------------------------------
+	 |     Multiplying a matrix by matrix
+	 |     Returns Matrix4
+	 | -----------------------------------------------------------------------------------------------------
+	 */
     inline Matrix4& operator*= (const Matrix4& m1)
     {
-        this->_m4[0] = this->_m4[0] * m1._m4[0] + this->_m4[1] * m1._m4[4] + this->_m4[2] * m1._m4[8] + this->_m4[3] * m1._m4[12];
-        this->_m4[1] = this->_m4[0] * m1._m4[1] + this->_m4[1] * m1._m4[5] + this->_m4[2] * m1._m4[9] + this->_m4[3] * m1._m4[13];
-        this->_m4[2] = this->_m4[0] * m1._m4[2] + this->_m4[1] * m1._m4[6] + this->_m4[2] * m1._m4[10] + this->_m4[3] * m1._m4[14];
-        this->_m4[3] = this->_m4[0] * m1._m4[3] + this->_m4[1] * m1._m4[7] + this->_m4[2] * m1._m4[11] + this->_m4[3] * m1._m4[15];
-        this->_m4[4] = this->_m4[4] * m1._m4[0] + this->_m4[5] * m1._m4[4] + this->_m4[6] * m1._m4[8] + this->_m4[7] * m1._m4[12];
-        this->_m4[5] = this->_m4[4] * m1._m4[1] + this->_m4[5] * m1._m4[5] + this->_m4[6] * m1._m4[9] + this->_m4[7] * m1._m4[13];
-        this->_m4[6] = this->_m4[4] * m1._m4[2] + this->_m4[5] * m1._m4[6] + this->_m4[6] * m1._m4[10] + this->_m4[7] * m1._m4[14];
-        this->_m4[7] = this->_m4[4] * m1._m4[3] + this->_m4[5] * m1._m4[7] + this->_m4[6] * m1._m4[11] + this->_m4[7] * m1._m4[15];
-        this->_m4[8] = this->_m4[8] * m1._m4[0] + this->_m4[9] * m1._m4[4] + this->_m4[10] * m1._m4[8] + this->_m4[11] * m1._m4[12];
-        this->_m4[9] = this->_m4[8] * m1._m4[1] + this->_m4[9] * m1._m4[5] + this->_m4[10] * m1._m4[9] + this->_m4[11] * m1._m4[13];
-        this->_m4[10] = this->_m4[8] * m1._m4[2] + this->_m4[9] * m1._m4[6] + this->_m4[10] * m1._m4[10] + this->_m4[11] * m1._m4[14];
-        this->_m4[11] = this->_m4[8] * m1._m4[3] + this->_m4[9] * m1._m4[7] + this->_m4[10] * m1._m4[11] + this->_m4[11] * m1._m4[15];
-        this->_m4[12] = this->_m4[12] * m1._m4[0] + this->_m4[13] * m1._m4[4] + this->_m4[14] * m1._m4[8] + this->_m4[15] * m1._m4[12];
-        this->_m4[13] = this->_m4[12] * m1._m4[1] + this->_m4[13] * m1._m4[5] + this->_m4[14] * m1._m4[9] + this->_m4[15] * m1._m4[13];
-        this->_m4[14] = this->_m4[12] * m1._m4[2] + this->_m4[13] * m1._m4[6] + this->_m4[14] * m1._m4[10] + this->_m4[15] * m1._m4[14];
-        this->_m4[15] = this->_m4[12] * m1._m4[3] + this->_m4[13] * m1._m4[7] + this->_m4[14] * m1._m4[11] + this->_m4[15] * m1._m4[15];
+		Matrix4 result;
+        result._m4[0] = this->_m4[0] * m1._m4[0] + this->_m4[1] * m1._m4[4] + this->_m4[2] * m1._m4[8] + this->_m4[3] * m1._m4[12];
+        result._m4[1] = this->_m4[0] * m1._m4[1] + this->_m4[1] * m1._m4[5] + this->_m4[2] * m1._m4[9] + this->_m4[3] * m1._m4[13];
+        result._m4[2] = this->_m4[0] * m1._m4[2] + this->_m4[1] * m1._m4[6] + this->_m4[2] * m1._m4[10] + this->_m4[3] * m1._m4[14];
+		result._m4[3] = this->_m4[0] * m1._m4[3] + this->_m4[1] * m1._m4[7] + this->_m4[2] * m1._m4[11] + this->_m4[3] * m1._m4[15];
+		result._m4[4] = this->_m4[4] * m1._m4[0] + this->_m4[5] * m1._m4[4] + this->_m4[6] * m1._m4[8] + this->_m4[7] * m1._m4[12];
+		result._m4[5] = this->_m4[4] * m1._m4[1] + this->_m4[5] * m1._m4[5] + this->_m4[6] * m1._m4[9] + this->_m4[7] * m1._m4[13];
+		result._m4[6] = this->_m4[4] * m1._m4[2] + this->_m4[5] * m1._m4[6] + this->_m4[6] * m1._m4[10] + this->_m4[7] * m1._m4[14];
+		result._m4[7] = this->_m4[4] * m1._m4[3] + this->_m4[5] * m1._m4[7] + this->_m4[6] * m1._m4[11] + this->_m4[7] * m1._m4[15];
+		result._m4[8] = this->_m4[8] * m1._m4[0] + this->_m4[9] * m1._m4[4] + this->_m4[10] * m1._m4[8] + this->_m4[11] * m1._m4[12];
+		result._m4[9] = this->_m4[8] * m1._m4[1] + this->_m4[9] * m1._m4[5] + this->_m4[10] * m1._m4[9] + this->_m4[11] * m1._m4[13];
+		result._m4[10] = this->_m4[8] * m1._m4[2] + this->_m4[9] * m1._m4[6] + this->_m4[10] * m1._m4[10] + this->_m4[11] * m1._m4[14];
+		result._m4[11] = this->_m4[8] * m1._m4[3] + this->_m4[9] * m1._m4[7] + this->_m4[10] * m1._m4[11] + this->_m4[11] * m1._m4[15];
+		result._m4[12] = this->_m4[12] * m1._m4[0] + this->_m4[13] * m1._m4[4] + this->_m4[14] * m1._m4[8] + this->_m4[15] * m1._m4[12];
+		result._m4[13] = this->_m4[12] * m1._m4[1] + this->_m4[13] * m1._m4[5] + this->_m4[14] * m1._m4[9] + this->_m4[15] * m1._m4[13];
+		result._m4[14] = this->_m4[12] * m1._m4[2] + this->_m4[13] * m1._m4[6] + this->_m4[14] * m1._m4[10] + this->_m4[15] * m1._m4[14];
+		result._m4[15] = this->_m4[12] * m1._m4[3] + this->_m4[13] * m1._m4[7] + this->_m4[14] * m1._m4[11] + this->_m4[15] * m1._m4[15];
 
-        return *this;
+        return result;
     }
 
 	/*
@@ -445,21 +489,40 @@ public:
 		_m4[index] = value;
 	}
     
+	/*
+	 | -----------------------------------------------------------------------------
+	 |     Loads Identity
+	 | ----------------------------------------------------------------------------- 
+	 */
     static const Matrix4 _S_IDENTITY;
+
+	/*
+	 | -----------------------------------------------------------------------------
+	 |     Zeroying the matrix
+	 | -----------------------------------------------------------------------------
+	 */
     static const Matrix4 _S_ZERO;
 	float _m4[16];
 private:
 	
 };
 
-// Multiplying Matrices - return new matrix
-// Parameter Matrix4 first matrix in multiplication
-// Parameter Matrix4 second matrix in multiplication
-// Returns new Matrix4
-// Matrix4 result = multiply(&matrix1, &matrix2)
+/*
+ | ----------------------------------------------------------------------------------
+ |     Multiplying Matrices - return new matrix
+ |     Parameter Matrix4 first matrix in multiplication
+ |     Parameter Matrix4 second matrix in multiplication
+ |     Returns new Matrix4
+ |     Matrix4 result = multiply(&matrix1, &matrix2)
+ | ----------------------------------------------------------------------------------
+ */
 Matrix4 multiply(const Matrix4* m1, const Matrix4* m2);
 
-// Helper function
+/*
+ | ----------------------------------------------------------------------------------
+ |     Helper function
+ | ----------------------------------------------------------------------------------
+ */
 void printM4(const Matrix4& m);
 }
 }

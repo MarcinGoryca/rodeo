@@ -158,6 +158,24 @@ namespace laura
 				return *this;
 			}
 
+
+			// TODO!
+			/*
+			| ----------------------------------------------------------------------------------------------------
+			|     Multiplying a vector by a matrix
+			|     Returns Vector4
+			| ----------------------------------------------------------------------------------------------------
+			*/
+			/*inline Vector4 operator* (const Matrix4& m)
+			{
+				Vector4 result;
+				result.setX(m._m4[0] * result.getX() + m._m4[4] * result.getY() + m._m4[8] * result.getZ() + m._m4[12] * result.getW());
+				result.setY(m._m4[1] * result.getX() + m._m4[5] * result.getY() + m._m4[9] * result.getZ() + m._m4[13] * result.getW());
+				result.setZ(m._m4[2] * result.getX() + m._m4[6] * result.getY() + m._m4[10] * result.getZ() + m._m4[14] * result.getW());
+				result.setW(m._m4[3] * result.getX() + m._m4[7] * result.getY() + m._m4[11] * result.getZ() + m._m4[15] * result.getW());
+				return result;
+			}*/
+
 			/*
 			 * ---------------------------------------------------------------
 			 *		Operator /

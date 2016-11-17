@@ -20,14 +20,28 @@ namespace math
 class Quaternion
 {
 public:
+	/*
+	 | -------------------------------------------------------------------------------------
+	 |     Default Constructor
+	 | -------------------------------------------------------------------------------------
+	 */
     Quaternion()
         :_x(0.0f), _y(0.0f), _z(0.0f), _w(1.0f)
     {}
 
-    // Constructing quaternion by vector
+    /*
+	 | -------------------------------------------------------------------------------------
+	 |     Constructing quaternion by vector
+	 | -------------------------------------------------------------------------------------
+	 */
     Quaternion(const Vector4& v);
 
-    // Parameter Vector3, float value
+    /*
+	 | -------------------------------------------------------------------------------------
+	 |     Constructing quaternion by vector and a number
+	 |     Parameter Vector3, float value
+	 | -------------------------------------------------------------------------------------
+	 */
     Quaternion(const Vector3& v, float w);
 
     // ---- //
