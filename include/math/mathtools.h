@@ -13,6 +13,9 @@
 #include "core\constants.h"
 #endif
 
+//TODO
+// Move all from this file to MathSystem
+
 namespace laura
 {
 namespace math

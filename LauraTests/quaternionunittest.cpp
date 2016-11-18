@@ -49,6 +49,44 @@ namespace LauraTests
 			Assert::AreEqual(3.0f, _quat->getZ());
 			Assert::AreEqual(1.0f, _quat->getW());
 		}
+
+		// Testing Constructing quaternion from four scalars
+		TEST_METHOD(TestQuaternionConstructionFromFourScalars)
+		{
+			_quat = std::unique_ptr<Quaternion>(new Quaternion(-1.0f, 0.0f, 1.0f, 1.0f));
+
+			Assert::AreEqual(-1.0f, _quat->getX());
+			Assert::AreEqual(0.0f, _quat->getY());
+			Assert::AreEqual(1.0f, _quat->getZ());
+			Assert::AreEqual(1.0f, _quat->getW());
+		}
+
+		// Testing Positive Identity of a quaternion
+		TEST_METHOD(TestQuaternionPositiveIdentity)
+		{
+			_quat = std::unique_ptr<Quaternion>(new Quaternion);
+			_quat->identity();
+
+			Assert::AreEqual(0.0f, _quat->getX());
+			Assert::AreEqual(0.0f, _quat->getY());
+			Assert::AreEqual(0.0f, _quat->getZ());
+			Assert::AreEqual(1.0f, _quat->getW());
+		}
+
+		// Testing Quaternion Rotation about X-axis
+		TEST_METHOD(TestQuaternionRotateAboutXAxis)
+		{
+			_quat = std::unique_ptr<Quaternion>(new Quaternion(1.0f, 1.0f, 3.0f, -2.0f));
+
+			_quat->rotateAboutX(90.0f);
+			//X = 0.707 (sin of 45.0f) degrees / 0.850f radians
+			//W = 0.707 (cos of 45.0f) degrees / 0.850f radians
+
+			Assert::AreEqual(0.850904f, _quat->getX(), 0.5f);
+			Assert::AreEqual(0.850904f, _quat->getW(), 0.5f);
+			Assert::AreEqual(0.0f, _quat->getY());
+			Assert::AreEqual(0.0f, _quat->getZ());
+		}
 	private:
 		std::unique_ptr<Quaternion> _quat;
 	};
