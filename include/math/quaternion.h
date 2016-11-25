@@ -97,7 +97,11 @@ public:
 	 */
     void rotateAboutX(float angle);
 
-    // Rotates about Y-axis 
+    /*
+	 | -------------------------------------------------------------------------------------
+	 |     Rotates about Y-axis 
+	 | -------------------------------------------------------------------------------------
+	 */
     void rotateAboutY(float angle);
 
     // Rotates about Z-axis 

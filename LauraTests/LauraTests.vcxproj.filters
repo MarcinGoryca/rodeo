@@ -35,5 +35,8 @@
     <ClCompile Include="quaternionunittest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vector2unittest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

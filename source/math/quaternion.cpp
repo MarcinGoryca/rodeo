@@ -73,15 +73,21 @@ void Quaternion::rotateAboutX(float angle)
 
 	_x = radiansToDegrees(_x);
 
+	_w = ::cos(halfAngle);
+	_w = radiansToDegrees(_w);
+
     setY(0.0f);
     setZ(0.0f);
-    setW(::cos(halfAngle));
+    //setW(::cos(halfAngle));
 }
 
 //--------------------------------------------------------------------------------------------------
 void Quaternion::rotateAboutY(float angle)
 {
     float halfAngle = angle * 0.5f;
+
+	_y = ::sin(halfAngle);
+	_y = radiansToDegrees(_y);
 
     setX(0.0f);
     setY(::sin(halfAngle));

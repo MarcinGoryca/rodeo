@@ -82,10 +82,16 @@ namespace LauraTests
 			//X = 0.707 (sin of 45.0f) degrees / 0.850f radians
 			//W = 0.707 (cos of 45.0f) degrees / 0.850f radians
 
-			Assert::AreEqual(0.850904f, _quat->getX(), 0.5f);
-			Assert::AreEqual(0.850904f, _quat->getW(), 0.5f);
+			Assert::AreEqual(48.7f, _quat->getX(), 0.5f);
+			Assert::AreEqual(48.7f, _quat->getW(), 0.5f);
 			Assert::AreEqual(0.0f, _quat->getY());
 			Assert::AreEqual(0.0f, _quat->getZ());
+		}
+
+		// Testing Quaternion Rotation about Y-axis
+		TEST_METHOD(TestQuaternionRotationAboutYAxis)
+		{
+
 		}
 	private:
 		std::unique_ptr<Quaternion> _quat;
