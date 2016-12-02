@@ -1,11 +1,36 @@
 /*
- | ----------------------------------------------
- |     Laura Game Engine
- |	   Copyright(c) Marcin Goryca
+ | --------------------------------------------------------------------------------------------------
+ |     Laura Project
+ |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
- |     http://marcingoryca.pl/laura
- |----------------------------------------------
+ |
+ |     License Information
+ |
+ |     The MIT License (MIT)
+ |     Copyright (c) 2016 Marcin Goryca
+ |
+ |     Permission is hereby granted, free of charge,
+ |     to any person obtaining a copy of this software
+ |     and associated documentation files (the "Software"),
+ |     to deal in the Software without restriction,
+ |     including without limitation the rights to use,
+ |     copy, modify, merge, publish, distribute, sublicense,
+ |     and/or sell copies of the Software,
+ |     and to permit persons to whom the Software is furnished to do so,
+ |     subject to the following conditions:
+ |
+ |     The above copyright notice and this permission notice
+ |     shall be included in all copies or substantial portions of the Software.
+ |
+ |     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ |     EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ |     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ |     IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ |     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ |     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ |     IN THE SOFTWARE.
+ |---------------------------------------------------------------------------------------------------
  */
 #ifndef LAURA_MATH_VECTOR2_H_
 #define LAURA_MATH_VECTOR2_H_
@@ -70,30 +95,31 @@ namespace laura
 
 			/*
 			 | -----------------------------------------------------------------------------------
-			 |		Length of a vector
-			 |      Length/magnitude/norm
-			 |      it can be any non-negative number 
+			 |	   Length of a vector
+			 |     Length/magnitude/norm
+			 |     it can be any non-negative number 
 			 | -----------------------------------------------------------------------------------
 			 */
 			float length();
 
 			/*
-			 * -------------------------------------------------------------------
-			 *      Normalization of a vector
-			 *      Normalizing a vector is dividing this vector by its length\n
-			 *      v(norm) = v / ||v||\n
-			 *      Normalizing a vector produces unit vector which points
-			 *      in the same direction as the product vector
-			 * -------------------------------------------------------------------
+			 | -------------------------------------------------------------------
+			 |      Normalization of a vector
+			 |      Normalizing a vector is dividing this vector by its length\n
+			 |      v(norm) = v / ||v||\n
+			 |      Normalizing a vector produces unit vector which points
+			 |      in the same direction as the product vector
+			 | -------------------------------------------------------------------
 			 */
 			void normalize();
 
 			/*
-			 * -------------------------------------------------------------------
-			 *		Operator +=
-			 * -------------------------------------------------------------------
+			 | -------------------------------------------------------------------
+			 |		Operator +=
+             |      Vector += Vector
+			 | -------------------------------------------------------------------
 			 */
-			inline Vector2& operator+=(const Vector2& v1)
+			Vector2& operator+=(const Vector2& v1)
 			{
 				this->_x += v1._x;
 				this->_y += v1._y;
@@ -101,35 +127,144 @@ namespace laura
 			}
 
 			/*
-			 * -------------------------------------------------------------------
-			 *		Operator +=
-			 * -------------------------------------------------------------------
+			 | -------------------------------------------------------------------
+			 |		Operator +=
+             |      Vector += scalar
+			 | -------------------------------------------------------------------
 			 */
-			inline  Vector2& operator+= (const float& scalar)
+			Vector2& operator+= (const float& scalar)
 			{
 				this->_x += scalar;
 				this->_y += scalar;
 				return *this;
 			}
 
+           /*
+            | ----------------------------------------------------------------------
+            |		Operator +
+            |       Vector + Vector
+            | ----------------------------------------------------------------------
+            */
+            Vector2 operator+(const Vector2& v1)
+            {
+             return Vector2(v1._x + _x, v1._y + _y);
+            }
+
+           /*
+            | --------------------------------------------------------------------
+            |		Operator +
+            |       Vector + scalar
+            | --------------------------------------------------------------------
+            */
+            Vector2& operator+(const float& scalar)
+            {
+             this->_x = this->_x + scalar;
+             this->_y = this->_y + scalar;
+             return *this;
+            }
+
+            /*
+             | -------------------------------------------------------------------
+             |		Operator -=
+             |      Vector -= Vector
+             | -------------------------------------------------------------------
+             */
+            Vector2& operator -=(const Vector2& v1)
+            {
+             this->_x -= v1._x;
+             this->_y -= v1._y;
+             return *this;
+            }
+
+            /*
+             | -------------------------------------------------------------------
+             |     Operator -=
+             |     Vector -= scalar
+             | -------------------------------------------------------------------
+             */
+            Vector2& operator -= (const float& scalar)
+            {
+             this->_x -= scalar;
+             this->_y -= scalar;
+             return *this;
+            }
+
+            /*
+            | ----------------------------------------------------------------------
+            |		Negates a vector
+            |		Returns Vector2 - negated
+            | ----------------------------------------------------------------------
+            */
+            Vector2 operator - () const
+            {
+             return Vector2(-_x, -_y);
+            }
+
+            /*
+             | ----------------------------------------------------------------
+             |     Operator -
+             |     Vector - Vector
+             | ----------------------------------------------------------------
+             */
+            Vector2 operator - (const Vector2& v1)
+            {
+                  float x = this->_x - v1.getX();
+                  float y = this->_y - v1.getY();
+                  return Vector2(x, y);
+            }
+
+           /*
+            | ----------------------------------------------------------------------
+            |		Operator /=
+            |       Vector /= Vector
+            | ----------------------------------------------------------------------
+            */
+            Vector2& operator /=(const Vector2& v1)
+            {
+             _x /= v1._x;
+             _y /= v1._y;
+             return *this;
+            }
+
 			/*
-			 * --------------------------------------------------------------------
-			 *		Operator /=
-			 * --------------------------------------------------------------------
+			 | --------------------------------------------------------------------
+			 |		Operator /=
+             |      Vector /= scalar
+			 | --------------------------------------------------------------------
 			 */
-			inline Vector2& operator/= (const float& scalar)
+			Vector2& operator/= (const float& scalar)
 			{
 				this->_x /= scalar;
 				this->_y /= scalar;
 				return *this;
 			}
 
+            /*
+             | ---------------------------------------------------------------------
+             |		Operator /
+             |      Vector / scalar
+             | ---------------------------------------------------------------------
+             */
+            Vector2 operator / (const float& scalar) const
+            {
+                 float tmp = 1.0f;
+                 if (scalar == 0.0f) {
+                     tmp = 0.1f;
+                 }
+                 else {
+                     tmp = scalar;
+                 }
+                 float sc = 1.0f / tmp;
+                 return Vector2(_x * sc, _y * sc);
+            }
+
 			/*
-			 * --------------------------------------------------------------------
-			 *		Operator *=
-			 * --------------------------------------------------------------------
+			 | --------------------------------------------------------------------
+			 |		Operator *=
+             |      Vector *= scalar
+			 | --------------------------------------------------------------------
 			 */
-			inline Vector2& operator *= (const float& scalar)
+			Vector2& operator *= (const float& scalar)
 			{
 				this->_x *= scalar;
 				this->_y *= scalar;
@@ -137,113 +272,72 @@ namespace laura
 			}
 
 			/*
-			 * -------------------------------------------------------------------
-			 *		Operator -=
-			 * -------------------------------------------------------------------
+			 | -------------------------------------------------------------------
+			 |		Operator *=
+             |      Vector *= Vector
+			 | -------------------------------------------------------------------
 			 */
-			inline Vector2& operator-=(const Vector2& v1)
-			{
-				this->_x -= v1._x;
-				_y -= v1._y;
-				return *this;
-			}
-
-			/*
-			 * -------------------------------------------------------------------
-			 *		Operator *=
-			 * -------------------------------------------------------------------
-			 */
-			inline Vector2& operator*=(const Vector2& v1)
+			Vector2& operator*=(const Vector2& v1)
 			{
 				this->_x *= v1._x;
 				this->_y *= v1._y;
 				return *this;
 			}
 
-			/*
-			 * ----------------------------------------------------------------------
-			 *		Operator /=
-			 * ----------------------------------------------------------------------
-			 */
-			inline Vector2& operator /=(const Vector2& v1)
-			{
-				_x /= v1._x;
-				_y /= v1._y;
-				return *this;
-			}
+           /*
+            | ---------------------------------------------------------------------
+            |		Operator *
+            |       Vector * scalar
+            | ---------------------------------------------------------------------
+            */
+            Vector2 operator*(const float& s) const
+            {
+                return Vector2(_x * s, _y * s);
+            }
+
+            /*
+             | ---------------------------------------------------------------------
+             |     Operator *
+             |     Vector * Vector
+             | ---------------------------------------------------------------------
+             */
+            Vector2 operator *(const Vector2& v) const
+            {
+                 return Vector2(_x * v.getX(), _y * v.getY());
+            }
 
 			/*
-			 * ----------------------------------------------------------------------
-			 *		Operator +
-			 * ----------------------------------------------------------------------
+			 | ---------------------------------------------------------------------
+			 |		Operator ==
+			 | ---------------------------------------------------------------------
 			 */
-			inline Vector2 operator+(const Vector2& v1)
-			{
-				return Vector2(v1._x + _x, v1._y + _y);
-			}
-
-			/*
-			 * ---------------------------------------------------------------------
-			 *		Operator ==
-			 * ---------------------------------------------------------------------
-			 */
-			inline bool operator == (const Vector2& v1) const
+			bool operator == (const Vector2& v1) const
 			{
 				return (_x == v1._x && _y == v1._y);
 			}
 
 			/*
-			 * ---------------------------------------------------------------------
-			 *		Operator =
-			 * ---------------------------------------------------------------------
+			 | ---------------------------------------------------------------------
+			 |		Operator =
+			 | ---------------------------------------------------------------------
 			 */
-			inline Vector2& operator = (const Vector2& v1)
+			Vector2& operator = (const Vector2& v1)
 			{
 				_x = v1._x; _y = v1._y;
 				return *this;
 			}
 
 			/*
-			 * ---------------------------------------------------------------------
-			 *		Operator !=
-			 * ---------------------------------------------------------------------
+			 | ---------------------------------------------------------------------
+			 |		Operator !=
+			 | ---------------------------------------------------------------------
 			 */
-			inline bool operator != (const Vector2& v1) const
+			bool operator != (const Vector2& v1) const
 			{
 				return (_x != v1._x || _y != v1._y);
 			}
 
-			/*
-			 * ----------------------------------------------------------------------
-			 *		Negates a vector
-			 *		Returns Vector2 - negated
-			 * ----------------------------------------------------------------------
-			 */
-			Vector2 operator - () const
-			{
-				return Vector2(-_x, -_y);
-			}
 
-			/*
-			 * ---------------------------------------------------------------------
-			 *		Operator *
-			 * ---------------------------------------------------------------------
-			 */
-			Vector2 operator*(const float& s) const
-			{
-				return Vector2(_x * s, _y * s);
-			}
-
-			/*
-			 * ---------------------------------------------------------------------
-			 *		Operator /
-			 * ---------------------------------------------------------------------
-			 */
-			Vector2 operator/(const float& s) const
-			{
-				float sc = 1.0f / s;
-				return Vector2(_x * sc, _y * sc);
-			}
 
 			/*
 			 * --------------------------------------------------------------------
@@ -255,17 +349,6 @@ namespace laura
 				return os << "Vector2(" << v._x << ", " << v._y << ")";
 			}
 
-			/*
-			 * --------------------------------------------------------------------
-			 *		Operator +
-			 * --------------------------------------------------------------------
-			 */
-			inline Vector2& operator+(const float& scalar)
-			{
-				this->_x = this->_x + scalar;
-				this->_y = this->_y + scalar;
-				return *this;
-			}
 
 			/*
 			 * ------------------------------------------------------------------

@@ -161,7 +161,6 @@
     <ClInclude Include="include\renderer\globalstate.h" />
     <ClInclude Include="include\renderer\gl\glcommon.h" />
     <ClInclude Include="include\renderer\gl\gldraw.h" />
-    <ClInclude Include="include\renderer\gl\gllibrary.h" />
     <ClInclude Include="include\renderer\gl\glrenderer.h" />
     <ClInclude Include="include\renderer\gl\glslshaders.h" />
     <ClInclude Include="include\renderer\gl\queryrenderer.h" />
@@ -190,7 +189,6 @@
     <ClInclude Include="include\tools\tools.h" />
     <ClInclude Include="include\tools\toolsall.h" />
     <ClInclude Include="include\tools\xmlparser.h" />
-    <ClInclude Include="source\renderer\gl\gldrawenums.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
