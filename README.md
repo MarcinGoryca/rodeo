@@ -1,5 +1,11 @@
-Laura Game Engine [ Project ]
+Laura Multimedia Engine [ Project ]
 -----------------------------
+
+<h2>Important Info (16 Dec 2016)</h2>
+<h3>Warning!</h3>
+<span style="color:red">The project is under heavy redesigning, testing and development, most of the old code is off right now.</span>
+
+<h2>Foundation</h2>
 <h3>This was my thesis project, but I didn't finish it within required time.</h3>
 <h3>I still want to get it working in some way. I think it is a great subject to explore.</h3>
 <h3>Great to learn and have fun.</h3>
