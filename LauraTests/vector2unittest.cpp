@@ -241,6 +241,24 @@ namespace LauraTests
              Assert::AreEqual(8.0f, _vec2->getY());
         }
 
+        // Testing getX method
+        TEST_METHOD(TestGetXMethod)
+        {
+             _vec2 = up(new Vector2(43.0f, 3.0f));
+
+             Assert::AreEqual(40.0f, _vec2->getX());
+        }
+
+        // Testing setY method
+        TEST_METHOD(TestSetYMethod)
+        {
+             _vec2 = up(new Vector2);
+
+             _vec2->setY(-3.0f);
+
+             Assert::AreEqual(-3.0f, _vec2->getY());
+        }
+
 	private:
 		std::unique_ptr<Vector2> _vec2;
 	};
