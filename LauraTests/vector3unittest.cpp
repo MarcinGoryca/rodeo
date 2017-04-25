@@ -64,8 +64,88 @@ namespace LauraTests
 
         }
 
+        // Testing DOT PRODUCT
+        TEST_METHOD(TestDotProductVector3)
+        {
+            _v3 = up(new Vector3(1.0f, 2.0f, 4.0f));
+            Vector3 x(2.0f, 3.0f, 2.0f);
 
+            float a = _v3->dot(x);
+
+            Assert::AreEqual(16.0f, a);
+        }
+
+        // Testing Negate Method
+        TEST_METHOD(TestNegateMethodVector3)
+        {
+            _v3 = up(new Vector3(2.0f, 3.0f, 4.0f));
+            _v3->negate();
+
+            Assert::AreEqual(-2.0f, _v3->getX());
+            Assert::AreEqual(-3.0f, _v3->getY());
+            Assert::AreEqual(-4.0f, _v3->getZ());
+
+            Vector3 a(*_v3);
+
+            a.negate();
+
+            Assert::AreEqual(2.0f, a.getX());
+            Assert::AreEqual(3.0f, a.getY());
+            Assert::AreEqual(4.0f, a.getZ());
+        }
+
+        // Testing Cross Product 
+        TEST_METHOD(TestCrossProductVector3)
+        {
+            _v3 = up(new Vector3(2.0f, 1.0f, 4.0f));
+            up x = up(new Vector3(4.0f, 2.0f, -2.0f));
+            Vector3 y;
+            y = y.cross(*_v3, *x);
+
+            // x = -10
+            // y =  20
+            // z = 0
+            Assert::AreEqual(-10.0f, y.getX());
+            Assert::AreEqual(20.0f, y.getY());
+            Assert::AreEqual(0.0f, y.getZ());
+        }
+
+        // Testing operator+
+        TEST_METHOD(TestOperatorPlusVector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, 5.0f));
+            up a = up(new Vector3(2.0f, -2.0f, -6.0f));
+
+            Vector3 b = *_v3 + *a;
+            Assert::AreEqual(5.0f, b.getX());
+            Assert::AreEqual(0.0f, b.getY());
+            Assert::AreEqual(-1.0f, b.getZ());
+        }
+
+        // Testing operator-
+        TEST_METHOD(TestOperatorMinusVector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, 5.0f));
+            up a = up(new Vector3(2.0f, -2.0f, -6.0f));
+
+            Vector3 b = *_v3 - *a;
+            Assert::AreEqual(1.0f, b.getX());
+            Assert::AreEqual(4.0f, b.getY());
+            Assert::AreEqual(11.0f, b.getZ());
+        }
+
+        //Testing operator+ for scalar
+        TEST_METHOD(TestOperatorPlusScalarVector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, -4.0f));
+
+            *_v3 = *_v3 + 4.0f;
+
+            Assert::AreEqual(7.0f, _v3->getX());
+            Assert::AreEqual(6.0f, _v3->getY());
+            Assert::AreEqual(0.0f, _v3->getZ());
+        }
     private:
-        std::unique_ptr<Vector3> _v3;
+        up _v3;
     };
 }

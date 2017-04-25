@@ -101,7 +101,7 @@ namespace laura
 			 *		Returns float scalar value 
 			 * --------------------------------------------------------------------
 			 */
-			inline float dot(const Vector3& v1)
+			float dot(const Vector3& v1)
 			{
 				return _x * v1._x + _y * v1._y + _z * v1._z;
 			}
@@ -127,7 +127,7 @@ namespace laura
 			 *      IF Cross AND Dot are used together, the Cross is first in equation
 			 * ---------------------------------------------------------------------
 			 */
-			inline Vector3 cross(Vector3& v1, Vector3& v2)
+			Vector3 cross(Vector3& v1, Vector3& v2)
 			{
 				return Vector3(v1._y * v2._z - v1._z * v2._y,
 					v1._z * v2._x - v1._x * v2._z,
@@ -144,7 +144,7 @@ namespace laura
 			 *		a = a + b;
 			 * ---------------------------------------------------------------------
 			 */
-			inline Vector3 operator+(const Vector3& vector3)
+			Vector3 operator+(const Vector3& vector3)
 			{
 				Vector3 result;
 				result._x = _x + vector3._x;
@@ -159,7 +159,7 @@ namespace laura
 			// Vector3 a;
 			// Vector3 b;
 			// a = a - b;
-			inline Vector3 operator-(const Vector3& vector3)
+			Vector3 operator-(const Vector3& vector3)
 			{
 				Vector3 result;
 				result._x = _x - vector3._x;
@@ -168,7 +168,7 @@ namespace laura
 				return result;
 			}
 
-			inline const Vector3 operator-(const Vector3 vector3)const
+			const Vector3 operator-(const Vector3 vector3)const
 			{
 				//return Vector3(vector3._x - _x, vector3._y - _y, vector3._z - _z);
 				Vector3 result;
@@ -184,7 +184,7 @@ namespace laura
 			// Vector3 a;
 			// float b;
 			// a = a + b;
-			inline Vector3& operator+(const float& scalar)
+			Vector3& operator+(const float& scalar)
 			{
 				this->_x = this->_x + scalar;
 				this->_y = this->_y + scalar;
@@ -194,7 +194,7 @@ namespace laura
 
 			// Overloaded operator- (scalar)
 			// Returns This Vector
-			inline Vector3& operator-(const float& scalar)
+			Vector3& operator-(const float& scalar)
 			{
 				this->_x = this->_x - scalar;
 				this->_y = this->_y - scalar;
@@ -204,14 +204,14 @@ namespace laura
 
 			// Overloaded operator* (scalar)
 			// Returns Vector
-			inline Vector3 operator*(const float& number)
+			Vector3 operator*(const float& number)
 			{
 				return Vector3(_x * number, _y * number, _z * number);
 			}
 
 			// Overloaded operator*
 			// Returns This vector
-			inline Vector3& operator*(const Vector3& v)
+			Vector3& operator*(const Vector3& v)
 			{
 				_x = _x * v._x;
 				_y = _y * v._y;
@@ -221,7 +221,7 @@ namespace laura
 
 			// Overloaded operator/ (scalar)
 			// Returns Vector
-			inline Vector3 operator/(float number)
+			Vector3 operator/(float number)
 			{
 				return Vector3(_x / number, _y / number, _z / number);
 			}
@@ -232,7 +232,7 @@ namespace laura
 			// Vector3 a;
 			// Vector3 b;
 			// a += b;
-			inline Vector3& operator+=(const Vector3& v1)
+			Vector3& operator+=(const Vector3& v1)
 			{
 				this->_x += v1._x;
 				this->_y += v1._y;
@@ -246,7 +246,7 @@ namespace laura
 			// Vector3 a;
 			// Vector3 b;
 			// a -= b;
-			inline Vector3& operator-=(const Vector3& v1)
+			Vector3& operator-=(const Vector3& v1)
 			{
 				this->_x -= v1._x;
 				this->_y -= v1._y;
@@ -256,7 +256,7 @@ namespace laura
 
 			// Overloaded operator *=
 			// Returns This Vector
-			inline Vector3& operator*=(const Vector3& v1)
+			Vector3& operator*=(const Vector3& v1)
 			{
 				this->_x *= v1._x;
 				this->_y *= v1._y;
@@ -266,7 +266,7 @@ namespace laura
 
 			// Overloaded Operator /=
 			// Returns This Vector
-			inline Vector3& operator /=(const Vector3& v1)
+			Vector3& operator /=(const Vector3& v1)
 			{
 				this->_x /= v1._x;
 				this->_y /= v1._y;
@@ -276,7 +276,7 @@ namespace laura
 
 			// Overloaded Operator =
 			// Returns This Vector
-			inline Vector3& operator =(const Vector3& v1)
+			Vector3& operator =(const Vector3& v1)
 			{
 				_x = v1._x;
 				_y = v1._y;
@@ -286,14 +286,14 @@ namespace laura
 
 			// Overloaded Operator ==
 			// Returns True if Vectors are equal;
-			inline bool operator == (const Vector3& v1) const
+			bool operator == (const Vector3& v1) const
 			{
 				return (_x == v1._x && _y == v1._y && _z == v1._z);
 			}
 
 			// Overloaded Operator !=
 			// Returns True if Vectors are NOT equal
-			inline bool operator != (const Vector3& v1) const
+			bool operator != (const Vector3& v1) const
 			{
 				return (_x != v1._x || _y != v1._y || _z != v1._z);
 			}
@@ -305,7 +305,7 @@ namespace laura
 			}
 
 			// Assigning default values to Vector
-			inline void reset()
+			void reset()
 			{
 				_x = 0.0f;
 				_y = 0.0f;
@@ -428,7 +428,7 @@ namespace laura
 		// Parameter Vector3 v2 - second vector to add
 		// Adds two Vectors
 		// Returns product Vector of two Vectors
-		inline Vector3 add(Vector3& result, const Vector3& v1, const Vector3& v2)
+		Vector3 add(Vector3& result, const Vector3& v1, const Vector3& v2)
 		{
 			result.setX(v1.getX() + v2.getX());
 			result.setY(v1.getY() + v2.getY());
@@ -438,7 +438,7 @@ namespace laura
 
 		// Divides Vector by Scalar
 		// Returns product Vector of dividing
-		inline Vector3 divideByScalar(const Vector3& v1, float scalar)
+		Vector3 divideByScalar(const Vector3& v1, float scalar)
 		{
 			Vector3 result;
 			result.setX(v1.getX() / scalar);
@@ -461,7 +461,7 @@ namespace laura
 		 *		if c = 0.5, position = middle point between A and B
 		 * -----------------------------------------------------------------------------------------
 		 */
-		inline Vector3 interpolate(Vector3 start, Vector3 end, float range = 0.5f)
+		Vector3 interpolate(Vector3 start, Vector3 end, float range = 0.5f)
 		{
 			Vector3 middle;
 
@@ -473,7 +473,7 @@ namespace laura
 		}
 
 		/** */
-		inline Vector3 computeNormals(const Vector3& v1, const Vector3& v2, const Vector3& v3, Vector3 out)
+		Vector3 computeNormals(const Vector3& v1, const Vector3& v2, const Vector3& v3, Vector3 out)
 		{
 			Vector3 edge1(0.0f, 0.0f, 0.0f);
 			Vector3 edge2(0.0f, 0.0f, 0.0f);
@@ -488,7 +488,7 @@ namespace laura
 		}
 
 		/** */
-		inline Vector3 vertexNormal(const Vector3& v1)
+		Vector3 vertexNormal(const Vector3& v1)
 		{
 			Vector3 result(0.0f, 0.0f, 0.0f);
 
@@ -498,7 +498,7 @@ namespace laura
 		}
 
 		/** Normalization */
-		inline void norm(Vector3& v)
+		void norm(Vector3& v)
 		{
 			float length = ::sqrt(v.getX() * v.getX() + v.getY() * v.getY() + v.getZ() * v.getZ());
 			if (length > 0.0f)
@@ -510,7 +510,7 @@ namespace laura
 		}
 
 		/** Normalization */
-		inline Vector3 normalize(Vector3& v)
+		Vector3 normalize(Vector3& v)
 		{
 			Vector3 result;
 			float length = ::sqrt(v.getX() * v.getX() + v.getY() * v.getY() + v.getZ() * v.getZ());
@@ -527,7 +527,7 @@ namespace laura
 		 * @details Distance between two vectors
 		 * @return float value of the distance
 		 */
-		inline float distance(const Vector3 &v1, const Vector3 &v2)
+		float distance(const Vector3 &v1, const Vector3 &v2)
 		{
 			float vx = v1.getX() - v2.getX();
 			float vy = v1.getY() - v2.getY();
@@ -539,7 +539,7 @@ namespace laura
 		 * @details Dividing Vectors
 		 * @return Vector3 - this vector
 		 */
-		inline Vector3 subtract(Vector3& result, const Vector3& v1, const Vector3& v2)
+		Vector3 subtract(Vector3& result, const Vector3& v1, const Vector3& v2)
 		{
 			result.setX(v1.getX() - v2.getX());
 			result.setY(v1.getY() - v2.getY());
