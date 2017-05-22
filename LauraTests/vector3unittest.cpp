@@ -145,6 +145,115 @@ namespace LauraTests
             Assert::AreEqual(6.0f, _v3->getY());
             Assert::AreEqual(0.0f, _v3->getZ());
         }
+
+        //Testing operator- for scalar
+        TEST_METHOD(TestOperatorMinusScalarVector3)
+        {
+            _v3 = up(new Vector3(3.0f, -2.0f, 0.0f));
+            float scalar = -4.0f;
+
+            *_v3 = *_v3 - scalar;
+
+            Assert::AreEqual(7.0f, _v3->getX());
+            Assert::AreEqual(2.0f, _v3->getY());
+            Assert::AreEqual(4.0f, _v3->getZ());
+        }
+
+        //Testing operator* for scalar
+        TEST_METHOD(TestOperatorMultiplyScalarVector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, -1.0f));
+
+            float scalar = 8.0f;
+
+            *_v3 = *_v3 * scalar;
+
+            Assert::AreEqual(24.0f, _v3->getX());
+            Assert::AreEqual(16.0f, _v3->getY());
+            Assert::AreEqual(-8.0f, _v3->getZ());
+
+        }
+
+        //Testing operator* for Vector3
+        TEST_METHOD(TestOperatorMultiplyVector3_Vector3)
+        {
+            _v3 = up(new Vector3(3.0f, -2.0f, 3.0f));
+            up v3_2 = up(new Vector3(3.0f, 2.0f, 1.0f));
+
+            *_v3 = *_v3 * *v3_2;
+
+            Assert::AreEqual(9.0f, _v3->getX());
+            Assert::AreEqual(-4.0f, _v3->getY());
+            Assert::AreEqual(3.0f, _v3->getZ());
+
+            up v3_3 = up(new Vector3(1.223f, 7.1342f, 0.5612f));
+
+            *_v3 = *_v3 * *v3_3;
+
+            Assert::AreEqual(11.007f, _v3->getX());
+            Assert::AreEqual(-28.5368f, _v3->getY());
+            Assert::AreEqual(1.6836f, _v3->getZ());
+
+        }
+
+        //Testing operator/ for scalar
+        TEST_METHOD(TestOperatorDivideScalarVector3)
+        {
+            _v3 = up(new Vector3(2.0f, 1.22f, 3.0f));
+            float scalar = 0.432f;
+
+            *_v3 = *_v3 / scalar;
+
+            Assert::AreEqual(4.629f, _v3->getX(),0.1f);
+            Assert::AreEqual(2.824f, _v3->getY(), 0.1f);
+            Assert::AreEqual(6.94f, _v3->getZ(), 0.1f);
+        }
+
+        //Testing operator+= Vector3
+        TEST_METHOD(TestOperatorPlusEqualVector3_Vector3)
+        {
+            _v3 = up(new Vector3(4.0f, -6.0f, 2.5f));
+            up v = up(new Vector3(-4.0f, 6.0f, 2.5f));
+
+            *_v3 += *v;
+
+            Assert::AreEqual(0.0f, _v3->getX());
+            Assert::AreEqual(0.0f, _v3->getY());
+            Assert::AreEqual(5.0f, _v3->getZ());
+        }
+
+        //Testing Operator-= Vector3
+        TEST_METHOD(TestOperatorMinusEqualVector3_Vector3)
+        {
+            _v3 = up(new Vector3(4.0f, 1.0f, 4.0f));
+            up v = up(new Vector3(7.0f, 4.0f, 1.2f));
+
+            *_v3 -= *v;
+
+            Assert::AreEqual(-3.0f, _v3->getX());
+            Assert::AreEqual(-3.0f, _v3->getY());
+            Assert::AreEqual(2.8f, _v3->getZ());
+        }
+
+        //Testing Operator*= Vector3
+        TEST_METHOD(TestOperatorMultiplyEqualVector3_Vector3)
+        {
+            _v3 = up(new Vector3(2.0f, 7.3f, 0.4f));
+            up v = up(new Vector3(1.1f, 8.4f, 9.3f));
+
+            *_v3 *= *v;
+
+            Assert::AreEqual(2.2f, _v3->getX());
+            Assert::AreEqual(61.32f, _v3->getY());
+            Assert::AreEqual(3.72f, _v3->getZ());
+        }
+
+        //Testing Operator/= Vector3
+        TEST_METHOD(TestOperatorDivideEqualVector3_Vector3)
+        {
+            _v3 = up(new Vector3(5.0f, 4.0f, 3.0f));
+            up v = up(new Vector3())
+        }
     private:
         up _v3;
     };

@@ -428,7 +428,7 @@ namespace laura
 		// Parameter Vector3 v2 - second vector to add
 		// Adds two Vectors
 		// Returns product Vector of two Vectors
-		Vector3 add(Vector3& result, const Vector3& v1, const Vector3& v2)
+		inline Vector3 add(Vector3& result, const Vector3& v1, const Vector3& v2)
 		{
 			result.setX(v1.getX() + v2.getX());
 			result.setY(v1.getY() + v2.getY());
@@ -438,7 +438,7 @@ namespace laura
 
 		// Divides Vector by Scalar
 		// Returns product Vector of dividing
-		Vector3 divideByScalar(const Vector3& v1, float scalar)
+		inline Vector3 divideByScalar(const Vector3& v1, float scalar)
 		{
 			Vector3 result;
 			result.setX(v1.getX() / scalar);
@@ -461,7 +461,7 @@ namespace laura
 		 *		if c = 0.5, position = middle point between A and B
 		 * -----------------------------------------------------------------------------------------
 		 */
-		Vector3 interpolate(Vector3 start, Vector3 end, float range = 0.5f)
+		inline Vector3 interpolate(Vector3 start, Vector3 end, float range = 0.5f)
 		{
 			Vector3 middle;
 
@@ -473,7 +473,7 @@ namespace laura
 		}
 
 		/** */
-		Vector3 computeNormals(const Vector3& v1, const Vector3& v2, const Vector3& v3, Vector3 out)
+		inline Vector3 computeNormals(const Vector3& v1, const Vector3& v2, const Vector3& v3, Vector3 out)
 		{
 			Vector3 edge1(0.0f, 0.0f, 0.0f);
 			Vector3 edge2(0.0f, 0.0f, 0.0f);
@@ -488,7 +488,7 @@ namespace laura
 		}
 
 		/** */
-		Vector3 vertexNormal(const Vector3& v1)
+		inline Vector3 vertexNormal(const Vector3& v1)
 		{
 			Vector3 result(0.0f, 0.0f, 0.0f);
 
@@ -498,7 +498,7 @@ namespace laura
 		}
 
 		/** Normalization */
-		void norm(Vector3& v)
+		inline void norm(Vector3& v)
 		{
 			float length = ::sqrt(v.getX() * v.getX() + v.getY() * v.getY() + v.getZ() * v.getZ());
 			if (length > 0.0f)
@@ -510,7 +510,7 @@ namespace laura
 		}
 
 		/** Normalization */
-		Vector3 normalize(Vector3& v)
+		inline Vector3 normalize(Vector3& v)
 		{
 			Vector3 result;
 			float length = ::sqrt(v.getX() * v.getX() + v.getY() * v.getY() + v.getZ() * v.getZ());
@@ -527,7 +527,7 @@ namespace laura
 		 * @details Distance between two vectors
 		 * @return float value of the distance
 		 */
-		float distance(const Vector3 &v1, const Vector3 &v2)
+		inline float distance(const Vector3 &v1, const Vector3 &v2)
 		{
 			float vx = v1.getX() - v2.getX();
 			float vy = v1.getY() - v2.getY();
@@ -539,7 +539,7 @@ namespace laura
 		 * @details Dividing Vectors
 		 * @return Vector3 - this vector
 		 */
-		Vector3 subtract(Vector3& result, const Vector3& v1, const Vector3& v2)
+		inline Vector3 subtract(Vector3& result, const Vector3& v1, const Vector3& v2)
 		{
 			result.setX(v1.getX() - v2.getX());
 			result.setY(v1.getY() - v2.getY());
