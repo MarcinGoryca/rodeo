@@ -100,9 +100,6 @@
     <Filter Include="Header Files\controllers">
       <UniqueIdentifier>{669ac239-9247-4cab-9185-b2b9214d3f5b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\front">
-      <UniqueIdentifier>{82e43ea0-c3b0-4877-b4d4-e8550f82b3b3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\controllers">
       <UniqueIdentifier>{fa92353f-6721-41d5-a848-67ba660f560c}</UniqueIdentifier>
     </Filter>
@@ -111,6 +108,9 @@
     </Filter>
     <Filter Include="Header Files\renderer\vk">
       <UniqueIdentifier>{48a85fc4-503c-410e-b181-377d1a050867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{82e43ea0-c3b0-4877-b4d4-e8550f82b3b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -408,9 +408,6 @@
     <ClInclude Include="include\event\eventheader.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
-    <ClInclude Include="include\event\mgevent.h">
-      <Filter>Header Files\event</Filter>
-    </ClInclude>
     <ClInclude Include="include\controllers\audiocontroller.h">
       <Filter>Header Files\controllers</Filter>
     </ClInclude>
@@ -445,13 +442,10 @@
       <Filter>Header Files\controllers</Filter>
     </ClInclude>
     <ClInclude Include="include\front\widget.h">
-      <Filter>Header Files\front</Filter>
+      <Filter>Header Files\ui</Filter>
     </ClInclude>
     <ClInclude Include="include\front\igui.h">
-      <Filter>Header Files\front</Filter>
-    </ClInclude>
-    <ClInclude Include="include\front\front.h">
-      <Filter>Header Files\front</Filter>
+      <Filter>Header Files\ui</Filter>
     </ClInclude>
     <ClInclude Include="include\renderer\gl\gldraw.h">
       <Filter>Header Files\renderer\gl</Filter>
@@ -461,6 +455,12 @@
     </ClInclude>
     <ClInclude Include="include\renderer\vk\vkrenderer.h">
       <Filter>Header Files\renderer\vk</Filter>
+    </ClInclude>
+    <ClInclude Include="include\event\lauraevent.h">
+      <Filter>Header Files\event</Filter>
+    </ClInclude>
+    <ClInclude Include="include\front\ui.h">
+      <Filter>Header Files\ui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

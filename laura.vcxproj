@@ -110,10 +110,10 @@
     <ClInclude Include="include\event\eventheader.h" />
     <ClInclude Include="include\event\gameevent.h" />
     <ClInclude Include="include\event\iinputlistener.h" />
-    <ClInclude Include="include\event\mgevent.h" />
+    <ClInclude Include="include\event\lauraevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
-    <ClInclude Include="include\front\front.h" />
+    <ClInclude Include="include\front\ui.h" />
     <ClInclude Include="include\front\igui.h" />
     <ClInclude Include="include\front\widget.h" />
     <ClInclude Include="include\io\file3dfactory.h" />

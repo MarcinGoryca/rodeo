@@ -126,7 +126,7 @@ inline std::string toString(T number, int digitPrecision)
 
 // Swapping function
 template <typename T>
-inline void rodeoSwap(T& a, T& b)
+inline void mySwap(T& a, T& b)
 {
     T temp = a;
     a = b;
@@ -134,7 +134,7 @@ inline void rodeoSwap(T& a, T& b)
 }
 
 // Swapping Float Values
-inline void rodeoSwapFloat(float& a, float& b)
+inline void mySwapFloat(float& a, float& b)
 {
     float temp = a;
     a = b;

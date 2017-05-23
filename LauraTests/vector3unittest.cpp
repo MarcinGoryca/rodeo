@@ -252,7 +252,146 @@ namespace LauraTests
         TEST_METHOD(TestOperatorDivideEqualVector3_Vector3)
         {
             _v3 = up(new Vector3(5.0f, 4.0f, 3.0f));
-            up v = up(new Vector3())
+            up v = up(new Vector3(3.2f, 1.0f, 2.5f));
+
+            *_v3 /= *v;
+
+            Assert::AreEqual(1.5625f, _v3->getX());
+            Assert::AreEqual(4.0f, _v3->getY());
+            Assert::AreEqual(1.2f, _v3->getZ());
+        }
+
+        //Testing Operator= Vector3
+        TEST_METHOD(TestOperatorAsignVector3_Vector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, 3.0f));
+
+            up v = up(new Vector3(5.0f, 1.0f, 1.4f));
+
+            *_v3 = *v;
+
+            Assert::AreEqual(5.0f, _v3->getX());
+            Assert::AreEqual(1.0f, _v3->getY());
+            Assert::AreEqual(1.4f, _v3->getZ());
+        }
+
+        //Testing Operator== Vector3
+        TEST_METHOD(TestOperatorEqualsVector3_Vector3)
+        {
+            _v3 = up(new Vector3(3.0f, 1.0f, 1.0f));
+            up v = up(new Vector3(3.0f, 1.0f, 1.0f));
+
+            bool areEqual = false;
+
+            if (*_v3 == *v)
+            {
+                areEqual = true;
+            }
+
+            Assert::IsTrue(areEqual);
+        }
+
+        //Testing Operator != Vector3
+        TEST_METHOD(TestOperatorNotEqualsVector3_Vector3)
+        {
+            _v3 = up(new Vector3(5.0f, 1.0f, 4.0f));
+            up v = up(new Vector3(3.0f, -4.0f, 3.0f));
+
+            bool areNotEqual = false;
+
+            if (*_v3 != *v)
+            {
+                areNotEqual = true;
+            }
+
+            Assert::IsTrue(areNotEqual);
+        }
+
+        //Testing reset() method Vector3
+        TEST_METHOD(TestResetMethodVector3)
+        {
+            _v3 = up(new Vector3(4.0f, -4.321f, -5.03f));
+
+            Assert::AreEqual(4.0f, _v3->getX());
+            Assert::AreEqual(-4.321f, _v3->getY());
+            Assert::AreEqual(-5.03f, _v3->getZ());
+
+            _v3->reset();
+
+            Assert::AreEqual(0.0f, _v3->getX());
+            Assert::AreEqual(0.0f, _v3->getY());
+            Assert::AreEqual(0.0f, _v3->getZ());
+
+            Vector3 v(5.0f, 3.0f, 2.0f);
+
+            Assert::AreEqual(5.0f, v.getX());
+            Assert::AreEqual(3.0f, v.getY());
+            Assert::AreEqual(2.0f, v.getZ());
+
+            v.reset();
+
+            Assert::AreEqual(0.0f, v.getX());
+            Assert::AreEqual(0.0f, v.getY());
+            Assert::AreEqual(0.0f, v.getZ());
+        }
+
+        //Testing Cross Product Vector3
+        TEST_METHOD(TestCrossVector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, 1.5f));
+            up v = up(new Vector3(4.0f, 3.0f, 2.5f));
+
+            Vector3 result;
+
+            Vector3::cross(result, *_v3, *v);
+
+            /*
+            result._x = v1._y * v2._z - v2._y * v1._z;
+            result._y = v1._x * v2._z - v2._x * v1._z;
+            result._z = v1._x * v2._y - v2._x * v1._y;
+            */
+
+            Assert::AreEqual(0.5f, result.getX());
+            Assert::AreEqual(1.5f, result.getY());
+            Assert::AreEqual(1.0f, result.getZ());
+        }
+
+        //Testing Dot Product Vector3
+        TEST_METHOD(TestDotMethodVector3)
+        {
+            _v3 = up(new Vector3(3.0f, 4.0f, 1.0f));
+            up v = up(new Vector3(4.0f, 3.0f, 2.0f));
+
+            float dot = Vector3::dot(*_v3, *v);
+
+            /*
+            dot_product = v1._x * v2._x + v1._y * v2._y + v1._z * v2._z;
+            */
+
+            Assert::AreEqual(26.0f, dot);
+        }
+
+        //Testign Normalize Method
+        TEST_METHOD(TestNormalizeMethodVector3)
+        {
+            _v3 = up(new Vector3(3.2f, 4.21f, 6.321f));
+
+            _v3->normalize();
+
+            /*
+            
+            float length = ::sqrt(this->_x * this->_x + this->_y * this->_y + this->_z * this->_z);
+				if (length > 0.0f)
+				{
+					this->_x = this->_x / length;
+					this->_y = this->_y / length;
+					this->_z = this->_z / length;
+                    }
+            */
+
+            Assert::AreEqual(0.39f, _v3->getX(), 0.1f);
+            Assert::AreEqual(0.51f, _v3->getY(), 0.1f);
+            Assert::AreEqual(0.76f, _v3->getZ(), 0.1f);
         }
     private:
         up _v3;
