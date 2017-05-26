@@ -63,9 +63,10 @@ Vector3 cross(const Vector3& v1, const Vector3& v2)
 {
 	Vector3 v = Vector3::S_VECTOR3_ZERO_;
 	v.setX(v1.getY() * v2.getZ() - v2.getY() * v1.getZ());
-    v.setY(v1.getX() * v2.getZ() - v2.getX() * v1.getZ());
+    v.setY(v1.getZ() * v2.getX() - v2.getZ() * v1.getX());
     v.setZ(v1.getX() * v2.getY() - v2.getX() * v1.getY());
-	return v;
+
+    return v;
 }
 
 /*

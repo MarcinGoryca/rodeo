@@ -75,8 +75,8 @@
 #include "tools/tools.h"
 #endif
 
-#ifndef LAURA_FRONT_FRONT_H_
-#include "front/front.h"
+#ifndef LAURA_UI_UI_H_
+#include "ui/ui.h"
 #endif
 
 #ifndef LAURA_PRIMITIVE_PRIMITIVE_H_

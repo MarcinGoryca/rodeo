@@ -338,12 +338,13 @@ namespace LauraTests
         //Testing Cross Product Vector3
         TEST_METHOD(TestCrossVector3)
         {
-            _v3 = up(new Vector3(3.0f, 2.0f, 1.5f));
-            up v = up(new Vector3(4.0f, 3.0f, 2.5f));
-
+            /*_v3 = up(new Vector3(3.0f, 2.0f, 1.5f));
+            up v = up(new Vector3(4.0f, 3.0f, 2.5f));*/
+            _v3 = up(new Vector3(2.0f, 1.0f, 4.0f));
+            up x = up(new Vector3(4.0f, 2.0f, -2.0f));
             Vector3 result;
 
-            Vector3::cross(result, *_v3, *v);
+            Vector3::cross(result, *_v3, *x);
 
             /*
             result._x = v1._y * v2._z - v2._y * v1._z;
@@ -351,9 +352,12 @@ namespace LauraTests
             result._z = v1._x * v2._y - v2._x * v1._y;
             */
 
-            Assert::AreEqual(0.5f, result.getX());
+            /*Assert::AreEqual(0.5f, result.getX());
             Assert::AreEqual(1.5f, result.getY());
-            Assert::AreEqual(1.0f, result.getZ());
+            Assert::AreEqual(1.0f, result.getZ());*/
+            Assert::AreEqual(-10.0f, result.getX());
+            Assert::AreEqual(20.0f, result.getY());
+            Assert::AreEqual(0.0f, result.getZ());
         }
 
         //Testing Dot Product Vector3
@@ -393,7 +397,153 @@ namespace LauraTests
             Assert::AreEqual(0.51f, _v3->getY(), 0.1f);
             Assert::AreEqual(0.76f, _v3->getZ(), 0.1f);
         }
+
+        //Testing Vector3 cross helper method
+        TEST_METHOD(TestCrossHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(2.0f, 1.0f, 4.0f));
+            up x = up(new Vector3(4.0f, 2.0f, -2.0f));
+            Vector3 y;
+            y = cross(*_v3, *x);
+
+            // x = -10
+            // y =  20
+            // z = 0
+            Assert::AreEqual(-10.0f, y.getX());
+            Assert::AreEqual(20.0f, y.getY());
+            Assert::AreEqual(0.0f, y.getZ());
+            /*_v3 = up(new Vector3(3.0f, 2.0f, 1.5f));
+            up v = up(new Vector3(4.0f, 3.0f, 2.5f));
+
+            Vector3 result;
+
+            result = cross(*_v3, *v);
+            Assert::AreEqual(0.5f, result.getX());
+            Assert::AreEqual(1.5f, result.getY());
+            Assert::AreEqual(1.0f, result.getZ());*/
+        }
+
+        //Testing Vector3 add helper method
+        TEST_METHOD(TestAddHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(3.0f, -1.0f, 3.0f));
+            up v = up(new Vector3(3.0f, 1.0f, 0.0f));
+            Vector3 r;
+            r = add(r, *_v3, *v);
+
+            Assert::AreEqual(6.0f, r.getX());
+            Assert::AreEqual(0.0f, r.getY());
+            Assert::AreEqual(3.0f, r.getZ());
+        }
+
+        //Testing Vector3 DivideByScalar Helper Method
+        TEST_METHOD(TestDivideByScalar_Vector3)
+        {
+            _v3 = up(new Vector3(-4.0f, 2.0f, 18.0f));
+
+            *_v3 = divideByScalar(*_v3, 2.0f);
+
+            Assert::AreEqual(-2.0f, _v3->getX());
+            Assert::AreEqual(1.0f, _v3->getY());
+            Assert::AreEqual(9.0f, _v3->getZ());
+        }
+
+        //Testing Vector3 Linear Interpolation LERP
+        TEST_METHOD(TestInterpolateHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(4.0f, 2.0f, 3.0f));
+            _v = up(new Vector3(3.0f, 1.0f, 5.0f));
+            _x = up(new Vector3);
+
+            *_x = interpolate(*_v3, *_v);
+
+            Assert::AreEqual(3.5f, _x->getX());
+            Assert::AreEqual(1.5f, _x->getY());
+            Assert::AreEqual(4.0f, _x->getZ());
+        }
+
+        //Testing ComputeNormals Helper Method
+        TEST_METHOD(TestComputeNormals_Vector3)
+        {
+            _v3 = up(new Vector3(1.0f, 2.0f, 3.0f));
+            _v = up(new Vector3(3.0f, 2.0f, 1.0f));
+            _x = up(new Vector3(2.0f, 1.0f, 3.0f));
+
+            Vector3 a;
+            a = computeNormals(*_v3, *_v, *_x, a);
+
+            //e1 = v2 - v1
+            //e2 = v3 - v1
+            //o = cross(e1, e2)
+            //o.normalize
+
+            //2, 0, -2
+            //1, -1, 0
+            //-2, -2, -2 / 3.46
+            //-0.577
+            Assert::AreEqual(-0.57f, a.getX(), 0.1f);
+            Assert::AreEqual(-0.57f, a.getY(), 0.1f);
+            Assert::AreEqual(-0.57f, a.getZ(), 0.1f);
+        }
+
+        //Testing VertexNormal Helper Method 
+        TEST_METHOD(TestVertexNormalMethod_Vector3)
+        {
+            _v3 = up(new Vector3(-5.0f, 2.0f, 3.0f));
+
+            Vector3 a = vertexNormal(*_v3);
+
+            Assert::AreEqual(-0.8116f, a.getX(), 0.1f);
+            Assert::AreEqual(0.3246f, a.getY(), 0.1f);
+            Assert::AreEqual(0.4870f, a.getZ(), 0.1f);
+        }
+
+        //Testing Norm Helper Method Vector3
+        TEST_METHOD(TestNormHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(4.0f, -2.0f, 3.0f));
+            norm(*_v3);
+
+            Assert::AreEqual(0.7427f, _v3->getX(), 0.01f);
+            Assert::AreEqual(-0.37139f, _v3->getY(), 0.01f);
+            Assert::AreEqual(0.5570f, _v3->getZ(), 0.01f);
+        }
+
+        //Testing Normalize Helper Method Vector3
+        TEST_METHOD(TestNormalizeHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(4.0f, -2.0f, 3.0f));
+            normalize(*_v3);
+
+            Assert::AreEqual(0.7427f, _v3->getX(), 0.01f);
+            Assert::AreEqual(-0.37139f, _v3->getY(), 0.01f);
+            Assert::AreEqual(0.5570f, _v3->getZ(), 0.01f);
+        }
+
+        //Testing Distance Helper Method Vector3
+        TEST_METHOD(TestDistanceHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(3.0f, 2.0f, 5.0f));
+            _v = up(new Vector3(2.0f, 1.0f, 3.0f));
+
+            float dist = distance(*_v3, *_v);
+            Assert::AreEqual(2.4494f, dist, 0.01f);
+        }
+
+        //Testing Subtract Helper Method Vector3
+        TEST_METHOD(TestSubtractHelperMethod_Vector3)
+        {
+            _v3 = up(new Vector3(3.0f, 4.0f, 1.0f));
+            _v = up(new Vector3(-3.0f, 1.0f, 3.0f));
+            Vector3 a = subtract(a, *_v3, *_v);
+
+            Assert::AreEqual(6.0f, a.getX());
+            Assert::AreEqual(3.0f, a.getY());
+            Assert::AreEqual(-2.0f, a.getZ());
+        }
     private:
         up _v3;
+        up _v;
+        up _x;
     };
 }

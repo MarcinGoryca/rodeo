@@ -319,7 +319,7 @@ namespace laura
 			static Vector3 cross(Vector3& result, Vector3& v1, Vector3& v2)
 			{
 				result._x = v1._y * v2._z - v2._y * v1._z;
-				result._y = v1._x * v2._z - v2._x * v1._z;
+				result._y = v1._z * v2._x - v2._z * v1._x;
 				result._z = v1._x * v2._y - v2._x * v1._y;
 				return result;
 			}
@@ -475,8 +475,8 @@ namespace laura
 		/** */
 		inline Vector3 computeNormals(const Vector3& v1, const Vector3& v2, const Vector3& v3, Vector3 out)
 		{
-			Vector3 edge1(0.0f, 0.0f, 0.0f);
-			Vector3 edge2(0.0f, 0.0f, 0.0f);
+			Vector3 edge1;
+			Vector3 edge2;
 
 			edge1 = v2 - v1;
 			edge2 = v3 - v1;
@@ -523,6 +523,7 @@ namespace laura
 			}
 			return result;
 		}
+
 		/**
 		 * @details Distance between two vectors
 		 * @return float value of the distance
