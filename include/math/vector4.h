@@ -137,7 +137,7 @@ namespace laura
 			 */
 			inline Vector4 operator+(const Vector4& v)
 			{
-				return Vector4(_x + v._x, _y + v._y, _z + v._z, v._w);
+				return Vector4(_x + v._x, _y + v._y, _z + v._z, _w + v._w);
 			}
 
 			/*
@@ -147,7 +147,7 @@ namespace laura
 			 */
 			inline Vector4 operator-(Vector4 v)
 			{
-				return Vector4(_x - v._x, _y - v._y, _z - v._z, v._w);
+				return Vector4(_x - v._x, _y - v._y, _z - v._z, _w + v._w);
 			}
 
 			/*
@@ -157,7 +157,7 @@ namespace laura
 			 */
 			inline const Vector4 operator-(const Vector4& v)const
 			{
-				return Vector4(_x - v._x, _y - v._y, _z - v._z, v._w);
+				return Vector4(_x - v._x, _y - v._y, _z - v._z, _w + v._w);
 			}
 
 			/*

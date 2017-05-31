@@ -190,6 +190,61 @@ namespace LauraTests
             Assert::AreEqual(80.4513f, dl, 0.01f);
         }
 
+        //Testing Operator+ Vector4
+        TEST_METHOD(TestOperatorPlus_Vector4)
+        {
+            _a = up(new Vector4(3.0f, 1.0f, 5.0f, 1.0f));
+            _b = up(new Vector4(3.1f, 3.0f, 0.5f, -1.0f));
+
+            Vector4 a = *_a + *_b;
+
+            Assert::AreEqual(6.1f, a.getX());
+            Assert::AreEqual(4.0f, a.getY());
+            Assert::AreEqual(5.5f, a.getZ());
+            Assert::AreEqual(0.0f, a.getW());
+        }
+
+        //Testing Operator- Vector4
+        TEST_METHOD(TestOperatorMinus_Vector4)
+        {
+            _a = up(new Vector4(3.0f, 1.0f, 5.0f, 1.0f));
+            _b = up(new Vector4(3.1f, 3.0f, 0.5f, -1.0f));
+
+            Vector4 a = *_a - *_b;
+
+            Assert::AreEqual(-0.1f, a.getX(), 0.01f);
+            Assert::AreEqual(-2.0f, a.getY());
+            Assert::AreEqual(4.5f, a.getZ());
+            Assert::AreEqual(0.0f, a.getW());
+        }
+
+        //Testing Operator* by Scalar Vector4
+        TEST_METHOD(TestOperatorMultiplyByScalar_Vector4)
+        {
+            _a = up(new Vector4(-1.0f, 3.0f, 0.3f, 1.0f));
+
+            Vector4 a = *_a * 8.0f;
+
+            Assert::AreEqual(-8.0f, a.getX());
+            Assert::AreEqual(24.0f, a.getY());
+            Assert::AreEqual(2.4f, a.getZ());
+            Assert::AreEqual(8.0f, a.getW());
+        }
+
+        //Testing Operator* by Vector Vector4
+        TEST_METHOD(TestOperatorMultiplyByVector_Vector4)
+        {
+            _a = up(new Vector4(2.0f, 1.0f, 2.0f, -1.0f));
+            _b = up(new Vector4(3.0f, -0.5f, 2.0f, 4.0f));
+
+            Vector4 a = *_a * *_b;
+
+            Assert::AreEqual(6.0f, a.getX());
+            Assert::AreEqual(-0.5f, a.getY());
+            Assert::AreEqual(4.0f, a.getZ());
+            Assert::AreEqual(-4.0f, a.getW());
+        }
+
     private:
         up _a;
         up _b;
