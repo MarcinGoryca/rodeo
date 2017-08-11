@@ -168,6 +168,7 @@
     </ClCompile>
     <ClCompile Include="matrix3unittest.cpp" />
     <ClCompile Include="matrix4unittest.cpp" />
+    <ClCompile Include="TransformUnittest.cpp" />
     <ClCompile Include="vector2unittest.cpp" />
     <ClCompile Include="vector3unittest.cpp" />
     <ClCompile Include="vector4unittest.cpp" />

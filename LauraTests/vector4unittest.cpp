@@ -245,6 +245,121 @@ namespace LauraTests
             Assert::AreEqual(-4.0f, a.getW());
         }
 
+		//Testing Operator/ by scalar
+		TEST_METHOD(TestOperatorDivide_ByScalar)
+		{
+			_a = up(new Vector4(2.0f, 12.0f, 2.0f, 5.0f));
+			float scalar = 2.0f;
+
+			*_a = *_a / scalar;
+
+			Assert::AreEqual(1.0f, _a->getX());
+			Assert::AreEqual(6.0f, _a->getY());
+			Assert::AreEqual(1.0f, _a->getZ());
+			Assert::AreEqual(2.5f, _a->getW());
+		}
+
+		//Testing Operator += by Vector Vector4
+		TEST_METHOD(TestOperatorPlusEquals_Vector_V4)
+		{
+			_a = up(new Vector4(3.0f, 7.0f, 4.0f, 1.0f));
+			_b = up(new Vector4(7.0f, 0.0f, 3.0f, 6.0f));
+
+			*_a += *_b;
+
+			Assert::AreEqual(10.0f, _a->getX());
+			Assert::AreEqual(7.0f, _a->getY());
+			Assert::AreEqual(7.0f, _a->getZ());
+			Assert::AreEqual(7.0f, _a->getW());
+		}
+
+		//Testing Operator-= by Vector Vector4
+		TEST_METHOD(TestOperatorMinusEquals_Vector_V4)
+		{
+			_a = up(new Vector4(3.0f, -3.0f, 5.0f, 0.0f));
+			_b = up(new Vector4(5.0f, -4.0f, 3.0f, -3.0f));
+
+			*_a -= *_b;
+
+			Assert::AreEqual(-2.0f, _a->getX());
+			Assert::AreEqual(1.0f, _a->getY());
+			Assert::AreEqual(2.0f, _a->getZ());
+			Assert::AreEqual(3.0f, _a->getW());
+		}
+
+		//Testing Operator*= Vector4
+		TEST_METHOD(TestOperatorMultiply_Vector_V4)
+		{
+			_a = up(new Vector4(3.0f, 4.0f, 2.0f, 9.0f));
+			_b = up(new Vector4(3.0f, 8.0f, 2.0f, 1.0f));
+
+			*_a *= *_b;
+
+			Assert::AreEqual(9.0f, _a->getX());
+			Assert::AreEqual(32.0f, _a->getY());
+			Assert::AreEqual(4.0f, _a->getZ());
+			Assert::AreEqual(9.0f, _a->getW());
+		}
+
+		//Testing Operator/= Vector4
+		TEST_METHOD(TestOperatorDivideEquals_Vector_V4)
+		{
+			_a = up(new Vector4(5.0f, 3.0f, 7.0f, 9.0f));
+			_b = up(new Vector4(2.5f, 1.5f, 3.5f, 4.5f));
+
+			*_a /= *_b;
+
+			Assert::AreEqual(2.0f, _a->getX());
+			Assert::AreEqual(2.0f, _a->getY());
+			Assert::AreEqual(2.0f, _a->getZ());
+			Assert::AreEqual(2.0f, _a->getW());
+		}
+
+		//Testing Operator= Vector4
+		TEST_METHOD(TestOperatorAsign_Vector4)
+		{
+			_a = up(new Vector4(3.0f, -4.0f, 2.0f, 0.0f));
+			_b = up(new Vector4);
+			
+			*_b = *_a;
+
+			Assert::AreEqual(3.0f, _b->getX());
+			Assert::AreEqual(-4.0f, _b->getY());
+			Assert::AreEqual(2.0f, _b->getZ());
+			Assert::AreEqual(0.0f, _b->getW());
+		}
+
+		//Testing Operator== Vector4
+		TEST_METHOD(TestOperatorEquals_Vector4)
+		{
+			_a = up(new Vector4(4.0f, 1.0f, 4.0f, 1.0f));
+			_b = up(new Vector4(4.0f, 1.0f, 4.0f, 1.0f));
+
+			bool eq = false;
+
+			if (*_b == *_a)
+			{
+				eq = true;
+			}
+
+			Assert::IsTrue(eq);
+		}
+
+		//Testing Operator!= Vector4
+		TEST_METHOD(TestOperatorNotEquals_Vector4)
+		{
+			_a = up(new Vector4(4.0f, 1.0f, 4.0f, 1.0f));
+			_b = up(new Vector4(4.0f, -1.0f, 4.0f, 1.0f));
+
+			bool eq = false;
+
+			if (*_b != *_a)
+			{
+				eq = true;
+			}
+
+			Assert::IsTrue(eq);
+		}
     private:
         up _a;
         up _b;
