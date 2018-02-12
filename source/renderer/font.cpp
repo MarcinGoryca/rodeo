@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,10 +34,10 @@
  */
 //#include "renderer\font.h"
 //
-//using namespace laura::core;
+//using namespace rodeo::core;
 //using namespace std;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{
@@ -47,17 +47,17 @@
 //			_error = FT_Init_FreeType(&_library);
 //			if (_error)
 //			{
-//				MessageBox(NULL, FREETYPE_LIBRARY_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, FREETYPE_LIBRARY_LOAD_FAIL.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				_library = NULL;
 //			}
 //			_error = FT_New_Face(_library, getFontfile(), 0, &_face);
 //			if (_error == FT_Err_Unknown_File_Format)
 //			{
-//				MessageBox(NULL, FREETYPE_UNKNOWN_FILE_FORMAT.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, FREETYPE_UNKNOWN_FILE_FORMAT.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //			}
 //			else if (_error)
 //			{
-//				MessageBox(NULL, FREETYPE_BROKEN_FONT_FILE.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, FREETYPE_BROKEN_FONT_FILE.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				_face = NULL;
 //			}
 //			/*_error = FT_Set_Char_Size(_face, 0, 16*64, 300, 300);

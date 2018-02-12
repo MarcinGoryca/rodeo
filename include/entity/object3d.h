@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -60,7 +60,7 @@
 //	virtual void setColor(Colors& rgb);
 //
 //	void setTexture(const char* texture_filename);
-//	//enginecore::TextureManager texturelaurar_;
+//	//enginecore::TextureManager texturerodeor_;
 //protected:	
 //	Model3D model3d_;
 //	const char* file_;

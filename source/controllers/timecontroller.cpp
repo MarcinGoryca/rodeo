@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,13 +35,13 @@
 #include "core\timer.h"
 #include "controllers\timecontroller.h"
 
-namespace laura
+namespace rodeo
 {
 	namespace controllers
 	{
 		void TimeController::init()
 		{
-			_time = new laura::core::Timer;
+			_time = new rodeo::core::Timer;
 		}
 
 		//--------------------------------------------------------------------------------------------------

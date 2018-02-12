@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,16 +32,16 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_EVENT_IINPUTLISTENER_H_
-//#define LAURA_EVENT_IINPUTLISTENER_H_
+//#ifndef RODEO_EVENT_IINPUTLISTENER_H_
+//#define RODEO_EVENT_IINPUTLISTENER_H_
 //
 //#include <list>
 //
-//#ifndef LAURA_IO_IINPUT_H_
+//#ifndef RODEO_IO_IINPUT_H_
 //#include "io\iinput.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace event
 //{
@@ -54,26 +54,26 @@
 //
 //    int getInputType()const;
 //
-//    void addInputListener(laura::io::IInput* in);
+//    void addInputListener(rodeo::io::IInput* in);
 //
-//    virtual void keyUp(laura::io::IInput key) = 0;
+//    virtual void keyUp(rodeo::io::IInput key) = 0;
 //
-//    virtual void keyDown(laura::io::IInput key) = 0;
+//    virtual void keyDown(rodeo::io::IInput key) = 0;
 //
-//    virtual void mouseDblClick(laura::io::IInput ms) = 0;
+//    virtual void mouseDblClick(rodeo::io::IInput ms) = 0;
 //
-//    virtual void mouseMove(laura::io::IInput ms) = 0;
+//    virtual void mouseMove(rodeo::io::IInput ms) = 0;
 //
-//    virtual void mouseExit(laura::io::IInput ms) = 0;
+//    virtual void mouseExit(rodeo::io::IInput ms) = 0;
 //
-//    virtual void mouseScroll(laura::io::IInput ms) = 0;
+//    virtual void mouseScroll(rodeo::io::IInput ms) = 0;
 //
-//    virtual void mouseClick(laura::io::IInput ms) = 0;
+//    virtual void mouseClick(rodeo::io::IInput ms) = 0;
 //
-//    virtual void mouseDrag(laura::io::IInput ms) = 0;
+//    virtual void mouseDrag(rodeo::io::IInput ms) = 0;
 //
 //protected:
-//    std::list <laura::io::IInput*> _input_list;
+//    std::list <rodeo::io::IInput*> _input_list;
 //};
 //}
 //}

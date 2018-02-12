@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,15 +32,15 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_TOOLS_XMLPARSER_H_
+//#ifndef RODEO_TOOLS_XMLPARSER_H_
 //#include "tools\xmlparser.h"
 //#endif
 //
-//using namespace laura::core;
-//using namespace laura::math;
+//using namespace rodeo::core;
+//using namespace rodeo::math;
 //using namespace std;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace tools
 //	{
@@ -56,7 +56,7 @@
 //			}
 //			catch (...)
 //			{
-//				MessageBox(NULL, L"Couldn't load XML File!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, L"Couldn't load XML File!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //
@@ -67,7 +67,7 @@
 //			if (_xml_element == NULL)
 //			{
 //				_xml_document.Clear();
-//				MessageBox(NULL, L"Failed to load XML file. No root element", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, L"Failed to load XML file. No root element", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //

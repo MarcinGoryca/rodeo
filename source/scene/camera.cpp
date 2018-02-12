@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,11 +34,11 @@
  */
 //#include "scene\Camera.h"
 //
-//using namespace laura::math;
+//using namespace rodeo::math;
 ////using namespace core;
 ////using namespace scene;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace scene
 //	{

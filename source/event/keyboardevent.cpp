@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -37,11 +37,11 @@
 //#include "event\keyboardevent.h"
 //#include "tools\xmlparser.h"
 //
-//using namespace laura::tools;
-//using namespace laura::io;
-//using namespace laura::core;
+//using namespace rodeo::tools;
+//using namespace rodeo::io;
+//using namespace rodeo::core;
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace event
 //{
@@ -51,13 +51,13 @@
 //    {
 //    case KEYF1:
 //        {
-//            MessageBox(NULL, L"F1!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//            MessageBox(NULL, L"F1!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //            return true;
 //        }
 //        break;
 //    case KEYF2:
 //        {
-//            MessageBox(NULL, L"F2!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//            MessageBox(NULL, L"F2!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //            return true;
 //        }
 //    }
@@ -66,8 +66,8 @@
 //
 //bool KeyboardEvent::onKeyUp(KeyMap key)
 //{
-//    MessageBox(NULL, L"Key Released!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//    MessageBox(NULL, L"Key Released!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //    return true;
 //}
 //}    // end of event namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace

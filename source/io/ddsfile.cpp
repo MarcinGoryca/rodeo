@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,11 +34,11 @@
  */
 //#include "io\filedds.h"
 //
-//using namespace laura::renderer;
-//using namespace laura::core;
+//using namespace rodeo::renderer;
+//using namespace rodeo::core;
 //using namespace std;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace io
 //	{
@@ -56,7 +56,7 @@
 //
 //			if (_hfile == INVALID_HANDLE_VALUE)
 //			{
-//				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //			read(filename);
@@ -78,7 +78,7 @@
 //		{
 //			if (_hfile == INVALID_HANDLE_VALUE)
 //			{
-//				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, DDS_LOAD_FAIL.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return;
 //			}
 //

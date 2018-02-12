@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -33,22 +33,22 @@
  |---------------------------------------------------------------------------------------------------
  */
 //
-//#ifndef LAURA_CONTROLLERS_SHADERSCONTROLLER_H_
-//#define LAURA_CONTROLLERS_SHADERSCONTROLLER_H_
+//#ifndef RODEO_CONTROLLERS_SHADERSCONTROLLER_H_
+//#define RODEO_CONTROLLERS_SHADERSCONTROLLER_H_
 //
 // //#include <string>
 //
-//#ifndef LAURA_RENDERER_GL_GLSLSHADERS_H_
+//#ifndef RODEO_RENDERER_GL_GLSLSHADERS_H_
 //#include "renderer\gl\glslshaders.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //    namespace controllers
 //    {
 //		enum ShadersVendor
 //		{
-//			LAURA_GLSL
+//			RODEO_GLSL
 //		};
 //
 //        class ShadersController
@@ -76,8 +76,8 @@
 //            // Inits Shaders
 //            void init();
 //        public:
-//            std::unique_ptr<laura::renderer::IShaders> _shader;
-//            std::unique_ptr<laura::renderer::GLSLShaders> _glsl_shader;
+//            std::unique_ptr<rodeo::renderer::IShaders> _shader;
+//            std::unique_ptr<rodeo::renderer::GLSLShaders> _glsl_shader;
 //        };
 //    }
 //}

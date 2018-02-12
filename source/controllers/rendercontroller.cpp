@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,7 +34,7 @@
  */
 //#include "controllers\rendercontroller.h"
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace controllers
 //	{
@@ -43,21 +43,21 @@
 //		{
 //			switch (renderer)
 //			{
-//			case LAURA_DX:
+//			case RODEO_DX:
 //			{
-//				_renderer = new laura::renderer::DxRenderer;
+//				_renderer = new rodeo::renderer::DxRenderer;
 //			}
 //			break;
 //
-//			case LAURA_GL:
+//			case RODEO_GL:
 //			{
-//				_renderer = new laura::renderer::GLRenderer;
+//				_renderer = new rodeo::renderer::GLRenderer;
 //			}
 //			break;
 //			}
-//			case LAURA_VC:
+//			case RODEO_VC:
 //			{
-//				_renderer = new laura::renderer::VcRenderer;
+//				_renderer = new rodeo::renderer::VcRenderer;
 //			}
 //		}
 //

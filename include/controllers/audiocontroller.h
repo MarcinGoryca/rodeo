@@ -1,6 +1,6 @@
 ﻿/*
 | --------------------------------------------------------------------------------------------------
-|     Laura Project
+|     Rodeo Engine
 |
 |     marcin.goryca@gmail.com
 |     http://marcingoryca.pl
@@ -33,26 +33,26 @@
 |---------------------------------------------------------------------------------------------------
 */
 //
-//#ifndef LAURA_CONTROLLERS_AUDIOCONTROLLER_H_
-//#define LAURA_CONTROLLERS_AUDIOCONTROLLER_H_
+//#ifndef RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
+//#define RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
 //
-//#ifndef LAURA_MATH_VECTOR_H_
+//#ifndef RODEO_MATH_VECTOR_H_
 //#include <vector>
 //#endif
 //
-//#ifndef LAURA_CORE_SINGLETON_H_
+//#ifndef RODEO_CORE_SINGLETON_H_
 //#include "core\singleton.h"
 //#endif
 //
-//#ifndef LAURA_AUDIO_SOUNDOBJECT_H_
+//#ifndef RODEO_AUDIO_SOUNDOBJECT_H_
 //#include "audio\soundobject.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace controllers
 //	{
-//		class AudioController : public laura::core::Singleton<AudioController>
+//		class AudioController : public rodeo::core::Singleton<AudioController>
 //		{
 //		public:
 //			/*
@@ -83,7 +83,7 @@
 //			 |    Returns SoundObject pointer to the sound object
 //			 |  -------------------------------------------------
 //			 */
-//			laura::audio::SoundObject* getSoundObject() const
+//			rodeo::audio::SoundObject* getSoundObject() const
 //			{ 
 //				return _sound_object;
 //			}
@@ -93,7 +93,7 @@
 //			 |    Sets SoundObject object
 //			 |  -------------------------------------------------
 //			 */
-//			void setSoundObject(laura::audio::SoundObject* so)
+//			void setSoundObject(rodeo::audio::SoundObject* so)
 //			{ 
 //				_sound_object = so;
 //			}
@@ -104,7 +104,7 @@
 //			 |    Returns Vector object, container of SoundObject objects
 //			 |  --------------------------------------------------
 //			 */
-//			std::vector<laura::audio::SoundObject*> getSoundContainer() const
+//			std::vector<rodeo::audio::SoundObject*> getSoundContainer() const
 //			{ 
 //				return _sound_container;
 //			}
@@ -114,12 +114,12 @@
 //			 |    Puts SoundObject into the container
 //			 |  -------------------------------------------------
 //			 */
-//			void putSound(laura::audio::SoundObject* so);
+//			void putSound(rodeo::audio::SoundObject* so);
 //		protected:
 //
 //		private:
-//			laura::audio::SoundObject* _sound_object;
-//			std::vector<laura::audio::SoundObject*> _sound_container;
+//			rodeo::audio::SoundObject* _sound_object;
+//			std::vector<rodeo::audio::SoundObject*> _sound_container;
 //
 //			/*
 //			|  ---------------------------------------------------

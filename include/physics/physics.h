@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,10 +32,10 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_PHYSICS_PHYSICS_H
-//#define LAURA_PHYSICS_PHYSICS_H
+//#ifndef RODEO_PHYSICS_PHYSICS_H
+//#define RODEO_PHYSICS_PHYSICS_H
 //
-//#ifndef LAURA_PHYSICS_PHYSICS_H_
+//#ifndef RODEO_PHYSICS_PHYSICS_H_
 //#include "physics\physics.h"
 //#endif
 //

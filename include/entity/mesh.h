@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -33,18 +33,18 @@
  |---------------------------------------------------------------------------------------------------
  */
 //
-//#ifndef LAURA_ENTITY_MESH_H_
-//#define LAURA_ENTITY_MESH_H_
+//#ifndef RODEO_ENTITY_MESH_H_
+//#define RODEO_ENTITY_MESH_H_
 //
-//#ifndef LAURA_MATH_VECTOR2_H_
+//#ifndef RODEO_MATH_VECTOR2_H_
 //#include "math\vector2.h"
 //#endif
 //
-//#ifndef LAURA_PRIMITIVE_GEOMETRYTOOLS_H_
+//#ifndef RODEO_PRIMITIVE_GEOMETRYTOOLS_H_
 //#include "primitive\geometrytools.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace entity
 //{
@@ -57,9 +57,9 @@
 //{
 //    std::vector<MeshTriangle*> _triangles;
 //    std::vector<MeshUV*> _coordinates;
-//    std::vector<laura::math::Vector3> _normals;
-//    std::vector<laura::math::Vector3> _vertex_normals;
-//    std::vector<laura::math::Vector3> _surface_normals;
+//    std::vector<rodeo::math::Vector3> _normals;
+//    std::vector<rodeo::math::Vector3> _vertex_normals;
+//    std::vector<rodeo::math::Vector3> _surface_normals;
 //
 //    MeshVertex* _vertex;
 //    MeshTriangle* _triangle;
@@ -88,7 +88,7 @@
 //// MeshVertex
 //struct MeshVertex
 //{
-//    laura::math::Vector3 _vertex;
+//    rodeo::math::Vector3 _vertex;
 //};
 //
 //
@@ -101,13 +101,13 @@
 //// MeshUV
 //struct MeshUV
 //{
-//    laura::math::Vector2 _uv;
+//    rodeo::math::Vector2 _uv;
 //};
 //
 //// MeshNormal
 //struct MeshNormal
 //{
-//    laura::math::Vector3 _normal;
+//    rodeo::math::Vector3 _normal;
 //};
 //
 //

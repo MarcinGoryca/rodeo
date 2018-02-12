@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,7 +34,7 @@
  */
 #include "core\timer.h"
 
-namespace laura
+namespace rodeo
 {
 	namespace core
 	{

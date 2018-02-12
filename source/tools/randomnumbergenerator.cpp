@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,7 +35,7 @@
 //#include <time.h>
 //#include "tools\randomnumbergenerator.h"
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace tools
 //	{

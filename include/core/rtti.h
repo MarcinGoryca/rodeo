@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CORE_RTTI_H_
-#define LAURA_CORE_RTTI_H_
+#ifndef RODEO_CORE_RTTI_H_
+#define RODEO_CORE_RTTI_H_
 
-#ifndef LAURA_CORE_CONSTANTS_H_
+#ifndef RODEO_CORE_CONSTANTS_H_
 #include "core\constants.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
     namespace core
     {

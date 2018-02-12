@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CORE_RENDEREREXCEPTION_H_
-#define LAURA_CORE_RENDEREREXCEPTION_H_
+#ifndef RODEO_CORE_RENDEREREXCEPTION_H_
+#define RODEO_CORE_RENDEREREXCEPTION_H_
 
-#ifndef LAURA_CORE_EXCEPTION_H_
+#ifndef RODEO_CORE_EXCEPTION_H_
 #include "core/exception.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
 	namespace core
 	{

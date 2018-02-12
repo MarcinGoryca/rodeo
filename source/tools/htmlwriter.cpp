@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,9 +35,9 @@
 //#include "tools\htmlwriter.h"
 //
 //using namespace std;
-//using namespace laura::core;
+//using namespace rodeo::core;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace tools
 //	{
@@ -55,7 +55,7 @@
 //
 //			if (_hfile == INVALID_HANDLE_VALUE)
 //			{
-//				MessageBox(NULL, HTMLFILE_LOAD_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, HTMLFILE_LOAD_FAIL.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //			return true;

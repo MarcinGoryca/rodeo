@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,7 +34,7 @@
  */
 #include "math\mathsystem.h"
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -65,4 +65,4 @@ void MathSystem::init()
     runGenerator();
 }
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

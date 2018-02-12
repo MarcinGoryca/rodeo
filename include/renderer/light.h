@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,18 +32,18 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_RENDERER_LIGHT_H_
-//#define LAURA_RENDERER_LIGHT_H_
+//#ifndef RODEO_RENDERER_LIGHT_H_
+//#define RODEO_RENDERER_LIGHT_H_
 //
-//#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
+//#ifndef RODEO_RENDERER_GL_GLCOMMON_H_
 //#include "gl\glcommon.h"
 //#endif
 //
-//#ifndef LAURA_ENTITY_ENTITY_H_
+//#ifndef RODEO_ENTITY_ENTITY_H_
 //#include "entity\entity.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{
@@ -57,13 +57,13 @@
 //			/*enum Lights
 //			{
 //				GL_LIGHT0,
-//				LAURA_LIGHT_1 = GL_LIGHT1,
-//				LAURA_LIGHT_2 = GL_LIGHT2,
-//				LAURA_LIGHT_3 = GL_LIGHT3,
-//				LAURA_LIGHT_4 = GL_LIGHT4,
-//				LAURA_LIGHT_5 = GL_LIGHT5,
-//				LAURA_LIGHT_6 = GL_LIGHT6,
-//				LAURA_LIGHT_7 = GL_LIGHT7
+//				RODEO_LIGHT_1 = GL_LIGHT1,
+//				RODEO_LIGHT_2 = GL_LIGHT2,
+//				RODEO_LIGHT_3 = GL_LIGHT3,
+//				RODEO_LIGHT_4 = GL_LIGHT4,
+//				RODEO_LIGHT_5 = GL_LIGHT5,
+//				RODEO_LIGHT_6 = GL_LIGHT6,
+//				RODEO_LIGHT_7 = GL_LIGHT7
 //			};*/
 //
 //			// For OpenGL it calls glEnable(GL_LIGHTING) 

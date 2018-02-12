@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,7 +35,7 @@
 //#include "io\importer.h"
 //#include "io\file3Dfactory.h"
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace io
 //{
@@ -45,13 +45,13 @@
 //
 //    switch(type)
 //    {
-//    case LAURA_FILE_3DS:
+//    case RODEO_FILE_3DS:
 //        {
 //            importer = new File3DS;
 //            break;
 //        }
 //
-//    case LAURA_FILE_FBX:
+//    case RODEO_FILE_FBX:
 //        {
 //            //importer = new FileFBX;
 //            break;
@@ -64,4 +64,4 @@
 //    return importer;
 //}
 //}    // end of io namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace

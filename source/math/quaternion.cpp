@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -378,4 +378,4 @@ Quaternion multiply(const Quaternion& q1, const Quaternion& q2)
     return result;
 }
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

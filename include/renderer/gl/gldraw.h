@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,11 +34,11 @@
  */
 //#pragma once
 //
-//#ifndef LAURA_RENDERER_GL_GLDRAWENUMS_H_
+//#ifndef RODEO_RENDERER_GL_GLDRAWENUMS_H_
 //#include "gldrawenums.h"
 //#endif
 //
-//namespace laura {
+//namespace rodeo {
 //	namespace renderer {
 //		class GLDraw {
 //		public:

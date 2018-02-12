@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,11 +35,11 @@
 //#include "primitive\geometry.h"
 //#include "io\log.h"
 //
-//using namespace laura::entity;
-//using namespace laura::math;
-//using namespace laura::core;
+//using namespace rodeo::entity;
+//using namespace rodeo::math;
+//using namespace rodeo::core;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace primitive
 //	{
@@ -273,7 +273,7 @@
 //			//d = (m-1) * dz
 //			Mesh mesh;
 //			mesh.reset();
-//			mesh._mesh_name = "laura Standard Grid";
+//			mesh._mesh_name = "rodeo Standard Grid";
 //			//memcpy(mesh._mesh_name, mesh._mesh_name, sizeof(mesh._mesh_name));
 //
 //			_model._mesh.push_back(mesh);

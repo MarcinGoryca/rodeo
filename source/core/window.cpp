@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -36,7 +36,7 @@
 //
 //using namespace std;
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace core
 //{
@@ -174,7 +174,7 @@
 //
 //    if(!EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm))
 //    {
-//        MessageBox(NULL, L"Couldn't Enum Display Settings", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Couldn't Enum Display Settings", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //        return;
 //    }
 //
@@ -189,7 +189,7 @@
 //        
 //    if(result != DISP_CHANGE_SUCCESSFUL)
 //    {
-//        MessageBox(NULL, L"Display Mode Not Compatible", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Display Mode Not Compatible", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //        onDestroy();
 //    }
 //}
@@ -214,13 +214,13 @@
 //
 //    if(!pixelFormat)
 //    {
-//        MessageBox(NULL, L"Choose PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Choose PixelFormat FAIL!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //        return;
 //    }
 //
 //    if(!SetPixelFormat(hdc, pixelFormat, &pfd))
 //    {
-//        MessageBox(NULL, L"Set PixelFormat FAIL!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//        MessageBox(NULL, L"Set PixelFormat FAIL!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //        return;
 //    }
 //}
@@ -259,10 +259,10 @@
 ////--------------------------------------------------------------------------------------------------
 //int Window::shutdown()
 //{
-//    //if(timelaurar_ != NULL)
+//    //if(timerodeor_ != NULL)
 //    //{
-//    //    delete timelaurar_;
-//    //    timelaurar_ = NULL;
+//    //    delete timerodeor_;
+//    //    timerodeor_ = NULL;
 //    //}
 //
 //    /*if(renderer_ != NULL)
@@ -465,7 +465,7 @@
 //void Window::onMouseMove(int x, int y)
 //{
 //    //Implement your onMouseMove(int x, int y) method in derivied class
-//    MessageBox(NULL, L"mc", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//    MessageBox(NULL, L"mc", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //}
 //
 ////--------------------------------------------------------------------------------------------------
@@ -483,7 +483,7 @@
 //{
 //    //time_manager_->time_.init();
 //    //mathcore_->init();
-//    //fontlaurar_.init();
+//    //fontrodeor_.init();
 //}
 //
 ////--------------------------------------------------------------------------------------------------
@@ -635,7 +635,7 @@
 //
 //    case WM_MOUSELEAVE:
 //        {
-//            MessageBox(NULL, L"Mouse outside the framework!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//            MessageBox(NULL, L"Mouse outside the framework!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //        }
 //        break;
 //
@@ -663,4 +663,4 @@
 //    return DefWindowProc(hwnd_, msg, wparam, lparam);
 //}
 //}    // end of core namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace

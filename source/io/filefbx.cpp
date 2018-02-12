@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -50,15 +50,15 @@
 // */
 //bool FileFBX::import(const char* filename)
 //{
-//    fbx_laurar_ = FbxManager::Create();
+//    fbx_rodeor_ = FbxManager::Create();
 //
-//    FbxIOSettings* ios = FbxIOSettings::Create(fbx_laurar_, IOSROOT);
+//    FbxIOSettings* ios = FbxIOSettings::Create(fbx_rodeor_, IOSROOT);
 //
-//    fbx_laurar_->SetIOSettings(ios);
+//    fbx_rodeor_->SetIOSettings(ios);
 //
-//    FbxImporter* importer = FbxImporter::Create(fbx_laurar_, "");
+//    FbxImporter* importer = FbxImporter::Create(fbx_rodeor_, "");
 //
-//    if(!importer->Initialize(filename, -1, fbx_laurar_->GetIOSettings()))
+//    if(!importer->Initialize(filename, -1, fbx_rodeor_->GetIOSettings()))
 //    {
 //        std::string error = "FBX Importer Failed.\n";
 //        error += "Error: ";
@@ -68,7 +68,7 @@
 //        return false;
 //    }
 //
-//    FbxScene* scene = FbxScene::Create(fbx_laurar_, "rodeo_scene");
+//    FbxScene* scene = FbxScene::Create(fbx_rodeor_, "rodeo_scene");
 //    importer->Import(scene);
 //    importer->Destroy();
 //

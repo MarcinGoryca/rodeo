@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,11 +35,11 @@
 //#include "controllers\scenecontroller.h"
 //#include "entity\entity.h"
 //
-//using namespace laura::renderer;
-//using namespace laura::entity;
-//using namespace laura::scene;
+//using namespace rodeo::renderer;
+//using namespace rodeo::entity;
+//using namespace rodeo::scene;
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace controllers
 //{

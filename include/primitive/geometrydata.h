@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,10 +32,10 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_PRIMITIVE_GEOMETRYDATA_H_
-//#define LAURA_PRIMITIVE_GEOMETRYDATA_H_
+//#ifndef RODEO_PRIMITIVE_GEOMETRYDATA_H_
+//#define RODEO_PRIMITIVE_GEOMETRYDATA_H_
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace primitive
 //	{

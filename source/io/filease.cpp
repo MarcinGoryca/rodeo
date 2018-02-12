@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,9 +34,9 @@
  */
 //#include "io\filease.h"
 //
-//using namespace laura::core;
+//using namespace rodeo::core;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace io
 //	{
@@ -57,7 +57,7 @@
 //			}
 //			catch (...)
 //			{
-//				MessageBox(NULL, L"Couldn't Load ASE file!", LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, L"Couldn't Load ASE file!", RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //

@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -36,7 +36,7 @@
 
 using namespace std;
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -89,4 +89,4 @@ void printV3(const char* message, const Vector3& v)
     std::cout << message << "\t" << "Vector3(" << v.getX() << ", " << v.getY() << ", " << v.getZ() << ")" << std::endl;
 }
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

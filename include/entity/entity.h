@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -33,30 +33,30 @@
  |---------------------------------------------------------------------------------------------------
  */
 //
-//#ifndef LAURA_ENTITY_ENTITY_H_
-//#define LAURA_ENTITY_ENTITY_H_
+//#ifndef RODEO_ENTITY_ENTITY_H_
+//#define RODEO_ENTITY_ENTITY_H_
 //
-//#ifndef LAURA_ENTITY_OBJECT_H_
+//#ifndef RODEO_ENTITY_OBJECT_H_
 //#include "object.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_GL_GLLIBRARY_H_
+//#ifndef RODEO_RENDERER_GL_GLLIBRARY_H_
 //#include "renderer\gl\gllibrary.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_MATERIAL_H_
+//#ifndef RODEO_RENDERER_MATERIAL_H_
 //#include "renderer\material.h"
 //#endif
 //
-//#ifndef LAURA_MATH_AABB_H_
+//#ifndef RODEO_MATH_AABB_H_
 //#include "math\aabb.h"
 //#endif
 //
-//#ifndef LAURA_MATH_TRANSFORM_H_
+//#ifndef RODEO_MATH_TRANSFORM_H_
 //#include "math\transform.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //    namespace entity
 //    {
@@ -105,7 +105,7 @@
 //			 |    Returns AABB object
 //			 | ------------------------------------------------
 //			 */
-//			laura::math::AABB getAabb() const
+//			rodeo::math::AABB getAabb() const
 //			{
 //				return _box;
 //			}
@@ -115,7 +115,7 @@
 //			 |    Get Transform object
 //			 | ------------------------------------------------
 //			 */
-//			laura::math::Transform getTransform() const
+//			rodeo::math::Transform getTransform() const
 //			{
 //				return _transform;
 //			}
@@ -136,7 +136,7 @@
 //			 |    Set AABB box
 //			 | ------------------------------------------------
 //			 */
-//			void setAabb(laura::math::AABB box)
+//			void setAabb(rodeo::math::AABB box)
 //			{
 //				_box = box;
 //			}
@@ -146,7 +146,7 @@
 //			 |    Set Transform
 //			 | ------------------------------------------------
 //			 */
-//			void setTransform(laura::math::Transform transform)
+//			void setTransform(rodeo::math::Transform transform)
 //			{
 //				_transform = transform;
 //			}
@@ -163,9 +163,9 @@
 //
 //        protected:
 //            //enginerenderer::Material material_;
-//            laura::math::AABB _box;
+//            rodeo::math::AABB _box;
 //
-//            laura::math::Transform _transform;
+//            rodeo::math::Transform _transform;
 //            bool _renderable;
 //
 //            // Copy Constructor

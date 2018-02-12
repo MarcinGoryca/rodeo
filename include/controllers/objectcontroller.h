@@ -1,6 +1,6 @@
 ﻿/*
 | --------------------------------------------------------------------------------------------------
-|     Laura Project
+|     Rodeo Engine
 |
 |     marcin.goryca@gmail.com
 |     http://marcingoryca.pl
@@ -33,30 +33,30 @@
 |---------------------------------------------------------------------------------------------------
 */
 //
-//#ifndef LAURA_CORE_OBJECTCONTROLLER_H_
-//#define LAURA_CORE_OBJECTCONTROLLER_H_
+//#ifndef RODEO_CORE_OBJECTCONTROLLER_H_
+//#define RODEO_CORE_OBJECTCONTROLLER_H_
 //
 //#ifndef VECTOR_H_
 //#include <vector>
 //#endif
 //
-//#ifndef LAURA_CORE_SINGLETON_H_
+//#ifndef RODEO_CORE_SINGLETON_H_
 //#include "core\singleton.h"
 //#endif
 //
-//#ifndef LAURA_ENTITY_MODEL3D_H_
+//#ifndef RODEO_ENTITY_MODEL3D_H_
 //#include "entity\model3d.h"
 //#endif
 //
-//#ifndef LAURA_PRIMITVE_BOUNDINGVOLUME_H_
+//#ifndef RODEO_PRIMITVE_BOUNDINGVOLUME_H_
 //#include "primitive\boundingvolume.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace controllers
 //	{
-//		class ObjectController : public laura::core::Singleton<ObjectController>
+//		class ObjectController : public rodeo::core::Singleton<ObjectController>
 //		{
 //		public:
 //			ObjectController();
@@ -67,11 +67,11 @@
 //			//scene::Model3D* objects_container_[MAX_OBJECTS_];
 //			//geometry::BoundingVolume* bounding_volume_[MAX_OBJECTS_];
 //
-//			//void create(laura::entity::Model3D* object3d);
+//			//void create(rodeo::entity::Model3D* object3d);
 //
-//			//void add(laura::entity::Model3D* object3d);
+//			//void add(rodeo::entity::Model3D* object3d);
 //
-//			void remove(laura::entity::Model3D* object3d);
+//			void remove(rodeo::entity::Model3D* object3d);
 //
 //			void remove();
 //
@@ -85,7 +85,7 @@
 //
 //		private:
 //			// Container for Model3D objects
-//			std::vector<laura::entity::Model3D*> _objects;
+//			std::vector<rodeo::entity::Model3D*> _objects;
 //			// Used to counting objects
 //			static unsigned int _s_objects_counter;
 //

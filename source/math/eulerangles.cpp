@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,7 +34,7 @@
  */
 #include "math\eulerangles.h"
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -42,20 +42,20 @@ void EulerAngles::canonize()
 {
     _pitch = wrapPI(_pitch);
 
-    if(_pitch < -core::LAURA_HALFPI)
+    if(_pitch < -core::RODEO_HALFPI)
     {
-        _pitch = -core::LAURA_PI - _pitch;
-        _yaw += core::LAURA_PI;
-        _roll += core::LAURA_PI;
+        _pitch = -core::RODEO_PI - _pitch;
+        _yaw += core::RODEO_PI;
+        _roll += core::RODEO_PI;
     }
-    else if(_pitch > core::LAURA_HALFPI)
+    else if(_pitch > core::RODEO_HALFPI)
     {
-        _pitch = core::LAURA_PI - _pitch;
-        _yaw += core::LAURA_PI;
-        _roll += core::LAURA_PI;
+        _pitch = core::RODEO_PI - _pitch;
+        _yaw += core::RODEO_PI;
+        _roll += core::RODEO_PI;
     }
 //Checking for gimbal lock case
-    if(fabs(_pitch) > core::LAURA_HALFPI - 1e-4)
+    if(fabs(_pitch) > core::RODEO_HALFPI - 1e-4)
     {
         _yaw += _roll;
         _roll = 0.0f;
@@ -70,9 +70,9 @@ void EulerAngles::canonize()
 //--------------------------------------------------------------------------------------------------
 float EulerAngles::wrapPI(float theta)
 {
-    theta *= core::LAURA_PI;
-    theta -= floor(theta * core::LAURA_ONEBYPI) * core::LAURA_TWOPI;
-    theta -= core::LAURA_PI;
+    theta *= core::RODEO_PI;
+    theta -= floor(theta * core::RODEO_ONEBYPI) * core::RODEO_TWOPI;
+    theta -= core::RODEO_PI;
     return theta;
 }
 
@@ -175,4 +175,4 @@ void EulerAngles::fromInertialToObjectQuaternion(const Quaternion& q)
 //	}
 //}
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

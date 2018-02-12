@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,18 +32,18 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_CORE_WINDOW_H_
-//#define LAURA_CORE_WINDOW_H_
+//#ifndef RODEO_CORE_WINDOW_H_
+//#define RODEO_CORE_WINDOW_H_
 //
-//#ifndef LAURA_CORE_ERROR_H_
+//#ifndef RODEO_CORE_ERROR_H_
 //#include "core\error.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
+//#ifndef RODEO_RENDERER_GL_GLCOMMON_H_
 //#include "..\renderer\gl\glcommon.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //    namespace core
 //    {
@@ -63,7 +63,7 @@
 //                exstyles_(-1),
 //                fullscreen_(false),
 //                window_classname_(L"engine"),
-//                windowname_(L"Laura Game Engine")
+//                windowname_(L"rodeo Game Engine")
 //            {
 //            }
 //
@@ -236,5 +236,5 @@
 //            std::wstring windowname_;
 //        };
 //    }    // end of core namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace
 //#endif

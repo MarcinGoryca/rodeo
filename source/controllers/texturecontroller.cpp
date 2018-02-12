@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,10 +34,10 @@
  */
 //#include "controllers\TextureController.h"
 //
-//using namespace laura::io;
-//using namespace laura::renderer;
+//using namespace rodeo::io;
+//using namespace rodeo::renderer;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace controllers
 //	{
@@ -55,9 +55,9 @@
 //		}
 //
 //		//--------------------------------------------------------------------------------------------------
-//		void TextureController::load(renderer::Image* ilaura, const char* filename, unsigned int& tid)
+//		void TextureController::load(renderer::Image* irodeo, const char* filename, unsigned int& tid)
 //		{
-//			_texture->load(ilaura, filename, tid);
+//			_texture->load(irodeo, filename, tid);
 //
 //			_s_texture_count += 1;
 //

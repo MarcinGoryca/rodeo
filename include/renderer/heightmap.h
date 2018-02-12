@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_RENDERER_HEIGHTMAP_H_
-//#define LAURA_RENDERER_HEIGHTMAP_H_
+//#ifndef RODEO_RENDERER_HEIGHTMAP_H_
+//#define RODEO_RENDERER_HEIGHTMAP_H_
 //
 //#include "core\constants.h"
 //#include "core\error.h"
 //#include "..\common\glheader.h"
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace renderer
 //{
@@ -89,5 +89,5 @@
 ////	float heightRatio;
 ////};
 //}    // end of renderer namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace
 //#endif

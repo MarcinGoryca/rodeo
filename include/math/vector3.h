@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_MATH_VECTOR3_H_
-#define LAURA_MATH_VECTOR3_H_
+#ifndef RODEO_MATH_VECTOR3_H_
+#define RODEO_MATH_VECTOR3_H_
 
-#ifndef LAURA_MATH_MATHTOOLS_H_
+#ifndef RODEO_MATH_MATHTOOLS_H_
 #include "mathtools.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
 	namespace math
 	{
@@ -74,7 +74,7 @@ namespace laura
 			/*
 			 * --------------------------------------------------------------------
 			 *      Static Vector, Vector3(0.0f, 0.0f, 0.0f);
-			 *      Example: laura::math::Vector3::S_VECTOR3_ZERO_;
+			 *      Example: rodeo::math::Vector3::S_VECTOR3_ZERO_;
 			 * --------------------------------------------------------------------
 			 */
 			static const Vector3 S_VECTOR3_ZERO_;
@@ -549,5 +549,5 @@ namespace laura
 			return result;
 		}
 	}    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace
 #endif

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,8 +32,8 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CORE_COMMON_H_
-#define LAURA_CORE_COMMON_H_
+#ifndef RODEO_CORE_COMMON_H_
+#define RODEO_CORE_COMMON_H_
 
 
 #include <windows.h>

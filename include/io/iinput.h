@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,21 +32,21 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_IO_IINPUT_H_
-//#define LAURA_IO_IINPUT_H_
+//#ifndef RODEO_IO_IINPUT_H_
+//#define RODEO_IO_IINPUT_H_
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace io
 //{
 //enum InputType
 //{
-//    LAURA_KEYBOARD_INPUT = 1,
-//    LAURA_MOUSE_INPUT = 2,
-//	LAURA_JOY_INPUT = 3,
-//	LAURA_GAMEPAD_INPUT = 4,
-//	LAURA_WHEEL_INPUT = 5,
-//	LAURA_TOUCH_INPUT = 6
+//    RODEO_KEYBOARD_INPUT = 1,
+//    RODEO_MOUSE_INPUT = 2,
+//	RODEO_JOY_INPUT = 3,
+//	RODEO_GAMEPAD_INPUT = 4,
+//	RODEO_WHEEL_INPUT = 5,
+//	RODEO_TOUCH_INPUT = 6
 //};
 //
 //class IInput

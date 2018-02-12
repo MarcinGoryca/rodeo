@@ -1,6 +1,6 @@
 ﻿/*
 | --------------------------------------------------------------------------------------------------
-|     Laura Project
+|     Rodeo Engine
 |
 |     marcin.goryca@gmail.com
 |     http://marcingoryca.pl
@@ -33,22 +33,22 @@
 |---------------------------------------------------------------------------------------------------
 */
 //
-//#ifndef LAURA_CORE_EVENTCONTROLLER_H_
-//#define LAURA_CORE_EVENTCONTROLLER_H_
+//#ifndef RODEO_CORE_EVENTCONTROLLER_H_
+//#define RODEO_CORE_EVENTCONTROLLER_H_
 //
-//#ifndef LAURA_CORE_CONSTANTS_H_
+//#ifndef RODEO_CORE_CONSTANTS_H_
 //#include "constants.h"
 //#endif
 //
-//#ifndef LAURA_CORE_SINGLETON_H_
+//#ifndef RODEO_CORE_SINGLETON_H_
 //#include "core\singleton.h"
 //#endif
 //
-//#ifndef LAURA_CORE_MASTERCONTROLLER_H_
+//#ifndef RODEO_CORE_MASTERCONTROLLER_H_
 //#include "mastercontroller.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace event
 //	{
@@ -57,7 +57,7 @@
 //
 //	namespace controllers
 //	{
-//		class EventController : public laura::core::Singleton<EventController>, public MasterController
+//		class EventController : public rodeo::core::Singleton<EventController>, public MasterController
 //		{
 //		public:
 //			/*
@@ -85,21 +85,21 @@
 //			 |    Translates the event
 //			 |  -----------------------------------------
 //			 */
-//			void translate(laura::event::Event* event);
+//			void translate(rodeo::event::Event* event);
 //
 //			/*
 //			 |  -----------------------------------------
 //			 |    Dispatches the event
 //			 |  -----------------------------------------
 //			 */
-//			void dispatch(laura::event::Event* event);
+//			void dispatch(rodeo::event::Event* event);
 //
 //			/*
 //			 |  -----------------------------------------
 //			 |    Sends the event
 //			 |  -----------------------------------------
 //			 */
-//			void send(laura::event::Event* event);
+//			void send(rodeo::event::Event* event);
 //
 //			/*
 //			 |  ----------------------------------------
@@ -108,7 +108,7 @@
 //			 |    Parameter Event* type of the event
 //			 |  ----------------------------------------
 //			 */
-//			virtual void addEventListener(laura::event::Event* event_type);
+//			virtual void addEventListener(rodeo::event::Event* event_type);
 //
 //			/*
 //			 |  ---------------------------------------
@@ -129,13 +129,13 @@
 //			 |    Gets Event object pointer
 //			 |  ---------------------------------------
 //			 */
-//			laura::event::Event* getEvent() const
+//			rodeo::event::Event* getEvent() const
 //			{
 //				return _event;
 //			}
 //
 //		private:
-//			laura::event::Event* _event;
+//			rodeo::event::Event* _event;
 //
 //			bool init();
 //			void clear();

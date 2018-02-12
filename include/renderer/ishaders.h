@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,21 +32,21 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_RENDERER_ISHADERS_H_
-//#define LAURA_RENDERER_ISHADERS_H_
+//#ifndef RODEO_RENDERER_ISHADERS_H_
+//#define RODEO_RENDERER_ISHADERS_H_
 //
-//#ifndef LAURA_CORE_CONSTANTS_H_
+//#ifndef RODEO_CORE_CONSTANTS_H_
 //#include "core\constants.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{
 //		enum ShaderType
 //		{
-//			LAURA_VS,
-//			LAURA_FS
+//			RODEO_VS,
+//			RODEO_FS
 //		};
 //		class IShaders
 //		{
@@ -59,7 +59,7 @@
 //			 |     [Pure Virtual]
 //			 |     Loads Shader Program from specified file
 //			 |     Parameter ShaderType use: 
-//			 |     LAURA_VS (VERTEX SHADER), LAURA_FS (FRAGMENT SHADER)
+//			 |     RODEO_VS (VERTEX SHADER), RODEO_FS (FRAGMENT SHADER)
 //			 | ---------------------------------------------------------
 //			 */
 //			virtual unsigned int loadShaderFromFile(const char* filename, ShaderType st) = 0;

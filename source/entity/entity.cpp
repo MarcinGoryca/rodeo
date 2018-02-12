@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,11 +34,11 @@
  */
 //#include "entity\entity.h"
 //
-//using namespace laura::renderer;
+//using namespace rodeo::renderer;
 ////using namespace enginemath;
 ////using namespace enginescene;
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace entity
 //{
@@ -124,4 +124,4 @@
 //{
 //}
 //}    // end of entity namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace

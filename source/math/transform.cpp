@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -36,7 +36,7 @@
 #include "..\include\math\matrix3.h"
 #include "..\include\math\matrix4.h"
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -113,4 +113,4 @@ Matrix4 Transform::translate(const float x, const float y, const float z)
     return m;
 }
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,7 +34,7 @@
  */
 #include "..\include\math\vector4.h"
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -76,4 +76,4 @@ void printV4(const char* message, const Vector4& v)
 		<< std::endl;
 }
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,26 +32,26 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CORE_FRAMEWORK_H_
-#define LAURA_CORE_FRAMEWORK_H_
+#ifndef RODEO_CORE_FRAMEWORK_H_
+#define RODEO_CORE_FRAMEWORK_H_
 
-#ifndef LAURA_CONTROLLERS_OBJECTCONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_OBJECTCONTROLLER_H_
 #include "controllers\objectcontroller.h"
 #endif
 
-#ifndef LAURA_CONTROLLERS_AUDIOCONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
 #include "controllers\audiocontroller.h"
 #endif
 
-#ifndef LAURA_CONTROLLERS_SCENECONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_SCENECONTROLLER_H_
 #include "controllers\scenecontroller.h"
 #endif
 
-#ifndef LAURA_CONTROLLERS_TIMECONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_TIMECONTROLLER_H_
 #include "controllers\timecontroller.h"
 #endif
 
-#ifndef LAURA_CONTROLLERS_RENDERCONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_RENDERCONTROLLER_H_
 #include "controllers\rendercontroller.h"
 #endif
 
@@ -59,7 +59,7 @@
  //#include "core\fontmanager.h"
  //#endif
 
-#ifndef LAURA_CONTROLLERS_EVENTCONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_EVENTCONTROLLER_H_
 #include "controllers\eventcontroller.h"
 #endif
 
@@ -67,7 +67,7 @@
 //#include "core\texturemanager.h"
 //#endif
 
-#ifndef LAURA_CONTROLLERS_OUTPUTCONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_OUTPUTCONTROLLER_H_
 #include "controllers\outputcontroller.h"
 #endif
 
@@ -75,7 +75,7 @@
 //#include "io\mouse.h"
 //#endif
 
-#ifndef LAURA_MATH_MATHSYSTEM_H_
+#ifndef RODEO_MATH_MATHSYSTEM_H_
 #include "math\mathsystem.h"
 #endif    //MATH_MATHSYSTEM_H_
 
@@ -91,15 +91,15 @@
 //#include "renderer\glrenderer.h"
 //#endif
 
-#ifndef LAURA_TOOLS_XMLPARSER_H_
+#ifndef RODEO_TOOLS_XMLPARSER_H_
 #include "tools\xmlparser.h"
 #endif
 
-#ifndef LAURA_PHYSICS_PHYSICSYSTEM_H_
+#ifndef RODEO_PHYSICS_PHYSICSYSTEM_H_
 #include "physics\physicsystem.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
 	namespace core
 	{
@@ -739,36 +739,36 @@ namespace laura
 			}
 
 		public:
-			//std::unique_ptr<laura::controllers::OutputController> _output_controller;
-			//std::unique_ptr<laura::controllers::AudioController> _audio_controller;
+			//std::unique_ptr<rodeo::controllers::OutputController> _output_controller;
+			//std::unique_ptr<rodeo::controllers::AudioController> _audio_controller;
 
 			//io::Mouse mouse_;
 
-			std::unique_ptr<laura::math::MathSystem> _mathsystem;
+			std::unique_ptr<rodeo::math::MathSystem> _mathsystem;
 
-			//std::unique_ptr<laura::controllers::RenderController> _render_controller;
+			//std::unique_ptr<rodeo::controllers::RenderController> _render_controller;
 
 			//renderer::RendererInterface* renderer_;
 
 			//scene::Camera camera_;
 
-			//std::unique_ptr<laura::tools::XmlParser> _xml_parser;
+			//std::unique_ptr<rodeo::tools::XmlParser> _xml_parser;
 
-			//std::unique_ptr<laura::controllers::ObjectController> _object_controller;
+			//std::unique_ptr<rodeo::controllers::ObjectController> _object_controller;
 
-			std::unique_ptr<laura::controllers::TimeController> _time_controller;
+			std::unique_ptr<rodeo::controllers::TimeController> _time_controller;
 
-			//std::unique_ptr<laura::controllers::SceneController> _scene_controller;
+			//std::unique_ptr<rodeo::controllers::SceneController> _scene_controller;
 
-			//FontManager fontlaurar_;
+			//FontManager fontrodeor_;
 
-			//std::unique_ptr<laura::controllers::EventController> _event_controller;
+			//std::unique_ptr<rodeo::controllers::EventController> _event_controller;
 
-			//TextureManager texturelaurar_;
+			//TextureManager texturerodeor_;
 
 			//scene::Viewport viewport_;
 
-			//std::unique_ptr<laura::physics::PhysicSystem> _physicsystem;
+			//std::unique_ptr<rodeo::physics::PhysicSystem> _physicsystem;
 
 		private:
 			// Global Delta Time,
@@ -835,5 +835,5 @@ namespace laura
 			bool _use_gl;
 		};
 	}    // end of core namespace
-}    // end of laura namespace
-#endif    // LAURA_CORE_FRAMEWORK_H_
+}    // end of rodeo namespace
+#endif    // RODEO_CORE_FRAMEWORK_H_

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_RENDERER_IRENDERER_H_
-//#define LAURA_RENDERER_IRENDERER_H_
+//#ifndef RODEO_RENDERER_IRENDERER_H_
+//#define RODEO_RENDERER_IRENDERER_H_
 //
-//#ifndef LAURA_RENDERER_GL_GLSLSHADERS_H_
+//#ifndef RODEO_RENDERER_GL_GLSLSHADERS_H_
 //#include "renderer\gl\glslshaders.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{

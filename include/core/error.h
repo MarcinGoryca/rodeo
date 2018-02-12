@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CORE_ERROR_H_
-#define LAURA_CORE_ERROR_H_
+#ifndef RODEO_CORE_ERROR_H_
+#define RODEO_CORE_ERROR_H_
 
-#ifndef LAURA_CORE_CONSTANTS_H_
+#ifndef RODEO_CORE_CONSTANTS_H_
 #include "constants.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
 	namespace core
 	{
@@ -244,10 +244,10 @@ namespace laura
 		/*
 		 |  -------------------------------------------------
 		 |    This is for Title Bar in the Message Box
-		 |	  LAURA GAME ENGINE header
+		 |	  rodeo GAME ENGINE header
 		 |  -------------------------------------------------
 		 */
-		const std::wstring LAURA_HEADER = L"LAURA";
+		const std::wstring RODEO_HEADER = L"rodeo";
 
 		//	FMOD ERRORS
 		const char* const FMOD_SYSTEM_FAIL = "Couldn't Create FMOD System Object!";

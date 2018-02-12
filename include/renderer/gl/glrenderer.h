@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,38 +32,38 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_RENDERER_GLRENDERER_H_
-//#define LAURA_RENDERER_GLRENDERER_H_
+//#ifndef RODEO_RENDERER_GLRENDERER_H_
+//#define RODEO_RENDERER_GLRENDERER_H_
 //
-//#ifndef LAURA_CORE_ERROR_H_
+//#ifndef RODEO_CORE_ERROR_H_
 //#include "core\error.h"
 //#endif
 //
-//#ifndef LAURA_CORE_EXCEPTION_H_
+//#ifndef RODEO_CORE_EXCEPTION_H_
 //#include "core\exception.h"
 //#endif
 //
-//#ifndef LAURA_CORE_SINGLETON_H_
+//#ifndef RODEO_CORE_SINGLETON_H_
 //#include "core\singleton.h"
 //#endif
 //
-//#ifndef LAURA_MATH_MATRIX4_H_
+//#ifndef RODEO_MATH_MATRIX4_H_
 //#include "math\matrix4.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
+//#ifndef RODEO_RENDERER_GL_GLCOMMON_H_
 //#include "renderer\gl\glcommon.h"
 //#endif
 //
-//#ifndef LAURA_RENDERERGL_GL_QUERYRENDERER_H_
+//#ifndef RODEO_RENDERERGL_GL_QUERYRENDERER_H_
 //#include "renderer\gl\queryrenderer.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_IRENDERER_H_
+//#ifndef RODEO_RENDERER_IRENDERER_H_
 //#include "renderer\irenderer.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{
@@ -105,7 +105,7 @@
 //			 |    Parameter g - green value of the color [range 0.0f - 1.0f]
 //			 |    Parameter b - blue value of the color [range 0.0f - 1.0f]
 //			 |    Use it to Change Background Color of the rendering window
-//			 |    Using Colors from laura
+//			 |    Using Colors from rodeo
 //			 |    backColor(darkgreen, 1.0f)
 //			 |    You must specify your alfa argument [range 0.0f[transparent] - 1.0f[opacity]]
 //			 |    Colors in float manner are defined with only three values red, green, blue
@@ -220,7 +220,7 @@
 //			/*
 //			|  ------------------------------------------
 //			|    Calls glClearColor(r, g, b, a)
-//			|    In laura it's value is glClearColor(black, 1.0) but it is NOT called!
+//			|    In rodeo it's value is glClearColor(black, 1.0) but it is NOT called!
 //			|  -------------------------------------------
 //			*/
 //			bool initGL();

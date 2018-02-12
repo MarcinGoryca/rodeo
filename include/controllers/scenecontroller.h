@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -33,22 +33,22 @@
  |---------------------------------------------------------------------------------------------------
  */
 //
-//#ifndef LAURA_CONTROLLERS_SCENECONTROLLER_H_
-//#define LAURA_CONTROLLERS_SCENECONTROLLER_H_
+//#ifndef RODEO_CONTROLLERS_SCENECONTROLLER_H_
+//#define RODEO_CONTROLLERS_SCENECONTROLLER_H_
 //
-//#ifndef LAURA_CORE_ERROR_H_
+//#ifndef RODEO_CORE_ERROR_H_
 //#include "core\error.h"
 //#endif
 //
-//#ifndef LAURA_CORE_SINGLETON_H_
+//#ifndef RODEO_CORE_SINGLETON_H_
 //#include "core\singleton.h"
 //#endif
 //
-//#ifndef LAURA_CONTROLLERS_MASTERCONTROLLER_H_
+//#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
 //#include "controllers\mastercontroller.h"
 //#endif
 //
-//#ifndef LAURA_SCENE_SCENE_H_
+//#ifndef RODEO_SCENE_SCENE_H_
 //#include "scene\scene.h"
 //#endif
 //
@@ -57,11 +57,11 @@
 //#include <list>
 //#endif    //LIST_H_
 //*/
-//namespace laura
+//namespace rodeo
 //{
 //    namespace controllers
 //    {
-//        class SceneController : public laura::core::Singleton<SceneController>, public MasterController
+//        class SceneController : public rodeo::core::Singleton<SceneController>, public MasterController
 //        {
 //        public:
 //            SceneController()

@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,18 +32,18 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_RENDERER_GLSLSHADERS_H_
-//#define LAURA_RENDERER_GLSLSHADERS_H_
+//#ifndef RODEO_RENDERER_GLSLSHADERS_H_
+//#define RODEO_RENDERER_GLSLSHADERS_H_
 //
-//#ifndef LAURA_RENDERER_GL_GLCOMMON_H_
+//#ifndef RODEO_RENDERER_GL_GLCOMMON_H_
 //#include "glcommon.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_ISHADERS_H_
+//#ifndef RODEO_RENDERER_ISHADERS_H_
 //#include "renderer\ishaders.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{
@@ -60,7 +60,7 @@
 //			 |  ----------------------------------------------------
 //			 |    Loads Shader from File
 //			 |    Parameter const char* string of shader filename
-//			 |    Parameter ShaderType - LAURA_VS, LAURA_FS
+//			 |    Parameter ShaderType - RODEO_VS, RODEO_FS
 //			 |    Returns unsigned int shader program id
 //			 |  ----------------------------------------------------
 //			 */

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,26 +32,26 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_MATH_MATHSYSTEM_H_
-#define LAURA_MATH_MATHSYSTEM_H_
+#ifndef RODEO_MATH_MATHSYSTEM_H_
+#define RODEO_MATH_MATHSYSTEM_H_
 
-#ifndef LAURA_CORE_SINGLETON_H_
+#ifndef RODEO_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef LAURA_MATH_MATHTOOLS_H_
+#ifndef RODEO_MATH_MATHTOOLS_H_
 #include "math\mathtools.h"
 #endif
 
-#ifndef LAURA_TOOLS_RANDOMNUMBERGENERATOR_H_
+#ifndef RODEO_TOOLS_RANDOMNUMBERGENERATOR_H_
 #include "tools\randomnumbergenerator.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
-class MathSystem : public laura::core::Singleton<MathSystem>
+class MathSystem : public rodeo::core::Singleton<MathSystem>
 {
 public:
     MathSystem()
@@ -62,7 +62,7 @@ public:
     ~MathSystem(){}
 
     // Gets the random number
-    //laura::tools::CRandom getRandomNumber() const { return _random_number; }
+    //rodeo::tools::CRandom getRandomNumber() const { return _random_number; }
 
     // Gets specified member of sinus table
     // Returns float value of specified index from sinus table
@@ -74,13 +74,13 @@ public:
 
 private:
 	// Random Number
-	//laura::tools::CRandom _random_number;
+	//rodeo::tools::CRandom _random_number;
 
 	// Full Sinus Table
-	float _sinus_table[laura::core::LAURA_FULL_CIRCLE];
+	float _sinus_table[rodeo::core::RODEO_FULL_CIRCLE];
 
 	// Full Cosinus Table
-	float _cosinus_table[laura::core::LAURA_FULL_CIRCLE];
+	float _cosinus_table[rodeo::core::RODEO_FULL_CIRCLE];
     // Runs Random Number Generator (Mersenne Twister)
     void runGenerator();
     void init();
@@ -88,5 +88,5 @@ private:
 
 };
 }    // end of math namespace
-}    // end of laura namespace
-#endif    //LAURA_MATH_MATHSYSTEM_H_
+}    // end of rodeo namespace
+#endif    //RODEO_MATH_MATHSYSTEM_H_

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,7 +34,7 @@
  */
 //#include "event\event.h"
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace event
 //{
@@ -73,4 +73,4 @@
 //{
 //}
 //}    // end of event namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace

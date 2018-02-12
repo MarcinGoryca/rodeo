@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,9 +35,9 @@
 //#include "..\include\renderer\gl\glrenderer.h"
 //
 //using namespace std;
-//using namespace laura::core;
+//using namespace rodeo::core;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace renderer
 //	{
@@ -72,7 +72,7 @@
 //			glewInit();
 //			if (!GLEW_VERSION_3_0)
 //			{
-//				MessageBox(NULL, OPENGL_VERSION_NOT_SUPPORTED.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, OPENGL_VERSION_NOT_SUPPORTED.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //			//query_renderer_->run();
@@ -124,12 +124,12 @@
 //		{
 //			switch (type)
 //			{
-//			case gl::LAURA_ORTHOGONAL:
+//			case gl::RODEO_ORTHOGONAL:
 //			{
 //				enter2d();
 //			}
 //			break;
-//			case gl::LAURA_PERSPECTIVE:
+//			case gl::RODEO_PERSPECTIVE:
 //			{
 //				enter3d();
 //			}

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_EVENT_GAMEEVENT_H_
-//#define LAURA_EVENT_GAMEEVENT_H_
+//#ifndef RODEO_EVENT_GAMEEVENT_H_
+//#define RODEO_EVENT_GAMEEVENT_H_
 //
-//#ifndef LAURA_EVENT_EVENT_H_
+//#ifndef RODEO_EVENT_EVENT_H_
 //#include "event\event.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace event
 //{
@@ -50,5 +50,5 @@
 //    virtual ~GameEvent(){}
 //};
 //}    // end of event namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace
 //#endif

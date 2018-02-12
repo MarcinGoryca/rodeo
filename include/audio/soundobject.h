@@ -1,6 +1,6 @@
 ﻿/*
 | --------------------------------------------------------------------------------------------------
-|     Laura Project
+|     Rodeo Engine
 |
 |     marcin.goryca@gmail.com
 |     http://marcingoryca.pl
@@ -65,26 +65,26 @@
 // |  --------------------------------------------------------
 // */
 //
-//#ifndef LAURA_AUDIO_SOUNDOBJECT_H_
-//#define LAURA_AUDIO_SOUNDOBJECT_H_
+//#ifndef RODEO_AUDIO_SOUNDOBJECT_H_
+//#define RODEO_AUDIO_SOUNDOBJECT_H_
 //
-//#ifndef LAURA_CORE_ERROR_H_
+//#ifndef RODEO_CORE_ERROR_H_
 //#include "core\error.h"
 //#endif
 //
-//#ifndef LAURA_ENTITY_ENTITY_H_
+//#ifndef RODEO_ENTITY_ENTITY_H_
 //#include "entity\entity.h"
 //#endif
 //
-//#ifndef LAURA_FMOD_FMOD_HPP_
+//#ifndef RODEO_FMOD_FMOD_HPP_
 //#include "fmod\fmod.hpp"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace audio
 //	{
-//		class SoundObject : public laura::entity::Entity
+//		class SoundObject : public rodeo::entity::Entity
 //		{
 //		public:
 //			SoundObject()

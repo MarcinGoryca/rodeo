@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,16 +32,16 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_IO_MOUSE_H_
-//#define LAURA_IO_MOUSE_H_
+//#ifndef RODEO_IO_MOUSE_H_
+//#define RODEO_IO_MOUSE_H_
 //
 ////#include "core\framework.h"
 //
-//#ifndef LAURA_MATH_VECTOR2_H_
+//#ifndef RODEO_MATH_VECTOR2_H_
 //#include "math\vector2.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace io
 //{

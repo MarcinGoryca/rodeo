@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,10 +34,10 @@
  */
 //#include "io\log.h"
 //
-//using namespace laura::core;
+//using namespace rodeo::core;
 //using namespace std;
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace io
 //	{
@@ -54,7 +54,7 @@
 //
 //			if (_hfile == INVALID_HANDLE_VALUE)
 //			{
-//				MessageBox(NULL, LOGFILE_ERROR.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, LOGFILE_ERROR.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //
@@ -68,7 +68,7 @@
 //			getDate += actualData;
 //			getDate += L", ";
 //			getDate += actualTime;
-//			save(LAURA_HEADER);
+//			save(RODEO_HEADER);
 //			save(getDate);
 //
 //			return true;

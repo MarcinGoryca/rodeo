@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -34,11 +34,11 @@
  */
 //#include "renderer\map.h"
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace renderer
 //{
 //void Map::create(){}
 ////-------------------------
 //}    // end of renderer namespace
-//}    // end of laura namespace
+//}    // end of rodeo namespace

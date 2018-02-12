@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,26 +32,26 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CONTROLLERS_TIMECONTROLLER_H_
-#define LAURA_CONTROLLERS_TIMECONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_TIMECONTROLLER_H_
+#define RODEO_CONTROLLERS_TIMECONTROLLER_H_
 
-#ifndef LAURA_CORE_SINGLETON_H_
+#ifndef RODEO_CORE_SINGLETON_H_
 #include "core\singleton.h"
 #endif
 
-#ifndef LAURA_CORE_TIMER_H_
+#ifndef RODEO_CORE_TIMER_H_
 #include "core\Timer.h"
 #endif
 
-#ifndef LAURA_CONTROLLERS_MASTERCONTROLLER_H_
+#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
 #include "controllers\mastercontroller.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
     namespace controllers
     {
-        class TimeController : public laura::core::Singleton<TimeController>, public MasterController
+        class TimeController : public rodeo::core::Singleton<TimeController>, public MasterController
         {
         public:
             TimeController()
@@ -67,13 +67,13 @@ namespace laura
             }
 
             // Get pointer to Timer Object
-            laura::core::Timer* getTimer() const { return _time; }
+            rodeo::core::Timer* getTimer() const { return _time; }
 
             // Get FPSShow
             bool getFpsShow() const { return _fps_show; }
 
         private:
-			laura::core::Timer* _time;
+			rodeo::core::Timer* _time;
 			bool _fps_show;
 
             // This method is responsible for initiliazation of member objects

@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,18 +32,18 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#ifndef LAURA_CORE_CONSTANTS_H_
-#define LAURA_CORE_CONSTANTS_H_
+#ifndef RODEO_CORE_CONSTANTS_H_
+#define RODEO_CORE_CONSTANTS_H_
 
-#ifndef LAURA_COMMON_H_
+#ifndef RODEO_COMMON_H_
 #include "common.h"
 #endif
 
-#ifndef LAURA_RENDERER_COLORS_H_
+#ifndef RODEO_RENDERER_COLORS_H_
 #include "renderer\colors.h"
 #endif
 
-namespace laura
+namespace rodeo
 {
 	namespace core
 	{
@@ -63,20 +63,20 @@ namespace laura
 		 |    MATH
 		 |  -----------------
 		 */
-		const float LAURA_ONE = 1.0f;
-		const float LAURA_ZERO = 0.0f;
-		const float LAURA_HALF = 0.5f;
-		const float LAURA_NEGATIVE_ONE = -1.0f;
-		const float LAURA_PI = 3.14159265f;
-		const float LAURA_TWOPI = 6.2831852f;
-		const float LAURA_HALFPI = 1.5707963f;
-		const float LAURA_ONEBYPI = 1.0f / LAURA_PI;
-		const float LAURA_ONEBY2PI = 1.0f / LAURA_TWOPI;
-		const unsigned int LAURA_FULL_CIRCLE = 360;
+		const float RODEO_ONE = 1.0f;
+		const float RODEO_ZERO = 0.0f;
+		const float RODEO_HALF = 0.5f;
+		const float RODEO_NEGATIVE_ONE = -1.0f;
+		const float RODEO_PI = 3.14159265f;
+		const float RODEO_TWOPI = 6.2831852f;
+		const float RODEO_HALFPI = 1.5707963f;
+		const float RODEO_ONEBYPI = 1.0f / RODEO_PI;
+		const float RODEO_ONEBY2PI = 1.0f / RODEO_TWOPI;
+		const unsigned int RODEO_FULL_CIRCLE = 360;
 
 		// DEGREE - Degrees From Radians [180 / PI] 
-		const float LAURA_DEGREE = 57.2957f;
-		const float LAURA_RADIAN = 0.01745f;
+		const float RODEO_DEGREE = 57.2957f;
+		const float RODEO_RADIAN = 0.01745f;
 
 
 

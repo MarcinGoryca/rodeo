@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -33,14 +33,14 @@
  |---------------------------------------------------------------------------------------------------
  */
 //
-//#ifndef LAURA_ENTITY_MODEL_H_
-//#define LAURA_ENTITY_MODEL_H_
+//#ifndef RODEO_ENTITY_MODEL_H_
+//#define RODEO_ENTITY_MODEL_H_
 //
-//#ifndef LAURA_ENTITY_MESH_H_
+//#ifndef RODEO_ENTITY_MESH_H_
 //#include "entity\mesh.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //    namespace entity
 //    {

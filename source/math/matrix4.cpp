@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -36,9 +36,9 @@
 #include "..\include\math\matrix4.h"
 
 using namespace std;
-using namespace laura::core;
+using namespace rodeo::core;
 
-namespace laura
+namespace rodeo
 {
 namespace math
 {
@@ -152,4 +152,4 @@ void printM4(const Matrix4& m)
     std::cout << "\n";
 }
 }    // end of math namespace
-}    // end of laura namespace
+}    // end of rodeo namespace

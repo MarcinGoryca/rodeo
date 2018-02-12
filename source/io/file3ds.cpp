@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -35,15 +35,15 @@
 //#include "..\include\io\file3ds.h"
 //
 //using namespace std;
-//using namespace laura::core;
-//using namespace laura::math;
-//using namespace laura::renderer;
+//using namespace rodeo::core;
+//using namespace rodeo::math;
+//using namespace rodeo::renderer;
 //
 ////================================================================
 ////	3DS LOADER	BASED ON GAME TUTORIALS BY BEN HUMPHREY
 ////================================================================
 //
-//namespace laura
+//namespace rodeo
 //{
 //	namespace io
 //	{
@@ -62,7 +62,7 @@
 //			}
 //			catch (...)
 //			{
-//				MessageBox(NULL, FILE3DS_FAIL.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, FILE3DS_FAIL.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return false;
 //			}
 //
@@ -88,7 +88,7 @@
 //
 //			if (chunk._id != MAIN3DS)
 //			{
-//				MessageBox(NULL, FILE3DS_ERROR.c_str(), LAURA_HEADER.c_str(), ERR_ICON_OK);
+//				MessageBox(NULL, FILE3DS_ERROR.c_str(), RODEO_HEADER.c_str(), ERR_ICON_OK);
 //				return;
 //			}
 //			else

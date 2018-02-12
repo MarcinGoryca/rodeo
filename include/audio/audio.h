@@ -1,6 +1,6 @@
 /*
 | --------------------------------------------------------------------------------------------------
-|     Laura Project
+|     Rodeo Engine
 |
 |     marcin.goryca@gmail.com
 |     http://marcingoryca.pl
@@ -32,10 +32,10 @@
 |     IN THE SOFTWARE.
 |---------------------------------------------------------------------------------------------------
 */
-#ifndef LAURA_AUDIO_AUDIO_H_
-#define LAURA_AUDIO_AUDIO_H_
+#ifndef RODEO_AUDIO_AUDIO_H_
+#define RODEO_AUDIO_AUDIO_H_
 
-#ifndef LAURA_AUDIO_SOUNDOBJECT_H_
+#ifndef RODEO_AUDIO_SOUNDOBJECT_H_
 #include "soundobject.h"
 #endif
 

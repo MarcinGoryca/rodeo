@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,14 +32,14 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_EVENT_KEYBOARDEVENT_H_
-//#define LAURA_EVENT_KEYBOARDEVENT_H_
+//#ifndef RODEO_EVENT_KEYBOARDEVENT_H_
+//#define RODEO_EVENT_KEYBOARDEVENT_H_
 //
-//#ifndef LAURA_IO_KEYBOARD_H_
+//#ifndef RODEO_IO_KEYBOARD_H_
 //#include "io\Keyboard.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //namespace event
 //{
@@ -52,9 +52,9 @@
 //
 //    virtual ~KeyboardEvent(){}
 //
-//    virtual bool onKeyUp(laura::io::KeyMap key);
+//    virtual bool onKeyUp(rodeo::io::KeyMap key);
 //
-//    virtual bool onKeyDown(laura::io::KeyMap key);
+//    virtual bool onKeyDown(rodeo::io::KeyMap key);
 //};
 //}
 //}

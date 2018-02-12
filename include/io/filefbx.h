@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -75,7 +75,7 @@
 //    void readstring(const char* header, const char* value, const char* suffix);
 //
 //// ---- < MEMBERS > ---- //
-//    FbxManager* fbx_laurar_;
+//    FbxManager* fbx_rodeor_;
 //    FbxNode* node_;
 //    std::string classname_;
 //};

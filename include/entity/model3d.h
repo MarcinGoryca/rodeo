@@ -1,6 +1,6 @@
 ﻿/*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Engine
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -32,32 +32,32 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_ENTITY_MODEL3D_H_
-//#define LAURA_ENTITY_MODEL3D_H_
+//#ifndef RODEO_ENTITY_MODEL3D_H_
+//#define RODEO_ENTITY_MODEL3D_H_
 //
-//#ifndef LAURA_ENTITY_ENTITY_H_
+//#ifndef RODEO_ENTITY_ENTITY_H_
 //#include "entity\entity.h"
 //#endif
 //
-//#ifndef LAURA_IO_FILE3DFACTORY_H_
+//#ifndef RODEO_IO_FILE3DFACTORY_H_
 //#include "io\file3dfactory.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_BUFFERS_H_
+//#ifndef RODEO_RENDERER_BUFFERS_H_
 //#include "renderer\buffers.h"
 //#endif
 //
-//#ifndef LAURA_RENDERER_RENDERMODE_H_
+//#ifndef RODEO_RENDERER_RENDERMODE_H_
 //#include "renderer\rendermode.h"
 //#endif
 //
-//namespace laura
+//namespace rodeo
 //{
 //    namespace entity
 //    {
 //        class Texture;
 //        class Vector3;
-//        class Model3D : public laura::renderer::RenderMode, public Entity
+//        class Model3D : public rodeo::renderer::RenderMode, public Entity
 //        {
 //        public:
 //            Model3D()
@@ -69,11 +69,11 @@
 //                _winding(GL_CCW)
 //            {}
 //
-//            Model3D(const char* filename, laura::io::File3DFactory::File3DType type);
+//            Model3D(const char* filename, rodeo::io::File3DFactory::File3DType type);
 //
 //            virtual ~Model3D();
 //
-//            void load(const char* filename, laura::io::File3DFactory::File3DType type);
+//            void load(const char* filename, rodeo::io::File3DFactory::File3DType type);
 //
 //            void update();
 //            void scale(float scale_factor);
@@ -95,7 +95,7 @@
 //
 //        protected:
 //			Model _model;
-//			laura::renderer::Buffers _buffer;
+//			rodeo::renderer::Buffers _buffer;
 //
 //			unsigned int _texture_id;
 //			unsigned int _mesh_count;
@@ -112,7 +112,7 @@
 //
 //            void render();
 //
-//            void bindTexture(laura::core::ui& texture_id);
+//            void bindTexture(rodeo::core::ui& texture_id);
 //
 //
 //        };
