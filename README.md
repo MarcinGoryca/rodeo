@@ -3,7 +3,7 @@
 -----------------------------
 <h2>12 February 2018 Update</h2>
 <h2>Back to the foundation - the RODEO name</h2>
-<h2>Important info is that this project is for snbowboard game ONLY</h2>
+<h2>Important info is that this project is for snowboard game ONLY</h2>
 
 
 ------------------------------------------------------------------------------------------------------------
