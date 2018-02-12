@@ -1,19 +1,21 @@
-Laura Multimedia Engine [ Project ]
+# Rodeo Engine [ Project ]
+## [C++]
 -----------------------------
+<h2>12 February 2018 Update</h2>
+<h2>Back to the foundation - the RODEO name</h2>
+<h2>Important info is that this project is for snbowboard game ONLY</h2>
+
+
+------------------------------------------------------------------------------------------------------------
+
 <h2>25 April 2017 Update</h2>
 <h3>Back to tests</h3>
 <hr/>
-
-<h2>Important Info (16 Dec 2016)</h2>
-<h3>Warning!</h3>
-<span style="color:red">The project is under heavy redesigning, testing and development, most of the old code is off right now.</span>
 
 <h2>Foundation</h2>
 <h3>This was my thesis project, but I didn't finish it within required time.</h3>
 <h3>I still want to get it working in some way. I think it is a great subject to explore.</h3>
 <h3>Great to learn and have fun.</h3>
-<h3>Previous name was Rodeo</h3>
-<h3>Another thing to consider is to make it more multimedia program, with wide use for animation, designing etc.</h3>
 <h4>Features:</h4>
 <ul>
 <li>Qt</li>
@@ -24,17 +26,7 @@ Laura Multimedia Engine [ Project ]
 <li>HLSL</li>
 <li>FreeType</li>
 <li>TinyXML</li>
-<h5>To be considered</h5>
 <li>ASSIMP</li>
 <li>SOIL</li>
 <li>FreeImage</li>
-</ul>
-<h4>#Updates</h4>
-<ul>
-<h5>24/08/2016</h5>
-<li>It's not only a game engine. Not pure game engine. It will be considered for wider usage.</li>
-<h5>26/11/2015</h5>
-<li>Whole project is being redesigned</li>
-<h5>06/08/2015</h5>
-<li>Since nVidia doesn't recommend using CG it is not available</li>
 </ul>
