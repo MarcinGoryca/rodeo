@@ -4,7 +4,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace rodeo::math;
 
-namespace rodeoTests
+namespace rodeotests
 {
 	TEST_CLASS(QuaternionUnitTest)
 	{
@@ -62,7 +62,7 @@ namespace rodeoTests
 		}
 
 		// Testing Positive Identity of a quaternion
-		TEST_METHOD(TestQuaternionPositiveIdentity)
+		TEST_METHOD(TestQuaternionIdentity)
 		{
 			_quat = std::unique_ptr<Quaternion>(new Quaternion);
 			_quat->identity();
@@ -71,6 +71,18 @@ namespace rodeoTests
 			Assert::AreEqual(0.0f, _quat->getY());
 			Assert::AreEqual(0.0f, _quat->getZ());
 			Assert::AreEqual(1.0f, _quat->getW());
+		}
+
+		// Testing Negative Identity of a quaternion
+		TEST_METHOD(TestQuaternionNegativeIdentity)
+		{
+			_quat = std::unique_ptr<Quaternion>(new Quaternion);
+			_quat->negativeIdentity();
+
+			Assert::AreEqual(0.0f, _quat->getX());
+			Assert::AreEqual(0.0f, _quat->getY());
+			Assert::AreEqual(0.0f, _quat->getZ());
+			Assert::AreEqual(-1.0f, _quat->getW());
 		}
 
 		// Testing Quaternion Rotation about X-axis

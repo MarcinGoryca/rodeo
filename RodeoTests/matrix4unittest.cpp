@@ -4,7 +4,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace rodeo::math;
 
-namespace rodeoTests
+namespace rodeotests
 {
 	TEST_CLASS(Matrix4Test)
 	{

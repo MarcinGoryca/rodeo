@@ -1,4 +1,4 @@
-rodeo
+RODEO
     CORE
 	    COMMON
 		CONSTANTS

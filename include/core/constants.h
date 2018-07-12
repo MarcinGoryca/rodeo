@@ -56,8 +56,6 @@ namespace rodeo
 		typedef unsigned int ui;
 		typedef const unsigned int cui;
 
-
-
 		/*
 		 |  -----------------
 		 |    MATH
@@ -77,8 +75,6 @@ namespace rodeo
 		// DEGREE - Degrees From Radians [180 / PI] 
 		const float RODEO_DEGREE = 57.2957f;
 		const float RODEO_RADIAN = 0.01745f;
-
-
 
 		//namespaces
 

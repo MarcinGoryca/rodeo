@@ -35,7 +35,6 @@
 #ifndef RODEO_CORE_COMMON_H_
 #define RODEO_CORE_COMMON_H_
 
-
 #include <windows.h>
 #include <windowsx.h>
 #include <cmath>

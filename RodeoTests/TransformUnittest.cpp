@@ -2,9 +2,9 @@
 #include "CppUnitTest.h"
 #include "../source/math/transform.cpp"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace laura::math;
+using namespace rodeo::math;
 
-namespace LauraTests
+namespace rodeotests
 {
 	TEST_CLASS(TransformUnittest)
 	{

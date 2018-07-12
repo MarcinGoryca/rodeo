@@ -4,9 +4,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace rodeo::math;
 
-
-
-namespace rodeoTests
+namespace rodeotests
 {
     typedef std::unique_ptr<Vector4> up;
 

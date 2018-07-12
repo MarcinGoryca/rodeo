@@ -45,9 +45,9 @@ namespace rodeo
 	{
 		//	WINDOWS ERRORS  
 		/*
-		 :  ------------------------------------------------------------
-		 :    If RegisterClassEx fails this message will show up
-		 :  ------------------------------------------------------------
+		 |  ------------------------------------------------------------
+		 |    If RegisterClassEx fails this message will show up
+		 |  ------------------------------------------------------------
 		 */
 		const std::wstring REGISTER_FAIL_MESSAGE = L"Cannot Register Window Class";
 
