@@ -453,7 +453,7 @@
     <ClInclude Include="include\renderer\vk\vkrenderer.h">
       <Filter>Header Files\renderer\vk</Filter>
     </ClInclude>
-    <ClInclude Include="include\event\lauraevent.h">
+    <ClInclude Include="include\event\rodeoevent.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
     <ClInclude Include="include\front\ui.h">
