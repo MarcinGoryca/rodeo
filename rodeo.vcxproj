@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{58CCA4A3-F717-4146-8DDB-2777B3DD3624}</ProjectGuid>
-    <RootNamespace>laura</RootNamespace>
+    <RootNamespace>rodeo</RootNamespace>
     <ProjectName>rodeo</ProjectName>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
