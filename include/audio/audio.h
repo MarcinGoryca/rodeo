@@ -1,6 +1,6 @@
 /*
 | --------------------------------------------------------------------------------------------------
-|     Rodeo Engine
+|     Rodeo Project
 |
 |     marcin.goryca@gmail.com
 |     http://marcingoryca.pl
