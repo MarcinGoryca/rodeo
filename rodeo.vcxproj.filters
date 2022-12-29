@@ -441,10 +441,10 @@
     <ClInclude Include="include\controllers\timecontroller.h">
       <Filter>Header Files\controllers</Filter>
     </ClInclude>
-    <ClInclude Include="include\front\widget.h">
+    <ClInclude Include="include\ui\widget.h">
       <Filter>Header Files\ui</Filter>
     </ClInclude>
-    <ClInclude Include="include\front\igui.h">
+    <ClInclude Include="include\ui\igui.h">
       <Filter>Header Files\ui</Filter>
     </ClInclude>
     <ClInclude Include="include\renderer\gl\gldraw.h">
@@ -456,7 +456,7 @@
     <ClInclude Include="include\event\rodeoevent.h">
       <Filter>Header Files\event</Filter>
     </ClInclude>
-    <ClInclude Include="include\front\ui.h">
+    <ClInclude Include="include\ui\ui.h">
       <Filter>Header Files\ui</Filter>
     </ClInclude>
     <ClInclude Include="include\rodeo.h">

@@ -1,6 +1,9 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Rodeo Engine
+ |     Rodeo Project
+ |	   Include\
+ |     Primitive\
+ |     Plane.h
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -8,7 +11,7 @@
  |     License Information
  |
  |     The MIT License (MIT)
- |     Copyright (c) 2016 Marcin Goryca
+ |     Copyright (c) 2010 - ... Marcin Goryca
  |
  |     Permission is hereby granted, free of charge,
  |     to any person obtaining a copy of this software
@@ -32,24 +35,22 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_PRIMITIVE_PLANE_H_
-//#define RODEO_PRIMITIVE_PLANE_H_
-//
-//#include "math\vector3.h"
-//
-//namespace rodeo
-//{
-//namespace primitive
-//{
-//class Plane 
-//{
-//public:
-//    //Plane(const enginemath::Vector3& normal, const enginemath::Vector3& point);
-//    //~Plane(){}
-//};
-//}
-//}
-//#endif
+#ifndef RODEO_PRIMITIVE_PLANE_H_
+#define RODEO_PRIMITIVE_PLANE_H_
+
+#include "math\vector3.h"
+
+namespace rodeo {
+    namespace primitive {
+        class Plane {
+            public:
+                Plane() {}
+                Plane(const math::Vector3& normal, const math::Vector3& point) {}
+                ~Plane(){}
+        };
+    }
+}
+#endif
 //
 ///*
 //Plane in 3D is the set of points equidistant from two points.

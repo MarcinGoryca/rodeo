@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Laura Project
+ |     Rodeo Project
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -8,7 +8,7 @@
  |     License Information
  |
  |     The MIT License (MIT)
- |     Copyright (c) 2016 Marcin Goryca
+ |     Copyright (c) 2010 - ... Marcin Goryca
  |
  |     Permission is hereby granted, free of charge,
  |     to any person obtaining a copy of this software
@@ -32,12 +32,12 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef LAURA_FRONTEND_IGUI_H_
-//#define LAURA_FRONTEND_IGUI_H_
+//#ifndef RODEO_UI_IGUI_H_
+//#define RODEO_UI_IGUI_H_
 //
-//namespace laura
+//namespace rodeo
 //{
-//namespace front
+//namespace ui
 //{
 //class IGui
 //{
@@ -45,6 +45,6 @@
 //    IGui(){}
 //    virtual ~IGui(){}
 //};
-//}    // end of front namespace
-//}    // end of laura namespace
+//}
+//}
 //#endif

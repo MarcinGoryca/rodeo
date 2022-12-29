@@ -110,7 +110,7 @@
     <ClInclude Include="include\event\eventheader.h" />
     <ClInclude Include="include\event\gameevent.h" />
     <ClInclude Include="include\event\iinputlistener.h" />
-    <ClInclude Include="include\event\lauraevent.h" />
+    <ClInclude Include="include\event\rodeoevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
     <ClInclude Include="include\front\ui.h" />
