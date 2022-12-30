@@ -113,9 +113,9 @@
     <ClInclude Include="include\event\rodeoevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
-    <ClInclude Include="include\front\ui.h" />
-    <ClInclude Include="include\front\igui.h" />
-    <ClInclude Include="include\front\widget.h" />
+    <ClInclude Include="include\ui\ui.h" />
+    <ClInclude Include="include\ui\igui.h" />
+    <ClInclude Include="include\ui\widget.h" />
     <ClInclude Include="include\io\file3dfactory.h" />
     <ClInclude Include="include\io\file3ds.h" />
     <ClInclude Include="include\io\filease.h" />
