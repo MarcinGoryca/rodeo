@@ -32,23 +32,23 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_EVENT_GAMEEVENT_H_
-//#define RODEO_EVENT_GAMEEVENT_H_
-//
-//#ifndef RODEO_EVENT_EVENT_H_
-//#include "event\event.h"
-//#endif
-//
-//namespace rodeo
-//{
-//namespace event
-//{
-//class GameEvent : public Event
-//{
-//public:
-//    GameEvent(){}
-//    virtual ~GameEvent(){}
-//};
-//}    // end of event namespace
-//}    // end of rodeo namespace
-//#endif
+#ifndef RODEO_EVENT_GAMEEVENT_H_
+#define RODEO_EVENT_GAMEEVENT_H_
+
+#ifndef RODEO_EVENT_EVENT_H_
+#include "event\event.h"
+#endif
+
+namespace rodeo
+{
+namespace event
+{
+class GameEvent : public Event
+{
+public:
+    GameEvent(){}
+    virtual ~GameEvent(){}
+};
+}    // end of event namespace
+}    // end of rodeo namespace
+#endif

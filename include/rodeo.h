@@ -1,6 +1,6 @@
 /*
  | --------------------------------------------------------------------------------------------------
- |     Rodeo Engine
+ |     Rodeo Project
  |
  |     marcin.goryca@gmail.com
  |     http://marcingoryca.pl
@@ -8,7 +8,7 @@
  |     License Information
  |
  |     The MIT License (MIT)
- |     Copyright (c) 2016 Marcin Goryca
+ |     Copyright (c) 2010-... Marcin Goryca
  |
  |     Permission is hereby granted, free of charge,
  |     to any person obtaining a copy of this software
@@ -43,10 +43,11 @@
 #include "core/core.h"
 #endif
 
+/*
 #ifndef RODEO_ENTITY_ENTITY_H_
 #include "entity/entity.h"
 #endif
-
+*/
 #ifndef RODEO_EVENT_EVENT_H_
 #include "event/event.h"
 #endif

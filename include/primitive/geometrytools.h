@@ -32,18 +32,18 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_PRIMITIVE_GEOMETRYTOOLS_H
-//#define RODEO_PRIMITIVE_GEOMETRYTOOLS_H
-//
-//#ifndef RODEO_MATH_VECTOR3_H_
-//#include "math\vector3.h"
-//#endif
-//
-//namespace rodeo
-//{
-//namespace primitive
-//{
-//
-//}
-//}
-//#endif
+#ifndef RODEO_PRIMITIVE_GEOMETRYTOOLS_H
+#define RODEO_PRIMITIVE_GEOMETRYTOOLS_H
+
+#ifndef RODEO_MATH_VECTOR3_H_
+#include "math\vector3.h"
+#endif
+
+namespace rodeo
+{
+namespace primitive
+{
+
+}
+}
+#endif

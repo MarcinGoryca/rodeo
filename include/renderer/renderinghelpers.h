@@ -32,29 +32,29 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_RENDERINGHELPERS_H_
-//#define RODEO_RENDERER_RENDERINGHELPERS_H_
-//
-//#ifndef RODEO_RENDERER_GL_GLCOMMON_H_
-//#include "gl\glcommon.h"
-//#endif
-//
-//namespace rodeo
-//{
-//	namespace renderer
-//	{
-//		class Colors;
-//		class RenderingHelpers
-//		{
-//		public:
-//			RenderingHelpers() { init(); }
-//			~RenderingHelpers() {}
-//
-//			void init();
-//			void drawLine(float* start, float* end, Colors rgb);
-//		private:
-//			bool _has_pivot_axes;
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_RENDERER_RENDERINGHELPERS_H_
+#define RODEO_RENDERER_RENDERINGHELPERS_H_
+
+#ifndef RODEO_RENDERER_GL_GLCOMMON_H_
+#include "gl\glcommon.h"
+#endif
+
+namespace rodeo
+{
+	namespace renderer
+	{
+		class Colors;
+		class RenderingHelpers
+		{
+		public:
+			RenderingHelpers() { init(); }
+			~RenderingHelpers() {}
+
+			void init();
+			void drawLine(float* start, float* end, Colors rgb);
+		private:
+			bool _has_pivot_axes;
+		};
+	}
+}
+#endif

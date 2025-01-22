@@ -32,51 +32,51 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_ENTITY_BOUNDINGVOLUME_H_
-//#define RODEO_ENTITY_BOUNDINGVOLUME_H_
-//
-//#ifndef RODEO_PRIMITIVE_GEOMETRY_H_
-//#include "primitive\geometry.h"
-//#endif
-//
-//namespace rodeo
-//{
-//	namespace entity
-//	{
-//		class BoundingVolume
-//		{
-//		public:
-//			BoundingVolume() {}
-//
-//			~BoundingVolume() {}
-//
-//			// Get Radius
-//			float getRadius() const
-//			{
-//				return _radius;
-//			}
-//
-//			// Sets the radius
-//			void setRadius(float new_radius)
-//			{
-//				_radius = new_radius;
-//			}
-//
-//			// Get the Cube (bounding box)
-//			//jennieprimitive::Cube* getBoundingBox() const
-//			//{
-//			//    return bounding_box_;
-//			//}
-//
-//			//// Sets Bounding Box
-//			//void setBoundingBox(jennieprimitive::Cube* new_cube)
-//			//{
-//			//    bounding_box_ = new_cube;
-//			//}
-//
-//		private:
-//			float _radius;
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_ENTITY_BOUNDINGVOLUME_H_
+#define RODEO_ENTITY_BOUNDINGVOLUME_H_
+
+#ifndef RODEO_PRIMITIVE_GEOMETRY_H_
+#include "primitive\geometry.h"
+#endif
+
+namespace rodeo
+{
+	namespace entity
+	{
+		class BoundingVolume
+		{
+		public:
+			BoundingVolume() {}
+
+			~BoundingVolume() {}
+
+			// Get Radius
+			float getRadius() const
+			{
+				return _radius;
+			}
+
+			// Sets the radius
+			void setRadius(float new_radius)
+			{
+				_radius = new_radius;
+			}
+
+			// Get the Cube (bounding box)
+			//jennieprimitive::Cube* getBoundingBox() const
+			//{
+			//    return bounding_box_;
+			//}
+
+			//// Sets Bounding Box
+			//void setBoundingBox(jennieprimitive::Cube* new_cube)
+			//{
+			//    bounding_box_ = new_cube;
+			//}
+
+		private:
+			float _radius;
+		};
+	}
+}
+#endif

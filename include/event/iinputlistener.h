@@ -32,49 +32,49 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_EVENT_IINPUTLISTENER_H_
-//#define RODEO_EVENT_IINPUTLISTENER_H_
-//
-//#include <list>
-//
-//#ifndef RODEO_IO_IINPUT_H_
-//#include "io\iinput.h"
-//#endif
-//
-//namespace rodeo
-//{
-//namespace event
-//{
-//class IInputListener
-//{
-//public:
-//    IInputListener(){}
-//
-//    virtual ~IInputListener(){}
-//
-//    int getInputType()const;
-//
-//    void addInputListener(rodeo::io::IInput* in);
-//
-//    virtual void keyUp(rodeo::io::IInput key) = 0;
-//
-//    virtual void keyDown(rodeo::io::IInput key) = 0;
-//
-//    virtual void mouseDblClick(rodeo::io::IInput ms) = 0;
-//
-//    virtual void mouseMove(rodeo::io::IInput ms) = 0;
-//
-//    virtual void mouseExit(rodeo::io::IInput ms) = 0;
-//
-//    virtual void mouseScroll(rodeo::io::IInput ms) = 0;
-//
-//    virtual void mouseClick(rodeo::io::IInput ms) = 0;
-//
-//    virtual void mouseDrag(rodeo::io::IInput ms) = 0;
-//
-//protected:
-//    std::list <rodeo::io::IInput*> _input_list;
-//};
-//}
-//}
-//#endif
+#ifndef RODEO_EVENT_IINPUTLISTENER_H_
+#define RODEO_EVENT_IINPUTLISTENER_H_
+
+#include <list>
+
+#ifndef RODEO_IO_IINPUT_H_
+#include "io\iinput.h"
+#endif
+
+namespace rodeo
+{
+namespace event
+{
+class IInputListener
+{
+public:
+    IInputListener(){}
+
+    virtual ~IInputListener(){}
+
+    int getInputType()const;
+
+    void addInputListener(rodeo::io::IInput* in);
+
+    virtual void keyUp(rodeo::io::IInput key) = 0;
+
+    virtual void keyDown(rodeo::io::IInput key) = 0;
+
+    virtual void mouseDblClick(rodeo::io::IInput ms) = 0;
+
+    virtual void mouseMove(rodeo::io::IInput ms) = 0;
+
+    virtual void mouseExit(rodeo::io::IInput ms) = 0;
+
+    virtual void mouseScroll(rodeo::io::IInput ms) = 0;
+
+    virtual void mouseClick(rodeo::io::IInput ms) = 0;
+
+    virtual void mouseDrag(rodeo::io::IInput ms) = 0;
+
+protected:
+    std::list <rodeo::io::IInput*> _input_list;
+};
+}
+}
+#endif

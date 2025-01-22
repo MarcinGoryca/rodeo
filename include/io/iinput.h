@@ -32,29 +32,29 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_IO_IINPUT_H_
-//#define RODEO_IO_IINPUT_H_
-//
-//namespace rodeo
-//{
-//namespace io
-//{
-//enum InputType
-//{
-//    RODEO_KEYBOARD_INPUT = 1,
-//    RODEO_MOUSE_INPUT = 2,
-//	RODEO_JOY_INPUT = 3,
-//	RODEO_GAMEPAD_INPUT = 4,
-//	RODEO_WHEEL_INPUT = 5,
-//	RODEO_TOUCH_INPUT = 6
-//};
-//
-//class IInput
-//{
-//public:
-//    IInput(){}
-//    virtual ~IInput(){}
-//};
-//}
-//}
-//#endif
+#ifndef RODEO_IO_IINPUT_H_
+#define RODEO_IO_IINPUT_H_
+
+namespace rodeo
+{
+namespace io
+{
+enum InputType
+{
+    RODEO_KEYBOARD_INPUT = 1,
+    RODEO_MOUSE_INPUT = 2,
+	RODEO_JOY_INPUT = 3,
+	RODEO_GAMEPAD_INPUT = 4,
+	RODEO_WHEEL_INPUT = 5,
+	RODEO_TOUCH_INPUT = 6
+};
+
+class IInput
+{
+public:
+    IInput(){}
+    virtual ~IInput(){}
+};
+}
+}
+#endif

@@ -1,4 +1,4 @@
-﻿/*
+/*
  | --------------------------------------------------------------------------------------------------
  |     Rodeo Project
  |
@@ -32,32 +32,50 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
+#pragma once
 
-#ifndef RODEO_ENTITY_ENTITYHEADER_H_
-#define RODEO_ENTITY_ENTITYHEADER_H_
+#include "glcommon.h"
 
-#ifndef RODEO_ENTITY_ENTITY_H_
-#include "entity.h"
-#endif
+namespace rodeo {
+	namespace renderer {
+		bool lineAntialias();
+		bool pointAntialias();
+		void polygonMode(GLenum face, GLenum mode);
+		bool polyFrontFill();
+		bool polyFrontLine();
+		bool polyFrontPoint();
+		bool polyFrontBackFill();
+		bool polyFrontBackLine();
+		bool polyFrontBackPoint();
+		bool cullFrontOn();
+		bool cullBackOn();
+		bool cullFrontBackOn();
+		bool cullFrontOff();
+		bool cullBackOff();
+		bool cullFrontBackOff();
+		bool polygonWinding(GLenum mode);
+		bool polygonWithEdges(GLboolean edge);
+		bool polygonAntialias();
+		bool shadeMode(GLenum mode);
+		bool lightingOn();
+		bool lightingOff();
+		bool depthTestOn();
+		bool depthTestOff();
+		bool scissorsOn();
+		bool scissorsOff();
+		bool stencilOn();
+		bool stencilOff();
+		void push();
+		void pop();
+		bool pointSize(float ps);
+		bool lineWidth(float lw);
+		bool lightModel(GLenum mode, float r, float g, float b);
+		bool colorMaterial();
+		bool colorMaterialMode(GLenum face, GLenum mode);
+		bool blendingOn();
+		bool blendingOff();
+		bool texturingOn();
+		bool texturingOff();
+	}
 
-#ifndef RODEO_ENTITY_MESH_H_
-#include "mesh.h"
-#endif
-
-#ifndef RODEO_ENTITY_MODEL_H_
-#include "model.h"
-#endif
-
-#ifndef RODEO_ENTITY_MODEL3D_H_
-#include "model3d.h"
-#endif
-
-#ifndef RODEO_ENTITY_OBJECT_H_
-#include "object.h"
-#endif
-
-#ifndef RODEO_ENTITY_OBJECT3D_H_
-#include "object3d.h"
-#endif
-
-#endif
+}

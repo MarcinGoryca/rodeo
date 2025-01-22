@@ -32,116 +32,116 @@
 |     IN THE SOFTWARE.
 |---------------------------------------------------------------------------------------------------
 */
-//
-//#ifndef RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
-//#define RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
-//
-//#ifndef RODEO_MATH_VECTOR_H_
-//#include <vector>
-//#endif
-//
-//#ifndef RODEO_CORE_SINGLETON_H_
-//#include "core\singleton.h"
-//#endif
-//
-//#ifndef RODEO_AUDIO_SOUNDOBJECT_H_
-//#include "audio\soundobject.h"
-//#endif
-//
-//namespace rodeo
-//{
-//	namespace controllers
-//	{
-//		class AudioController : public rodeo::core::Singleton<AudioController>
-//		{
-//		public:
-//			/*
-//			 |  -------------------------------------------------
-//			 |    Constructor
-//			 |  -------------------------------------------------
-//			 */
-//			AudioController()
-//				:_sound_object(NULL),
-//				_sound_container(0)
-//			{}
-//
-//			//explicit AudioController(const char* filename){}
-//
-//			/*
-//			 |  -------------------------------------------------
-//			 |    Destructor
-//			 |  -------------------------------------------------
-//			 */
-//			~AudioController()
-//			{
-//				clean();
-//			}
-//
-//			/*
-//			 |  -------------------------------------------------
-//			 |    Gets sound object
-//			 |    Returns SoundObject pointer to the sound object
-//			 |  -------------------------------------------------
-//			 */
-//			rodeo::audio::SoundObject* getSoundObject() const
-//			{ 
-//				return _sound_object;
-//			}
-//
-//			/*
-//			 |  -------------------------------------------------
-//			 |    Sets SoundObject object
-//			 |  -------------------------------------------------
-//			 */
-//			void setSoundObject(rodeo::audio::SoundObject* so)
-//			{ 
-//				_sound_object = so;
-//			}
-//
-//			/*
-//			 |  --------------------------------------------------
-//			 |    Gets Container of the sound
-//			 |    Returns Vector object, container of SoundObject objects
-//			 |  --------------------------------------------------
-//			 */
-//			std::vector<rodeo::audio::SoundObject*> getSoundContainer() const
-//			{ 
-//				return _sound_container;
-//			}
-//
-//			/*
-//			 |  -------------------------------------------------
-//			 |    Puts SoundObject into the container
-//			 |  -------------------------------------------------
-//			 */
-//			void putSound(rodeo::audio::SoundObject* so);
-//		protected:
-//
-//		private:
-//			rodeo::audio::SoundObject* _sound_object;
-//			std::vector<rodeo::audio::SoundObject*> _sound_container;
-//
-//			/*
-//			|  ---------------------------------------------------
-//			|    Copy Constructor
-//			|  ---------------------------------------------------
-//			*/
-//			AudioController(const AudioController& copy);
-//
-//			/*
-//			|  ---------------------------------------------------
-//			|    Copy operator
-//			|  ---------------------------------------------------
-//			*/
-//			AudioController& operator=(const AudioController& copy);
-//
-//			/*
-//			|  ---------------------------------------------------
-//			|    Cleans the memory
-//			|  ---------------------------------------------------
-//			*/
-//			void clean();
-//		};
-//	}
-//}
-//#endif
+
+#ifndef RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
+#define RODEO_CONTROLLERS_AUDIOCONTROLLER_H_
+
+#ifndef RODEO_MATH_VECTOR_H_
+#include <vector>
+#endif
+
+#ifndef RODEO_CORE_SINGLETON_H_
+#include "core\singleton.h"
+#endif
+
+#ifndef RODEO_AUDIO_SOUNDOBJECT_H_
+#include "audio\soundobject.h"
+#endif
+
+namespace rodeo
+{
+	namespace controllers
+	{
+		class AudioController : public rodeo::core::Singleton<AudioController>
+		{
+		public:
+			/*
+			 |  -------------------------------------------------
+			 |    Constructor
+			 |  -------------------------------------------------
+			 */
+			AudioController()
+				:_sound_object(NULL),
+				_sound_container(0)
+			{}
+
+			//explicit AudioController(const char* filename){}
+
+			/*
+			 |  -------------------------------------------------
+			 |    Destructor
+			 |  -------------------------------------------------
+			 */
+			~AudioController()
+			{
+				clean();
+			}
+
+			/*
+			 |  -------------------------------------------------
+			 |    Gets sound object
+			 |    Returns SoundObject pointer to the sound object
+			 |  -------------------------------------------------
+			 */
+			rodeo::audio::SoundObject* getSoundObject() const
+			{ 
+				return _sound_object;
+			}
+
+			/*
+			 |  -------------------------------------------------
+			 |    Sets SoundObject object
+			 |  -------------------------------------------------
+			 */
+			void setSoundObject(rodeo::audio::SoundObject* so)
+			{ 
+				_sound_object = so;
+			}
+
+			/*
+			 |  --------------------------------------------------
+			 |    Gets Container of the sound
+			 |    Returns Vector object, container of SoundObject objects
+			 |  --------------------------------------------------
+			 */
+			std::vector<rodeo::audio::SoundObject*> getSoundContainer() const
+			{ 
+				return _sound_container;
+			}
+
+			/*
+			 |  -------------------------------------------------
+			 |    Puts SoundObject into the container
+			 |  -------------------------------------------------
+			 */
+			void putSound(rodeo::audio::SoundObject* so);
+		protected:
+
+		private:
+			rodeo::audio::SoundObject* _sound_object;
+			std::vector<rodeo::audio::SoundObject*> _sound_container;
+
+			/*
+			|  ---------------------------------------------------
+			|    Copy Constructor
+			|  ---------------------------------------------------
+			*/
+			AudioController(const AudioController& copy);
+
+			/*
+			|  ---------------------------------------------------
+			|    Copy operator
+			|  ---------------------------------------------------
+			*/
+			AudioController& operator=(const AudioController& copy);
+
+			/*
+			|  ---------------------------------------------------
+			|    Cleans the memory
+			|  ---------------------------------------------------
+			*/
+			void clean();
+		};
+	}
+}
+#endif

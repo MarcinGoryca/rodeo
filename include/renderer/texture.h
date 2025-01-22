@@ -32,46 +32,46 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_TEXTURE_H_
-//#define RODEO_RENDERER_TEXTURE_H_
-//
-//#ifndef RODEO_IO_FILEDDS_H_
-//#include "io\filedds.h"
-//#endif
-//
-//#ifndef RODEO_IO_FILETGA_H_
-//#include "io\filetga.h"
-//#endif
-//
-//namespace rodeo
-//{
-//	namespace renderer
-//	{
-//		class Texture
-//		{
-//		public:
-//			Texture() {}
-//
-//			~Texture()
-//			{
-//				reset();
-//			}
-//
-//			virtual bool load(Image* image, const char* filename, core::ui& tid);
-//			//virtual void load(Image* image, std::string filename, ui numberOfTextures);
-//			virtual void release(Image* image);
-//			virtual void bind(Image* image, core::ui& tid);
-//
-//			// This will clean up all generated textures 
-//			bool reset();
-//
-//		private:
-//			// Used for counting number of generated textures 
-//			static int _s_texture_count;
-//			unsigned int _texture_id;
-//
-//			virtual void build(Image* image, core::ui& tid);
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_RENDERER_TEXTURE_H_
+#define RODEO_RENDERER_TEXTURE_H_
+
+#ifndef RODEO_IO_FILEDDS_H_
+#include "io\filedds.h"
+#endif
+
+#ifndef RODEO_IO_FILETGA_H_
+#include "io\filetga.h"
+#endif
+
+namespace rodeo
+{
+	namespace renderer
+	{
+		class Texture
+		{
+		public:
+			Texture() {}
+
+			~Texture()
+			{
+				reset();
+			}
+
+			virtual bool load(Image* image, const char* filename, unsigned int& tid);
+			//virtual void load(Image* image, std::string filename, ui numberOfTextures);
+			virtual void release(Image* image);
+			virtual void bind(Image* image, unsigned int& tid);
+
+			// This will clean up all generated textures 
+			bool reset();
+
+		private:
+			// Used for counting number of generated textures 
+			static int _s_texture_count;
+			unsigned int _texture_id;
+
+			virtual void build(Image* image, unsigned int& tid);
+		};
+	}
+}
+#endif

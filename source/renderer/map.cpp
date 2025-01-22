@@ -32,13 +32,13 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "renderer\map.h"
-//
-//namespace rodeo
-//{
-//namespace renderer
-//{
-//void Map::create(){}
-////-------------------------
-//}    // end of renderer namespace
-//}    // end of rodeo namespace
+#include "renderer\map.h"
+
+namespace rodeo
+{
+namespace renderer
+{
+void Map::create(){}
+//-------------------------
+}    // end of renderer namespace
+}    // end of rodeo namespace

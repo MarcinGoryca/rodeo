@@ -32,11 +32,11 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_PHYSICS_PHYSICS_H
-//#define RODEO_PHYSICS_PHYSICS_H
-//
-//#ifndef RODEO_PHYSICS_PHYSICS_H_
-//#include "physics\physics.h"
-//#endif
-//
-//#endif
+#ifndef RODEO_PHYSICS_PHYSICS_H
+#define RODEO_PHYSICS_PHYSICS_H
+
+#ifndef RODEO_PHYSICS_PHYSICS_H_
+#include "physics\physics.h"
+#endif
+
+#endif

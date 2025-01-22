@@ -32,19 +32,19 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_UI_IGUI_H_
-//#define RODEO_UI_IGUI_H_
-//
-//namespace rodeo
-//{
-//namespace ui
-//{
-//class IGui
-//{
-//public:
-//    IGui(){}
-//    virtual ~IGui(){}
-//};
-//}
-//}
-//#endif
+#ifndef RODEO_UI_IGUI_H_
+#define RODEO_UI_IGUI_H_
+
+namespace rodeo
+{
+namespace ui
+{
+class IGui
+{
+public:
+    IGui(){}
+    virtual ~IGui(){}
+};
+}
+}
+#endif

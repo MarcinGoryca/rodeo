@@ -32,15 +32,15 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_UI_H_
-//#define RODEO_UI_H_
-//
-//#ifndef RODEO_UI_IGUI_H_
-//#include "ui\igui.h"
-//#endif
-//
-//#ifndef RODEO_UI_WIDGET_H_
-//#include "ui\widget.h"
-//#endif
-//
-//#endif
+#ifndef RODEO_UI_H_
+#define RODEO_UI_H_
+
+#ifndef RODEO_UI_IGUI_H_
+#include "ui\igui.h"
+#endif
+
+#ifndef RODEO_UI_WIDGET_H_
+#include "ui\widget.h"
+#endif
+
+#endif

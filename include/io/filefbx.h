@@ -44,40 +44,43 @@
 //#include "core\error.h"
 //#endif
 //
-//#include <fbxsdk.h>
 //
-//namespace engineio
-//{
-//class FileFBX : public Importer
-//{
-//public: 
-//    FileFBX()
-//    :classname_("FileFBX")
-//    {}
+//#include <fbx\fbxsdk.h>
 //
-//    virtual ~FileFBX(){}
+//namespace rodeo {
+//    namespace io {
+//        class FileFBX : public Importer
+//        {
+//        public:
+//            FileFBX()
+//                :classname_("FileFBX")
+//            {
+//            }
 //
-//    virtual bool import(const char* filename);
+//            virtual ~FileFBX() {}
 //
-//    virtual const std::string& getClassName()const { return classname_; }
+//            virtual bool import(const char* filename);
 //
-//private:
-//    void readFile(FbxScene* scene);
-//    void readContent(FbxNode* node);
-//    void readMesh(FbxNode* node);
-//    void readMarker(FbxNode* node);
-//    void readSkeleton(FbxNode* node);
-//    void readNurbs(FbxNode* node);
-//    void readPatch(FbxNode* node);
-//    void readCamera(FbxNode* node);
-//    void readLight(FbxNode* node);
-//    void readLODGroup(FbxNode* node);
-//    void readstring(const char* header, const char* value, const char* suffix);
+//            virtual const std::string& getClassName()const { return classname_; }
 //
-//// ---- < MEMBERS > ---- //
-//    FbxManager* fbx_rodeor_;
-//    FbxNode* node_;
-//    std::string classname_;
-//};
-//}    //end of engineio namespace
+//        private:
+//            void readFile(FbxScene* scene);
+//            void readContent(FbxNode* node);
+//            void readMesh(FbxNode* node);
+//            void readMarker(FbxNode* node);
+//            void readSkeleton(FbxNode* node);
+//            void readNurbs(FbxNode* node);
+//            void readPatch(FbxNode* node);
+//            void readCamera(FbxNode* node);
+//            void readLight(FbxNode* node);
+//            void readLODGroup(FbxNode* node);
+//            void readstring(const char* header, const char* value, const char* suffix);
+//
+//            // ---- < MEMBERS > ---- //
+//            FbxManager* fbx_rodeor_;
+//            FbxNode* node_;
+//            std::string classname_;
+//        };
+//    }    //end of engineio namespace
+//}
 //#endif //RODEO_IO_FILEFBX_H_

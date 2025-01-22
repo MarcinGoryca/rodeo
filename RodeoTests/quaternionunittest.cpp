@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include "../source/math/quaternion.cpp"
+#include "../include/math/quaternion.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-using namespace rodeo::math;
+
 
 namespace rodeotests
 {
@@ -16,7 +16,7 @@ namespace rodeotests
 		// Testing default construction of a quaternion
 		TEST_METHOD(TestQuaternionDefaultConstructor)
 		{
-			_quat = std::unique_ptr<Quaternion>(new Quaternion);
+			_quat = std::unique_ptr<rodeo::math::Quaternion>(new rodeo::math::Quaternion);
 
 			Assert::AreEqual(0.0f, _quat->getX());
 			Assert::AreEqual(0.0f, _quat->getY());
@@ -28,8 +28,8 @@ namespace rodeotests
 		TEST_METHOD(TestQuaternionConstructionByVector4)
 		{
 
-			Vector4 v(1.0f, 1.0f, 3.0f, 2.0f);
-			Quaternion q(v);
+			rodeo::math::Vector4 v(1.0f, 1.0f, 3.0f, 2.0f);
+			rodeo::math::Quaternion q(v);
 			
 			Assert::AreEqual(1.0f, q.getX());
 			Assert::AreEqual(1.0f, q.getY());
@@ -41,8 +41,8 @@ namespace rodeotests
 		TEST_METHOD(TestQuaternionConstructionByVectorByNumber)
 		{
 			float number = 1.0f;
-			Vector3 v(1.0f, 2.0f, 3.0f);
-			_quat = std::unique_ptr<Quaternion>(new Quaternion(v, number));
+			rodeo::math::Vector3 v(1.0f, 2.0f, 3.0f);
+			_quat = std::unique_ptr<rodeo::math::Quaternion>(new rodeo::math::Quaternion(v, number));
 		
 			Assert::AreEqual(1.0f, _quat->getX());
 			Assert::AreEqual(2.0f, _quat->getY());
@@ -53,7 +53,7 @@ namespace rodeotests
 		// Testing Constructing quaternion from four scalars
 		TEST_METHOD(TestQuaternionConstructionFromFourScalars)
 		{
-			_quat = std::unique_ptr<Quaternion>(new Quaternion(-1.0f, 0.0f, 1.0f, 1.0f));
+			_quat = std::unique_ptr<rodeo::math::Quaternion>(new rodeo::math::Quaternion(-1.0f, 0.0f, 1.0f, 1.0f));
 
 			Assert::AreEqual(-1.0f, _quat->getX());
 			Assert::AreEqual(0.0f, _quat->getY());
@@ -64,7 +64,7 @@ namespace rodeotests
 		// Testing Positive Identity of a quaternion
 		TEST_METHOD(TestQuaternionIdentity)
 		{
-			_quat = std::unique_ptr<Quaternion>(new Quaternion);
+			_quat = std::unique_ptr<rodeo::math::Quaternion>(new rodeo::math::Quaternion);
 			_quat->identity();
 
 			Assert::AreEqual(0.0f, _quat->getX());
@@ -76,7 +76,7 @@ namespace rodeotests
 		// Testing Negative Identity of a quaternion
 		TEST_METHOD(TestQuaternionNegativeIdentity)
 		{
-			_quat = std::unique_ptr<Quaternion>(new Quaternion);
+			_quat = std::unique_ptr<rodeo::math::Quaternion>(new rodeo::math::Quaternion);
 			_quat->negativeIdentity();
 
 			Assert::AreEqual(0.0f, _quat->getX());
@@ -88,7 +88,7 @@ namespace rodeotests
 		// Testing Quaternion Rotation about X-axis
 		TEST_METHOD(TestQuaternionRotateAboutXAxis)
 		{
-			_quat = std::unique_ptr<Quaternion>(new Quaternion(1.0f, 1.0f, 3.0f, -2.0f));
+			_quat = std::unique_ptr<rodeo::math::Quaternion>(new rodeo::math::Quaternion(1.0f, 1.0f, 3.0f, -2.0f));
 
 			_quat->rotateAboutX(90.0f);
 			//X = 0.707 (sin of 45.0f) degrees / 0.850f radians
@@ -106,6 +106,6 @@ namespace rodeotests
 
 		}
 	private:
-		std::unique_ptr<Quaternion> _quat;
+		std::unique_ptr<rodeo::math::Quaternion> _quat;
 	};
 }

@@ -154,7 +154,7 @@ namespace rodeotests
 		}
 
 		// Testing Loading Identity Matrix
-		TEST_METHOD(TestLoadIdenityMatrix4)
+		TEST_METHOD(TestLoadIdentityMatrix4)
 		{
 			Vector4 v1(-1.0f, 1.0f, 1.0f, 0.0f);
 			Vector4 v2(-2.0f, 2.2f, 2.3f, 2.4f);

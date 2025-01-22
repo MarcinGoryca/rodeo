@@ -32,6 +32,8 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
+#ifndef RODEO_MATH_VECTOR
+#define RODEO_MATH_VECTOR
 namespace enginemath
 {
 class Vector
@@ -47,4 +49,3 @@ protected:
 };
 }    // end of enginemath namespace
 #endif    // RODEO_MATH_VECTOR_H_
-*/

@@ -32,27 +32,27 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_EVENTALL_H_
-//#define RODEO_EVENTALL_H_
-//
-//#ifndef RODEO_EVENT_EVENT_H_
-//#include "event\event.h"
-//#endif
-//
-//#ifndef RODEO_EVENT_GAMEEVENT_H_
-//#include "event\gameevent.h"
-//#endif
-//
-//#ifndef RODEO_EVENT_IINPUTLISTENER_H_
-//#include "event\iinputlistener.h"
-//#endif
-//
-//#ifndef RODEO_EVENT_KEYBOARDEVENT_H_
-//#include "event\keyboardevent.h"
-//#endif
-//
-//#ifndef RODEO_EVENT_MOUSEEVENT_H_
-//#include "event\mouseevent.h"
-//#endif
-//
-//#endif
+#ifndef RODEO_EVENTALL_H_
+#define RODEO_EVENTALL_H_
+
+#ifndef RODEO_EVENT_EVENT_H_
+#include "event\event.h"
+#endif
+
+#ifndef RODEO_EVENT_GAMEEVENT_H_
+#include "event\gameevent.h"
+#endif
+
+#ifndef RODEO_EVENT_IINPUTLISTENER_H_
+#include "event\iinputlistener.h"
+#endif
+
+#ifndef RODEO_EVENT_KEYBOARDEVENT_H_
+#include "event\keyboardevent.h"
+#endif
+
+#ifndef RODEO_EVENT_MOUSEEVENT_H_
+#include "event\mouseevent.h"
+#endif
+
+#endif

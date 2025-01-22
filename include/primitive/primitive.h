@@ -32,27 +32,27 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_PRIMITIVE_PRIMITIVE_H_
-//#define RODEO_PRIMITIVE_PRIMITIVE_H_
-//
-//#ifndef RODEO_PRIMITIVE_BOUNDINGVOLUME_H_
-//#include "primitive\boundingvolume.h"
-//#endif
-//
-//#ifndef RODEO_PRIMITIVE_GEOMETRY_H_
-//#include "primitive\geometry.h"
-//#endif
-//
-//#ifndef RODEO_PRIMITIVE_GEOMETRYTOOLS_H_
-//#include "primitive\geometrytools.h"
-//#endif
-//
-//#ifndef RODEO_PRIMITIVE_GEOMETRYDATA_H_
-//#include "primitive\geometrydata.h"
-//#endif
-//
-//#ifndef RODEO_PRIMIIVE_PLANE_H_
-//#include "primitive\plane.h"
-//#endif
-//
-//#endif
+#ifndef RODEO_PRIMITIVE_PRIMITIVE_H_
+#define RODEO_PRIMITIVE_PRIMITIVE_H_
+
+#ifndef RODEO_PRIMITIVE_BOUNDINGVOLUME_H_
+#include "primitive\boundingvolume.h"
+#endif
+
+#ifndef RODEO_PRIMITIVE_GEOMETRY_H_
+#include "primitive\geometry.h"
+#endif
+
+#ifndef RODEO_PRIMITIVE_GEOMETRYTOOLS_H_
+#include "primitive\geometrytools.h"
+#endif
+
+#ifndef RODEO_PRIMITIVE_GEOMETRYDATA_H_
+#include "primitive\geometrydata.h"
+#endif
+
+#ifndef RODEO_PRIMIIVE_PLANE_H_
+#include "primitive\plane.h"
+#endif
+
+#endif

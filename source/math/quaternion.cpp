@@ -67,13 +67,13 @@ const Quaternion& Quaternion::get() const
 //--------------------------------------------------------------------------------------------------
 const void Quaternion::positiveIdentity()
 {
-    Vector4(0.0f, 0.0f, 0.0f, 1.0f);
+    Vector4 v(0.0f, 0.0f, 0.0f, 1.0f);
 }
 
 //--------------------------------------------------------------------------------------------------
 const void Quaternion::negativeIdentity()
 {
-    Vector4(0.0f, 0.0f, 0.0f, -1.0f);
+    Vector4 v(0.0f, 0.0f, 0.0f, -1.0f);
 }
 
 //void Quaternion::Conjugate(Vector3& v)
@@ -266,6 +266,11 @@ Vector3 Quaternion::getRotationAxis()const
 //{
 //	//
 //}
+
+float dotProduct(const Quaternion& q1, const Quaternion& q2)
+{
+    return 0.0f;
+}
 
 //--------------------------------------------------------------------------------------------------
 Quaternion slerp(const Quaternion& q1, const Quaternion& q2, float t)

@@ -32,31 +32,34 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "math\vectorstools.h"
+//#include "math\mathtools.h"
 //
-//namespace enginemath
+//namespace rodeo
 //{
-//float findTheta(Vector2 a, Vector2 b)
-//{
-//	float theta = 0.0f;
-//	float product = 0.0f;
-//	float productALength = a.length();
-//	float productBLength = b.length();
-//	float productsLength = productALength * productBLength;
-//	float dotProduct = a.dot(b);
-//
-//	if((productsLength != 0.0f) && (dotProduct != 0.0f))
+//	namespace math
 //	{
-//		product = dotProduct / productsLength;
-//	}
-//	if(product != 0.0f)
-//	{
-//		theta = ::acos(product);
-//	}
+//		float findTheta(Vector2 a, Vector2 b)
+//		{
+//			float theta = 0.0f;
+//			float product = 0.0f;
+//			float productALength = a.length();
+//			float productBLength = b.length();
+//			float productsLength = productALength * productBLength;
+//			float dotProduct = a.dot(b);
 //
-//	theta = radiansToDegrees(theta);
+//			if ((productsLength != 0.0f) && (dotProduct != 0.0f))
+//			{
+//				product = dotProduct / productsLength;
+//			}
+//			if (product != 0.0f)
+//			{
+//				theta = ::acos(product);
+//			}
 //
-//	return theta;
-//}
-////=============================================================================================================================
+//			theta = radiansToDegrees(theta);
+//
+//			return theta;
+//		}
+//		//=============================================================================================================================
+//	}
 //}

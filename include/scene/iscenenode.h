@@ -32,26 +32,26 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_SCENE_ISCENENODE_H_
-//#define RODEO_SCENE_ISCENENODE_H_
-//
-//namespace rodeo
-//{
-//	namespace scene
-//	{
-//		class ISceneNode
-//		{
-//		public:
-//			ISceneNode() {};
-//
-//			virtual ~ISceneNode() {}
-//
-//			virtual void update(float dt) = 0;
-//
-//			virtual void render() = 0;
-//
-//			//virtual void addChild(shared_ptr<SceneNodeIfc> child) = 0;
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_SCENE_ISCENENODE_H_
+#define RODEO_SCENE_ISCENENODE_H_
+
+namespace rodeo
+{
+	namespace scene
+	{
+		class ISceneNode
+		{
+		public:
+			ISceneNode() {};
+
+			virtual ~ISceneNode() {}
+
+			virtual void update(float dt) = 0;
+
+			virtual void render() = 0;
+
+			//virtual void addChild(shared_ptr<SceneNodeIfc> child) = 0;
+		};
+	}
+}
+#endif

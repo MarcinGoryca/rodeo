@@ -32,48 +32,48 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_EVENT_MOUSEEVENT_H_
-//#define RODEO_EVENT_MOUSEEVENT_H_
-//
-//namespace rodeo
-//{
-//namespace event
-//{
-//class Event;
-//
-//class MouseEvent : public Event
-//{
-//public:
-//    MouseEvent(){}
-//
-//    virtual ~MouseEvent(){}
-//
-//    virtual void onMouseMove();
-//
-//    virtual void onLeftButtonClick();
-//
-//    virtual void onLeftButtonDoubleClick();
-//
-//    virtual void onRightButtonClick();
-//
-//    virtual void onRightButtonDoubleClick();
-//
-//    virtual void onMiddleButtonClick();
-//
-//    virtual void onMiddleButtonDoubleClick();
-//
-//    virtual void onLeftRightClick();
-//
-//    virtual void onLeftMiddleClick();
-//
-//    virtual void onRightMiddleClick();
-//
-//    virtual void onDrag();
-//
-//    virtual bool onMouseDown();
-//
-//    virtual bool onMouseUp();
-//};
-//}    // end of event namespace
-//}    // end of rodeo namespace
-//#endif
+#ifndef RODEO_EVENT_MOUSEEVENT_H_
+#define RODEO_EVENT_MOUSEEVENT_H_
+
+namespace rodeo
+{
+namespace event
+{
+class Event;
+
+class MouseEvent : public Event
+{
+public:
+    MouseEvent(){}
+
+    virtual ~MouseEvent(){}
+
+    virtual void onMouseMove();
+
+    virtual void onLeftButtonClick();
+
+    virtual void onLeftButtonDoubleClick();
+
+    virtual void onRightButtonClick();
+
+    virtual void onRightButtonDoubleClick();
+
+    virtual void onMiddleButtonClick();
+
+    virtual void onMiddleButtonDoubleClick();
+
+    virtual void onLeftRightClick();
+
+    virtual void onLeftMiddleClick();
+
+    virtual void onRightMiddleClick();
+
+    virtual void onDrag();
+
+    virtual bool onMouseDown();
+
+    virtual bool onMouseUp();
+};
+}    // end of event namespace
+}    // end of rodeo namespace
+#endif

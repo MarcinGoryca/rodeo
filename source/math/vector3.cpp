@@ -32,7 +32,7 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#include "math\vector3.h"
+#include "..\include\math\vector3.h"
 
 using namespace std;
 

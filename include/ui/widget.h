@@ -32,24 +32,24 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_UI_WIDGET_H_
-//#define RODEO_UI_WIDGET_H_
-//
-//#ifndef LIST_H_
-//#include <list>
-//#endif
-//
-//namespace rodeo
-//{
-//namespace ui
-//{
-//class Widget
-//{
-//public:
-//
-//protected:
-//private:
-//};
-//}
-//}
-//#endif
+#ifndef RODEO_UI_WIDGET_H_
+#define RODEO_UI_WIDGET_H_
+
+#ifndef LIST_H_
+#include <list>
+#endif
+
+namespace rodeo
+{
+namespace ui
+{
+class Widget
+{
+public:
+
+protected:
+private:
+};
+}
+}
+#endif

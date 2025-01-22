@@ -32,69 +32,69 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//
-//#ifndef RODEO_CONTROLLERS_SCENECONTROLLER_H_
-//#define RODEO_CONTROLLERS_SCENECONTROLLER_H_
-//
-//#ifndef RODEO_CORE_ERROR_H_
-//#include "core\error.h"
-//#endif
-//
-//#ifndef RODEO_CORE_SINGLETON_H_
-//#include "core\singleton.h"
-//#endif
-//
-//#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
-//#include "controllers\mastercontroller.h"
-//#endif
-//
-//#ifndef RODEO_SCENE_SCENE_H_
-//#include "scene\scene.h"
-//#endif
-//
-///*
-//#ifndef LIST_H_
-//#include <list>
-//#endif    //LIST_H_
-//*/
-//namespace rodeo
-//{
-//    namespace controllers
-//    {
-//        class SceneController : public rodeo::core::Singleton<SceneController>, public MasterController
-//        {
-//        public:
-//            SceneController()
-//            {
-//                init();
-//            }
-//
-//            virtual ~SceneController()
-//            {
-//                clear();
-//            }
-//
-//            virtual void render();
-//
-//            virtual void update(float dt);
-//
-//            //virtual void onIdle();
-//
-//            //void addChild(entity::Entity* entity);
-//
-//            //void removeChild(entity::Entity* entity);
-//
-//            //void removeChildren();
-//
-//            scene::Scene* getScene()const { return _scene; }
-//
-//        protected:
-//            void init();
-//            void clear();
-//
-//        private:
-//            scene::Scene* _scene;
-//        };
-//    }
-//}
-//#endif
+
+#ifndef RODEO_CONTROLLERS_SCENECONTROLLER_H_
+#define RODEO_CONTROLLERS_SCENECONTROLLER_H_
+
+#ifndef RODEO_CORE_ERROR_H_
+#include "core\error.h"
+#endif
+
+#ifndef RODEO_CORE_SINGLETON_H_
+#include "core\singleton.h"
+#endif
+
+#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
+#include "controllers\mastercontroller.h"
+#endif
+
+#ifndef RODEO_SCENE_SCENE_H_
+#include "scene\scene.h"
+#endif
+
+/*
+#ifndef LIST_H_
+#include <list>
+#endif    //LIST_H_
+*/
+namespace rodeo
+{
+    namespace controllers
+    {
+        class SceneController : public rodeo::core::Singleton<SceneController>, public MasterController
+        {
+        public:
+            SceneController()
+            {
+                init();
+            }
+
+            virtual ~SceneController()
+            {
+                clear();
+            }
+
+            virtual void render();
+
+            virtual void update(float dt);
+
+            //virtual void onIdle();
+
+            //void addChild(entity::Entity* entity);
+
+            //void removeChild(entity::Entity* entity);
+
+            //void removeChildren();
+
+            scene::Scene* getScene()const { return _scene; }
+
+        protected:
+            void init();
+            void clear();
+
+        private:
+            scene::Scene* _scene;
+        };
+    }
+}
+#endif

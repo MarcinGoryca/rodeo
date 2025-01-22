@@ -42,21 +42,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\marcin\Documents\Visual Studio 2017\Projects\rodeo\libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\marci\source\repos\rodeo\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\other;$(ProjectDir)\other\freetype;$(ProjectDir)\other\freetype\include;$(ProjectDir)\other\freetype\include\freetype2;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\other;$(ProjectDir)\other\freetype;$(ProjectDir)\other\freetype\include;$(ProjectDir)\other\freetype\include\freetype2;$(ProjectDir)\other\fbx</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4820;4668;4571;4456;4710;4365;4514;4458;4005</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glew32s.lib;freetype.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,6 +113,7 @@
     <ClInclude Include="include\event\rodeoevent.h" />
     <ClInclude Include="include\event\keyboardevent.h" />
     <ClInclude Include="include\event\mouseevent.h" />
+    <ClInclude Include="include\renderer\gl\gllibrary.h" />
     <ClInclude Include="include\ui\ui.h" />
     <ClInclude Include="include\ui\igui.h" />
     <ClInclude Include="include\ui\widget.h" />
@@ -186,7 +187,7 @@
     <ClInclude Include="include\scene\viewport.h" />
     <ClInclude Include="include\tools\htmlwriter.h" />
     <ClInclude Include="include\tools\memory_aligned.h" />
-    <ClInclude Include="include\tools\randomnumbergenerator.h" />
+    <ClInclude Include="include\tools\rng.h" />
     <ClInclude Include="include\tools\tools.h" />
     <ClInclude Include="include\tools\toolsall.h" />
     <ClInclude Include="include\tools\xmlparser.h" />

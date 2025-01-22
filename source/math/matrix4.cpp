@@ -123,7 +123,7 @@ Matrix4 multiply(const Matrix4* m1, const Matrix4* m2)
 {
     Matrix4 out = Matrix4::_S_IDENTITY;
 
-    ui row, column, ro_woffset;
+    unsigned int row, column, ro_woffset;
 
     for(row = 0, ro_woffset = row * 4; row < 4; ++row, ro_woffset = row * 4)
     {

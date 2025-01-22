@@ -32,41 +32,41 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "event\event.h"
-//#include "controllers\eventcontroller.h"
-//
-//using namespace rodeo::event;
-//
-//namespace rodeo
-//{
-//	namespace controllers
-//	{
-//		bool EventController::init()
-//		{
-//			_event = new event::Event;
-//			return true;
-//		}
-//
-//		// -------------------------------------------------------------------------------------------------
-//		void EventController::addEventListener(event::Event* event_type)
-//		{
-//
-//		}
-//
-//		// -------------------------------------------------------------------------------------------------
-//		void EventController::clear()
-//		{
-//			if (_event != nullptr)
-//			{
-//				delete _event;
-//				_event = nullptr;
-//			}
-//		}
-//
-//		/**
-//		void EventManager::getUserInput()
-//		{
-//		}
-//		*/
-//	}
-//}
+#include "event\event.h"
+#include "controllers\eventcontroller.h"
+
+using namespace rodeo::event;
+
+namespace rodeo
+{
+	namespace controllers
+	{
+		bool EventController::init()
+		{
+			_event = new event::Event;
+			return true;
+		}
+
+		// -------------------------------------------------------------------------------------------------
+		void EventController::addEventListener(event::Event* event_type)
+		{
+
+		}
+
+		// -------------------------------------------------------------------------------------------------
+		void EventController::clear()
+		{
+			if (_event != nullptr)
+			{
+				delete _event;
+				_event = nullptr;
+			}
+		}
+
+		/**
+		void EventManager::getUserInput()
+		{
+		}
+		*/
+	}
+}

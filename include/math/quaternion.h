@@ -36,7 +36,7 @@
 #define RODEO_MATH_QUATERNION_H_
 
 #ifndef RODEO_MATH_VECTOR4_H_
-#include "math\vector4.h"
+#include "vector4.h"
 #endif
 
 namespace rodeo

@@ -247,7 +247,7 @@ namespace rodeo
 		 |	  rodeo GAME ENGINE header
 		 |  -------------------------------------------------
 		 */
-		const std::wstring RODEO_HEADER = L"rodeo";
+		const char* const PROJECT_HEADER = "rodeo";
 
 		//	FMOD ERRORS
 		const char* const FMOD_SYSTEM_FAIL = "Couldn't Create FMOD System Object!";

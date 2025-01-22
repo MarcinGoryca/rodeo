@@ -32,29 +32,29 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_RENDERSTATE_H_
-//#define RODEO_RENDERER_RENDERSTATE_H_
-//
-//namespace rodeo
-//{
-//	namespace renderer
-//	{
-//		class RenderState : public entity::Object
-//		{
-//		public:
-//			virtual ~RenderState() {}
-//
-//			virtual int getState()const = 0;
-//
-//			enum State
-//			{
-//				GLOBAL,
-//				LIGHT,
-//				EFFECT
-//			};
-//		protected:
-//			RenderState() {}
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_RENDERER_RENDERSTATE_H_
+#define RODEO_RENDERER_RENDERSTATE_H_
+
+namespace rodeo
+{
+	namespace renderer
+	{
+		class RenderState : public entity::Object
+		{
+		public:
+			virtual ~RenderState() {}
+
+			virtual int getState()const = 0;
+
+			enum State
+			{
+				GLOBAL,
+				LIGHT,
+				EFFECT
+			};
+		protected:
+			RenderState() {}
+		};
+	}
+}
+#endif

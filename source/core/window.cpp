@@ -32,37 +32,39 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "core\window.h"
-//
-//using namespace std;
-//
-//namespace rodeo
+#include "core\window.h"
+
+using namespace std;
+
+namespace rodeo
+{
+	namespace core
+	{
+	}
+}
+//LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 //{
-//namespace core
-//{
-////LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
-////{
-////    static Window* rodeo_application = 0;
-////
-////    switch(msg)
-////    {
-////    case WM_CREATE:
-////        {
-////            CREATESTRUCT* cs = (CREATESTRUCT*)lparam;
-////            rodeo_application = (Window*)cs->lpCreateParams;
-////            return 0;
-////        }
-////    }
-////    if(rodeo_application)
-////        return rodeo_application->messageProcessor(msg, wparam, lparam);
-////    else
-////        return DefWindowProc(hwnd, msg, wparam, lparam);
-////}
+//    static Window* rodeo_application = 0;
 //
-///**
-// * 
-// */
-//
+//    switch(msg)
+//    {
+//    case WM_CREATE:
+//        {
+//            CREATESTRUCT* cs = (CREATESTRUCT*)lparam;
+//            rodeo_application = (Window*)cs->lpCreateParams;
+//            return 0;
+//        }
+//    }
+//    if(rodeo_application)
+//        return rodeo_application->messageProcessor(msg, wparam, lparam);
+//    else
+//        return DefWindowProc(hwnd, msg, wparam, lparam);
+//}
+
+/**
+ * 
+ */
+
 //void Window::init()
 //{
 //    createWindowClass(GetModuleHandle(NULL), getWindowClassName());
@@ -71,8 +73,8 @@
 //    show();
 //    createGLContext(GetDC(getWindowHandle()));
 //}
-//
-////--------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
 //bool Window::createWindowClass(HINSTANCE hinstance, std::wstring classname)
 //{
 //    //wnd_.cbSize = sizeof(wnd_);

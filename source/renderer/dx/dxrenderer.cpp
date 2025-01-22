@@ -36,10 +36,8 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-
-//#include "renderer\dx\dxrenderer.h"
 //
-//using namespace rodeo::core;
+//#include "renderer\dx\dxrenderer.h"
 //
 //namespace rodeo
 //{
@@ -47,7 +45,7 @@
 //{
 //bool DxRenderer::run(int w, int h)
 //{
-//    init(hwnd_, w, h);
+//    //init(hwnd_, w, h);
 //    return true;
 //}
 //

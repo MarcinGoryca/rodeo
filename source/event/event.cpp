@@ -32,45 +32,45 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "event\event.h"
-//
-//namespace rodeo
-//{
-//namespace event
-//{
-//void Event::onMove()
-//{
-//
-//}
-//
-////...............................//
-//void Event::onChange()
-//{
-//}
-//
-////...............................//
-//void Event::onUpdate()
-//{
-//}
-//
-////...............................//
-//void Event::onDraw()
-//{
-//}
-//
-////...............................//
-//void Event::onHit()
-//{
-//}
-//
-////...............................//
-//void Event::addedToScene()
-//{
-//}
-//
-////...............................//
-//void Event::removedFromScene()
-//{
-//}
-//}    // end of event namespace
-//}    // end of rodeo namespace
+#include "event\event.h"
+
+namespace rodeo
+{
+namespace event
+{
+void Event::onMove()
+{
+
+}
+
+//...............................//
+void Event::onChange()
+{
+}
+
+//...............................//
+void Event::onUpdate()
+{
+}
+
+//...............................//
+void Event::onDraw()
+{
+}
+
+//...............................//
+void Event::onHit()
+{
+}
+
+//...............................//
+void Event::addedToScene()
+{
+}
+
+//...............................//
+void Event::removedFromScene()
+{
+}
+}    // end of event namespace
+}    // end of rodeo namespace

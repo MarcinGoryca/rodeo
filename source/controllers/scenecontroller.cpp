@@ -32,70 +32,70 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "controllers\scenecontroller.h"
-//#include "entity\entity.h"
-//
-//using namespace rodeo::renderer;
-//using namespace rodeo::entity;
-//using namespace rodeo::scene;
-//
-//namespace rodeo
-//{
-//namespace controllers
-//{
-//void SceneController::init()
-//{
-//    _scene = new Scene;
-//}
-//
-////--------------------------------------------------------------------------------------------------
-//void SceneController::clear()
-//{
-//    delete _scene;
-//}
-//
-////--------------------------------------------------------------------------------------------------
-//void SceneController::render()
-//{
-//    if(_scene != nullptr)
-//    {
-//        _scene->render();
-//    }
-//}
-//
-////--------------------------------------------------------------------------------------------------
-//void SceneController::update(float dt)
-//{
-//	if (_scene != nullptr)
-//    {
-//        _scene->update(dt);
-//    }
-//}
-///*
-//void SceneController::onIdle()
-//{
-//}
-//*/
-///**
-// *
-// */
-///*
-//void SceneController::addChild(Entity* entity)
-//{
-//
-//}
-//*/
-///**
-// *
-// */
-///*
-//void SceneController::removeChildren()
-//{
-//    if(scene_ != NULL)
-//    {
-//        scene_->clear();
-//    }
-//}
-//*/
-//}
-//}
+#include "controllers\scenecontroller.h"
+#include "entity\entity.h"
+
+using namespace rodeo::renderer;
+using namespace rodeo::entity;
+using namespace rodeo::scene;
+
+namespace rodeo
+{
+namespace controllers
+{
+void SceneController::init()
+{
+    _scene = new Scene;
+}
+
+//--------------------------------------------------------------------------------------------------
+void SceneController::clear()
+{
+    delete _scene;
+}
+
+//--------------------------------------------------------------------------------------------------
+void SceneController::render()
+{
+    if(_scene != nullptr)
+    {
+        _scene->render();
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
+void SceneController::update(float dt)
+{
+	if (_scene != nullptr)
+    {
+        _scene->update(dt);
+    }
+}
+/*
+void SceneController::onIdle()
+{
+}
+*/
+/**
+ *
+ */
+/*
+void SceneController::addChild(Entity* entity)
+{
+
+}
+*/
+/**
+ *
+ */
+/*
+void SceneController::removeChildren()
+{
+    if(scene_ != NULL)
+    {
+        scene_->clear();
+    }
+}
+*/
+}
+}

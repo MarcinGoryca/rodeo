@@ -32,25 +32,25 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "controllers\audiocontroller.h"
-//
-//namespace rodeo
-//{
-//	namespace controllers
-//	{
-//		void AudioController::putSound(audio::SoundObject* so)
-//		{
-//			_sound_container.push_back(so);
-//		}
-//
-//		// - private - //
-//		void AudioController::clean()
-//		{
-//			if (_sound_object != nullptr)
-//			{
-//				delete _sound_object;
-//				_sound_object = nullptr;
-//			}
-//		}
-//	}
-//}
+#include "controllers\audiocontroller.h"
+
+namespace rodeo
+{
+	namespace controllers
+	{
+		void AudioController::putSound(audio::SoundObject* so)
+		{
+			_sound_container.push_back(so);
+		}
+
+		// - private - //
+		void AudioController::clean()
+		{
+			if (_sound_object != nullptr)
+			{
+				delete _sound_object;
+				_sound_object = nullptr;
+			}
+		}
+	}
+}

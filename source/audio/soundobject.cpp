@@ -32,89 +32,89 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-#include "audio\soundobject.h"
-
-namespace rodeo
-{
-namespace audio
-{
+//#include "audio\soundobject.h"
+//
+//namespace rodeo
+//{
+//namespace audio
+//{
 //bool SoundObject::initSound()
 //{
-//    result_ = System_Create(&system_);
-//    if(result_ != FMOD_OK)
+//    _result = FMOD::System_Create(&_system);
+//    if(_result != FMOD_OK)
 //    {
-//        MessageBox(NULL, enginecore::FMODSystemFail, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::FMOD_SYSTEM_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //
-//    result_ = system_->getVersion(&version_);
-//    if(result_ != FMOD_OK)
+//    _result = _system->getVersion(&_version);
+//    if(_result != FMOD_OK)
 //    {
-//        MessageBox(NULL, enginecore::FMODVersionFail, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::FMOD_VERSION_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //
-//    if(version_ < FMOD_VERSION)
+//    if(_version < FMOD_VERSION)
 //    {
-//        MessageBox(NULL, enginecore::FMODVersionNotSupported, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::FMOD_VERSION_NOT_SUPPORTED", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //
-//    result_ = system_->getNumDrivers(&numdrivers_);
-//    if(result_ != FMOD_OK)
+//    _result = _system->getNumDrivers(&_numdrivers);
+//    if(_result != FMOD_OK)
 //    {
-//        MessageBox(NULL, enginecore::FMODDriversEnumerateFail, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::FMOD_DRIVERS_ENUMERATE_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //
-//    if(numdrivers_ == 0)
+//    if(_numdrivers == 0)
 //    {
-//        MessageBox(NULL, enginecore::FMODSoundDriversFail, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::FMOD_SOUND_DRIVERS_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;	
 //    }
 //    else
 //    {
-//        result_ = system_->getDriverCaps(0, &caps_, 0, 0, &speakermode_);
-//        if(result_ != FMOD_OK)
+//        _result = _system->getDriverCaps(0, &_caps, 0, 0, &_speakermode);
+//        if(_result != FMOD_OK)
 //        {
-//            MessageBox(NULL, enginecore::FMODSpeakerModeNotAvailable, enginecore::HEADER, enginecore::errIconOK);
+//            MessageBox(NULL, L"core::FMOD_SPEAKER_MODE_NOT_AVAILABLE", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //            return false;
 //        }
-//        result_ = system_->setSpeakerMode(speakermode_);
-//        if(result_ != FMOD_OK)
+//        _result = _system->setSpeakerMode(_speakermode);
+//        if(_result != FMOD_OK)
 //        {
-//            MessageBox(NULL, enginecore::FMODSetSpeakerModeFail, enginecore::HEADER, enginecore::errIconOK);
+//            MessageBox(NULL, L"core::FMOD_SET_SPEAKER_MODE_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //            return false;
 //        }
-//        if(caps_ & FMOD_CAPS_HARDWARE_EMULATED)
+//        if(_caps & FMOD_CAPS_HARDWARE_EMULATED)
 //        {
-//            result_ = system_->setDSPBufferSize(1024, 10);
-//            if(result_ != FMOD_OK)
+//            _result = _system->setDSPBufferSize(1024, 10);
+//            if(_result != FMOD_OK)
 //            {
-//                MessageBox(NULL, enginecore::FMODDSPBufferSizeFail, enginecore::HEADER, enginecore::errIconOK);
+//                MessageBox(NULL, L"core::FMOD_DSP_BUFFER_SIZE_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //                return false;
 //            }
 //        }
-//        result_ = system_->getDriverInfo(0, drivername_, 256, 0);
-//        if(result_ != FMOD_OK)
+//        _result = _system->getDriverInfo(0, _drivername, 256, 0);
+//        if(_result != FMOD_OK)
 //        {
-//            MessageBox(NULL, enginecore::FMODDriverInfoFail, enginecore::HEADER, enginecore::errIconOK);
+//            MessageBox(NULL, L"core::FMOD_DRIVER_INFO_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //            return false;
 //        }
 //    }
-//    result_ = system_->init(100, FMOD_INIT_NORMAL, 0);
-//    if(result_ == FMOD_ERR_OUTPUT_CREATEBUFFER)
+//    _result = _system->init(100, FMOD_INIT_NORMAL, 0);
+//    if(_result == FMOD_ERR_OUTPUT_CREATEBUFFER)
 //    {
-//        result_ = system_->setSpeakerMode(FMOD_SPEAKERMODE_STEREO);
-//        if(result_ != FMOD_OK)
+//        _result = _system->setSpeakerMode(FMOD_SPEAKERMODE_STEREO);
+//        if(_result != FMOD_OK)
 //        {
-//            MessageBox(NULL, enginecore::FMODSpeakerModeStereoFail, enginecore::HEADER, enginecore::errIconOK);
+//            MessageBox(NULL, L"core::FMOD_SPEAKER_MODE_STEREO_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //            return false;
 //        }
-//        result_ = system_->init(100, FMOD_INIT_NORMAL, 0);
-//        if(result_ != FMOD_OK)
+//        _result = _system->init(100, FMOD_INIT_NORMAL, 0);
+//        if(_result != FMOD_OK)
 //        {
-//            MessageBox(NULL, enginecore::FMODSystemInitializeFail, enginecore::HEADER, enginecore::errIconOK);
+//            MessageBox(NULL, L"core::FMOD_SYSTEM_INITIALIZE_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //            return false;
 //        }
 //    }
@@ -128,27 +128,27 @@ namespace audio
 //bool SoundObject::createSound()
 //{
 //    FMOD::Sound* sound = NULL;
-//    if(file_ == NULL)
+//    if(_file == NULL)
 //    {
-//        MessageBox(NULL, enginecore::CreateSoundObjectFirst, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::CREATE_SOUND_OBJECT_FIRST", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //
-//    if(system_->createSound(file_, FMOD_DEFAULT, 0, &sound) != FMOD_OK)
+//    if(_system->createSound(_file, FMOD_DEFAULT, 0, &sound) != FMOD_OK)
 //    {
-//        MessageBox(NULL, enginecore::CreateSoundObjectFail, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::CREATE_SOUND_OBJECT_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //
 //    FMOD::Channel* channel;
-//    if(system_->playSound(FMOD_CHANNEL_FREE, sound, false, &channel) != FMOD_OK)
+//    if(_system->playSound(FMOD_CHANNEL_FREE, sound, false, &channel) != FMOD_OK)
 //    {
-//        MessageBox(NULL, enginecore::CannotPlaySound, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::CANNOT_PLAY_SOUND", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //    if(channel->setVolume(0.6f) != FMOD_OK)
 //    {
-//        MessageBox(NULL, enginecore::SetVolumeFail, enginecore::HEADER, enginecore::errIconOK);
+//        MessageBox(NULL, L"core::SET_VOLUME_FAIL", L"core::PROJECT_HEADER", core::ERR_ICON_OK);
 //        return false;
 //    }
 //    return true;
@@ -160,8 +160,8 @@ namespace audio
 //
 //void SoundObject::release()
 //{
-//    file_ = NULL;
-//    system_->release();
+//    _file = NULL;
+//    _system->release();
 //}
-}
-}
+//}
+//}

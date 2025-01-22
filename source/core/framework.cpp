@@ -520,7 +520,7 @@ namespace rodeo
 		bool Framework::readConfFile(const std::wstring filePath)
 		{
 
-			ui fullscreenTemp = 0;
+			unsigned int fullscreenTemp = 0;
 			if (_width == 0)
 			{
 				_width = GetPrivateProfileInt(CONF_DEF_WINDOW_STRING.c_str(), CONF_DEF_WINDOW_WIDTH_KEY.c_str(), CONF_DEF_WINDOW_WIDTH, filePath.c_str());

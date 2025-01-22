@@ -32,43 +32,47 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "controllers\rendercontroller.h"
-//
-//namespace rodeo
-//{
-//	namespace controllers
-//	{
-//
-//		RenderController::RenderController(RendererType renderer)
-//		{
-//			switch (renderer)
-//			{
-//			case RODEO_DX:
-//			{
-//				_renderer = new rodeo::renderer::DxRenderer;
-//			}
-//			break;
-//
-//			case RODEO_GL:
-//			{
-//				_renderer = new rodeo::renderer::GLRenderer;
-//			}
-//			break;
-//			}
-//			case RODEO_VC:
-//			{
-//				_renderer = new rodeo::renderer::VcRenderer;
-//			}
-//		}
-//
-//		//--------------------------------------------------------------------------------------------------
-//		RenderController::~RenderController()
-//		{
-//			if (_renderer != nullptr)
-//			{
-//				delete _renderer;
-//				_renderer = nullptr;
-//			}
-//		}
-//	}
-//}
+#include "controllers\rendercontroller.h"
+
+namespace rodeo
+{
+	namespace controllers
+	{
+
+		RenderController::RenderController(RendererType renderer)
+		{
+			switch (renderer)
+			{
+			case RODEO_DX:
+			{
+				//_renderer = new rodeo::renderer::DxRenderer;
+			}
+			break;
+
+			case RODEO_GL:
+			{
+				_renderer = new rodeo::renderer::GLRenderer;
+			}
+			break;
+
+			case RODEO_VC:
+			{
+				//_renderer = new rodeo::renderer::VkRenderer;
+			}
+			break;
+
+			default:
+				std::cout << "" << std::endl;
+			}
+		}
+
+		RenderController::~RenderController()
+		{
+			if (_renderer != nullptr)
+			{
+				delete _renderer;
+				_renderer = nullptr;
+			}
+		}
+	}
+}

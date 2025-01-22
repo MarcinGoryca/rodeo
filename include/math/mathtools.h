@@ -36,7 +36,7 @@
 #define RODEO_MATH_MATHTOOLS_H_
 
 #ifndef RODEO_CORE_CONSTANTS_H_
-#include "core\constants.h"
+#include "..\core\constants.h"
 #endif
 
 //TODO
@@ -54,7 +54,7 @@ inline void sinCos(float* s, float* c, float theta)
 
 inline void buildSinusTable(float* angles)
 {
-    for(core::ui i=0; i < core::RODEO_FULL_CIRCLE; ++i)
+    for(unsigned int i=0; i < core::RODEO_FULL_CIRCLE; ++i)
     {
         angles[i] = ::sin(i * core::RODEO_RADIAN);
     }
@@ -62,7 +62,7 @@ inline void buildSinusTable(float* angles)
 
 inline void buildCosinusTable(float* angles)
 {
-    for(core::ui i=0; i < core::RODEO_FULL_CIRCLE; ++i)
+    for(unsigned int i=0; i < core::RODEO_FULL_CIRCLE; ++i)
     {
         angles[i] = ::cos(i * core::RODEO_RADIAN);
     }

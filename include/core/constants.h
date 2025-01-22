@@ -40,21 +40,15 @@
 #endif
 
 #ifndef RODEO_RENDERER_COLORS_H_
-#include "renderer\colors.h"
+#include "..\renderer\colors.h"
 #endif
 
 namespace rodeo
 {
 	namespace core
 	{
-		/*
-		 | -------------------------------------------
-		 |    TYPEDEFS
-		 | -------------------------------------------
-		 */
-		typedef const std::wstring cws;
-		typedef unsigned int ui;
-		typedef const unsigned int cui;
+		const std::string PROJECT_NAME = "RODEO PROJECT";
+		
 
 		/*
 		 |  -----------------
@@ -102,15 +96,6 @@ namespace rodeo
 		// Engine Window Icons - DO NOT MODIFY!
 		const std::wstring ICON_ASSETS_PATH = L"assets\\icons\\rrbi-32.ico";
 		const std::wstring ICON_SMALL_ASSETS_PATH = L"assets\\icons\\rrbi-16.ico";
-
-		// RAW FILES - TERRAIN DATA
-		//const char* const kMap1_raw = "assets\\heightmaps\\map1.raw";
-
-		// AUDIO FILES
-		//const char* const kMm9_mp3 = "assets\\audio\\mm9.mp3";
-
-		// FONT MEDIA PATH
-		//const char* const fonts_path = "assets\\fonts";
 
 		// Maximum amount of objects on the scene
 		const unsigned int MAX_OBJECTS_ = 100;

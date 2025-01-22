@@ -32,7 +32,7 @@
 |     IN THE SOFTWARE.
 |---------------------------------------------------------------------------------------------------
 */
-//
+
 //#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
 //#include "controllers\mastercontroller.h"
 //#endif

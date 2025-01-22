@@ -32,33 +32,33 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "io\keyboard.h"
-//
-//using namespace rodeo::core;
-//
-//namespace rodeo
-//{
-//	namespace io
-//	{
-//		Keyboard::Keyboard(int state)
-//		{
-//			_keystate = state;
-//		}
-//
-//		//.........................................//
-//		Keyboard::Keyboard(const Keyboard& copy)
-//		{
-//			this->operator=(copy);
-//		}
-//
-//		//.........................................//
-//		Keyboard& Keyboard::operator=(const Keyboard& copy)
-//		{
-//			if (this != &copy)
-//			{
-//				_keystate = copy._keystate;
-//			}
-//			return *this;
-//		}
-//	}
-//}
+#include "io\keyboard.h"
+
+using namespace rodeo::core;
+
+namespace rodeo
+{
+	namespace io
+	{
+		Keyboard::Keyboard(int state)
+		{
+			_keystate = state;
+		}
+
+		//.........................................//
+		Keyboard::Keyboard(const Keyboard& copy)
+		{
+			this->operator=(copy);
+		}
+
+		//.........................................//
+		Keyboard& Keyboard::operator=(const Keyboard& copy)
+		{
+			if (this != &copy)
+			{
+				_keystate = copy._keystate;
+			}
+			return *this;
+		}
+	}
+}

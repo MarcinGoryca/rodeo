@@ -32,30 +32,30 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_EVENT_KEYBOARDEVENT_H_
-//#define RODEO_EVENT_KEYBOARDEVENT_H_
-//
-//#ifndef RODEO_IO_KEYBOARD_H_
-//#include "io\Keyboard.h"
-//#endif
-//
-//namespace rodeo
-//{
-//namespace event
-//{
-//class Event;
-//
-//class KeyboardEvent : public Event
-//{
-//public:
-//    KeyboardEvent(){}
-//
-//    virtual ~KeyboardEvent(){}
-//
-//    virtual bool onKeyUp(rodeo::io::KeyMap key);
-//
-//    virtual bool onKeyDown(rodeo::io::KeyMap key);
-//};
-//}
-//}
-//#endif
+#ifndef RODEO_EVENT_KEYBOARDEVENT_H_
+#define RODEO_EVENT_KEYBOARDEVENT_H_
+
+#ifndef RODEO_IO_KEYBOARD_H_
+#include "io\Keyboard.h"
+#endif
+
+namespace rodeo
+{
+namespace event
+{
+class Event;
+
+class KeyboardEvent : public Event
+{
+public:
+    KeyboardEvent(){}
+
+    virtual ~KeyboardEvent(){}
+
+    virtual bool onKeyUp(rodeo::io::KeyMap key);
+
+    virtual bool onKeyDown(rodeo::io::KeyMap key);
+};
+}
+}
+#endif

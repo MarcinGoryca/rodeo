@@ -40,7 +40,7 @@
 
 #pragma pack(push, 8)	//FBXSDK is compiled with default value (8)
 
-#include <fbxsdk/fbxsdk_def.h>
+#include <fbxsdk\fbxsdk_def.h>
 
 #ifndef FBXSDK_NAMESPACE_USING
 	#define FBXSDK_NAMESPACE_USING 1

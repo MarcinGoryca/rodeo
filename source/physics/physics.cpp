@@ -32,34 +32,34 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "physics/physicsystem.h"
-//
-//namespace rodeo
-//{
-//	namespace physics
-//	{
-//
-//		void PhysicSystem::update()
-//		{
-//			//update method
-//		}
-//
-//		void PhysicSystem::update(float delta)
-//		{
-//			//update with delta
-//		}
-//
-//		void PhysicSystem::init()
-//		{
-//			_initstr.assign(L"Physics Module initialized");
-//			_module_initialized = true;
-//		}
-//
-//		void PhysicSystem::clear()
-//		{
-//			_module_initialized = false;
-//			//const char* t = "Physics Module shutdown";
-//			_initstr.assign(L"Physics Module shutdown");
-//		}
-//	}
-//}
+#include "physics/physicsystem.h"
+
+namespace rodeo
+{
+	namespace physics
+	{
+
+		void PhysicSystem::update()
+		{
+			//update method
+		}
+
+		void PhysicSystem::update(float delta)
+		{
+			//update with delta
+		}
+
+		void PhysicSystem::init()
+		{
+			_initstr.assign(L"Physics Module initialized");
+			_module_initialized = true;
+		}
+
+		void PhysicSystem::clear()
+		{
+			_module_initialized = false;
+			//const char* t = "Physics Module shutdown";
+			_initstr.assign(L"Physics Module shutdown");
+		}
+	}
+}

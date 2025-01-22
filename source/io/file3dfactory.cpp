@@ -32,36 +32,36 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#include "io\importer.h"
-//#include "io\file3Dfactory.h"
-//
-//namespace rodeo
-//{
-//namespace io
-//{
-//Importer* File3DFactory::create(File3DType type)
-//{
-//    Importer* importer = NULL;
-//
-//    switch(type)
-//    {
-//    case RODEO_FILE_3DS:
-//        {
-//            importer = new File3DS;
-//            break;
-//        }
-//
-//    case RODEO_FILE_FBX:
-//        {
-//            //importer = new FileFBX;
-//            break;
-//        }
-//
-//    default:
-//        importer = NULL;
-//    }
-//
-//    return importer;
-//}
-//}    // end of io namespace
-//}    // end of rodeo namespace
+#include "io\importer.h"
+#include "io\file3Dfactory.h"
+
+namespace rodeo
+{
+namespace io
+{
+Importer* File3DFactory::create(File3DType type)
+{
+    Importer* importer = NULL;
+
+    switch(type)
+    {
+    case RODEO_FILE_3DS:
+        {
+            importer = new File3DS;
+            break;
+        }
+
+    case RODEO_FILE_FBX:
+        {
+            //importer = new FileFBX;
+            break;
+        }
+
+    default:
+        importer = NULL;
+    }
+
+    return importer;
+}
+}    // end of io namespace
+}    // end of rodeo namespace

@@ -32,20 +32,20 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_GLOBALSTATE_H_
-//#define RODEO_RENDERER_GLOBALSTATE_H_
-//
-//namespace rodeo
-//{
-//namespace renderer
-//{
-//class GlobalState : public RenderState
-//{
-//public:
-//    virtual int getState()const { return GLOBAL; }
-//protected:
-//    GlobalState(){}
-//};
-//}    // end of renderer namespace
-//}    // end of rodeo namespace
-//#endif
+#ifndef RODEO_RENDERER_GLOBALSTATE_H_
+#define RODEO_RENDERER_GLOBALSTATE_H_
+
+namespace rodeo
+{
+namespace renderer
+{
+class GlobalState : public RenderState
+{
+public:
+    virtual int getState()const { return GLOBAL; }
+protected:
+    GlobalState(){}
+};
+}    // end of renderer namespace
+}    // end of rodeo namespace
+#endif

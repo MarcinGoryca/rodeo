@@ -32,64 +32,64 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_RENDERER_H_
-//#define RODEO_RENDERER_RENDERER_H_
-//
-//#ifndef RODEO_RENDERER_BUFFERS_H_
-//#include "renderer\buffers.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_COLORS_H_
-//#include "renderer\colors.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_FONT_H_
-//#include "renderer\font.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_GAMEMAP_H_
-//#include "renderer\gamemap.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_GL_GLRENDERER_H_
-//#include "renderer\gl\glrenderer.h"
-//#endif
-//
-////#ifndef RENDERER_HEO
-////#include "renderer\heightmap.h"
-//
-//#ifndef RODEO_RENDERER_IMAGE_H_
-//#include "renderer\image.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_LIGHT_H_
-//#include "renderer\light.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_MAP_H_
-//#include "renderer\map.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_MATERIAL_H_
-//#include "renderer\material.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_GL_QUERYRENDERER_H_
-//#include "renderer\gl\queryrenderer.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_IRENDERER_H_
-//#include "renderer\irenderer.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_RENDERMODE_H_
-//#include "renderer\rendermode.h"
-//#endif
-////#include "renderer\glslshaders.h"
-////#include "renderer\cgshaders.h"
-//
-//#ifndef RODEO_RENDERER_TEXTURE_H_
-//#include "renderer\texture.h"
-//#endif
-//
-//#endif
+#ifndef RODEO_RENDERER_RENDERER_H_
+#define RODEO_RENDERER_RENDERER_H_
+
+#ifndef RODEO_RENDERER_BUFFERS_H_
+#include "renderer\buffers.h"
+#endif
+
+#ifndef RODEO_RENDERER_COLORS_H_
+#include "renderer\colors.h"
+#endif
+
+#ifndef RODEO_RENDERER_FONT_H_
+#include "renderer\font.h"
+#endif
+
+#ifndef RODEO_RENDERER_GAMEMAP_H_
+#include "renderer\gamemap.h"
+#endif
+
+#ifndef RODEO_RENDERER_GL_GLRENDERER_H_
+#include "renderer\gl\glrenderer.h"
+#endif
+
+//#ifndef RENDERER_HEO
+//#include "renderer\heightmap.h"
+
+#ifndef RODEO_RENDERER_IMAGE_H_
+#include "renderer\image.h"
+#endif
+
+#ifndef RODEO_RENDERER_LIGHT_H_
+#include "renderer\light.h"
+#endif
+
+#ifndef RODEO_RENDERER_MAP_H_
+#include "renderer\map.h"
+#endif
+
+#ifndef RODEO_RENDERER_MATERIAL_H_
+#include "renderer\material.h"
+#endif
+
+#ifndef RODEO_RENDERER_GL_QUERYRENDERER_H_
+#include "renderer\gl\queryrenderer.h"
+#endif
+
+#ifndef RODEO_RENDERER_IRENDERER_H_
+#include "renderer\irenderer.h"
+#endif
+
+#ifndef RODEO_RENDERER_RENDERMODE_H_
+#include "renderer\rendermode.h"
+#endif
+//#include "renderer\glslshaders.h"
+//#include "renderer\cgshaders.h"
+
+#ifndef RODEO_RENDERER_TEXTURE_H_
+#include "renderer\texture.h"
+#endif
+
+#endif

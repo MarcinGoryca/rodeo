@@ -32,27 +32,27 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_EFFECTS_H_
-//#define RODEO_RENDERER_EFFECTS_H_
-//
-////#include "core\common.h"
-//
-//#ifndef RODEO_ENTITY_ENTITY_H_
-//#include "entity\entity.h"
-//#endif
-//
-//namespace rodeo
-//{
-//    namespace renderer
-//    {
-//        class Effects : public rodeo::entity::Entity
-//        {
-//            public:
-//                Effects(std::string filename);
-//            protected:
-//            private:
-//                Effects(){}
-//        };
-//    }
-//}
-//#endif
+#ifndef RODEO_RENDERER_EFFECTS_H_
+#define RODEO_RENDERER_EFFECTS_H_
+
+//#include "core\common.h"
+
+#ifndef RODEO_ENTITY_ENTITY_H_
+#include "entity\entity.h"
+#endif
+
+namespace rodeo
+{
+    namespace renderer
+    {
+        class Effects : public rodeo::entity::Entity
+        {
+            public:
+                Effects(std::string filename);
+            protected:
+            private:
+                Effects(){}
+        };
+    }
+}
+#endif

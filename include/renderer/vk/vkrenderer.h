@@ -32,13 +32,15 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_VKRENDERER
-//#define RODEO_RENDERER_VKRENDERER
-//
-//namespace rodeo
-//{
-//	namespace renderer
-//	{
-//		class VkRenderer : public Renderer
-//	}
-//}
+#ifndef RODEO_RENDERER_VKRENDERER
+#define RODEO_RENDERER_VKRENDERER
+
+namespace rodeo
+{
+	namespace renderer
+	{
+		class VkRenderer;
+	}
+}
+
+#endif

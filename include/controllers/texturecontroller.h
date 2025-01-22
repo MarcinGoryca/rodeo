@@ -32,79 +32,79 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//
-//#ifndef RODEO_CONTROLLERS_TEXTURECONTROLLER_H_
-//#define RODEO_CONTROLLERS_TEXTURECONTROLLER_H_
-//
-//#ifndef RODEO_CORE_SINGLETON_H
-//#include "core\singleton.h"
-//#endif
-//
-//#ifndef RODEO_CORE_CONSTANTS_H_
-//#include "core\constants.h"
-//#endif
-//
-//#ifndef RODEO_RENDERER_TEXTURE_H_
-//#include "renderer\texture.h"
-//#endif
-//
-//#ifndef VECTOR_H_
-//#include <vector>
-//#endif
-//
-//namespace rodeo
-//{
-//    namespace controllers
-//    {
-//        class TextureController : public rodeo::core::Singleton<TextureController>
-//        {
-//        public:
-//            TextureController()
-//            {
-//                reset();
-//            }
-//
-//            ~TextureController()
-//            {
-//                clean();
-//            }
-//
-//            void bind(unsigned int& tid);
-//
-//            //Parameter texid is an id of actually loaded texture,
-//            // from 1 to MAX_TEXTURES
-//            void load(rodeo::renderer::Image* irodeo, const char* filename, unsigned int& tid);
-//
-//            void load();
-//
-//            unsigned int loadDDS(const char* filename);
-//
-//            unsigned int loadTGA(const char* filename);
-//
-//            rodeo::renderer::Texture* getTexture() const { return _texture; }
-//
-//            static int getTextureCount() { return _s_texture_count; }
-//
-//        private:
-//			// Texture object 
-//			rodeo::renderer::Texture* _texture;
-//
-//			// Counting How many textures are loaded
-//			static int _s_texture_count;
-//
-//			// Maximum number of textures to load, this can be changed freely 
-//			static const unsigned int _S_MAX_TEXTURES = 100;
-//
-//			// Unique Id of a texture
-//			unsigned int _texture_id[_S_MAX_TEXTURES];
-//
-//			rodeo::renderer::Image* _image_data[_S_MAX_TEXTURES];
-//
-//			std::vector<unsigned int> _texObj;
-//
-//            void clean();
-//            void reset();
-//        };
-//    }
-//}
-//#endif
+
+#ifndef RODEO_CONTROLLERS_TEXTURECONTROLLER_H_
+#define RODEO_CONTROLLERS_TEXTURECONTROLLER_H_
+
+#ifndef RODEO_CORE_SINGLETON_H
+#include "core\singleton.h"
+#endif
+
+#ifndef RODEO_CORE_CONSTANTS_H_
+#include "core\constants.h"
+#endif
+
+#ifndef RODEO_RENDERER_TEXTURE_H_
+#include "renderer\texture.h"
+#endif
+
+#ifndef VECTOR_H_
+#include <vector>
+#endif
+
+namespace rodeo
+{
+    namespace controllers
+    {
+        class TextureController : public rodeo::core::Singleton<TextureController>
+        {
+        public:
+            TextureController()
+            {
+                reset();
+            }
+
+            ~TextureController()
+            {
+                clean();
+            }
+
+            void bind(unsigned int& tid);
+
+            //Parameter texid is an id of actually loaded texture,
+            // from 1 to MAX_TEXTURES
+            void load(rodeo::renderer::Image* irodeo, const char* filename, unsigned int& tid);
+
+            void load();
+
+            unsigned int loadDDS(const char* filename);
+
+            unsigned int loadTGA(const char* filename);
+
+            rodeo::renderer::Texture* getTexture() const { return _texture; }
+
+            static int getTextureCount() { return _s_texture_count; }
+
+        private:
+			// Texture object 
+			rodeo::renderer::Texture* _texture;
+
+			// Counting How many textures are loaded
+			static int _s_texture_count;
+
+			// Maximum number of textures to load, this can be changed freely 
+			static const unsigned int _S_MAX_TEXTURES = 100;
+
+			// Unique Id of a texture
+			unsigned int _texture_id[_S_MAX_TEXTURES];
+
+			rodeo::renderer::Image* _image_data[_S_MAX_TEXTURES];
+
+			std::vector<unsigned int> _texObj;
+
+            void clean();
+            void reset();
+        };
+    }
+}
+#endif

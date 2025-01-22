@@ -32,42 +32,42 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_PHYSICS_PHYSICSYSTEM_H_
-//#define RODEO_PHYSICS_PHYSICSYSTEM_H_
-//
-//#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
-//#include "controllers/mastercontroller.h"
-//#endif
-//
-//namespace rodeo
-//{
-//	namespace physics
-//	{
-//		class PhysicSystem : public controllers::MasterController
-//		{
-//		public:
-//
-//			PhysicSystem()
-//				:MasterController()
-//			{
-//				init();
-//			}
-//
-//			~PhysicSystem()
-//			{
-//				clear();
-//			}
-//
-//			// Implement this method in your application
-//			virtual void update();
-//
-//			// Implement this method in your application
-//			virtual void update(float delta);
-//
-//		private:
-//			void init();
-//			void clear();
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_PHYSICS_PHYSICSYSTEM_H_
+#define RODEO_PHYSICS_PHYSICSYSTEM_H_
+
+#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
+#include "controllers/mastercontroller.h"
+#endif
+
+namespace rodeo
+{
+	namespace physics
+	{
+		class PhysicSystem : public controllers::MasterController
+		{
+		public:
+
+			PhysicSystem()
+				:MasterController()
+			{
+				init();
+			}
+
+			~PhysicSystem()
+			{
+				clear();
+			}
+
+			// Implement this method in your application
+			virtual void update();
+
+			// Implement this method in your application
+			virtual void update(float delta);
+
+		private:
+			void init();
+			void clear();
+		};
+	}
+}
+#endif

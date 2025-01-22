@@ -32,56 +32,56 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//
-//#ifndef RODEO_CORE_OUTPUTCONTROLLER_H
-//#define RODEO_CORE_OUTPUTCONTROLLER_H
-//
-//#ifndef RODEO_IO_LOG_H_
-//#include "io/log.h"
-//#endif
-//
-//#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
-//#include "controllers/mastercontroller.h"
-//#endif
-//
-//namespace rodeo
-//{
-//	namespace controllers
-//	{
-//		class OutputController : public MasterController
-//		{
-//		public:
-//
-//			OutputController()
-//				:MasterController()
-//			{
-//				init();
-//			}
-//
-//			~OutputController()
-//			{
-//				clear();
-//			}
-//
-//			/*
-//			 * --------------------------------------------
-//			 *    Gets Log
-//			 *    Returns Log log
-//			 * --------------------------------------------
-//			 */
-//
-//			std::unique_ptr<io::Log*> getLog() const
-//			{
-//				return _log;
-//			}
-//
-//		private:
-//			void init();
-//			void clear();
-//
-//			//io::Log* _log;
-//			std::unique_ptr<io::Log*> _log;
-//		};
-//	}
-//}
-//#endif
+
+#ifndef RODEO_CORE_OUTPUTCONTROLLER_H
+#define RODEO_CORE_OUTPUTCONTROLLER_H
+
+#ifndef RODEO_IO_LOG_H_
+#include "io/log.h"
+#endif
+
+#ifndef RODEO_CONTROLLERS_MASTERCONTROLLER_H_
+#include "controllers/mastercontroller.h"
+#endif
+
+namespace rodeo
+{
+	namespace controllers
+	{
+		class OutputController : public MasterController
+		{
+		public:
+
+			OutputController()
+				:MasterController()
+			{
+				init();
+			}
+
+			~OutputController()
+			{
+				clear();
+			}
+
+			/*
+			 * --------------------------------------------
+			 *    Gets Log
+			 *    Returns Log log
+			 * --------------------------------------------
+			 */
+
+			std::unique_ptr<io::Log*> getLog() const
+			{
+				//return _log;
+			}
+
+		private:
+			void init();
+			void clear();
+
+			//io::Log* _log;
+			std::unique_ptr<io::Log*> _log;
+		};
+	}
+}
+#endif

@@ -139,7 +139,7 @@
 //                void print(std::string text, float x, float y);
 //
 //                // Sets new Size for the font
-//                void setFontSize(core::ui height);
+//                void setFontSize(unsigned int height);
 //
 //                void setText(const char* text) { _text = text; }
 //                const char* getText()const { return _text; }

@@ -43,8 +43,8 @@
 #include "math\mathtools.h"
 #endif
 
-#ifndef RODEO_TOOLS_RANDOMNUMBERGENERATOR_H_
-#include "tools\randomnumbergenerator.h"
+#ifndef RODEO_TOOLS_RNG_H_
+#include "tools\rng.h"
 #endif
 
 namespace rodeo

@@ -32,21 +32,21 @@
  |     IN THE SOFTWARE.
  |---------------------------------------------------------------------------------------------------
  */
-//#ifndef RODEO_RENDERER_MAP_H_
-//#define RODEO_RENDERER_MAP_H_
-//
-//namespace rodeo
-//{
-//	namespace renderer
-//	{
-//		class Map
-//		{
-//		public:
-//			Map() {}
-//			virtual ~Map() {}
-//
-//			virtual void create();
-//		};
-//	}
-//}
-//#endif
+#ifndef RODEO_RENDERER_MAP_H_
+#define RODEO_RENDERER_MAP_H_
+
+namespace rodeo
+{
+	namespace renderer
+	{
+		class Map
+		{
+		public:
+			Map() {}
+			virtual ~Map() {}
+
+			virtual void create();
+		};
+	}
+}
+#endif

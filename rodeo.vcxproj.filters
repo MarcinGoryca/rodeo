@@ -390,7 +390,7 @@
     <ClInclude Include="include\tools\memory_aligned.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
-    <ClInclude Include="include\tools\randomnumbergenerator.h">
+    <ClInclude Include="include\tools\rng.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
     <ClInclude Include="include\tools\tools.h">
@@ -461,6 +461,9 @@
     </ClInclude>
     <ClInclude Include="include\rodeo.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\renderer\gl\gllibrary.h">
+      <Filter>Header Files\renderer\gl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
